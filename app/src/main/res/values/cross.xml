@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cross_title">
+        <item>@string/cross_st1_title</item>
+        <item>@string/cross_st2_title</item>
+        <item>@string/cross_st3_title</item>
+    </string-array>
+
+    <integer-array name="cross_icon">
+        <item>@drawable/cross_1</item>
+        <item>@drawable/cross_2</item>
+        <item>@drawable/cross_3</item>
+    </integer-array>
+
+    <string-array name="cross_descr">
+        <item>@string/cross_st1_descr</item>
+        <item>@string/cross_st2_descr</item>
+        <item>@string/cross_st3_descr</item>
+    </string-array>
+
+    <string-array name="cross_url">
+        <item>@string/cross_st1_url</item>
+        <item>@string/cross_st2_url</item>
+        <item>@string/cross_st3_url</item>
+    </string-array>
+
+
+    <string name="cross_st1_title">Крест 1</string>
+    <string name="cross_st1_descr" formatted="false"><![CDATA[
+        Сборка кубика по методу Джессики Фридрих начинается со сборки креста на одной из сторон. Причем собирать следует сразу правильный крест.
+        Чаще всего спидкуберы начинают это делать с белой стороны, хотя вовсе и не обязательно так делать.
+        Но на первых шагах в сборке правильного креста проще выбрать какую-то одну сторону, т.к.
+        последовательности боковых граней для сборки правильного креста будут разные для разных "первых"
+        сторон и если вы начинаете с одной стороны, то вам не надо запоминать эти последовательности для каждой стороны.\n
+    ]]></string>
+    <string name="cross_st1_url">voaQ-_OY4bQ</string>
+
+    <string name="cross_st2_title">Крест 2</string>
+    <string name="cross_st2_descr" formatted="false"><![CDATA[
+        Стоит добавить, что правильный крест из любой позиции собирается максимумв 8 ходов. :)\n
+    ]]></string>
+    <string name="cross_st2_url">YSV8JR0cF0Y</string>
+
+    <string name="cross_st3_title">Крест 3</string>
+    <string name="cross_st3_descr" formatted="false"><![CDATA[
+        Тут пожалуй стоит еще упомянуть, что такие элементы креста как последний в данном видео, лучше
+        ставить немного не так, а все таки смещая со своего места один из элементов креста, а потом
+        возвращая его на место. <br/>
+        Многие спидкуберы собирают крест сразу снизу, т.е. предварительно осмотрев кубик заранее
+        просчитывают все ходы на сборку креста и в этом случае не нужно тратить время на переворот
+        кубика при переходе к следующему этапу.
+    ]]></string>
+    <string name="cross_st3_url">X8ISM4OoiM0</string>
+
+</resources>

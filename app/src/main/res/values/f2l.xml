@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="f2l_title">
+        <item>@string/f2l_st1_title</item>
+        <item>@string/f2l_st2_title</item>
+        <item>@string/f2l_st3_title</item>
+        <item>@string/f2l_st4_title</item>
+        <item>@string/f2l_st5_title</item>
+        <item>@string/f2l_st6_title</item>
+        <item>@string/f2l_st7_title</item>
+        <item>@string/f2l_st8_title</item>
+        <item>@string/f2l_st9_title</item>
+        <item>@string/f2l_st10_title</item>
+        <item>@string/f2l_st11_title</item>
+        <item>@string/f2l_st12_title</item>
+        <item>@string/f2l_st13_title</item>
+        <item>@string/f2l_st14_title</item>
+        <item>@string/f2l_st15_title</item>
+        <item>@string/f2l_st16_title</item>
+        <item>@string/f2l_st17_title</item>
+        <item>@string/f2l_st18_title</item>
+        <item>@string/f2l_st19_title</item>
+        <item>@string/f2l_st20_title</item>
+        <item>@string/f2l_st21_title</item>
+        <item>@string/f2l_st22_title</item>
+        <item>@string/f2l_st23_title</item>
+        <item>@string/f2l_st24_title</item>
+        <item>@string/f2l_st25_title</item>
+    </string-array>
+
+    <integer-array name="f2l_icon">
+        <item>@drawable/f2l_1</item>
+        <item>@drawable/f2l_2</item>
+        <item>@drawable/f2l_3</item>
+        <item>@drawable/f2l_4</item>
+        <item>@drawable/f2l_5</item>
+        <item>@drawable/f2l_6</item>
+        <item>@drawable/f2l_7</item>
+        <item>@drawable/f2l_8</item>
+        <item>@drawable/f2l_9</item>
+        <item>@drawable/f2l_10</item>
+        <item>@drawable/f2l_11</item>
+        <item>@drawable/f2l_12</item>
+        <item>@drawable/f2l_13</item>
+        <item>@drawable/f2l_14</item>
+        <item>@drawable/f2l_15</item>
+        <item>@drawable/f2l_16</item>
+        <item>@drawable/f2l_17</item>
+        <item>@drawable/f2l_18</item>
+        <item>@drawable/f2l_19</item>
+        <item>@drawable/f2l_20</item>
+        <item>@drawable/f2l_21</item>
+        <item>@drawable/f2l_22</item>
+        <item>@drawable/f2l_23</item>
+        <item>@drawable/f2l_6</item>
+        <item>@drawable/f2l_6</item>
+    </integer-array>
+
+    <string-array name="f2l_descr">
+        <item>@string/f2l_st1_descr</item>
+        <item>@string/f2l_st2_descr</item>
+        <item>@string/f2l_st3_descr</item>
+        <item>@string/f2l_st4_descr</item>
+        <item>@string/f2l_st5_descr</item>
+        <item>@string/f2l_st6_descr</item>
+        <item>@string/f2l_st7_descr</item>
+        <item>@string/f2l_st8_descr</item>
+        <item>@string/f2l_st9_descr</item>
+        <item>@string/f2l_st10_descr</item>
+        <item>@string/f2l_st11_descr</item>
+        <item>@string/f2l_st12_descr</item>
+        <item>@string/f2l_st13_descr</item>
+        <item>@string/f2l_st14_descr</item>
+        <item>@string/f2l_st15_descr</item>
+        <item>@string/f2l_st16_descr</item>
+        <item>@string/f2l_st17_descr</item>
+        <item>@string/f2l_st18_descr</item>
+        <item>@string/f2l_st19_descr</item>
+        <item>@string/f2l_st20_descr</item>
+        <item>@string/f2l_st21_descr</item>
+        <item>@string/f2l_st22_descr</item>
+        <item>@string/f2l_st23_descr</item>
+        <item>@string/f2l_st24_descr</item>
+        <item>@string/f2l_st25_descr</item>
+    </string-array>
+
+    <string-array name="f2l_url">
+        <item>@string/f2l_st1_url</item>
+        <item>@string/f2l_st2_url</item>
+        <item>@string/f2l_st3_url</item>
+        <item>@string/f2l_st4_url</item>
+        <item>@string/f2l_st5_url</item>
+        <item>@string/f2l_st6_url</item>
+        <item>@string/f2l_st7_url</item>
+        <item>@string/f2l_st8_url</item>
+        <item>@string/f2l_st9_url</item>
+        <item>@string/f2l_st10_url</item>
+        <item>@string/f2l_st11_url</item>
+        <item>@string/f2l_st12_url</item>
+        <item>@string/f2l_st13_url</item>
+        <item>@string/f2l_st14_url</item>
+        <item>@string/f2l_st15_url</item>
+        <item>@string/f2l_st16_url</item>
+        <item>@string/f2l_st17_url</item>
+        <item>@string/f2l_st18_url</item>
+        <item>@string/f2l_st19_url</item>
+        <item>@string/f2l_st20_url</item>
+        <item>@string/f2l_st21_url</item>
+        <item>@string/f2l_st22_url</item>
+        <item>@string/f2l_st23_url</item>
+        <item>@string/f2l_st24_url</item>
+        <item>@string/f2l_st25_url</item>
+    </string-array>
+
+<!-- ______________________________________________________________________________ -->
+
+    <string name="f2l_st1_title">Часть А. Введение в F2L</string>
+    <string name="f2l_st1_descr" formatted="false"><![CDATA[
+    <p>F2L - First 2 Layers (Первые два слоя). Что такое сборка первых двух слоев, в чем ее
+    преимущество перед сборкой по методу для новичков и почему нужно перходить на F2L.</p>
+    <p>Изучая F2L нужно много понимать, а не только запоминать. И для начала, чтобы было
+    <a href="rubic-activity://ytactivity?time=9:29&link=8JyOY9PR6Ig">проще переходить</a>
+    на новый метод, научитесь <a href="rubic-activity://ytactivity?time=11:03&link=8JyOY9PR6Ig">перемешивать
+    4 и 5 этапы</a>, т.е. ставить не сначала углы, а потом ребра второго слоя. А сначала угол и
+    сразу к нему соответствующее ребро второго слоя.</p>
+    ]]></string>
+    <string name="f2l_st1_url">8JyOY9PR6Ig</string>
+
+    <string name="f2l_st2_title">Часть Б. Максимкина терминология</string>
+    <string name="f2l_st2_descr" formatted="false"><![CDATA[
+    <p>Определяемся с терминологией. Что такое слот (квартира). Кто такие парень с девушкой и как
+    они <a href="rubic-activity://ytactivity?time=4:03&link=jnFCuBkZSSY">образовывают пары</a>. </p>
+    <p>Парень это угол, а девушка это ребро второго слоя кубика. Преждем чем их поставить на место в
+    их слот (заселить их в квартиру) они должны образовать пару.</p>
+    <p>На этапе обучения мы всегда будем подгонять угол (парня) к своей квартире, а квартира будет
+    находится на ближней к нам стороне справа. В дальнейшем вы уже и сами научитесь не перехватывать кубик
+    для каждой квартиры и заселять пары из любого положения.</p>
+    ]]></string>
+    <string name="f2l_st2_url">jnFCuBkZSSY</string>
+
+    <string name="f2l_st3_title">Часть В. Завышенная самооценка, незнакомы</string>
+    <string name="f2l_st3_descr" formatted="false"><![CDATA[
+    <p>При переходе на F2L легче всего начать с парней с завышенной самооценкой, т.к. их проще всего
+    искать (на крыше), если их нет, то пока собираем кубик привычным способом через пиф-пафы и ромашки.</p>
+    <p>Если у парня самооценка завышена и с девушкой он еще не знаком, то все очень просто. Подгоняем
+    девушку к своему цвету (как в ромашке), отворачиваем девушку от квартиры, подводим парня к девушке
+    (они должны образовать пару) и поднимаем пару на верх. Заселяем. <br/>
+    Заселяем английским пиф-пафом или перехватываем кубик и делаем
+    <a href="rubic-activity://ytactivity?time=11:01&link=GeOEd4OHEwg">английский пиф-паф, но слева,</a>
+    в зависимости от того с какой стороны от свой квартиры у нас встала пара. А если рассматривать
+    вариант без перехвата, то английский пиф-паф слева будет выглядеть как (F R\' F\' R), а так же
+    в этом случаем можно заселить комбинацией (U\' F\' U F), кому как будет удобнее.</p>
+    А если записывать формулами, то получается, что в данном случае мы рассмотрели сразу 4 ситуации:
+    <p style="text-align:center"><img src="f2l_3_1.png" width="30%%"></p>
+    <b>1.<a href="rubic-activity://ytactivity?time=4:43&link=GeOEd4OHEwg">Алгоритм:</a> U (R U2\' R\') (R\' F R F\')</b><br/>
+    или с другим способом заселения <br/>
+    <b>U (R U2\' R\' U) (R U\' R\')</b>
+    <p style="text-align:center"><img src="f2l_3_2.png" width="30%%"></p>
+    <b>2.<a href="rubic-activity://ytactivity?time=9:34&link=GeOEd4OHEwg">Алгоритм:</a> U2 (F\' U\' F) (F R\' F\' R) </b><br/>
+    или ускорение для данного положения, но через левую руку <b>(F\' L\' U2) (L F)</b>
+    <p style="text-align:center"><img src="f2l_3_3.png" width="30%%"></p>
+    <b>3.Алгоритм: U2 (R U R\') (R\' F R F\')</b><br/>
+    или опять же через другой вариант заселения <br/>
+    <b>U2 (R U R\') (U R U\' R\')</b>
+    <p style="text-align:center"><img src="f2l_3_4.png" width="30%%"></p>
+    4.<b>Алгоритм: (U\' F\' U2 F) (U\' F\' U F) </b>или<br/><b>(U\' F\' U2 F) (F R\' F\' R)</b>
+    ]]></string>
+    <string name="f2l_st3_url">GeOEd4OHEwg</string>
+
+    <string name="f2l_st4_title">Часть Г. Завышенная самооценка, знакомы, несовместимы, слева</string>
+    <string name="f2l_st4_descr" formatted="false"><![CDATA[
+    <p>Рассмотрим ситуацию, когда у парня самооценка завышена и девушка стоит слева от парня (т.е.
+    они знакомы), но ни верхняя ни боковая наклейки у них не совпадают, т.е. они друг с другом не
+    ладят, т.е. несовместимы.</p>
+    <p style="text-align:center"><img src="f2l_4_1.png" width="30%%"></p>
+    Девушка от квартиры, парень уезжает далеко-далеко, поднимаем девушку на третий этаж
+    (восстанавливаем крест), подгоняем квартиру к парню и заселяем в 3 хода<br/>
+    <b><a href="rubic-activity://ytactivity?time=4:03&link=ea0xuf-tW4g">Алгоритм:</a> (F\' U2 F) Dw (R\' U\' R)</b><br/>
+    Альтернативный вариант: делать <a href="rubic-activity://ytactivity?time=10:33&link=ea0xuf-tW4g">сначала перехват</a>,
+    тогда квартира будет находится справа сзади. И после подъема девушки на третий этаж, будем уже
+    подгонять парня к квартире:<br/>
+    <b>Алгоритм: y\' (R\' U2 R) U (R\' U\' R)</b>
+    ]]></string>
+    <string name="f2l_st4_url">ea0xuf-tW4g</string>
+
+    <string name="f2l_st5_title">Часть Д. Завышенная самооценка, знакомы, несовместимы, сзади</string>
+    <string name="f2l_st5_descr" formatted="false"><![CDATA[
+    <p>Если у парня самооценка завышена и они знакомы, несовместимы, но в отличии от предыдущего
+    случая девушка находится позади парня, а не слева.</p>
+    <p style="text-align:center"><img src="f2l_5_1.png" width="30%%"></p>
+    <p>Решение аналогично предыдущему, но не нужно делать ни перехватов, ни крутить два нижних слоя.
+    Девушка идет от квартиры, парень уезжает далеко-далеко, девушка вовращается на третий этаж,
+    парня подводим к квартире и заселяем в 3 хода.</p>
+    <b><a href="rubic-activity://ytactivity?time=1:33&link=t5ePtMEJvyE">Алгоритм:</a> (R U2 R\') U (R U R\')</b>
+    ]]></string>
+    <string name="f2l_st5_url">t5ePtMEJvyE</string>
+
+    <string name="f2l_st6_title">Часть Е. Завышенная самооценка, знакомы, совместимы, слева</string>
+    <string name="f2l_st6_descr" formatted="false"><![CDATA[
+    <p><a href="rubic-activity://ytactivity?time=2:36&link=wwoPHQsxSC0">Ситуация</a>
+    похожа на <b>Часть Г</b>, т.е. у парня самооценка завышена и девушка стоит слева от парня (т.е.
+    они знакомы), но в данном случае боковые наклейки у них совпадают, т.е. они совместимы, но пару не образуют.</p>
+    <p style="text-align:center"><img src="f2l_6_1.png" width="30%%"></p>
+    Отправляем нашу пару в отпуск (крыша 2 раза), включаем свет 2 раза (ищем влюбленных), пара возвращается,
+    но они расстаются и парню пришлось уехать на 1 этаж, у девушки поехала крыша, парень решил вернуться, но крыша у
+    девушки продолжала ехать. Однако они образовали пару, которую ставим на место двойным включением света.<br/>
+    <b><a href="rubic-activity://ytactivity?time=6:03&link=wwoPHQsxSC0">Алгоритм:</a> (U2 R2 U2 R\') U\' R U\' R2</b>
+    ]]></string>
+    <string name="f2l_st6_url">wwoPHQsxSC0</string>
+
+    <string name="f2l_st7_title">Часть Ж.</string>
+    <string name="f2l_st7_descr" formatted="false"><![CDATA[
+
+    ]]></string>
+    <string name="f2l_st7_url">78bcU-2aryQ</string>
+
+    <string name="f2l_st8_title">Часть З.</string>
+    <string name="f2l_st8_descr" formatted="false"><![CDATA[
+    ]]></string>
+    <string name="f2l_st8_url">mphb_lhZhII</string>
+
+    <string name="f2l_st9_title">Часть И.</string>
+    <string name="f2l_st9_descr" formatted="false"><![CDATA[
+    ]]></string>
+    <string name="f2l_st9_url">b7e_sss9hMo</string>
+
+    <string name="f2l_st10_title">Часть К.</string>
+    <string name="f2l_st10_descr" formatted="false"><![CDATA[
+    ]]></string>
+    <string name="f2l_st10_url">1qeK6y-1vaQ</string>
+
+    <string name="f2l_st11_title">Часть Л.</string>
+    <string name="f2l_st11_descr" formatted="false"><![CDATA[
+    ]]></string>
+    <string name="f2l_st11_url">r0r78ZFkK-A</string>
+
+    <string name="f2l_st12_title">Часть М.</string>
+    <string name="f2l_st12_descr" formatted="false"><![CDATA[
+    ]]></string>
+    <string name="f2l_st12_url">M7fbAWPX8Mc</string>
+
+    <string name="f2l_st13_title">Часть Н.</string>
+    <string name="f2l_st13_descr" formatted="false"><![CDATA[
+    ]]></string>
+    <string name="f2l_st13_url">OoOBnORuGY4</string>
+
+    <string name="f2l_st14_title">Часть О.</string>
+    <string name="f2l_st14_descr" formatted="false"><![CDATA[
+    ]]></string>
+    <string name="f2l_st14_url">3MJ2x9X9KE0</string>
+
+    <string name="f2l_st15_title">Часть П.</string>
+    <string name="f2l_st15_descr" formatted="false"><![CDATA[
+    ]]></string>
+    <string name="f2l_st15_url">JQpJp3lNnNw</string>
+
+    <string name="f2l_st16_title">Часть Р.</string>
+    <string name="f2l_st16_descr" formatted="false"><![CDATA[
+    ]]></string>
+    <string name="f2l_st16_url">JgAivZA4AKI</string>
+
+    <string name="f2l_st17_title">Часть С.</string>
+    <string name="f2l_st17_descr" formatted="false"><![CDATA[
+    ]]></string>
+    <string name="f2l_st17_url">qd0ErPqPvyI</string>
+
+    <string name="f2l_st18_title">Часть Т.</string>
+    <string name="f2l_st18_descr" formatted="false"><![CDATA[
+    ]]></string>
+    <string name="f2l_st18_url">my1HZ8kEq3U</string>
+
+    <string name="f2l_st19_title">Часть У.</string>
+    <string name="f2l_st19_descr" formatted="false"><![CDATA[
+    ]]></string>
+    <string name="f2l_st19_url">VrjaDDxzZYY</string>
+
+    <string name="f2l_st20_title">Часть Ф.</string>
+    <string name="f2l_st20_descr" formatted="false"><![CDATA[
+    ]]></string>
+    <string name="f2l_st20_url">y4pklPQ1cTM</string>
+
+    <string name="f2l_st21_title">Часть Х.</string>
+    <string name="f2l_st21_descr" formatted="false"><![CDATA[
+    ]]></string>
+    <string name="f2l_st21_url">8LKqHMavUJs</string>
+
+    <string name="f2l_st22_title">Часть Ц.</string>
+    <string name="f2l_st22_descr" formatted="false"><![CDATA[
+    ]]></string>
+    <string name="f2l_st22_url">UdyiDspIJiE</string>
+
+    <string name="f2l_st23_title">Часть Ч.</string>
+    <string name="f2l_st23_descr" formatted="false"><![CDATA[
+    ]]></string>
+    <string name="f2l_st23_url">2U95iLJ9TX4</string>
+
+    <string name="f2l_st24_title">Часть Ш.</string>
+    <string name="f2l_st24_descr" formatted="false"><![CDATA[
+    ]]></string>
+    <string name="f2l_st24_url">iZTvqT35mVw</string>
+
+    <string name="f2l_st25_title">Ускоорения (Advanced 2FL)</string>
+    <string name="f2l_st25_descr" formatted="false"><![CDATA[
+    <p>Ускорения для некоторых ситуаций:<br/>
+    1.
+    </p>
+    ]]></string>
+    <string name="f2l_st25_url">WIFh0sXDkMM</string>
+
+
+</resources>
