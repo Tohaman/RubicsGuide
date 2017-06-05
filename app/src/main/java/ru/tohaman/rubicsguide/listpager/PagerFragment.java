@@ -35,6 +35,7 @@ import ru.tohaman.rubicsguide.R;
 
 import java.util.List;
 
+import static ru.tohaman.rubicsguide.DeveloperKey.DEVELOPER_KEY;
 import static ru.tohaman.rubicsguide.MainFragment.RubicPhase;
 
 
@@ -44,7 +45,6 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
     private static final String DIALOG_COMMENT = "DialogComment";  //в этой "паре", передаем значение комментария для редактирования
 
     // YouTube
-    private static final String API_KEY = "AIzaSyCtccTdfmn7HawTUzVKOzqUPQPdthrO4VA";
     private static String VIDEO_ID = "0TvO_rpG_aM";
     public static final int REQ_START_STANDALONE_PLAYER = 101;
     private static final int REQ_RESOLVE_SERVICE_MISSING = 2;
@@ -141,14 +141,14 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
 
         if (!VIDEO_ID.equals("")) {
             thumbnailView = (YouTubeThumbnailView) v.findViewById(R.id.pager_youtube);
-            thumbnailView.initialize(API_KEY,this);
+            thumbnailView.initialize(DEVELOPER_KEY,this);
             thumbnailView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = null;
                     //String youtubeURL = mPLL.getUrl();
 
-                    intent = YouTubeStandalonePlayer.createVideoIntent(getActivity(),API_KEY,mListPager.getUrl(),1000,true,true);
+                    intent = YouTubeStandalonePlayer.createVideoIntent(getActivity(),DEVELOPER_KEY,mListPager.getUrl(),1000,true,true);
                     if (intent !=null) {
                         if (canResolveIntent(intent)) {
                             canHideStatusBar = true;

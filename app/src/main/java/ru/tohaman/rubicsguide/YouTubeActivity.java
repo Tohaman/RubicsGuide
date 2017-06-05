@@ -39,7 +39,8 @@ public class YouTubeActivity extends Activity
  <a href="rubic_activity://ytactivity?time=1:15&link=Vt9dHndW7-E">Time 1:15</a>
  в манифесте надо для активности прописать <intent-filter>
  <data android:host="ytactivity" android:scheme="test_activity" />
-
+ а манифест перед <application добавить строку
+ <uses-permission android:name="android.permission.INTERNET" />
  */
         String Text1 = getIntent().getData().getQueryParameter("time");
         String VIDEO_ID = getIntent().getData().getQueryParameter("link");
