@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.maximchechnev.rubicsguide.MainActivity">
+    tools:context="ru.tohaman.rubicsguide.MainActivity">
 
 </android.support.constraint.ConstraintLayout>

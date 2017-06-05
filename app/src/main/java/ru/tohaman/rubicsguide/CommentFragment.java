@@ -18,7 +18,7 @@ import android.widget.EditText;
 public class CommentFragment extends DialogFragment {
 
     //стр.250
-    public static final String EXTRA_Comment = "com.maximchechnev.rubicsguide.comment";
+    public static final String EXTRA_Comment = "ru.tohaman.rubicsguide.comment";
     //стр.247
     private static final String ARG_Comment = "comment";
 
