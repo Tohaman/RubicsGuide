@@ -221,33 +221,67 @@
     девушки едет крыша, парень за девушкой, крыша еще едет. Ставим на место двойным светом. Заметьте,
     что крыша в данном случае, в отличие от предыдущего случая едет в другую сторону.</p>
     <p><b><a href="rubic-activity://ytactivity?time=2:38&link=78bcU-2aryQ">Алгоритм:</a> y (U2 L2 U2 L) U L\' U L2</b></p>
-    <p>2. Второй вариант. Сделать перехват в <a href="rubic-activity://ytactivity?time=4:25&link=78bcU-2aryQ">другую сторону</a>
+    <p>2. Второй вариант. Сделать перехват в <a href="rubic-activity://ytactivity?time=4:25&link=78bcU-2aryQ">другую сторону (ход y\')</a>
     и сделать в принципе все тоже самое, но уже справа. Т.е. отправляем пару в отпуск, включаем дважды
     свет справа, возвращаемся из отпуска, парень на первый этаж (включаем свет), у девушки едет крыша
     (по часовой), парень за девушкой (выключаем свет), крыша продолжает ехать, ставим на место двойным
     светом.
     <p><b>Алгоритм: y\' (U2 R2 U2 R) U R\' U R2</b></p>
-    3. Есть еще и более быстрый вариант, он будет рассмотрен в ускорениях (Advanced) F2L.
+    3. Есть и еще более быстрый вариант, он будет рассмотрен в Ускорениях (Advanced) F2L.
     ]]></string>
     <string name="f2l_st7_url">78bcU-2aryQ</string>
 
-    <string name="f2l_st8_title">Часть З.</string>
+    <string name="f2l_st8_title">Часть З. Завышенная самооценка, девушка на 2 этаже несовместимы</string>
     <string name="f2l_st8_descr" formatted="false"><![CDATA[
+    <p>Если у парня самооценка завышена, а девушки на третьем этаже нет, значит она находится на втором
+    этаже.</p>
+    <p style="text-align:center"><img src="f2l_8_1.png" width="30%%"></p>
+    <p>В этом случаем первым делом подводим парня к девушке (или лучше девушку к парню ходами Dw
+    или Dw\') и смотрим на их совместимость. Если они несовместимы, то делаем 2 пиф-пафа, подгоняем
+    квартиру к парню и делаем еще один пиф-паф (можно без последнего хода).<br/>
+    В случае если девушка уже
+    <a href="rubic-activity://ytactivity?time=7:58&link=mphb_lhZhII">находится в квартире</a>, просто делаем 3 пиф-пафа.</p>
+    <p><b><a href="rubic-activity://ytactivity?time=1:31&link=mphb_lhZhII">Алгоритм:</a> (R U R\' U\') (R U R\' U\') {Dw} (R U R\' U\')</b></p>
     ]]></string>
     <string name="f2l_st8_url">mphb_lhZhII</string>
 
-    <string name="f2l_st9_title">Часть И.</string>
+    <string name="f2l_st9_title">Часть И. Завышенная самооценка, девушка на 2 этаже, совместимы</string>
     <string name="f2l_st9_descr" formatted="false"><![CDATA[
+    <p><a href="rubic-activity://ytactivity?time=0:56&link=b7e_sss9hMo">Ситуация</a>
+    похожа на предыдущую: у парня завышенная самооценка, девушка находится на втором этаже,
+    но если подвести парня к девушке, то они образовывают пару.</p>
+    <p style="text-align:center"><img src="f2l_9_1.png" width="30%%"></p>
+    <p>Поскольку пара у нас уже есть, но находится она в квартире вверх ногами. Надо ее сначала из
+    квартиры выгнать (включить свет, крыша против часовой или 2 раза, выключить свет). Получаем пару на третьем
+    этаже, которую подводим к своей квартире и заселяем английским пиф-пафом слева или
+    <a href="rubic-activity://ytactivity?time=6:45&link=b7e_sss9hMo">комбинацией (L\' U L)</a>.<br/><br/></p>
+    <b><a href="rubic-activity://ytactivity?time=5:25&link=b7e_sss9hMo">Алгоритм:</a> (R U\' R\') {U} (L\' U L)</b>
     ]]></string>
     <string name="f2l_st9_url">b7e_sss9hMo</string>
 
-    <string name="f2l_st10_title">Часть К.</string>
+    <string name="f2l_st10_title">Часть К. Наглый, с девушкой не знаком, совместимы</string>
     <string name="f2l_st10_descr" formatted="false"><![CDATA[
+    <p>С парнями с завышенной самооценкой разобрались, переходим к наглым парням. И
+    <a href="rubic-activity://ytactivity?time=4:58&link=1qeK6y-1vaQ">начнем с ситуации</a>
+    когда девушка находится на третьем этаже, они не знакомы и совместимы по знаку зодиака.</p>
+    <p>Поскольку парень наглый, то он делает первый шаг, и делает его неправильно (против часовой стрелки).
+    Поэтому девушка от него убегает, но он идет на хитрость и прячется на первом этаже.
+    Это срабатывает и девушка идет посмотреть куда делся парень (встает сзади). Парень поднимается
+    на третий этаж и они образовывают пару. Подводим к квартире, заселяем.</p>
+    <p style="text-align:center"><img src="f2l_10_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=6:25&link=1qeK6y-1vaQ">Алгоритм:</a> (U\' R) (U R\' U) (R\' F R F\')</b><br/>
+    или только через правую и верхнюю грань:<br/>
+    <b>(U\' R) (U R\') U2 (R U\' R\')</b>
+    <p style="text-align:center"><img src="f2l_10_2.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=9:00&link=1qeK6y-1vaQ">Алгоритм:</a> (U\' R) (U2 R\' U) (R\' F R F\')</b><br/>
+    или только через правую и верхнюю грань:<br/>
+    <b>(U\' R) (U2 R\') U2 (R U\' R\')</b>
     ]]></string>
     <string name="f2l_st10_url">1qeK6y-1vaQ</string>
 
-    <string name="f2l_st11_title">Часть Л.</string>
+    <string name="f2l_st11_title">Часть Л. Наглый, знакомы, совместимы</string>
     <string name="f2l_st11_descr" formatted="false"><![CDATA[
+
     ]]></string>
     <string name="f2l_st11_url">r0r78ZFkK-A</string>
 
