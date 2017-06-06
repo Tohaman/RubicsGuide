@@ -281,7 +281,20 @@
 
     <string name="f2l_st11_title">Часть Л. Наглый, знакомы, совместимы</string>
     <string name="f2l_st11_descr" formatted="false"><![CDATA[
-
+    <p>Теперь рассмотрим ситуации когда парень наглый, с дувушкой они совместимы и даже знакомы. Т.е.
+    девушка находится слева или сзади парня.
+    <a href="rubic-activity://ytactivity?time=1:35&link=r0r78ZFkK-A">Начнем с ситуации</a> когда
+    девушка живет слева от парня.</p>
+    <p style="text-align:center"><img src="f2l_11_1.png" width="30%%"></p>
+    Делаем перехват (y\'). Выключаем им свет, но парень уезжает от девушки. Девушка включает свет,
+    чтобы его найти и долго-долго его ищет. Перехват (y) и заселяем в три хода пиф-пафа.
+    <b><a href="rubic-activity://ytactivity?time=3:00&link=r0r78ZFkK-A">Алгоритм:</a> y' (R\' U) R U2 y R U R\' </b><br/><br/>
+    Ну и в <a href="rubic-activity://ytactivity?time=9:01&link=r0r78ZFkK-A">случае если</a>
+    девушка находится сзади наглого парня, то мы сразу видим, что они образуют идеальную пару,
+    которую подводим к своей квартире и заселяем или английским пиф-пафом или комбинацией <b>U R U\' R\'</b>.<br/>
+    <p style="text-align:center"><img src="f2l_11_2.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=3:00&link=r0r78ZFkK-A">Алгоритм:</a> R\' F R F\'</b> или
+    <b>U R U\' R\'</b>.
     ]]></string>
     <string name="f2l_st11_url">r0r78ZFkK-A</string>
 
