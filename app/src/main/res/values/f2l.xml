@@ -52,7 +52,7 @@
         <item>@drawable/f2l_21</item>
         <item>@drawable/f2l_22</item>
         <item>@drawable/f2l_23</item>
-        <item>@drawable/f2l_6</item>
+        <item>@drawable/f2l_24</item>
         <item>@drawable/f2l_6</item>
     </integer-array>
 
@@ -503,17 +503,37 @@
 
     <string name="f2l_st22_title">Часть Ц. Скромный, девушка на 2 этаже, совместимы</string>
     <string name="f2l_st22_descr" formatted="false"><![CDATA[
-
+    <p>Рассмотрим <a href="rubic-activity://ytactivity?time=2:02&link=UdyiDspIJiE">cитуацию</a>
+    когда парень скромный, девушка находится на 2 этаже и они совместимы.</p>
+    <p style="text-align:center"><img src="f2l_22_1.png" width="30%%"></p>
+    <p><a href="rubic-activity://ytactivity?time=2:38&link=UdyiDspIJiE">Для начала,</a>
+    как и всегда, когда девушка живет на втором этаже, подгоняем парня к девушке (а лучше девушку к парню,
+    если он у нас находится в правом ближнем верхнем углу). И т.к. они совместимы,
+    но идеальную пару не образуют, то мы их разлучаем. Отправляем парня против часовой стрелки.
+    Девушка бежит за парнем, но парень убегает вниз. Девушка обижается и
+    уезжает далеко-далеко. Парень поднимается и идет туда, где встретил девушку. Подгоняем к парню
+    его квартиру и заселяем 3 ходами пиф-пафа.</p>
+    <b><a href="rubic-activity://ytactivity?time=6:30&link=UdyiDspIJiE">Алгоритм:</a> {Dw} U\' R U2 R\' U {Dw} (R U R\')</b>
     ]]></string>
     <string name="f2l_st22_url">UdyiDspIJiE</string>
 
-    <string name="f2l_st23_title">Часть Ч.</string>
+    <string name="f2l_st23_title">Часть Ч. Скромный, девушка на 2 этаже, несовместимы</string>
     <string name="f2l_st23_descr" formatted="false"><![CDATA[
+    <p>Теперь <a href="rubic-activity://ytactivity?time=0:59&link=2U95iLJ9TX4">cитуация</a>
+    когда парень скромный, девушка находится на 2 этаже и они несовместимы.</p>
+    <p style="text-align:center"><img src="f2l_23_1.png" width="30%%"></p>
+    <p>Как обычно с девушками на 2 этаже, <a href="rubic-activity://ytactivity?time=1:31&link=2U95iLJ9TX4">подгоняем парня</a>
+    к девушке (или девушку к парню ходами Dw/Dw\').Когда совместимость была, то уходил парень, а т.к.
+    в данном случае ее нет, то уходит девушка. Парень идет плакать на первый этаж. Девушка от такого
+    плаксы уходит. Он находит в себе силы, поднимается и хочет домой. Подгоняем квартиру к парню и
+    заселяем пару в три хода пиф-пафа.</p>
+    <b><a href="rubic-activity://ytactivity?time=4:15&link=2U95iLJ9TX4">Алгоритм:</a> {Dw} Dw R\' U\' R {Dw} (R U R\')</b>
     ]]></string>
     <string name="f2l_st23_url">2U95iLJ9TX4</string>
 
-    <string name="f2l_st24_title">Часть Ш.</string>
+    <string name="f2l_st24_title">Часть Ш. Парни на первом этаже</string>
     <string name="f2l_st24_descr" formatted="false"><![CDATA[
+    <p style="text-align:center"><img src="f2l_24_1.png" width="30%%"></p>
     ]]></string>
     <string name="f2l_st24_url">iZTvqT35mVw</string>
 
