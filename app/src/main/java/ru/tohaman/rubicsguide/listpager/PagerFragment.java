@@ -175,6 +175,9 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
         // поэтому используем @SuppressWarnings("deprecation") перед объявлением метода и вот такую конструкцию
         // для преобразования String в Spanned. В принципе использование старой конструкции равноценно использованию
         // новой с флагом Html.FROM_HTML_MODE_LEGACY... подробнее о флагах-модификаторах на developer.android.com
+        // В методе Html.fromHtml(String, imgGetter, tagHandler) - tagHandler - это метод, который вызывется, если
+        // в строке встречается тэг, который не распознан, т.е. тут можно обрабатывать свои тэги
+        // пока не используется (null), но все воозможно :)
 
         Spanned spanresult;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
@@ -255,7 +258,7 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
         return resolveInfo != null && !resolveInfo.isEmpty();
     }
 
-    // не знаю для чего, взято со Стэка из бработки какого-то Ютуба, можно попробовать удалить
+    // не знаю для чего, взято со Стэка из обработки какого-то Ютуба, можно попробовать удалить
     public boolean isCanHideStatusBar() {
         return canHideStatusBar;
     }
@@ -269,6 +272,7 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
     // и еще сделать обработку только ссылок вида
     // <a href="rubic-activity://ytactivity?time=5:18&link=B3iSPvlr7PA"
     // а остальные обрабатывать стандартно, пока просто метод со СтэкОверФлоу, но работает :)
+    // Если используется TextView, то он вообще не нужен
     private class MyWebViewClient extends WebViewClient {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -288,6 +292,7 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
     // т.к. в дравабле-ресурсах оно не нужно. Используем конструкцию с @SuppressWarnings("deprecation")
     // для использования в разных версиях разных методов.
     // начиная с лолипопа, для получения ссылки на ресурс можно еще указывать тему (Theme).
+
     @SuppressWarnings("deprecation")
     private Html.ImageGetter imgGetter = new Html.ImageGetter() {
         public Drawable getDrawable(String source) {
@@ -296,7 +301,7 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
             int resID = getResources().getIdentifier(source , "drawable", getActivity().getPackageName());
             //если картинка в drawable не найдена, то подсовываем заведомо существующую картинку
             if (resID == 0 ) {
-                resID = getResources().getIdentifier("blind" , "drawable", getActivity().getPackageName());
+                resID = getResources().getIdentifier("noscr" , "drawable", getActivity().getPackageName());
             }
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
                 drawable = getResources().getDrawable(resID, null);
