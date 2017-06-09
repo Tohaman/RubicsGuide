@@ -53,7 +53,7 @@
         <item>@drawable/f2l_22</item>
         <item>@drawable/f2l_23</item>
         <item>@drawable/f2l_24</item>
-        <item>@drawable/f2l_6</item>
+        <item>@drawable/f2l_25</item>
     </integer-array>
 
     <string-array name="f2l_descr">
@@ -594,8 +594,30 @@
     действительно быстро, то надо стараться сводить эти установочные ходы к минимуму, а лучше и
     вовсе их избегать. И в этом вам помогут некоторые ускорения, которые приведены в этой серии
     видео от Кристофера Олсона <a href="http://www.cyotheking.com/about">Christopher Olson.</a></p>
-    <p>1.</p>
-    <p style="text-align:center"><img src="f2l_25_1.png" width="30%%"></p>
+    <p>Поскольку ориганальное видео на английском, постараюсь как можно более подробно описать все
+    на русском.</p>
+    <p>1. Первая ситуация - <a href="rubic-activity://ytactivity?time=0:25&link=WIFh0sXDkMM">пара</a>
+    около своей квартиры, но и пара и квартира на задней стороне. Обычно вы сделали бы перехват
+    (ход y\') и сделали бы английский пиф-паф слева, но есть другой вариант: </p>
+    <p style="text-align:center"><img src="f2l_25_1.png" width="60%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=0:40&link=WIFh0sXDkMM">Алгоритм:</a> Lw U L\' U\' M\'</b><br/>
+    Можно использовать зеркальный алгоритм и для классического случая из <b>Части Ф</b><br/>
+    <b><a href="rubic-activity://ytactivity?time=0:48&link=WIFh0sXDkMM">Алгоритм:</a> Rw U R\' U\' M</b>
+    <p>2. Вторая ситуация - <a href="rubic-activity://ytactivity?time=0:56&link=WIFh0sXDkMM">снова пара</a>
+    на задней грани около своей квартиры, но уже справа.
+    <p style="text-align:center"><img src="f2l_25_2.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=0:40&link=WIFh0sXDkMM">Алгоритм:</a> Rw\' U\' R U M\'</b>
+    <p>3. Третья ситуация - <a href="rubic-activity://ytactivity?time=1:10&link=WIFh0sXDkMM">пара</a>
+    на передней грани слева, а квартира ее сзади справа. Можно сделать U2 и привести к ситуации 2, но
+    как обычно есть и другой вариант.</p>
+    <p style="text-align:center"><img src="f2l_25_3.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=1:15&link=WIFh0sXDkMM">Алгоритм:</a> R2 F R F\' R</b>
+    <p>4. Четвертая ситуация - <a href="rubic-activity://ytactivity?time=1:26&link=WIFh0sXDkMM">девушка</a>
+    дома, но перевернута, парень с завышенной самооценкой справа сзади. Опять же можно использовать
+    и вместо обычного алгоритма, только первым ходом поставить парня назад, пусть и разбив пару. Данный
+    алгоритм быстрее, т.к. в нем нет двойных кручений.</p>
+    <p style="text-align:center"><img src="f2l_25_3.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=1:33&link=WIFh0sXDkMM">Алгоритм:</a> (R\' F R F\') R U\' R\'</b>
     ]]></string>
     <string name="f2l_st25_url">WIFh0sXDkMM</string>
 
