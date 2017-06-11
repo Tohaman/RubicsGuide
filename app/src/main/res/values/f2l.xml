@@ -638,13 +638,27 @@
     делать перхват y.</p>
     <p style="text-align:center"><img src="f2l_25_6.png" width="60%%"></p>
     <b><a href="rubic-activity://ytactivity?time=2:14&link=WIFh0sXDkMM">Алгоритм:</a> (F U R U\' R\' F\') R U\' R\'</b><br/>
-    <b><a href="rubic-activity://ytactivity?time=2:33&link=WIFh0sXDkMM">Алгоритм для квартиры сзади:</a> (U2 R2 U2 R) U R\' U R2</b>
+    <b><a href="rubic-activity://ytactivity?time=2:32&link=WIFh0sXDkMM">Алгоритм для квартиры сзади:</a> (U2 R2 U2 R) U R\' U R2</b>
 
     <p>7. Седьмая ситуация - <a href="rubic-activity://ytactivity?time=2:42&link=WIFh0sXDkMM">ситуация,</a>
-    из <b>Части Ж</b>, альтернативный вариант c удобным фингертриксом из стандартного положения рук:
+    из <b>Части Ж</b>, альтернативный вариант c удобным фингертриксом из стандартного положения рук
+    и что самое главное без перехватов:
     <p style="text-align:center"><img src="f2l_25_7.png" width="30%%"></p>
-    <b><a href="rubic-activity://ytactivity?time=2:33&link=WIFh0sXDkMM">Алгоритм:</a> U2 (R U R\' U\' R U\' R\' U2 R U\' R\'</b><br/>
-    <b><a href="rubic-activity://ytactivity?time=4:25&link=78bcU-2aryQ">Алгоритм из Части Ж:</a> (U2 R2 U2 R) U R\' U R2</b>
+    <b><a href="rubic-activity://ytactivity?time=2:47&link=WIFh0sXDkMM">Алгоритм:</a> U2 (R U R\' U\') R U\' R\' U2 R U\' R\'</b><br/>
+    или <a href="rubic-activity://ytactivity?time=3:07&link=WIFh0sXDkMM">Алгоритм:</a> U2 R2 U2 R\' U\' R U\' R2</b><br/>
+    <b><a href="rubic-activity://ytactivity?time=4:25&link=78bcU-2aryQ">Для сранения алгоритмы из Части Ж:</a><br/>
+     y\' (U2 R2 U2 R) U R\' U R2<br/>
+     y (U2 L2 U2 L) U L\' U L2 </b>
+
+    <p>8. Восьмая ситуация - <a href="rubic-activity://ytactivity?time=3:22&link=WIFh0sXDkMM">ситуация,</a>
+    из <b>Части Л.1</b>, альтернативный вариант без перехватов, и сложным, но очень быстрым
+    <a href="rubic-activity://ytactivity?time=3:37&link=WIFh0sXDkMM">фингертриксом</a>
+    <p style="text-align:center"><img src="f2l_25_8.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=3:27&link=WIFh0sXDkMM">Алгоритм:</a> R B L U\' L\' B\' R\'</b><br/>
+    или тоже самое, но в другой интерпретации:<br/>
+    <b>(Lw U Rw U\') Rw\' U\' Lw\' </b>
+
+
 
     ]]></string>
     <string name="f2l_st25_url">WIFh0sXDkMM</string>
