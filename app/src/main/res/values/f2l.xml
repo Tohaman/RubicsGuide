@@ -596,6 +596,7 @@
     видео от Кристофера Олсона <a href="http://www.cyotheking.com/about">Christopher Olson.</a></p>
     <p>Поскольку ориганальное видео на английском, но с моими комментариями и картинками думаю и так
      все будет понятно.</p>
+
     <p>1. Первая ситуация - <a href="rubic-activity://ytactivity?time=0:25&link=WIFh0sXDkMM">пара</a>
     около своей квартиры, но и пара и квартира на задней стороне слева. Обычно вы сделали бы перехват
     (ход y\') и английский пиф-паф слева, но есть другой вариант: </p>
@@ -603,30 +604,47 @@
     <b><a href="rubic-activity://ytactivity?time=0:40&link=WIFh0sXDkMM">Алгоритм:</a> Lw U L\' U\' M\'</b><br/>
     Можно использовать зеркальный алгоритм и для классического случая из <b>Части Ф</b>, когда пара и квартира спереди:<br/>
     <b><a href="rubic-activity://ytactivity?time=0:48&link=WIFh0sXDkMM">Алгоритм:</a> Rw U R\' U\' M</b>
+
     <p>2. Вторая ситуация - <a href="rubic-activity://ytactivity?time=0:56&link=WIFh0sXDkMM">снова пара</a>
     на задней грани около своей квартиры, но уже справа.
     <p style="text-align:center"><img src="f2l_25_2.png" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=0:40&link=WIFh0sXDkMM">Алгоритм:</a> Rw\' U\' R U M\'</b>
+
     <p>3. Третья ситуация - <a href="rubic-activity://ytactivity?time=1:10&link=WIFh0sXDkMM">пара</a>
     на передней грани слева, а квартира ее сзади справа. Можно сделать U2 и привести к ситуации 2, но
     как обычно есть и другой вариант.</p>
     <p style="text-align:center"><img src="f2l_25_3.png" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=1:15&link=WIFh0sXDkMM">Алгоритм:</a> R2 F R F\' R</b>
+
     <p>4. Четвертая ситуация - <a href="rubic-activity://ytactivity?time=1:26&link=WIFh0sXDkMM">девушка</a>
     дома, но перевернута, парень с завышенной самооценкой справа сзади. Опять же можно использовать
     и вместо обычного алгоритма, только первым ходом поставить парня назад, пусть и разбив пару. Данный
     алгоритм быстрее, т.к. в нем нет двойных кручений.</p>
     <p style="text-align:center"><img src="f2l_25_4.png" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=1:33&link=WIFh0sXDkMM">Алгоритм:</a> (R\' F R F\') R U\' R\'</b>
+
     <p>5. Пятая ситуация - <a href="rubic-activity://ytactivity?time=1:49&link=WIFh0sXDkMM">пара</a>
     в своем доме, но перевернута, дом находится справа сзади.</p>
     <p style="text-align:center"><img src="f2l_25_5.png" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=1:55&link=WIFh0sXDkMM">Алгоритм:</a> R\' U R\' F R F\' R</b>
+
     <p>6. Шестая ситуация - <a href="rubic-activity://ytactivity?time=2:07&link=WIFh0sXDkMM">парень</a>
     с завышенной самооценкой, девушка сзади него и они совместимы. Ускорение для <b>Части Ж</b>. Без
-    двойных кручений, за счет этого выполняется быстрее</p>
-    <p style="text-align:center"><img src="f2l_25_6.png" width="30%%"></p>
-    <b><a href="rubic-activity://ytactivity?time=2:14&link=WIFh0sXDkMM">Алгоритм:</a> (F U R U\' R\' F\') R U\' R\'</b>
+    двойных кручений и перехватов, а так же с удобным фингертриксом (если второй ход делать
+    указательным пальцем левой руки). За счет этого выполняется
+    <a href="rubic-activity://ytactivity?time=2:26&link=WIFh0sXDkMM">быстрее,</a> чем алгоритм из
+    <a href="rubic-activity://ytactivity?time=2:39&link=WIFh0sXDkMM"><b>Части Ж</b></a>, хотя, когда
+    квартира находится справа сзади, лучше использовать алгоритм с двойным кручением, а не
+    делать перхват y.</p>
+    <p style="text-align:center"><img src="f2l_25_6.png" width="60%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=2:14&link=WIFh0sXDkMM">Алгоритм:</a> (F U R U\' R\' F\') R U\' R\'</b><br/>
+    <b><a href="rubic-activity://ytactivity?time=2:33&link=WIFh0sXDkMM">Алгоритм для квартиры сзади:</a> (U2 R2 U2 R) U R\' U R2</b>
+
+    <p>7. Седьмая ситуация - <a href="rubic-activity://ytactivity?time=2:42&link=WIFh0sXDkMM">ситуация,</a>
+    из <b>Части Ж</b>, альтернативный вариант c удобным фингертриксом из стандартного положения рук:
+    <p style="text-align:center"><img src="f2l_25_7.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=2:33&link=WIFh0sXDkMM">Алгоритм:</a> U2 (R U R\' U\' R U\' R\' U2 R U\' R\'</b><br/>
+    <b><a href="rubic-activity://ytactivity?time=4:25&link=78bcU-2aryQ">Алгоритм из Части Ж:</a> (U2 R2 U2 R) U R\' U R2</b>
 
     ]]></string>
     <string name="f2l_st25_url">WIFh0sXDkMM</string>
