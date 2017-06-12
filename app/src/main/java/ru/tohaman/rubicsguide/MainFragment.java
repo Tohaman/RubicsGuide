@@ -13,7 +13,6 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-import ru.tohaman.rubicsguide.basiclist.BasicListActivity;
 import ru.tohaman.rubicsguide.listpager.ListActivity;
 import ru.tohaman.rubicsguide.listpager.ListPager;
 import ru.tohaman.rubicsguide.listpager.ListPagerLab;
@@ -62,7 +61,8 @@ public class MainFragment extends Fragment {
                         startActivity(mIntent);
                         break;
                     case "BASIC":
-                        mIntent = new Intent(getActivity(),BasicListActivity.class);
+                        mIntent = new Intent(getActivity(),ListActivity.class);
+                        mIntent.putExtra(RubicPhase,"BASIC");
                         startActivity(mIntent);
                         break;
 

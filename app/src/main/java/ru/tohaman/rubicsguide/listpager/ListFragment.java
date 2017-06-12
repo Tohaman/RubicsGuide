@@ -33,13 +33,13 @@ public class ListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.fragment_list, container, false);
-
         // Получаем синглет
         listPagerLab = ListPagerLab.get(getActivity());
         // Получаем данные о фазе от родителя и делаем выборку по фазе
         Phase = getActivity().getIntent().getStringExtra(RubicPhase);
         mListPagers = listPagerLab.getPhaseList(Phase);
+
+        View v = inflater.inflate(R.layout.fragment_list, container, false);
 
         // список через РесайклВью с адаптером RecycleAdapter
         mRecyclerView = (RecyclerView) v.findViewById(R.id.recycler_view_list);
@@ -79,8 +79,12 @@ public class ListFragment extends Fragment {
 
         @Override
         public void onClick(View v) {
+            if (Phase.equals("BASIC")){
+                Toast.makeText(getActivity(),mListPager.getDescription(), Toast.LENGTH_SHORT).show();
+            } else {
                 Intent intent = PagerActivity.newIntenet(getActivity(), String.valueOf(mListPager.getId()), Phase);
                 startActivity(intent);
+            }
         }
     }
 
@@ -95,7 +99,13 @@ public class ListFragment extends Fragment {
         @Override
         public RecycleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             LayoutInflater layoutInflater = LayoutInflater.from(getActivity());
-            View view = layoutInflater.inflate(R.layout.list_item, parent, false);
+            View view;
+            if (Phase.equals("BASIC")){
+                view = layoutInflater.inflate(R.layout.basic_list_item, parent, false);
+            } else {
+                view = layoutInflater.inflate(R.layout.list_item, parent, false);
+            }
+
             return new RecycleViewHolder(view);
         }
 
