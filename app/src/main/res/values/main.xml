@@ -17,7 +17,7 @@
     </integer-array>
 
     <string-array name="main_phase">
-        <item>BEGINNER</item>
+        <item>BEGIN</item>
         <item>G2F</item>
         <item>BLIND</item>
         <item>BASIC</item>

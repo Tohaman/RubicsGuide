@@ -62,7 +62,12 @@ public class MainFragment extends Fragment {
                         break;
                     case "BASIC":
                         mIntent = new Intent(getActivity(),ListActivity.class);
-                        mIntent.putExtra(RubicPhase,"BASIC");
+                        mIntent.putExtra(RubicPhase,phase);
+                        startActivity(mIntent);
+                        break;
+                    case "BEGIN":
+                        mIntent = new Intent(getActivity(),ListActivity.class);
+                        mIntent.putExtra(RubicPhase,phase);
                         startActivity(mIntent);
                         break;
 
