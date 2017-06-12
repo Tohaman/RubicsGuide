@@ -30,8 +30,6 @@ public class G2FFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        //Инициализируем синглет ListPagerLab, в котором будет база.
-        ListPagerLab listPagerLab = ListPagerLab.get(getActivity());
 
         View v = inflater.inflate(R.layout.fragment_mainscreen, container, false);
 

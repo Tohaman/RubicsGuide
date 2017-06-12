@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="main_title">
+        <item>Метод для начинающих</item>
+        <item>Переходим на Фридрих</item>
+        <item>Сборка кубика вслепую</item>
+        <item>Основные движения</item>
+        <item>О Программе</item>
+    </string-array>
+
+    <integer-array name="main_icon">
+        <item>@drawable/begin</item>
+        <item>@drawable/g2f</item>
+        <item>@drawable/blind</item>
+        <item>@drawable/basic</item>
+        <item>@drawable/about</item>
+    </integer-array>
+
+    <string-array name="main_phase">
+        <item>BEGINNER</item>
+        <item>G2F</item>
+        <item>BLIND</item>
+        <item>BASIC</item>
+        <item>ABOUT</item>
+    </string-array>
+
+
+</resources>
