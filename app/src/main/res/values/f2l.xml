@@ -152,23 +152,30 @@
     (они должны образовать пару) и поднимаем пару на верх. Заселяем. <br/>
     Заселяем английским пиф-пафом или перехватываем кубик и делаем
     <a href="rubic-activity://ytactivity?time=11:01&link=GeOEd4OHEwg">английский пиф-паф, но слева,</a>
-    в зависимости от того с какой стороны от свой квартиры у нас встала пара. А если рассматривать
-    вариант без перехвата, то английский пиф-паф слева будет выглядеть как (F R\' F\' R), а так же
-    в этом случаем можно заселить комбинацией (U\' F\' U F), кому как будет удобнее.</p>
-    А если записывать формулами, то получается, что в данном случае мы рассмотрели сразу 4 ситуации:
+    в зависимости от того с какой стороны от своей квартиры у нас встала пара. А если рассматривать
+    вариант без перехвата, то английский пиф-паф слева будет выглядеть как <b>(F R\' F\' R)</b>, а так же
+    в этом случаем можно заселить комбинацией <b>(U\' F\' U F)</b>, кому как будет удобнее.</p>
+    А если записывать формулами, то получается, что в данном случае мы рассмотрели сразу 4 ситуации:<br/>
+    <b>1.</b>
     <p style="text-align:center"><img src="f2l_3_1.png" width="30%%"></p>
-    <b>1.<a href="rubic-activity://ytactivity?time=4:43&link=GeOEd4OHEwg">Алгоритм:</a> U (R U2\' R\') (R\' F R F\')</b><br/>
+    <b><a href="rubic-activity://ytactivity?time=4:43&link=GeOEd4OHEwg">Алгоритм:</a> U (R U2\' R\') (R\' F R F\')</b><br/>
     или с другим способом заселения <br/>
-    <b>U (R U2\' R\' U) (R U\' R\')</b>
+    <b>U (R U2\' R\' U) (R U\' R\')</b><br/>
+
+    <b>2.</b>
     <p style="text-align:center"><img src="f2l_3_2.png" width="30%%"></p>
-    <b>2.<a href="rubic-activity://ytactivity?time=9:34&link=GeOEd4OHEwg">Алгоритм:</a> U2 (F\' U\' F) (F R\' F\' R) </b><br/>
-    или ускорение для данного положения, но через левую руку <b>(F\' L\' U2) (L F)</b>
+    <b><a href="rubic-activity://ytactivity?time=9:34&link=GeOEd4OHEwg">Алгоритм:</a> U2 (F\' U\' F) (F R\' F\' R) </b><br/>
+    или короткий вариант для данного положения, но через левую руку <b>(F\' L\' U2) (L F)</b><br/>
+
+    <b>3.</b>
     <p style="text-align:center"><img src="f2l_3_3.png" width="30%%"></p>
-    <b>3.Алгоритм: U2 (R U R\') (R\' F R F\')</b><br/>
+    <b>Алгоритм: U2 (R U R\') (R\' F R F\')</b><br/>
     или опять же через другой вариант заселения <br/>
-    <b>U2 (R U R\') (U R U\' R\')</b>
+    <b>U2 (R U R\') (U R U\' R\')</b><br/>
+
+    <b>4.</b>
     <p style="text-align:center"><img src="f2l_3_4.png" width="30%%"></p>
-    4.<b>Алгоритм: (U\' F\' U2 F) (U\' F\' U F) </b>или<br/><b>(U\' F\' U2 F) (F R\' F\' R)</b>
+    <b>Алгоритм: (U\' F\' U2 F) (U\' F\' U F) </b>или<br/><b>(U\' F\' U2 F) (F R\' F\' R)</b>
     ]]></string>
     <string name="f2l_st3_url">GeOEd4OHEwg</string>
 
@@ -597,8 +604,8 @@
     действительно быстро, то надо стараться сводить эти установочные ходы к минимуму, а лучше и
     вовсе их избегать. И в этом вам помогут некоторые ускорения, которые приведены в этой серии
     видео от Кристофера Олсона <a href="http://www.cyotheking.com/about">Christopher Olson.</a></p>
-    <p>Ориганальное видео на английском, но с моими комментариями и картинками надеюсь
-     все будет понятно.</p>
+    <p>К сожалению ориганальное видео на английском и ситуации в нем никак не упорядочены,
+    но надеюсь, что с моими комментариями и картинками (превьюшками ситуаций) все будет понятно.</p>
 
     <p>1. Первая ситуация - <a href="rubic-activity://ytactivity?time=0:25&link=WIFh0sXDkMM">пара</a>
     около своей квартиры, но и пара и квартира на задней стороне слева. Обычно вы сделали бы перехват
@@ -638,13 +645,14 @@
     <a href="rubic-activity://ytactivity?time=2:26&link=WIFh0sXDkMM">быстрее,</a> чем алгоритм из
     <a href="rubic-activity://ytactivity?time=2:39&link=WIFh0sXDkMM"><b>Части Ж</b></a>, хотя, когда
     квартира находится справа сзади, лучше использовать алгоритм с двойным кручением, а не
-    делать перхват y.</p>
+    делать перхват <b>y</b>.</p>
     <p style="text-align:center"><img src="f2l_25_6.png" width="60%%"></p>
     <b><a href="rubic-activity://ytactivity?time=2:14&link=WIFh0sXDkMM">Алгоритм:</a> (F U R U\' R\' F\') R U\' R\'</b><br/>
     <b><a href="rubic-activity://ytactivity?time=2:32&link=WIFh0sXDkMM">Алгоритм для квартиры сзади:</a> (U2 R2 U2 R) U R\' U R2</b>
 
     <p>7. Седьмая <a href="rubic-activity://ytactivity?time=2:42&link=WIFh0sXDkMM">ситуация</a>
-    из <b>Части Е</b>, альтернативный вариант c удобным фингертриксом из стандартного положения рук.</p>
+    из <b>Части Е</b>, альтернативный вариант c удобным фингертриксом из стандартного положения рук.
+    Максимкин алгоритм вроде бы и короче, но мне кажется что данный алгоритм быстрее.</p>
     <p style="text-align:center"><img src="f2l_25_7.png" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=2:47&link=WIFh0sXDkMM">Алгоритм:</a> U2 (R U R\' U\') R U\' R\' U2 R U\' R\'</b><br/>
     или старый <b><a href="rubic-activity://ytactivity?time=3:07&link=WIFh0sXDkMM">Алгоритм:</a> (U2 R2 U2 R\') U\' R U\' R2</b><br/>
@@ -689,10 +697,25 @@
     <b><a href="rubic-activity://ytactivity?time=4:49&link=WIFh0sXDkMM">Алгоритм:</a> (R U\' R\') Rw U\' Rw\' U2 Rw U Rw\'</b>
 
     <p>13. Тринадцатая <a href="rubic-activity://ytactivity?time=5:00&link=WIFh0sXDkMM">ситуация</a>
-
-    .</p>
+    - скромный парень на 3 этаже, девушка на втором в своей квартире, но перевернута, а квартира
+    справа сзади. Можно было поднять девушку на третий этаж, увести на заднюю грань, вернуть парня
+    на третий этаж, подвести к нему квартиру и заселить в 3 хода. А можно сделать это удобно и
+    <a href="rubic-activity://ytactivity?time=5:15&link=WIFh0sXDkMM">быстро.</a></p>
     <p style="text-align:center"><img src="f2l_25_13.png" width="30%%"></p>
-    <b><a href="rubic-activity://ytactivity?time=5:10&link=WIFh0sXDkMM">Алгоритм:</a> </b>
+    <b><a href="rubic-activity://ytactivity?time=5:10&link=WIFh0sXDkMM">Алгоритм:</a> (R\' F) R\' F\' R U\' R</b>
+
+    <p>14. Четырнадцатая <a href="rubic-activity://ytactivity?time=5:20&link=WIFh0sXDkMM">ситуация</a>
+    из <b>Части В-3</b>. Парень с завышенной самооценкой, девушка на третьем этаже слева напротив своей
+    грани. Но квартира у них спереди слева. Очень короткий и
+    <a href="rubic-activity://ytactivity?time=5:41&link=WIFh0sXDkMM">быстрый</a> алгоритм.</p>
+    <p style="text-align:center"><img src="f2l_25_14.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=5:35&link=WIFh0sXDkMM">Алгоритм:</a> F R U2 R\' F\'</b>
+
+    <p>15. Пятнадцатая <a href="rubic-activity://ytactivity?time=5:44&link=WIFh0sXDkMM">ситуация</a>
+    ускорение для <b>Ромашки направо</b>, т.е. одной из ситуаций, когда парень уже на своем месте,
+    а девушка на третьем этаже. Вот только стебель ромашки должен быть слева (на картинке не видно).
+    <p style="text-align:center"><img src="f2l_25_15.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=5:54&link=WIFh0sXDkMM">Алгоритм:</a> (Rw U Rw\' U\') (Rw\' F Rw F\')</b>
 
     ]]></string>
     <string name="f2l_st25_url">WIFh0sXDkMM</string>

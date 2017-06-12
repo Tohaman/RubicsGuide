@@ -16,7 +16,7 @@ import ru.tohaman.rubicsguide.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import static ru.tohaman.rubicsguide.MainFragment.RubicPhase;
+import static ru.tohaman.rubicsguide.G2FFragment.RubicPhase;
 
 /**
  * Created by Toha on 09.04.2017.

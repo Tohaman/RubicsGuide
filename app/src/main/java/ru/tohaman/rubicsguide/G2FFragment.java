@@ -24,7 +24,7 @@ import static ru.tohaman.rubicsguide.listpager.ListPagerLab.getResID;
 /**
  * Created by Toha on 20.05.2017.
  */
-public class MainFragment extends Fragment {
+public class G2FFragment extends Fragment {
     Intent mIntent;
     public final static String RubicPhase = "ru.tohaman.rubicsguide.PHASE";
 

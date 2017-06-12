@@ -36,7 +36,7 @@ import ru.tohaman.rubicsguide.R;
 import java.util.List;
 
 import static ru.tohaman.rubicsguide.DeveloperKey.DEVELOPER_KEY;
-import static ru.tohaman.rubicsguide.MainFragment.RubicPhase;
+import static ru.tohaman.rubicsguide.G2FFragment.RubicPhase;
 
 
 public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnInitializedListener {
