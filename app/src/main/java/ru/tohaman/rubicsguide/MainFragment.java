@@ -53,11 +53,12 @@ public class MainFragment extends Fragment {
         AdapterView.OnItemClickListener itemListener = new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                String phase = getResources().getStringArray(R.array.main_phase)[position];
 
-                // вызываем активность List(RecycleView)->PagerView с параметром (ACCEL,PLL,OLL,CROSS и т.д. заданным в массиве строк g2f_phase)
-                mIntent = new Intent(getActivity(),G2FActivity.class);
-                //mIntent.putExtra(RubicPhase,getResources().getStringArray(R.array.g2f_phase)[position]);
-                startActivity(mIntent);
+                if (phase.equals("G2F")){
+                    mIntent = new Intent(getActivity(), G2FActivity.class);
+                    startActivity(mIntent);
+                }
             }
         };
         mListView.setOnItemClickListener(itemListener);
