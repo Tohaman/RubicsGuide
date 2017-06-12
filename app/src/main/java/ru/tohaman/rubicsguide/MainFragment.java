@@ -13,6 +13,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
+import ru.tohaman.rubicsguide.basiclist.BasicListActivity;
 import ru.tohaman.rubicsguide.listpager.ListActivity;
 import ru.tohaman.rubicsguide.listpager.ListPager;
 import ru.tohaman.rubicsguide.listpager.ListPagerLab;
@@ -55,9 +56,16 @@ public class MainFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 String phase = getResources().getStringArray(R.array.main_phase)[position];
 
-                if (phase.equals("G2F")){
-                    mIntent = new Intent(getActivity(), G2FActivity.class);
-                    startActivity(mIntent);
+                switch (phase) { //задаем переменые для каждого этапа
+                    case "G2F":
+                        mIntent = new Intent(getActivity(), G2FActivity.class);
+                        startActivity(mIntent);
+                        break;
+                    case "BASIC":
+                        mIntent = new Intent(getActivity(),BasicListActivity.class);
+                        startActivity(mIntent);
+                        break;
+
                 }
             }
         };

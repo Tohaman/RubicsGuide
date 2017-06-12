@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import ru.tohaman.rubicsguide.R;
 
@@ -78,8 +79,8 @@ public class ListFragment extends Fragment {
 
         @Override
         public void onClick(View v) {
-            Intent intent = PagerActivity.newIntenet(getActivity(), String.valueOf(mListPager.getId()), Phase);
-            startActivity(intent);
+                Intent intent = PagerActivity.newIntenet(getActivity(), String.valueOf(mListPager.getId()), Phase);
+                startActivity(intent);
         }
     }
 
