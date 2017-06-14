@@ -142,6 +142,7 @@
     <string name="blind_st3_title">N3 Запад</string>
     <string name="blind_st3_descr" formatted="false"><![CDATA[
         Первый из алгоритмов, который применяется при сборке вслепую - Запад.<br/>
+         <p style="text-align:center"><img src="blind_3_1.png" width="30%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=3:35&link=_yWZMTIM-fA">на видео 3:35</a>
         (<a href="rubic-activity://ytactivity?time=7:22&link=_yWZMTIM-fA">или 7:22</a>) <br/>
         <b>Алгоритм: (R U R\' U\') R\' F R2 U\' R\' U\' (R U R\' F\') </b>
@@ -169,7 +170,8 @@
 
     <string name="blind_st7_title">N7 Добрались до Юга</string>
     <string name="blind_st7_descr" formatted="false"><![CDATA[
-        Еще один очень нужный алгоритм для сборки ребер - Юг. \n
+        Еще один очень нужный алгоритм для сборки ребер - Юг.
+        <p style="text-align:center"><img src="blind_7_1.png" width="30%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=2:36&link=rzGqTZKG74o">на видео 2:36</a> \n
         <b>Алгоритм: (R U R\' F\') (R U R\' U\' R\' F R2 U\' R\' U\')</b>
     ]]></string>
