@@ -17,6 +17,9 @@
         </activity>
         <activity android:name=".g2f.G2FActivity">
         </activity>
+        <activity android:name=".about.AboutActivity">
+        </activity>
+
         <activity
             android:name=".YouTubeActivity"
             android:theme="@style/Theme.AppCompat.Dialog">
@@ -31,6 +34,7 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

@@ -13,6 +13,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
+import ru.tohaman.rubicsguide.about.AboutActivity;
 import ru.tohaman.rubicsguide.g2f.G2FActivity;
 import ru.tohaman.rubicsguide.listpager.ListActivity;
 import ru.tohaman.rubicsguide.listpager.ListPager;
@@ -69,6 +70,10 @@ public class MainFragment extends Fragment {
                     case "BEGIN":
                         mIntent = new Intent(getActivity(),ListActivity.class);
                         mIntent.putExtra(RubicPhase,phase);
+                        startActivity(mIntent);
+                        break;
+                    case "ABOUT":
+                        mIntent = new Intent(getActivity(), AboutActivity.class);
                         startActivity(mIntent);
                         break;
 
