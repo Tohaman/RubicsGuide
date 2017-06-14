@@ -15,7 +15,7 @@
         </activity>
         <activity android:name=".listpager.PagerActivity">
         </activity>
-        <activity android:name=".G2FActivity">
+        <activity android:name=".g2f.G2FActivity">
         </activity>
         <activity
             android:name=".YouTubeActivity"

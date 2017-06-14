@@ -13,7 +13,7 @@ import ru.tohaman.rubicsguide.R;
 
 import java.util.List;
 
-import static ru.tohaman.rubicsguide.G2FFragment.RubicPhase;
+import static ru.tohaman.rubicsguide.g2f.G2FFragment.RubicPhase;
 
 public class PagerActivity extends AppCompatActivity {
 
