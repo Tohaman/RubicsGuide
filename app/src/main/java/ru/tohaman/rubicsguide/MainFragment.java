@@ -58,26 +58,21 @@ public class MainFragment extends Fragment {
                 String phase = getResources().getStringArray(R.array.main_phase)[position];
 
                 switch (phase) { //задаем переменые для каждого этапа
-                    case "G2F":
-                        mIntent = new Intent(getActivity(), G2FActivity.class);
-                        startActivity(mIntent);
-                        break;
-                    case "BASIC":
-                        mIntent = new Intent(getActivity(),ListActivity.class);
-                        mIntent.putExtra(RubicPhase,phase);
-                        startActivity(mIntent);
-                        break;
                     case "BEGIN":
                         mIntent = new Intent(getActivity(),ListActivity.class);
                         mIntent.putExtra(RubicPhase,phase);
-                        startActivity(mIntent);
-                        break;
+                    case "G2F":
+                        mIntent = new Intent(getActivity(), G2FActivity.class);
+                    case "BLIND":
+                        mIntent = new Intent(getActivity(),ListActivity.class);
+                        mIntent.putExtra(RubicPhase,phase);
+                    case "BASIC":
+                        mIntent = new Intent(getActivity(),ListActivity.class);
+                        mIntent.putExtra(RubicPhase,phase);
                     case "ABOUT":
                         mIntent = new Intent(getActivity(), AboutActivity.class);
-                        startActivity(mIntent);
-                        break;
-
                 }
+                startActivity(mIntent);
             }
         };
         mListView.setOnItemClickListener(itemListener);

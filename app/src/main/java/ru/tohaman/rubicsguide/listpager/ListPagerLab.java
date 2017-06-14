@@ -80,6 +80,12 @@ public class ListPagerLab {
         mUrl = mContext.getResources().getStringArray(R.array.begin_url);
         PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
 
+        mPhase = "BLIND";
+        mTitles = mContext.getResources().getStringArray(R.array.blind_title);
+        mResId = getResID(R.array.blind_icon);
+        Descr = getResID(R.array.blind_descr);
+        mUrl = mContext.getResources().getStringArray(R.array.blind_url);
+        PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
 
     }
 
