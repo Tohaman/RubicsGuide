@@ -61,16 +61,21 @@ public class MainFragment extends Fragment {
                     case "BEGIN":
                         mIntent = new Intent(getActivity(),ListActivity.class);
                         mIntent.putExtra(RubicPhase,phase);
+                        break;
                     case "G2F":
                         mIntent = new Intent(getActivity(), G2FActivity.class);
+                        break;
                     case "BLIND":
                         mIntent = new Intent(getActivity(),ListActivity.class);
                         mIntent.putExtra(RubicPhase,phase);
+                        break;
                     case "BASIC":
                         mIntent = new Intent(getActivity(),ListActivity.class);
                         mIntent.putExtra(RubicPhase,phase);
+                        break;
                     case "ABOUT":
                         mIntent = new Intent(getActivity(), AboutActivity.class);
+                        break;
                 }
                 startActivity(mIntent);
             }
