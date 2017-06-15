@@ -39,9 +39,9 @@
         <item>@drawable/blind_6</item>
         <item>@drawable/blind_7</item>
         <item>@drawable/blind_8</item>
-        <item>@drawable/blind</item>
-        <item>@drawable/blind</item>
-        <item>@drawable/blind</item>
+        <item>@drawable/blind_9</item>
+        <item>@drawable/blind_10</item>
+        <item>@drawable/blind_11</item>
         <item>@drawable/blind</item>
         <item>@drawable/blind</item>
         <item>@drawable/blind</item>
@@ -197,7 +197,7 @@
 
     <string name="blind_st11_title">N11 Цепочки</string>
     <string name="blind_st11_descr" formatted="false"><![CDATA[
-        Как создаются последовательности элементов, которые оказываются в буфере. \n
+        Как создаются последовательности элементов, которые оказываются в буфере.<br/>
         <b>Скармбл в видео: U2 F2 L\' D2 R U F\' L2 B2 R L2 B2 U R</b>
     ]]></string>
     <string name="blind_st11_url">8h4JDbvXPMg</string>
