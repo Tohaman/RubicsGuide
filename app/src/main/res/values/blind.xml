@@ -54,10 +54,10 @@
         <item>@drawable/blind_21</item>
         <item>@drawable/blind_22</item>
         <item>@drawable/blind_23</item>
-        <item>@drawable/blind</item>
-        <item>@drawable/blind</item>
-        <item>@drawable/blind</item>
-        <item>@drawable/blind</item>
+        <item>@drawable/blind_24</item>
+        <item>@drawable/blind_25</item>
+        <item>@drawable/blind_26</item>
+        <item>@drawable/blind_27</item>
     </integer-array>
 
     <string-array name="blind_descr">
