@@ -47,13 +47,13 @@
         <item>@drawable/blind_13</item>
         <item>@drawable/blind_15</item>
         <item>@drawable/blind_16</item>
-        <item>@drawable/blind</item>
-        <item>@drawable/blind</item>
-        <item>@drawable/blind</item>
-        <item>@drawable/blind</item>
-        <item>@drawable/blind</item>
-        <item>@drawable/blind</item>
-        <item>@drawable/blind</item>
+        <item>@drawable/blind_17</item>
+        <item>@drawable/blind_18</item>
+        <item>@drawable/blind_19</item>
+        <item>@drawable/blind_20</item>
+        <item>@drawable/blind_21</item>
+        <item>@drawable/blind_22</item>
+        <item>@drawable/blind_23</item>
         <item>@drawable/blind</item>
         <item>@drawable/blind</item>
         <item>@drawable/blind</item>
@@ -261,6 +261,7 @@
     <string name="blind_st19_title">N19 Экватор</string>
     <string name="blind_st19_descr" formatted="false"><![CDATA[
         Для чего нужен еще один алгоритм - Экватор.<br/>
+        <p style="text-align:center"><img src="blind_19_1.png" width="30%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=4:35&link=pT72Wh8VZT4">на видео 4:35</a><br/>
         <b>Алгоритм: (R U R\' F\') (R U2 R\' U2) (R\' F R U R) U2 R\' U\'</b>
     ]]></string>
