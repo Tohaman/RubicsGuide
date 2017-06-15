@@ -25,6 +25,8 @@
         <item>@string/oll_st22_title</item>
         <item>@string/oll_st23_title</item>
         <item>@string/oll_st24_title</item>
+        <item>@string/oll_st25_title</item>
+        <item>@string/oll_st26_title</item>
     </string-array>
 
     <integer-array name="oll_icon">
@@ -52,6 +54,8 @@
         <item>@drawable/oll_22</item>
         <item>@drawable/oll_23</item>
         <item>@drawable/oll_24</item>
+        <item>@drawable/oll_25</item>
+        <item>@drawable/oll_26</item>
     </integer-array>
 
     <string-array name="oll_descr">
@@ -79,6 +83,8 @@
         <item>@string/oll_st22_descr</item>
         <item>@string/oll_st23_descr</item>
         <item>@string/oll_st24_descr</item>
+        <item>@string/oll_st25_descr</item>
+        <item>@string/oll_st26_descr</item>
     </string-array>
 
     <string-array name="oll_url">
@@ -106,6 +112,8 @@
         <item>@string/oll_st22_url</item>
         <item>@string/oll_st23_url</item>
         <item>@string/oll_st24_url</item>
+        <item>@string/oll_st25_url</item>
+        <item>@string/oll_st26_url</item>
     </string-array>
 
     <string name="oll_st1_title">#1 Снежинка</string>
@@ -454,13 +462,14 @@
 
     <string name="oll_st25_title">#25 Правый петух с точкой</string>
     <string name="oll_st25_descr" formatted="false"><![CDATA[
-        <p>И снова четыре похожие ситуации, которые назовем петухами. Петухи как и молнии бывают
+        <p>И снова четыре похожие ситуации, которые назовем <b>петухами</b>. Петухи как и молнии бывают
         правые/левые и с точкой/блоком. Чтобы их отличить друг от друга, надо поставить петуха
         головой и хвостом к себе (двумя правильно ориентированными углами) и для начала посмотреть
         на бумеранг петуха. Если он справа, то петух левый, а если слева, то петух правый (т.к.
         во первых, мы смотрим на перевернутого петуха, а во вторых, то какой петух определяет, какой
         рукой делать алгоритм). Теперь посмотрите на соответствующую грань (правую для правого или
-        на левую для левого петуха). Что там точка или блок. Ну или бумеранг + глазки = петух с точкой,
+        на левую для левого петуха). Что там точка или блок. Ну или:<br/>
+        бумеранг + глазки = петух с точкой<br/>
         бумеранг + ушки = петух с блоком.<br/>
         Начнем с самого простого, правого петуха с точкой.</p>
         <b>Как решать:</b>
