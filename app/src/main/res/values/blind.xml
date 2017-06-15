@@ -284,6 +284,7 @@
     <string name="blind_st22_title">N22 Азбука углов</string>
     <string name="blind_st22_descr" formatted="false"><![CDATA[
         Азбука для углов.
+        <p style="text-align:center"><img src="blind_22_1.png" width="80%%"></p>
     ]]></string>
     <string name="blind_st22_url">fxvR33pCHN0</string>
 
@@ -295,7 +296,7 @@
 
     <string name="blind_st24_title">N24 Установочные ходы для углов часть 2</string>
     <string name="blind_st24_descr" formatted="false"><![CDATA[
-        Установочные ходя для углов оранжевой, красной, желтой и белой стороны.
+        Установочные ходы для углов оранжевой, красной, желтой и белой стороны.
     ]]></string>
     <string name="blind_st24_url">0_8jiiJX8jU</string>
 
