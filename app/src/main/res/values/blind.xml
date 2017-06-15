@@ -42,11 +42,11 @@
         <item>@drawable/blind_9</item>
         <item>@drawable/blind_10</item>
         <item>@drawable/blind_11</item>
-        <item>@drawable/blind</item>
-        <item>@drawable/blind</item>
-        <item>@drawable/blind</item>
-        <item>@drawable/blind</item>
-        <item>@drawable/blind</item>
+        <item>@drawable/blind_12</item>
+        <item>@drawable/blind_13</item>
+        <item>@drawable/blind_13</item>
+        <item>@drawable/blind_15</item>
+        <item>@drawable/blind_16</item>
         <item>@drawable/blind</item>
         <item>@drawable/blind</item>
         <item>@drawable/blind</item>
@@ -163,7 +163,7 @@
 
     <string name="blind_st6_title">N6 Первая практика</string>
     <string name="blind_st6_descr" formatted="false"><![CDATA[
-        Пробуем собрать кубик, пока с открытыми глазами.\n
+        Пробуем собрать кубик, пока с открытыми глазами.<br/>
         <b>Скрамбл в видео: F2 U2 R L2 B2 D F D2 R2 U R2 L2 R\' U R B D\'</b>
     ]]></string>
     <string name="blind_st6_url">2Jz4yGBzWzM</string>
@@ -172,7 +172,7 @@
     <string name="blind_st7_descr" formatted="false"><![CDATA[
         Еще один очень нужный алгоритм для сборки ребер - <b>Юг</b>.
         <p style="text-align:center"><img src="blind_7_1.png" width="30%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:36&link=rzGqTZKG74o">на видео 2:36</a> \n
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:36&link=rzGqTZKG74o">на видео 2:36</a> <br/>
         <b>Алгоритм: (R U R\' F\') (R U R\' U\' R\' F R2 U\' R\' U\')</b>
     ]]></string>
     <string name="blind_st7_url">rzGqTZKG74o</string>
@@ -204,61 +204,64 @@
 
     <string name="blind_st12_title">N12 Азбука</string>
     <string name="blind_st12_descr" formatted="false"><![CDATA[
-        Система запоминания цепочек.
+        Азбука - система запоминания цепочек.
+        <p style="text-align:center"><img src="blind_12_1.png" width="80%%"></p>
     ]]></string>
     <string name="blind_st12_url">oglge8NIQqI</string>
 
     <string name="blind_st13_title">N13 Тренируем азбуку</string>
     <string name="blind_st13_descr" formatted="false"><![CDATA[
-        <b>Скармбл в видео: U2 F2 L\' D2 R U F\' L2 B2 R L2 B2 U R </b>\n
-        Получается: КЁрлинг ПО МоВе ЛИ Желтые Яблоки Э \n
+        Пробуем создать цепочку по азбуке.<br/>
+        <b>Скармбл в видео: U2 F2 L\' D2 R U F\' L2 B2 R L2 B2 U R </b><br/>
+        Должно получиться: КЁрлинг ПО МоВе ЛИ Желтые Яблоки Э <br/>
     ]]></string>
     <string name="blind_st13_url">CiDALMqmlxo</string>
 
     <string name="blind_st14_title">N14 Пробуем закрыть глаза</string>
     <string name="blind_st14_descr" formatted="false"><![CDATA[
-        Пробуем собрать ребра по запомненной фразе с закрытыми глазами.
-        <b>Скармбл в видео: U2 F2 L\' D2 R U F\' L2 B2 R L2 B2 U R </b>\n
-        Фраза: КЁрлинг ПО МоВе ЛИ Желтые Яблоки Э \n
+        Цепочку (фразу) создали, пробуем собрать ребра по запомненной фразе с закрытыми глазами.
+        <b>Скармбл в видео: U2 F2 L\' D2 R U F\' L2 B2 R L2 B2 U R </b><br/>
+        Фраза: КЁрлинг ПО МоВе ЛИ Желтые Яблоки Э
     ]]></string>
     <string name="blind_st14_url">F42YJAq2cmA</string>
 
     <string name="blind_st15_title">N15 Переплавка буфера</string>
     <string name="blind_st15_descr" formatted="false"><![CDATA[
-        Самая сложная часть сборки. Что делать, если буфер встает на место преждевременно и как понять преждевременно он туда встал или нет.\n
-        <b>Скрамбл: D2 F\' R L U R\' D\' B2 R\' F2 R2 U2 R2 U\' </b>\n
+        Самая сложная часть сборки. Что делать, если буфер встает на место преждевременно и как
+        понять преждевременно он туда встал или нет.<br/>
+        <b>Скрамбл: D2 F\' R L U R\' D\' B2 R\' F2 R2 U2 R2 U\' </b><br/>
         Фраза: ЕИ ХЁЯ ПоМыл КЮ ЛоСось
     ]]></string>
     <string name="blind_st15_url">UyovfS_8kT0</string>
 
     <string name="blind_st16_title">N16 Двойная переплавка</string>
     <string name="blind_st16_descr" formatted="false"><![CDATA[
-        Еще более сложная ситуация, когда буфер не встает на свое место и после первой переплавки. \n
-        <b>Скрамбл: R D2 U F2 R\' F\' U2 R D R2 B </b>\n
+        Еще более сложная ситуация, когда буфер не встает на свое место и после первой переплавки. <br/>
+        <b>Скрамбл: R D2 U F2 R\' F\' U2 R D R2 B </b><br/>
         Фраза: ХЁ ВаГон МАма ПыШка СЯ ЮК Р
     ]]></string>
     <string name="blind_st16_url">pkikOC_SgPs</string>
 
     <string name="blind_st17_title">N17 Ребро на месте</string>
     <string name="blind_st17_descr" formatted="false"><![CDATA[
-        <b>Скрамбл: R D2 U F2 R\' F\' U2 R D R2 B D </b>\n
-        Отличается всего одним ходом от скрамбла в видео #16, но фраза уже совсем другая получается.\n
+        <b>Скрамбл: R D2 U F2 R\' F\' U2 R D R2 B D </b><br/>
+        Отличается всего одним ходом от предыдущего скрамбла, но фраза уже совсем другая получается.<br/>
         Фраза: ХЦ (Хватит Царапать) ЯСно ИЗ ЛЁвы ВаГон.
     ]]></string>
     <string name="blind_st17_url">y1K8QkrvG2A</string>
 
     <string name="blind_st18_title">N18 Перевернутое ребро</string>
     <string name="blind_st18_descr" formatted="false"><![CDATA[
-        <b>Скрамбл: B2 D U2 R\' L2 U2 R2 D F2 U\' L2 R\' B\' D R </b> \n
-        Что делать если попалось ребро которое стоит на своем месте, но перевернуто. \n
+        <b>Скрамбл: B2 D U2 R\' L2 U2 R2 D F2 U\' L2 R\' B\' D R </b> <br/>
+        Что делать если попалось ребро которое стоит на своем месте, но перевернуто. <br/>
         Фраза: ГЭФЕСА ЖаЛко ЦО ЯРик.
     ]]></string>
     <string name="blind_st18_url">TJKqLhg9Q7c</string>
 
     <string name="blind_st19_title">N19 Экватор</string>
     <string name="blind_st19_descr" formatted="false"><![CDATA[
-        Для чего нужен еще один алгоритм - Экватор.\n
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=4:35&link=pT72Wh8VZT4">на видео 4:35</a>\n
+        Для чего нужен еще один алгоритм - Экватор.<br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=4:35&link=pT72Wh8VZT4">на видео 4:35</a><br/>
         <b>Алгоритм: (R U R\' F\') (R U2 R\' U2) (R\' F R U R) U2 R\' U\'</b>
     ]]></string>
     <string name="blind_st19_url">pT72Wh8VZT4</string>
@@ -271,8 +274,8 @@
 
     <string name="blind_st21_title">N21 Австралия</string>
     <string name="blind_st21_descr" formatted="false"><![CDATA[
-        Где находится буфер и корзина для углов. Основной алгоритм для постановки на место углов - Австралия. \n
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=4:07&link=artmFaxjaC0">на видео 4:07</a> \n
+        Где находится буфер и корзина для углов. Основной алгоритм для постановки на место углов - Австралия. <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=4:07&link=artmFaxjaC0">на видео 4:07</a> <br/>
         <b>Алгоритм: (F R) (U\' R\' U\' R U R\' F\') (R U R\' U\') (R\' F R F\')</b>
     ]]></string>
     <string name="blind_st21_url">artmFaxjaC0</string>
@@ -297,22 +300,22 @@
 
     <string name="blind_st25_title">N25 Цепочка и практика с углами.</string>
     <string name="blind_st25_descr" formatted="false"><![CDATA[
-        Составляем цепочку для запоминания углов.\n
-        <b>Скрамбл: U\` L2 B2 R F\` B2 L\` R U2 D2 </b> \n
+        Составляем цепочку для запоминания углов.<br/>
+        <b>Скрамбл: U\` L2 B2 R F\` B2 L\` R U2 D2 </b> <br/>
         Фраза: УШастик ЛаПает ЗоВет Ю
     ]]></string>
     <string name="blind_st25_url">BFY3Q3tB3hU</string>
 
     <string name="blind_st26_title">N26 Переплавка буфера углов</string>
     <string name="blind_st26_descr" formatted="false"><![CDATA[
-        Что делать, если буфер встал на свое место раньше времени. \n
+        Что делать, если буфер встал на свое место раньше времени. <br/>
         <b>Скрамбл: R2 U\' F D2 L B2 F2 R\' U F D2 R2</b>
     ]]></string>
     <string name="blind_st26_url">EpVBcLyj0WQ</string>
 
     <string name="blind_st27_title">N27 Перевернутый угол и угол на месте</string>
     <string name="blind_st27_descr" formatted="false"><![CDATA[
-        Что делать с перевернутыми углами, которые стоят на своем месте. \n
+        Что делать с перевернутыми углами, которые стоят на своем месте. <br/>
         <b>Скрамбл: R2 U2 D\' B2 F L2 U\' R F2 B2 D2</b>
     ]]></string>
     <string name="blind_st27_url">92dy3OyXCjM</string>
