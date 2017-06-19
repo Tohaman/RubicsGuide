@@ -28,6 +28,7 @@
         <item>@string/blind_st25_title</item>
         <item>@string/blind_st26_title</item>
         <item>@string/blind_st27_title</item>
+        <item>@string/blind_st28_title</item>
     </string-array>
 
     <integer-array name="blind_icon">
@@ -58,6 +59,7 @@
         <item>@drawable/blind_25</item>
         <item>@drawable/blind_26</item>
         <item>@drawable/blind_27</item>
+        <item>@drawable/blaccel_1</item>
     </integer-array>
 
     <string-array name="blind_descr">
@@ -88,6 +90,7 @@
         <item>@string/blind_st25_descr</item>
         <item>@string/blind_st26_descr</item>
         <item>@string/blind_st27_descr</item>
+        <item>@string/blind_st28_descr</item>
     </string-array>
 
     <string-array name="blind_url">
@@ -118,6 +121,7 @@
         <item>@string/blind_st25_url</item>
         <item>@string/blind_st26_url</item>
         <item>@string/blind_st27_url</item>
+        <item>@string/blind_st28_url</item>
     </string-array>
 
 
@@ -321,5 +325,20 @@
         <b>Скрамбл: R2 U2 D\' B2 F L2 U\' R F2 B2 D2</b>
     ]]></string>
     <string name="blind_st27_url">92dy3OyXCjM</string>
+
+    <string name="blind_st28_title">Ускорение №1</string>
+    <string name="blind_st28_descr" formatted="false"><![CDATA[
+        Ускорение для ситуации, когда одно из ребер на своем месте, но перевернуто. Или не для
+        слепой сборки - как перевернуть два ребра находящиеся друг напротив друга. <br/>
+        <p style="text-align:center"><img src="blaccel_1_1.png" width="30%%"></p>
+        <b>Алгоритм: (M\' U M\' U M\' U2) (M U M U M U2)</b><br/><br/>
+        Или вариант для классического расположения буфера и корзины, т.е. можно выполнять без
+        перехвата кубика. К тому же без неудобного кручения среднего слоя, но с чередованием
+        вращения верхней грани.
+        <p style="text-align:center"><img src="blaccel_1_2.png" width="30%%"></p>
+        <b>Алгоритм: (M\' U M\' U M\' U M\' U) (M\' U\' M\' U\' M\' U\' M\' U\')</b> или <b>4(M\' U) 4(M\' U\')</b>
+    ]]></string>
+    <string name="blind_st28_url">sWlREfNebUI</string>
+
 
 </resources>
