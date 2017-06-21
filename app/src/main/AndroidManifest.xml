@@ -19,7 +19,6 @@
         </activity>
         <activity android:name=".about.AboutActivity">
         </activity>
-
         <activity
             android:name=".YouTubeActivity"
             android:theme="@style/Theme.AppCompat.Dialog">
@@ -34,12 +33,16 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".blind.ScrambleActivity">
+        </activity>
+        <activity android:name=".blind.BlindMenuActivity">
         </activity>
     </application>
 
