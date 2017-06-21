@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="blind_menu_title">
+        <item>Методика сборки с закрытыми глазами</item>
+        <item>Ускорения сборки с закрытыми глазами</item>
+        <item>Генератор скрамблов</item>
+    </string-array>
+
+    <integer-array name="blind_menu_icon">
+        <item>@drawable/accel_2</item>
+        <item>@drawable/cross</item>
+        <item>@drawable/pll</item>
+    </integer-array>
+
+    <string-array name="blind_menu_phase">
+        <item>BLIND</item>
+        <item>ACCBLIND</item>
+        <item>SCRAMBLE</item>
+    </string-array>
+
+</resources>
