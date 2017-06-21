@@ -14,7 +14,7 @@
 
     <string-array name="blind_menu_phase">
         <item>BLIND</item>
-        <item>ACCBLIND</item>
+        <item>BLINDACC</item>
         <item>SCRAMBLE</item>
     </string-array>
 

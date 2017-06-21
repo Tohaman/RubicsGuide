@@ -87,6 +87,14 @@ public class ListPagerLab {
         mUrl = mContext.getResources().getStringArray(R.array.blind_url);
         PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
 
+        mPhase = "BLINDACC";
+        mTitles = mContext.getResources().getStringArray(R.array.blindacc_title);
+        mResId = getResID(R.array.blindacc_icon);
+        Descr = getResID(R.array.blindacc_descr);
+        mUrl = mContext.getResources().getStringArray(R.array.blindacc_url);
+        PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
+
+
     }
 
     // Инициализация фазы, с заданными массивами Заголовков, Иконок, Описаний, ютуб-ссылок

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="blindacc_title">
+        <item>@string/blindacc_st1_title</item>
+    </string-array>
+
+    <integer-array name="blindacc_icon">
+        <item>@drawable/blind</item>
+    </integer-array>
+
+    <string-array name="blindacc_descr">
+        <item>@string/blindacc_st1_descr</item>
+    </string-array>
+
+    <string-array name="blindacc_url">
+        <item>@string/blindacc_st1_url</item>
+    </string-array>
+
+    <string name="blindacc_st1_title">Ускорение №1</string>
+    <string name="blindacc_st1_descr" formatted="false"><![CDATA[
+        Ускорение для ситуации, когда одно из ребер на своем месте, но перевернуто. Или не для
+        слепой сборки - как перевернуть два ребра находящиеся друг напротив друга. <br/>
+        <p style="text-align:center"><img src="blaccel_1_1.png" width="30%%"></p>
+        <b>Алгоритм: (M\' U M\' U M\' U2) (M U M U M U2)</b><br/><br/>
+        Или вариант для классического расположения буфера и корзины, т.е. можно выполнять без
+        перехвата кубика. К тому же без неудобного кручения среднего слоя, но с чередованием
+        вращения верхней грани.
+        <p style="text-align:center"><img src="blaccel_1_2.png" width="30%%"></p>
+        <b>Алгоритм: (M\' U M\' U M\' U M\' U) (M\' U\' M\' U\' M\' U\' M\' U\')</b> или <b>4(M\' U) 4(M\' U\')</b>
+    ]]></string>
+    <string name="blindacc_st1_url">sWlREfNebUI</string>
+
+
+</resources>

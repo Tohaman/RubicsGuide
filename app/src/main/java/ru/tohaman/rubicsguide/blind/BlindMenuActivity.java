@@ -1,15 +1,14 @@
 package ru.tohaman.rubicsguide.blind;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.support.v4.app.Fragment;
 
-import ru.tohaman.rubicsguide.R;
+import ru.tohaman.rubicsguide.SingleFragmentActivity;
 
-public class BlindMenuActivity extends AppCompatActivity {
+public class BlindMenuActivity extends SingleFragmentActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_blind_menu);
+    protected Fragment createFragment () {
+        return new BlindMenuFragment();
     }
+
 }
