@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ru.tohaman.rubicsguide.about.AboutActivity;
+import ru.tohaman.rubicsguide.blind.BlindMenuActivity;
 import ru.tohaman.rubicsguide.g2f.G2FActivity;
 import ru.tohaman.rubicsguide.listpager.ListActivity;
 import ru.tohaman.rubicsguide.listpager.ListPager;
@@ -66,8 +67,7 @@ public class MainFragment extends Fragment {
                         mIntent = new Intent(getActivity(), G2FActivity.class);
                         break;
                     case "BLIND":
-                        mIntent = new Intent(getActivity(),ListActivity.class);
-                        mIntent.putExtra(RubicPhase,phase);
+                        mIntent = new Intent(getActivity(),BlindMenuActivity.class);
                         break;
                     case "BASIC":
                         mIntent = new Intent(getActivity(),ListActivity.class);

@@ -5,7 +5,7 @@
     </string-array>
 
     <integer-array name="blindacc_icon">
-        <item>@drawable/blind</item>
+        <item>@drawable/blaccel_1</item>
     </integer-array>
 
     <string-array name="blindacc_descr">

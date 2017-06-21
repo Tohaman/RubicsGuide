@@ -14,10 +14,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ru.tohaman.rubicsguide.R;
+import ru.tohaman.rubicsguide.about.AboutActivity;
+import ru.tohaman.rubicsguide.g2f.G2FActivity;
 import ru.tohaman.rubicsguide.listpager.ListActivity;
 import ru.tohaman.rubicsguide.listpager.ListPager;
 import ru.tohaman.rubicsguide.listpager.MyListAdapter;
 
+import static ru.tohaman.rubicsguide.g2f.G2FFragment.RubicPhase;
 import static ru.tohaman.rubicsguide.listpager.ListPagerLab.getResID;
 
 /**
@@ -53,10 +56,22 @@ public class BlindMenuFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
 
-                // вызываем активность List(RecycleView)->PagerView с параметром (ACCEL,PLL,OLL,CROSS и т.д. заданным в массиве строк g2f_phase)
-                mIntent = new Intent(getActivity(),ListActivity.class);
-                mIntent.putExtra(RubicPhase,getResources().getStringArray(R.array.blind_menu_phase)[position]);
+                String phase = getResources().getStringArray(R.array.blind_menu_phase)[position];
+                switch (phase) { //задаем переменые для каждого этапа
+                    case "BLIND":
+                        mIntent = new Intent(getActivity(),ListActivity.class);
+                        mIntent.putExtra(RubicPhase,phase);
+                        break;
+                    case "BLINDACC":
+                        mIntent = new Intent(getActivity(),ListActivity.class);
+                        mIntent.putExtra(RubicPhase,phase);
+                        break;
+                    case "SCRAMBLE":
+                        mIntent = new Intent(getActivity(), ScrambleActivity.class);
+                        break;
+                }
                 startActivity(mIntent);
+
             }
         };
         mListView.setOnItemClickListener(itemListener);
