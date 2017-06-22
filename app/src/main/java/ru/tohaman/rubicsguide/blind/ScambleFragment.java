@@ -14,7 +14,6 @@ import android.widget.TextView;
 
 import ru.tohaman.rubicsguide.R;
 
-import static ru.tohaman.rubicsguide.blind.BasicMoves.MoveRb;
 
 /**
  * Created by Toha on 21.06.2017.
@@ -75,7 +74,7 @@ public class ScambleFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
         public void onClick(View v) {
             // Обработка нажатия
-            MoveRb (CompleteCube);
+            BasicMoves.MoveF (CompleteCube);
             cube2view();
         }
     });
