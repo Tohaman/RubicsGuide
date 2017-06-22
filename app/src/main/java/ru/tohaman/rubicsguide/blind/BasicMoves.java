@@ -257,173 +257,191 @@ public class BasicMoves {
         return cube;
     }
 
-//    Sub MoveD(cube)
-//'Меняем фронт
-//    Change2 cube, 52, 36
-//    Change2 cube, 53, 33
-//    Change2 cube, 54, 30
-//    Change2 cube, 52, 3
-//    Change2 cube, 53, 2
-//    Change2 cube, 54, 1
-//    Change2 cube, 52, 10
-//    Change2 cube, 53, 13
-//    Change2 cube, 54, 16
-//            'Меняем бок
-//    Change2 cube, 44, 40
-//    Change2 cube, 44, 38
-//    Change2 cube, 44, 42
-//    Change2 cube, 43, 37
-//    Change2 cube, 43, 39
-//    Change2 cube, 43, 45
-//    End Sub
-//
-//    Sub MoveDb(cube)
-//'Меняем фронт
-//    Change2 cube, 52, 10
-//    Change2 cube, 53, 13
-//    Change2 cube, 54, 16
-//    Change2 cube, 52, 3
-//    Change2 cube, 53, 2
-//    Change2 cube, 54, 1
-//    Change2 cube, 52, 36
-//    Change2 cube, 53, 33
-//    Change2 cube, 54, 30
-//            'Меняем бок
-//    Change2 cube, 44, 42
-//    Change2 cube, 44, 38
-//    Change2 cube, 44, 40
-//    Change2 cube, 43, 45
-//    Change2 cube, 43, 39
-//    Change2 cube, 43, 37
-//    End Sub
-//
-//    Sub MoveD2(cube)    'D2
-//    MoveD cube
-//    MoveD cube
-//    End Sub
-//
-//    Sub MoveE(cube)     'E
-//            'Меняем фронт
-//    Change2 cube, 49, 35
-//    Change2 cube, 50, 32
-//    Change2 cube, 51, 29
-//    Change2 cube, 49, 6
-//    Change2 cube, 50, 5
-//    Change2 cube, 51, 4
-//    Change2 cube, 49, 11
-//    Change2 cube, 50, 14
-//    Change2 cube, 51, 17
-//    End Sub
-//
-//    Sub MoveEb(cube)    'E'
-//            'Меняем фронт
-//    Change2 cube, 49, 11
-//    Change2 cube, 50, 14
-//    Change2 cube, 51, 17
-//    Change2 cube, 49, 6
-//    Change2 cube, 50, 5
-//    Change2 cube, 51, 4
-//    Change2 cube, 49, 35
-//    Change2 cube, 50, 32
-//    Change2 cube, 51, 29
-//    End Sub
-//
-//    Sub MoveE2(cube)    'E2
-//    MoveE cube
-//    MoveE cube
-//    End Sub
-//
-//    Sub MoveM(cube)     'M
-//            'Меняем фронт
-//    Change2 cube, 20, 47
-//    Change2 cube, 23, 50
-//    Change2 cube, 26, 53
-//    Change2 cube, 20, 44
-//    Change2 cube, 23, 41
-//    Change2 cube, 26, 38
-//    Change2 cube, 20, 2
-//    Change2 cube, 23, 5
-//    Change2 cube, 26, 8
-//    End Sub
-//
-//    Sub MoveMb(cube)    'M'
-//            'Меняем фронт
-//    Change2 cube, 20, 2
-//    Change2 cube, 23, 5
-//    Change2 cube, 26, 8
-//    Change2 cube, 20, 44
-//    Change2 cube, 23, 41
-//    Change2 cube, 26, 38
-//    Change2 cube, 20, 47
-//    Change2 cube, 23, 50
-//    Change2 cube, 26, 53
-//    End Sub
-//
-//    Sub MoveM2(cube)    'M2
-//    MoveM cube
-//    MoveM cube
-//    End Sub
-//
-//    Sub MoveS(cube)     'S
-//            'Меняем фронт
-//    Change2 cube, 22, 31
-//    Change2 cube, 23, 32
-//    Change2 cube, 24, 33
-//    Change2 cube, 22, 40
-//    Change2 cube, 23, 41
-//    Change2 cube, 24, 42
-//    Change2 cube, 22, 13
-//    Change2 cube, 23, 14
-//    Change2 cube, 24, 15
-//    End Sub
-//
-//    Sub MoveSb(cube)    'S'
-//            'Меняем фронт
-//    Change2 cube, 22, 13
-//    Change2 cube, 23, 14
-//    Change2 cube, 24, 15
-//    Change2 cube, 22, 40
-//    Change2 cube, 23, 41
-//    Change2 cube, 24, 42
-//    Change2 cube, 22, 31
-//    Change2 cube, 23, 32
-//    Change2 cube, 24, 33
-//    End Sub
-//
-//    Sub MoveS2(cube)   'S2
-//    MoveS cube
-//    MoveS cube
-//    End Sub
-//
-//    Sub MoveUm(cube)   'u - верхние 2 слоя
-//    MoveU cube
-//    MoveEb cube
-//    End Sub
-//
-//    Sub MoveUmb(cube)  'u'
-//    MoveUb cube
-//    MoveE cube
-//    End Sub
-//
-//    Sub MoveUm2(cube)   'u2
-//    MoveUm cube
-//    MoveUm cube
-//    End Sub
-//
-//    Sub MoveDm(cube)   'd - нижние 2 слоя
-//    MoveD cube
-//    MoveE cube
-//    End Sub
-//
-//    Sub MoveDmb(cube)  'd'
-//    MoveDb cube
-//    MoveEb cube
-//    End Sub
-//
-//    Sub MoveDm2(cube)   'd2
-//    MoveDm cube
-//    MoveDm cube
-//    End Sub
+    public static int[] MoveD(int [] cube) {
+    //'Меняем фронт
+    Change2 (cube, 51, 35);
+    Change2 (cube, 52, 32);
+    Change2 (cube, 53, 29);
+    Change2 (cube, 51, 2);
+    Change2 (cube, 52, 1);
+    Change2 (cube, 53, 0);
+    Change2 (cube, 51, 9);
+    Change2 (cube, 52, 12);
+    Change2 (cube, 53, 15);
+    //'Меняем бок
+    Change2 (cube, 43, 39);
+    Change2 (cube, 43, 37);
+    Change2 (cube, 43, 41);
+    Change2 (cube, 42, 36);
+    Change2 (cube, 42, 38);
+    Change2 (cube, 42, 44);
+    return cube;
+    }
+
+    public static int[] MoveDb(int [] cube) {
+        //'Меняем фронт
+        Change2 (cube, 51, 9);
+        Change2 (cube, 52, 12);
+        Change2 (cube, 53, 15);
+        Change2 (cube, 51, 2);
+        Change2 (cube, 52, 1);
+        Change2 (cube, 53, 0);
+        Change2 (cube, 51, 35);
+        Change2 (cube, 52, 32);
+        Change2 (cube, 53, 29);
+        //'Меняем бок
+        Change2 (cube, 43, 41);
+        Change2 (cube, 43, 37);
+        Change2 (cube, 43, 39);
+        Change2 (cube, 42, 44);
+        Change2 (cube, 42, 38);
+        Change2 (cube, 42, 36);
+        return cube;
+    }
+
+    public static int[] MoveD2(int [] cube) {
+        MoveD (cube);
+        MoveD (cube);
+        return cube;
+    }
+
+    public static int[] MoveE(int [] cube) {
+        //'Меняем фронт
+        Change2 (cube, 48, 34);
+        Change2 (cube, 49, 31);
+        Change2 (cube, 50, 28);
+        Change2 (cube, 48, 5);
+        Change2 (cube, 49, 4);
+        Change2 (cube, 50, 3);
+        Change2 (cube, 48, 10);
+        Change2 (cube, 49, 13);
+        Change2 (cube, 50, 16);
+        return cube;
+    }
+
+    public static int[] MoveEb(int [] cube) {
+        //'Меняем фронт
+        Change2 (cube, 48, 10);
+        Change2 (cube, 49, 13);
+        Change2 (cube, 50, 16);
+        Change2 (cube, 48, 5);
+        Change2 (cube, 49, 4);
+        Change2 (cube, 50, 3);
+        Change2 (cube, 48, 34);
+        Change2 (cube, 49, 31);
+        Change2 (cube, 50, 28);
+        return cube;
+    }
+
+    public static int[] MoveE2(int [] cube) {
+        MoveE (cube);
+        MoveE (cube);
+        return cube;
+    }
+
+    public static int[] MoveM(int [] cube) {
+        //'Меняем фронт
+        Change2 (cube, 19, 46);
+        Change2 (cube, 22, 49);
+        Change2 (cube, 25, 52);
+        Change2 (cube, 19, 43);
+        Change2 (cube, 22, 40);
+        Change2 (cube, 25, 37);
+        Change2 (cube, 19, 1);
+        Change2 (cube, 22, 4);
+        Change2 (cube, 25, 7);
+        return cube;
+    }
+
+    public static int[] MoveMb(int [] cube) {
+        //'Меняем фронт
+        Change2 (cube, 19, 1);
+        Change2 (cube, 22, 4);
+        Change2 (cube, 25, 7);
+        Change2 (cube, 19, 43);
+        Change2 (cube, 22, 40);
+        Change2 (cube, 25, 37);
+        Change2 (cube, 19, 46);
+        Change2 (cube, 22, 49);
+        Change2 (cube, 25, 52);
+        return cube;
+    }
+
+    public static int[] MoveM2(int [] cube) {
+        MoveM (cube);
+        MoveM (cube);
+        return cube;
+    }
+
+    public static int[] MoveS(int [] cube) {
+        //'Меняем фронт
+        Change2 (cube, 21, 30);
+        Change2 (cube, 22, 31);
+        Change2 (cube, 23, 32);
+        Change2 (cube, 21, 39);
+        Change2 (cube, 22, 40);
+        Change2 (cube, 23, 41);
+        Change2 (cube, 21, 12);
+        Change2 (cube, 22, 13);
+        Change2 (cube, 23, 14);
+        return cube;
+    }
+
+    public static int[] MoveSb(int [] cube) {
+        //'Меняем фронт
+        Change2 (cube, 21, 12);
+        Change2 (cube, 22, 13);
+        Change2 (cube, 23, 14);
+        Change2 (cube, 21, 39);
+        Change2 (cube, 22, 40);
+        Change2 (cube, 23, 41);
+        Change2 (cube, 21, 30);
+        Change2 (cube, 22, 31);
+        Change2 (cube, 23, 32);
+        return cube;
+    }
+
+    public static int[] MoveS2(int [] cube) {
+        MoveS (cube);
+        MoveS (cube);
+        return cube;
+    }
+
+    public static int[] MoveUw(int [] cube) {   //Uw - верхние два слоя
+        MoveU (cube);
+        MoveEb (cube);
+        return cube;
+    }
+
+    public static int[] MoveUwb(int [] cube) {   //Uw' - верхние два слоя
+        MoveUb (cube);
+        MoveE (cube);
+        return cube;
+    }
+
+    public static int[] MoveUw2(int [] cube) {   //Uw2 - верхние два слоя
+        MoveUw (cube);
+        MoveUw (cube);
+        return cube;
+    }
+
+    public static int[] MoveDw(int [] cube) {   //Dw - нижние два слоя
+        MoveD (cube);
+        MoveE (cube);
+        return cube;
+    }
+
+    public static int[] MoveDwb(int [] cube) {
+        MoveDb (cube);
+        MoveEb (cube);
+        return cube;
+    }
+
+    public static int[] MoveDw2(int [] cube) {
+        MoveDw (cube);
+        MoveDw (cube);
+        return cube;
+    }
 
 
 }
