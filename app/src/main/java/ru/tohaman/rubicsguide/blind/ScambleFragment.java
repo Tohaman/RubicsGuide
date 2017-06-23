@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -56,7 +57,7 @@ public class ScambleFragment extends Fragment {
         cubeColor[5] = green;
 
         mGridLayout = (GridLayout) view.findViewById(R.id.grid);
-        BlindMain.Initialize(CompleteCube);
+        Initialize(CompleteCube);
 
         for (int i = 0; i < 108; i++) {
             View v = View.inflate(view.getContext(),R.layout.grid_item,null);
@@ -88,7 +89,7 @@ public class ScambleFragment extends Fragment {
         reset_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Обработка нажатия
-                BasicMoves.MoveDw (CompleteCube);
+                Initialize(CompleteCube);
                 cube2view();
                 }
             });
@@ -97,8 +98,8 @@ public class ScambleFragment extends Fragment {
         gen_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Обработка нажатия
-                BlindMain.Initialize(CompleteCube);
                 GenerateScramble();
+                BlindMoves.Scram(CompleteCube,String.valueOf(Scramble.getText()));
                 cube2view();
             }
         });
@@ -109,10 +110,6 @@ public class ScambleFragment extends Fragment {
 
         return view;
 
-    }
-
-    private void UpdateUI() {
-        cube2view();
     }
 
     private void cube2view () {
@@ -142,12 +139,19 @@ public class ScambleFragment extends Fragment {
         }
     }
 
+    public static int[] Initialize (int[] cube) {
+        for (int i = 0 ; i < cube.length; i++) {
+            cube[i] = (i / 9);
+        }
+        return cube;
+    }
+
     private void addViewToGrid(GridLayout field, View view) {
         GridLayout.LayoutParams lp = new GridLayout.LayoutParams();
         lp.width  = 0;
-        lp.height = 0;//ViewGroup.LayoutParams.WRAP_CONTENT MATCH_PARENT
-        lp.columnSpec = GridLayout.spec(GridLayout.UNDEFINED    , 1f);// позиция и вес кнопки по горизонтали
-        lp.rowSpec    = GridLayout.spec(GridLayout.ALIGN_MARGINS, 1f);// позиция и вес кнопки по вертикали
+        lp.height = 0;                                                  //ViewGroup.LayoutParams.WRAP_CONTENT MATCH_PARENT
+        lp.columnSpec = GridLayout.spec(GridLayout.UNDEFINED    , 1f);  // позиция и вес кнопки по горизонтали
+        lp.rowSpec    = GridLayout.spec(GridLayout.ALIGN_MARGINS, 1f);  // позиция и вес кнопки по вертикали
         field.addView(view, lp);
     }
 
@@ -192,25 +196,11 @@ public class ScambleFragment extends Fragment {
         scramble = scramble.replace(" -4"," L'");
         scramble = scramble.replace(" -5"," D'");
         scramble = scramble.replace(" -6"," B'");
+        scramble = scramble.replaceFirst(" ","");
         Scramble.setText(scramble);
         return scramble;
     }
-//            Txt = Replace(Txt, " 1", "R")
-//    Txt = Replace(Txt, " 2", "U")
-//    Txt = Replace(Txt, " 3", "F")
-//    Txt = Replace(Txt, " 4", "L")
-//    Txt = Replace(Txt, " 5", "D")
-//    Txt = Replace(Txt, " 6", "B")
-//    Txt = Replace(Txt, "-1", "R'")
-//    Txt = Replace(Txt, "-2", "U'")
-//    Txt = Replace(Txt, "-3", "F'")
-//    Txt = Replace(Txt, "-4", "L'")
-//    Txt = Replace(Txt, "-5", "D'")
-//    Txt = Replace(Txt, "-6", "B'")
-//    Txt = Trim(Txt)
-//    Txt = Replace(Txt, " ", ",")
-//    GenerateScramble = Txt
-//    End Function
+
 
 
 }

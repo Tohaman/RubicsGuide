@@ -407,6 +407,24 @@ public class BasicMoves {
         return cube;
     }
 
+    public static int[] MoveRw(int [] cube) {   //Uw - верхние два слоя
+        MoveR (cube);
+        MoveMb (cube);
+        return cube;
+    }
+
+    public static int[] MoveRwb(int [] cube) {   //Uw' - верхние два слоя
+        MoveRb (cube);
+        MoveM (cube);
+        return cube;
+    }
+
+    public static int[] MoveRw2(int [] cube) {   //Uw2 - верхние два слоя
+        MoveRw (cube);
+        MoveRw (cube);
+        return cube;
+    }
+
     public static int[] MoveUw(int [] cube) {   //Uw - верхние два слоя
         MoveU (cube);
         MoveEb (cube);
@@ -443,5 +461,22 @@ public class BasicMoves {
         return cube;
     }
 
+    public static int[] MoveLw(int [] cube) {   //Uw - верхние два слоя
+        MoveL (cube);
+        MoveM (cube);
+        return cube;
+    }
+
+    public static int[] MoveLwb(int [] cube) {   //Uw' - верхние два слоя
+        MoveLb (cube);
+        MoveMb (cube);
+        return cube;
+    }
+
+    public static int[] MoveLw2(int [] cube) {   //Uw2 - верхние два слоя
+        MoveLw (cube);
+        MoveLw (cube);
+        return cube;
+    }
 
 }
