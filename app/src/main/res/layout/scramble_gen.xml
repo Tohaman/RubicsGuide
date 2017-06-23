@@ -5,26 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <Button
-        android:id="@+id/button_azbuka"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Азбука"/>
-
-    <LinearLayout
-        android:layout_width="360dp"
-        android:layout_height="270dp"
         android:orientation="horizontal">
 
-        <android.support.v7.widget.GridLayout
-            android:id="@+id/grid"
+        <Button
+            android:id="@+id/button_azbuka"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:columnCount="12"
-            app:rowCount="9">
-        </android.support.v7.widget.GridLayout>
+            android:layout_weight="1"
+            android:text="Азбука"/>
+
+        <Button
+            android:id="@+id/button_do"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Выполнить скрамбл"/>
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,62 +43,97 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="Сгенерировать скрамбл"/>
+        android:text="Генерировать скрамбл"/>
     </LinearLayout>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:gravity="center"
-            android:text="Длина скрамбла"
-            android:textColor="@android:color/background_dark"
-            android:textSize="16sp" />
-        <EditText
-            android:id="@+id/scrambleLength"
+        android:layout_height="match_parent">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="2"
-            android:textSize="16sp"
-            android:text="14" />
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="3"
-        android:textSize="16sp"
-        android:gravity="center"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:textColor="@android:color/background_dark"
-        android:text="Скрамбл" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:text="Длина скрамбла"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="16sp" />
+                <EditText
+                    android:id="@+id/scrambleLength"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2"
+                    android:textSize="16sp"
+                    android:text="14" />
 
-    <EditText
-        android:id="@+id/scramble"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:textSize="16sp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:textColor="@android:color/background_dark"
-        android:text="U D R F" />
-    </LinearLayout>
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@android:color/background_dark"
+                android:text="Скрамбл" />
+
+            <EditText
+                android:id="@+id/scramble"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@android:color/background_dark"
+                android:text="U D R F" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/checkBox_gran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Без переплавки буфера ребер" />
+            <CheckBox
+                android:id="@+id/checkBox_ugol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Без переплавки буфера углов" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.GridLayout
+                    android:id="@+id/grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:columnCount="12"
+                    app:rowCount="9">
+                </android.support.v7.widget.GridLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

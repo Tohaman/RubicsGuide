@@ -321,6 +321,7 @@ public class BlindMoves {
         return cube;
     }
 
+//--------------------------------------------------------------------------------------------------
 
     public int[] Blinde20(int[] cube) {  //белосинекрасный угол
         Scram (cube,"R D' F'");
@@ -334,120 +335,137 @@ public class BlindMoves {
         return cube;
     }
 
+    public int[] Blinde24(int[] cube) {  //белозеленооранжевый угол
+        Scram (cube,"F' D R");
+        Australia (cube);
+        Scram (cube,"R' D' F");
+        return cube;
+    }
 
-//    Sub Blinde25(cube) 'Г угол
-//    Scram cube, "F',D,R"
-//    Australia cube
-//    Scram cube, "R',D',F"
-//    End Sub
-//
-//    Sub Blinde46(cube) 'Д угол
-//    Scram cube, "F',D,F'"
-//    Australia cube
-//    Scram cube, "F,D',F"
-//    End Sub
-//
-//    Sub Blinde48(cube) 'Е угол
-//    Scram cube, "F,R"
-//    Australia cube
-//    Scram cube, "R',F'"
-//    End Sub
-//
-//    Sub Blinde54(cube) 'Ж угол
-//    Scram cube, "R"
-//    Australia cube
-//    Scram cube, "R'"
-//    End Sub
-//
-//    Sub Blinde52(cube) 'З угол
-//    Scram cube, "D,F'"
-//    Australia cube
-//    Scram cube, "F,D'"
-//    End Sub
-//
-//    Sub Blinde9(cube) 'К угол
-//    Scram cube, "R'"
-//    Australia cube
-//    Scram cube, "R"
-//    End Sub
-//
-//    Sub Blinde3(cube) 'Л угол
-//    Scram cube, "D',F'"
-//    Australia cube
-//    Scram cube, "F,D"
-//    End Sub
-//
-//    Sub Blinde1(cube) 'М угол
-//    Scram cube, "D2,R"
-//    Australia cube
-//    Scram cube, "R',D2"
-//    End Sub
-//
-//    Sub Blinde18(cube) 'О угол
-//    Scram cube, "F"
-//    Australia cube
-//    Scram cube, "F'"
-//    End Sub
-//
-//    Sub Blinde16(cube) 'П угол
-//    Scram cube, "D,R"
-//    Australia cube
-//    Scram cube, "R',D'"
-//    End Sub
-//
-//    Sub Blinde10(cube) 'Р угол
-//    Scram cube, "D2,F'"
-//    Australia cube
-//    Scram cube, "F,D2"
-//    End Sub
-//
-//    Sub Blinde28(cube) 'С угол
-//    Scram cube, "R2,F'"
-//    Australia cube
-//    Scram cube, "F,R2"
-//    End Sub
-//
-//    Sub Blinde34(cube) 'Т угол
-//    Scram cube, "R',F'"
-//    Australia cube
-//    Scram cube, "F,R"
-//    End Sub
-//
-//    Sub Blinde36(cube) 'У угол
-//    Scram cube, "F'"
-//    Australia cube
-//    Scram cube, "F"
-//    End Sub
-//
-//    Sub Blinde30(cube) 'Ф угол
-//    Scram cube, "R,F'"
-//    Australia cube
-//    Scram cube, "F,R'"
-//    End Sub
-//
-//
-//    Sub Blinde39(cube) 'Х угол
-//    Scram cube, "D',R2"
-//    Australia cube
-//    Scram cube, "R2,D"
-//    End Sub
-//
-//    Sub Blinde37(cube) 'Ц угол
-//    Scram cube, "R2"
-//    Australia cube
-//    Scram cube, "R2"
-//    End Sub
-//
-//    Sub Blinde43(cube) 'Ч угол
-//    Scram cube, "D,R2"
-//    Australia cube
-//    Scram cube, "R2,D'"
-//    End Sub
-//
-//    Sub Blinde45(cube) 'Ш угол
-//    Scram cube, "D2,R2"
-//    Australia cube
-//    Scram cube, "R2,D2"
-//    End Sub
-    
+    public int[] Blinde45(int[] cube) {  //зеленооранжевобелый
+        Scram (cube,"F' D F'");
+        Australia (cube);
+        Scram (cube,"F D' F");
+        return cube;
+    }
+
+    public int[] Blinde47(int[] cube) {  //зеленобелосиний
+        Scram (cube,"F R");
+        Australia (cube);
+        Scram (cube,"R' F'");
+        return cube;
+    }
+
+    public int[] Blinde53(int[] cube) {  //зеленокрасножелтый
+        Scram (cube,"R");
+        Australia (cube);
+        Scram (cube,"R'");
+        return cube;
+    }
+
+    public int[] Blinde51(int[] cube) {  //зеленожелтооранжевый
+        Scram (cube,"D F'");
+        Australia (cube);
+        Scram (cube,"F D'");
+        return cube;
+    }
+
+    public int[] Blinde8(int[] cube) {  //синекраснобелый
+        Scram (cube,"R'");
+        Australia (cube);
+        Scram (cube,"R");
+        return cube;
+    }
+
+    public int[] Blinde2(int[] cube) {  //синежелтокрасный
+        Scram (cube,"D' F'");
+        Australia (cube);
+        Scram (cube,"F D");
+        return cube;
+    }
+
+    public int[] Blinde0(int[] cube) {  //синеоранжевожелтый
+        Scram (cube,"D2 R");
+        Australia (cube);
+        Scram (cube,"R' D2");
+        return cube;
+    }
+
+    public int[] Blinde17(int[] cube) {  //оранжевобелозеленый
+        Scram (cube,"F");
+        Australia (cube);
+        Scram (cube,"F'");
+        return cube;
+    }
+
+    public int[] Blinde15(int[] cube) {  //оранжевозеленожелтый
+        Scram (cube,"D R");
+        Australia (cube);
+        Scram (cube,"R' D'");
+        return cube;
+    }
+
+    public int[] Blinde9(int[] cube) {  //оранжевожелтосиний
+        Scram (cube,"D2 F'");
+        Australia (cube);
+        Scram (cube,"F D2");
+        return cube;
+    }
+
+    public int[] Blinde27(int[] cube) {  //краснобелосиний
+        Scram (cube,"R2 F'");
+        Australia (cube);
+        Scram (cube,"F R2");
+        return cube;
+    }
+
+    public int[] Blinde33(int[] cube) {  //краснозеленобелый
+        Scram (cube,"R' F'");
+        Australia (cube);
+        Scram (cube,"F R");
+        return cube;
+    }
+
+    public int[] Blinde35(int[] cube) {  //красножелтозеленый
+        Scram (cube,"F'");
+        Australia (cube);
+        Scram (cube,"F");
+        return cube;
+    }
+
+    public int[] Blinde29(int[] cube) {  //красносинежелтый
+        Scram (cube,"R F'");
+        Australia (cube);
+        Scram (cube,"F R'");
+        return cube;
+    }
+
+    public int[] Blinde38(int[] cube) {  //желтосинеоранжевый
+        Scram (cube,"D' R2");
+        Australia (cube);
+        Scram (cube,"R2 D");
+        return cube;
+    }
+
+    public int[] Blinde36(int[] cube) {  //желтокрасносиний
+        Scram (cube,"R2");
+        Australia (cube);
+        Scram (cube,"R2");
+        return cube;
+    }
+
+    public int[] Blinde42(int[] cube) {  //желтозеленокрасный
+        Scram (cube,"D R2");
+        Australia (cube);
+        Scram (cube,"R2 D'");
+        return cube;
+    }
+
+    public int[] Blinde44(int[] cube) {  //желтооранжевозеленый
+        Scram (cube,"D2 R2");
+        Australia (cube);
+        Scram (cube,"R2 D2");
+        return cube;
+    }
+
 }

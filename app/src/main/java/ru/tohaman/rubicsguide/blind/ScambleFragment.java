@@ -98,15 +98,27 @@ public class ScambleFragment extends Fragment {
         gen_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Обработка нажатия
+                Initialize(CompleteCube);
                 GenerateScramble();
                 BlindMoves.Scram(CompleteCube,String.valueOf(Scramble.getText()));
                 cube2view();
             }
         });
 
+        Button do_button = (Button) view.findViewById(R.id.button_do);
+        do_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Обработка нажатия
+                BlindMoves.Scram(CompleteCube,String.valueOf(Scramble.getText()));
+                cube2view();
+            }
+        });
+
+
         ScrambleLength = (EditText) view.findViewById(R.id.scrambleLength);
         ScrambleLength.setText("14");
         Scramble = (EditText) view.findViewById(R.id.scramble);
+        Scramble.setText("");
 
         return view;
 
