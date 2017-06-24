@@ -2,27 +2,32 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:theme="@style/Base.TextAppearance.AppCompat.Button">
 
         <Button
             android:id="@+id/button_azbuka"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Азбука"/>
+            android:text="Азбука"
+            android:textSize="12sp"/>
 
         <Button
             android:id="@+id/button_do"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Выполнить скрамбл"/>
+            android:text="Выполнить скрамбл"
+            android:textSize="12sp"/>
 
     </LinearLayout>
 
@@ -36,6 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:textSize="12sp"
         android:text="Сброс кубика"/>
 
     <Button
@@ -43,6 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:textSize="12sp"
         android:text="Генерировать скрамбл"/>
     </LinearLayout>
 
@@ -108,17 +115,23 @@
                 android:textColor="@android:color/background_dark"
                 android:text="U D R F" />
             </LinearLayout>
-
-            <CheckBox
-                android:id="@+id/checkBox_gran"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Без переплавки буфера ребер" />
-            <CheckBox
-                android:id="@+id/checkBox_ugol"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Без переплавки буфера углов" />
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/checkBox_gran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Без переплавки буфера ребер" />
+                <CheckBox
+                    android:id="@+id/checkBox_ugol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Без переплавки буфера углов" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -134,6 +147,11 @@
                 </android.support.v7.widget.GridLayout>
 
             </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Решение:"/>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
