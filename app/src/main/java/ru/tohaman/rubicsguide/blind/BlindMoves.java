@@ -18,6 +18,8 @@ public class BlindMoves {
         scrm = scrm.replace("l","Lw");
         scrm = scrm.replace("u","Uw");
         scrm = scrm.replace("d","Dw");
+        scrm = scrm.replace("f","Fw");
+        scrm = scrm.replace("b","Bw");
         String hod = "";
         int j = 0;
         String [] ArScrm = scrm.split(" ");
@@ -141,180 +143,198 @@ public class BlindMoves {
                 case "Lw2":
                     BasicMoves.MoveLw2 (cube);
                     break;
+                case "Fw":
+                    BasicMoves.MoveFw (cube);
+                    break;
+                case "Fw1":
+                    BasicMoves.MoveFwb (cube);
+                    break;
+                case "Fw2":
+                    BasicMoves.MoveFw2 (cube);
+                    break;
+                case "Bw":
+                    BasicMoves.MoveBw (cube);
+                    break;
+                case "Bw1":
+                    BasicMoves.MoveBwb (cube);
+                    break;
+                case "Bw2":
+                    BasicMoves.MoveBw2 (cube);
+                    break;
             }
         }
         return cube;
     }
 
-    public int[] Zapad(int[] cube) {  //Алгоритм Запад
+    public static int[] Zapad(int[] cube) {  //Алгоритм Запад
         Scram (cube,"R U R' U' R' F R2 U' R' U' R U R' F'");
         return cube;
     }
 
-    public int[] Yug(int[] cube) {  //Алгоритм Юг
+    public static int[] Yug(int[] cube) {  //Алгоритм Юг
         Scram (cube,"R U R' F' R U R' U' R' F R2 U' R' U'");
         return cube;
     }
 
-    public int[] PifPaf(int[] cube) {  //Алгоритм Пиф-паф
+    public static int[] PifPaf(int[] cube) {  //Алгоритм Пиф-паф
         Scram (cube,"R U R' U'");
         return cube;
     }
 
-    public int[] Ekvator(int[] cube) {  //Алгоритм Экватор
+    public static int[] Ekvator(int[] cube) {  //Алгоритм Экватор
         Scram (cube,"R U R' F' R U2 R' U2 R' F R U R U2 R' U'");
         return cube;
     }
 
-    public int[] Australia(int[] cube) {  //Алгоритм Австралия
+    public static int[] Australia(int[] cube) {  //Алгоритм Австралия
         Scram (cube,"F R U' R' U' R U R' F' R U R' U' R' F R F'");
         return cube;
     }
 
-    public int[] Blinde19(int[] cube) {  //белосинее ребро
+    public static int[] Blinde19(int[] cube) {  //белосинее ребро
         Scram (cube,"M2 D' L2");
         Zapad (cube);
         Scram (cube,"L2 D M2");
         return cube;
     }
 
-    public int[] Blinde25(int[] cube) {  //белозеленое
+    public static int[] Blinde25(int[] cube) {  //белозеленое
         Yug (cube);
         return cube;
     }
 
-    public int[] Blinde21(int[] cube) {  //белооранжевое
+    public static int[] Blinde21(int[] cube) {  //белооранжевое
         Zapad (cube);
         return cube;
     }
 
-    public int[] Blinde46(int[] cube) {  //зеленобелое
+    public static int[] Blinde46(int[] cube) {  //зеленобелое
         Scram (cube,"M D' L2");
         Zapad (cube);
         Scram (cube,"L2 D M'");
         return cube;
     }
 
-    public int[] Blinde50(int[] cube) {  //зеленокрасное
+    public static int[] Blinde50(int[] cube) {  //зеленокрасное
         Scram (cube,"Dw2 L");
         Zapad (cube);
         Scram (cube,"L' Dw2");
         return cube;
     }
 
-    public int[] Blinde52(int[] cube) {  //зеленожелтое
+    public static int[] Blinde52(int[] cube) {  //зеленожелтое
         Scram (cube,"M'");
         Yug (cube);
         Scram (cube,"M");
         return cube;
     }
 
-    public int[] Blinde48(int[] cube) {  //зеленооранжевое
+    public static int[] Blinde48(int[] cube) {  //зеленооранжевое
         Scram (cube,"L'");
         Zapad (cube);
         Scram (cube,"L");
         return cube;
     }
 
-    public int[] Blinde7(int[] cube) {  //синебелое
+    public static int[] Blinde7(int[] cube) {  //синебелое
         Scram (cube,"M");
         Yug (cube);
         Scram (cube,"M'");
         return cube;
     }
 
-    public int[] Blinde5(int[] cube) {  //синекрасное
+    public static int[] Blinde5(int[] cube) {  //синекрасное
         Scram (cube,"Dw2 L'");
         Zapad (cube);
         Scram (cube,"L Dw2");
         return cube;
     }
 
-    public int[] Blinde1(int[] cube) {  //синежелтое
+    public static int[] Blinde1(int[] cube) {  //синежелтое
         Scram (cube,"Dw2 L'");
         Zapad (cube);
         Scram (cube,"L Dw2");
         return cube;
     }
 
-    public int[] Blinde3(int[] cube) {  //синеоранжевое
+    public static int[] Blinde3(int[] cube) {  //синеоранжевое
         Scram (cube,"L");
         Zapad (cube);
         Scram (cube,"L'");
         return cube;
     }
 
-    public int[] Blinde14(int[] cube) {  //оранжевобелое
+    public static int[] Blinde14(int[] cube) {  //оранжевобелое
         Scram (cube,"L2 D M'");
         Yug (cube);
         Scram (cube,"M D' L2");
         return cube;
     }
 
-    public int[] Blinde16(int[] cube) {  //оранжевозеленое
+    public static int[] Blinde16(int[] cube) {  //оранжевозеленое
         Scram (cube,"Dw' L");
         Zapad (cube);
         Scram (cube,"L' Dw");
         return cube;
     }
 
-    public int[] Blinde12(int[] cube) {  //оранжевожелтое
+    public static int[] Blinde12(int[] cube) {  //оранжевожелтое
         Scram (cube,"D M'");
         Yug (cube);
         Scram (cube,"M D'");
         return cube;
     }
 
-    public int[] Blinde10(int[] cube) {  //оранжевосинее
+    public static int[] Blinde10(int[] cube) {  //оранжевосинее
         Scram (cube,"Dw L'");
         Zapad (cube);
         Scram (cube,"L Dw'");
         return cube;
     }
 
-    public int[] Blinde34(int[] cube) {  //краснозеленое
+    public static int[] Blinde34(int[] cube) {  //краснозеленое
         Scram (cube,"Dw' L'");
         Zapad (cube);
         Scram (cube,"L Dw");
         return cube;
     }
 
-    public int[] Blinde32(int[] cube) {  //красножелтое
+    public static int[] Blinde32(int[] cube) {  //красножелтое
         Scram (cube,"D' M'");
         Yug (cube);
         Scram (cube,"M D");
         return cube;
     }
 
-    public int[] Blinde28(int[] cube) {  //красносинее
+    public static int[] Blinde28(int[] cube) {  //красносинее
         Scram (cube,"Dw L");
         Zapad (cube);
         Scram (cube,"L' Dw'");
         return cube;
     }
 
-    public int[] Blinde37(int[] cube) {  //желтосинее
+    public static int[] Blinde37(int[] cube) {  //желтосинее
         Scram (cube,"D L2");
         Zapad (cube);
         Scram (cube,"L2 D'");
         return cube;
     }
 
-    public int[] Blinde39(int[] cube) {  //желтокрасное
+    public static int[] Blinde39(int[] cube) {  //желтокрасное
         Scram (cube,"D2 L2");
         Zapad (cube);
         Scram (cube,"L2 D2");
         return cube;
     }
 
-    public int[] Blinde43(int[] cube) {  //желтозеленое
+    public static int[] Blinde43(int[] cube) {  //желтозеленое
         Scram (cube,"D' L2");
         Zapad (cube);
         Scram (cube,"L2 D'");
         return cube;
     }
 
-    public int[] Blinde41(int[] cube) {  //желтооранжевое
+    public static int[] Blinde41(int[] cube) {  //желтооранжевое
         Scram (cube,"L2");
         Zapad (cube);
         Scram (cube,"D2");
@@ -323,145 +343,145 @@ public class BlindMoves {
 
 //--------------------------------------------------------------------------------------------------
 
-    public int[] Blinde20(int[] cube) {  //белосинекрасный угол
+    public static int[] Blinde20(int[] cube) {  //белосинекрасный угол
         Scram (cube,"R D' F'");
         Australia (cube);
         Scram (cube,"F D R'");
         return cube;
     }
 
-    public int[] Blinde26(int[] cube) {  //белокраснозеленый угол
+    public static int[] Blinde26(int[] cube) {  //белокраснозеленый угол
         Australia (cube);
         return cube;
     }
 
-    public int[] Blinde24(int[] cube) {  //белозеленооранжевый угол
+    public static int[] Blinde24(int[] cube) {  //белозеленооранжевый угол
         Scram (cube,"F' D R");
         Australia (cube);
         Scram (cube,"R' D' F");
         return cube;
     }
 
-    public int[] Blinde45(int[] cube) {  //зеленооранжевобелый
+    public static int[] Blinde45(int[] cube) {  //зеленооранжевобелый
         Scram (cube,"F' D F'");
         Australia (cube);
         Scram (cube,"F D' F");
         return cube;
     }
 
-    public int[] Blinde47(int[] cube) {  //зеленобелосиний
+    public static int[] Blinde47(int[] cube) {  //зеленобелосиний
         Scram (cube,"F R");
         Australia (cube);
         Scram (cube,"R' F'");
         return cube;
     }
 
-    public int[] Blinde53(int[] cube) {  //зеленокрасножелтый
+    public static int[] Blinde53(int[] cube) {  //зеленокрасножелтый
         Scram (cube,"R");
         Australia (cube);
         Scram (cube,"R'");
         return cube;
     }
 
-    public int[] Blinde51(int[] cube) {  //зеленожелтооранжевый
+    public static int[] Blinde51(int[] cube) {  //зеленожелтооранжевый
         Scram (cube,"D F'");
         Australia (cube);
         Scram (cube,"F D'");
         return cube;
     }
 
-    public int[] Blinde8(int[] cube) {  //синекраснобелый
+    public static int[] Blinde8(int[] cube) {  //синекраснобелый
         Scram (cube,"R'");
         Australia (cube);
         Scram (cube,"R");
         return cube;
     }
 
-    public int[] Blinde2(int[] cube) {  //синежелтокрасный
+    public static int[] Blinde2(int[] cube) {  //синежелтокрасный
         Scram (cube,"D' F'");
         Australia (cube);
         Scram (cube,"F D");
         return cube;
     }
 
-    public int[] Blinde0(int[] cube) {  //синеоранжевожелтый
+    public static int[] Blinde0(int[] cube) {  //синеоранжевожелтый
         Scram (cube,"D2 R");
         Australia (cube);
         Scram (cube,"R' D2");
         return cube;
     }
 
-    public int[] Blinde17(int[] cube) {  //оранжевобелозеленый
+    public static int[] Blinde17(int[] cube) {  //оранжевобелозеленый
         Scram (cube,"F");
         Australia (cube);
         Scram (cube,"F'");
         return cube;
     }
 
-    public int[] Blinde15(int[] cube) {  //оранжевозеленожелтый
+    public static int[] Blinde15(int[] cube) {  //оранжевозеленожелтый
         Scram (cube,"D R");
         Australia (cube);
         Scram (cube,"R' D'");
         return cube;
     }
 
-    public int[] Blinde9(int[] cube) {  //оранжевожелтосиний
+    public static int[] Blinde9(int[] cube) {  //оранжевожелтосиний
         Scram (cube,"D2 F'");
         Australia (cube);
         Scram (cube,"F D2");
         return cube;
     }
 
-    public int[] Blinde27(int[] cube) {  //краснобелосиний
+    public static int[] Blinde27(int[] cube) {  //краснобелосиний
         Scram (cube,"R2 F'");
         Australia (cube);
         Scram (cube,"F R2");
         return cube;
     }
 
-    public int[] Blinde33(int[] cube) {  //краснозеленобелый
+    public static int[] Blinde33(int[] cube) {  //краснозеленобелый
         Scram (cube,"R' F'");
         Australia (cube);
         Scram (cube,"F R");
         return cube;
     }
 
-    public int[] Blinde35(int[] cube) {  //красножелтозеленый
+    public static int[] Blinde35(int[] cube) {  //красножелтозеленый
         Scram (cube,"F'");
         Australia (cube);
         Scram (cube,"F");
         return cube;
     }
 
-    public int[] Blinde29(int[] cube) {  //красносинежелтый
+    public static int[] Blinde29(int[] cube) {  //красносинежелтый
         Scram (cube,"R F'");
         Australia (cube);
         Scram (cube,"F R'");
         return cube;
     }
 
-    public int[] Blinde38(int[] cube) {  //желтосинеоранжевый
+    public static int[] Blinde38(int[] cube) {  //желтосинеоранжевый
         Scram (cube,"D' R2");
         Australia (cube);
         Scram (cube,"R2 D");
         return cube;
     }
 
-    public int[] Blinde36(int[] cube) {  //желтокрасносиний
+    public static int[] Blinde36(int[] cube) {  //желтокрасносиний
         Scram (cube,"R2");
         Australia (cube);
         Scram (cube,"R2");
         return cube;
     }
 
-    public int[] Blinde42(int[] cube) {  //желтозеленокрасный
+    public static int[] Blinde42(int[] cube) {  //желтозеленокрасный
         Scram (cube,"D R2");
         Australia (cube);
         Scram (cube,"R2 D'");
         return cube;
     }
 
-    public int[] Blinde44(int[] cube) {  //желтооранжевозеленый
+    public static int[] Blinde44(int[] cube) {  //желтооранжевозеленый
         Scram (cube,"D2 R2");
         Australia (cube);
         Scram (cube,"R2 D2");

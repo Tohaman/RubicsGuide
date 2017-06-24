@@ -31,6 +31,9 @@ public class ScambleFragment extends Fragment {
     int[] CompleteCube = new int[54];
     int[] viewCube = new int[108];
     int[] cubeColor = new int[6];
+    int[] MainRebro = new int[66];
+    int[] DopRebro = new int[54];
+    int[] SpisReber = new int[54];
     LinearLayout[] mLinearLayouts = new LinearLayout[108];
     LinearLayout[] mLinearLayouts1 = new LinearLayout[108];
     final Random random = new Random();
@@ -57,6 +60,7 @@ public class ScambleFragment extends Fragment {
         cubeColor[5] = green;
 
         mGridLayout = (GridLayout) view.findViewById(R.id.grid);
+        InitArrays();
         Initialize(CompleteCube);
 
         for (int i = 0; i < 108; i++) {
@@ -119,6 +123,32 @@ public class ScambleFragment extends Fragment {
         ScrambleLength.setText("14");
         Scramble = (EditText) view.findViewById(R.id.scramble);
         Scramble.setText("");
+
+        Button gran_button = (Button) view.findViewById(R.id.button_gran);
+        gran_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Обработка нажатия
+                int a = CompleteCube[23] + 1;       //смотрим что в буфере ребер
+                int b = CompleteCube[30] + 1;
+                int c = MainRebro[(a*10)+b];
+//                Do
+//                a = CurCube(24)
+//                b = CurCube(31)
+//                c = MainGran((a * 10 + b))
+//                BufferSolve CurCube, c
+//                Loop Until CheckGran(CurCube)
+//                Letter2WordGran
+//                ShowCube CurCube, ShowR, ShowC
+            }
+        });
+
+        Button ugol_button = (Button) view.findViewById(R.id.button_ugol);
+        ugol_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Обработка нажатия
+            }
+        });
+
 
         return view;
 
@@ -213,6 +243,197 @@ public class ScambleFragment extends Fragment {
         return scramble;
     }
 
+    private void InitArrays () {        //Инициализируем таблицы соответствий
+        for (int i = 0; i < 66; i++) {
+            MainRebro[i] = 0;
+        }
+        //Создаем табличку номеров основных ребер, для определенных сочетаний цветов, остальные элементы равны 0
+        MainRebro[12] = 3;      //для сине-оранжевого ребра
+        MainRebro[13] = 7;      //для сине-белого ребра
+        MainRebro[14] = 5;      //для сине-красного ребра
+        MainRebro[15] = 1;      //для сине-желтого ребра
+        MainRebro[21] = 10;     //для оранжево-синей ребра
+        MainRebro[23] = 14;     //для оранжево-белого ребра
+        MainRebro[25] = 12;     //для оранжево-желтого ребра
+        MainRebro[26] = 16;     //для оранжево-зеленого ребра
+        MainRebro[31] = 19;     //для бело-синей ребра
+        MainRebro[32] = 21;     //для бело-оранжевого ребра
+        MainRebro[34] = 23;     //для бело-красного ребра
+        MainRebro[36] = 25;     //для бело-зеленого ребра
+        MainRebro[41] = 28;     //для красно-синей ребра
+        MainRebro[43] = 30;     //для красно-белого ребра
+        MainRebro[45] = 32;     //для красно-желтого ребра
+        MainRebro[46] = 34;     //для красно-зеленого ребра
+        MainRebro[51] = 37;     //для желто-синей ребра
+        MainRebro[52] = 41;     //для желто-оранжевого ребра
+        MainRebro[54] = 39;     //для желто-красного ребра
+        MainRebro[56] = 43;     //для желто-зеленого ребра
+        MainRebro[62] = 48;     //для зелено-оранжевого ребра
+        MainRebro[63] = 46;     //для зелено-белого ребра
+        MainRebro[64] = 50;     //для зелено-красного ребра
+        MainRebro[65] = 52;     //для зелено-желтого ребра
+        for (int i = 0; i < 54; i++) {
+            DopRebro[i] = 0;
+        }
+        //Создаем табличку соответствия основного цвета и дополнительного цвета ребра [где искать второй цвет)
+        DopRebro[1] = 37;           //сине-желтое
+        DopRebro[3] = 10;           //сине-оранжевое
+        DopRebro[5] = 28;           //сине-красное
+        DopRebro[7] = 19;           //сине-белое
+        DopRebro[10] = 3;           //оранжево-синяя
+        DopRebro[12] = 41;          //оранжево-желтое
+        DopRebro[14] = 21;          //оранжево-белое
+        DopRebro[16] = 48;          //оранжево-зеленое
+        DopRebro[19] = 7;           //бело-синяя
+        DopRebro[21] = 14;          //бело-оранжевое
+        DopRebro[23] = 30;          //бело-красное
+        DopRebro[25] = 46;          //бело-зеленое
+        DopRebro[28] = 5;           //красно-синяя
+        DopRebro[30] = 23;          //красно-белое
+        DopRebro[32] = 39;          //красно-желтое
+        DopRebro[34] = 50;          //красно-зеленое
+        DopRebro[37] = 1;           //желто-синяя
+        DopRebro[39] = 32;          //желто-красное
+        DopRebro[41] = 12;          //желто-оранжевое
+        DopRebro[43] = 52;          //желто-зеленое
+        DopRebro[46] = 25;          //зелено-белое
+        DopRebro[48] = 16;          //зелено-оранжевое
+        DopRebro[50] = 34;          //зелено-красное
+        DopRebro[52] = 43;          //зелено-желтое
+    }
+
+    private int[] BufferRebroSolve (int[] cube, int c) {
+        if (!(c==23 | c == 30)) {           //если с = 23, то буфер на месте, и выводим решение на экран
+        }
+        switch (c) {
+            case 1:
+                BlindMoves.Blinde1 (cube);
+                break;
+            case 3:
+                BlindMoves.Blinde3 (cube);
+                break;
+            case 5:
+                BlindMoves.Blinde5 (cube);
+                break;
+            case 7:
+                BlindMoves.Blinde7 (cube);
+                break;
+            case 10:
+                BlindMoves.Blinde10 (cube);
+                break;
+            case 12:
+                BlindMoves.Blinde12 (cube);
+                break;
+            case 14:
+                BlindMoves.Blinde14 (cube);
+                break;
+            case 16:
+                BlindMoves.Blinde16 (cube);
+                break;
+            case 19:
+                BlindMoves.Blinde19 (cube);
+                break;
+            case 21:
+                BlindMoves.Blinde21 (cube);
+                break;
+            case 23:
+                if (!CheckRebro(cube)) {
+                    int i = 0;
+                    do {
+                        i++;
+
+                    } while (SpisReber[i] ==0);
+                }
+                break;
+        }
+        return cube;
+    }
+
+//    Case 24          'для бело-красного ребра
+//    If Not CheckGran(cube] Then ' если не все ребра на своих местах
+//    i = 0
+//    Do                                'то ищем грань с макимальным номером не на своем месте
+//    i = i + 1                       'т.е. в приоритет граней такого: зеленая, желтая, красная, белая, оранжевая, синяя
+//    Loop Until SpisGran(i) = 0
+//    c = SpisGran(i - 1)
+//    If c = 31 Then c = SpisGran(i - 2)    'наверно лишнее, но на всякий случай оставил
+//    If c = 24 Then c = SpisGran(i - 3)
+//    BufferSolve cube, c
+//    Else
+//    Letter2WordGran           'Если все ребра на месте, то преобразуем буквы в слова
+//    End If
+//    Case 26           'для бело-зеленого ребра
+//    Blinde26 cube
+//    Case 29           'для красно-синей ребра
+//    Blinde29 cube
+//    Case 31          'для красно-белого ребра
+//    If Not CheckGran(cube) Then
+//    i = 0
+//    Do
+//            i = i + 1
+//    Loop Until SpisGran(i) = 0
+//    c = SpisGran(i - 1)
+//    If c = 31 Then c = SpisGran(i - 2)
+//    If c = 24 Then c = SpisGran(i - 3)
+//    BufferSolve cube, c
+//    End If
+//    Case 33           'для красно-желтого ребра
+//    Blinde33 cube
+//    Case 35           'для красно-зеленого ребра
+//    Blinde35 cube
+//    Case 38           'для желто-синей ребра
+//    Blinde38 cube
+//    Case 40           'для желто-красного ребра
+//    Blinde40 cube
+//    Case 42           'для желто-оранжевого ребра
+//    Blinde42 cube
+//    Case 44           'для желто-зеленого ребра
+//    Blinde44 cube
+//    Case 47           'для зелено-белого ребра
+//    Blinde47 cube
+//    Case 49           'для зелено-оранжевого ребра
+//    Blinde49 cube
+//    Case 51           'для зелено-красного ребра
+//    Blinde51 cube
+//    Case 53           'для зелено-желтого ребра
+//    Blinde53 cube
+//
+//    Case Else
+//    MsgBox "Странная грань в буфере " & a & b & с, vbOKOnly
+//    End Select
+//    End Sub
+
+    private Boolean CheckRebro (int[] cube){    //проверяем все ли грани на своих местах
+        Boolean Check = true;           //предположим что все на местах
+
+        for (int i = 0; i<24; i++) {    //Обнуляем список ребер на местах
+            SpisReber[i] = 0;
+        }
+        int j = 1;
+
+        return Check;
+    }
+
+//    Function CheckGran(cube) As Boolean  'Ïðîâåðÿåì âñå ëè ãðàíè íà ñâîèõ ìåñòàõ
+//    CheckGran = True
+//    For i = 1 To 24
+//    SpisGran(i) = 0
+//    Next
+//            j = 1
+//    For i = 1 To 53
+//    If DopGran(i) <> 0 Then
+//            a = cube(i)
+//    b = cube(DopGran(i))
+//    c = a * 10 + b
+//    If MainGran(c) <> i Then
+//    SpisGran(j) = i
+//            j = j + 1
+//    CheckGran = False
+//    End If
+//    End If
+//    Next
+//
+//    End Function
 
 
 }

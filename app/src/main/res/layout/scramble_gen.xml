@@ -10,8 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:theme="@style/Base.TextAppearance.AppCompat.Button">
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/button_azbuka"
@@ -69,10 +68,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="3"
+                    android:layout_weight="1"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:gravity="center"
+                    android:gravity="left|center_vertical"
                     android:text="Длина скрамбла"
                     android:textColor="@android:color/background_dark"
                     android:textSize="16sp" />
@@ -83,7 +82,7 @@
                     android:gravity="center"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_weight="2"
+                    android:layout_weight="3"
                     android:textSize="16sp"
                     android:text="14" />
 
@@ -98,7 +97,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:textSize="16sp"
-                android:gravity="center"
+                android:gravity="left|center_vertical"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:textColor="@android:color/background_dark"
@@ -131,6 +130,27 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Без переплавки буфера углов" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_gran"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:text="Решить ребра"/>
+
+                <Button
+                    android:id="@+id/button_ugol"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:text="решить углы"/>
             </LinearLayout>
 
             <LinearLayout
