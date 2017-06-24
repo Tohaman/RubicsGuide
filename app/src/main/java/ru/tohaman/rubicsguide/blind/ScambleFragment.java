@@ -131,14 +131,8 @@ public class ScambleFragment extends Fragment {
                 int a = CompleteCube[23] + 1;       //смотрим что в буфере ребер
                 int b = CompleteCube[30] + 1;
                 int c = MainRebro[(a*10)+b];
-//                Do
-//                a = CurCube(24)
-//                b = CurCube(31)
-//                c = MainGran((a * 10 + b))
-//                BufferSolve CurCube, c
-//                Loop Until CheckGran(CurCube)
-//                Letter2WordGran
-//                ShowCube CurCube, ShowR, ShowC
+                BufferRebroSolve(CompleteCube, c);
+                cube2view();
             }
         });
 
@@ -336,72 +330,74 @@ public class ScambleFragment extends Fragment {
             case 21:
                 BlindMoves.Blinde21 (cube);
                 break;
-            case 23:
+            case 23:                      // для бело-красного ребра
                 if (!CheckRebro(cube)) {
                     int i = 0;
                     do {
                         i++;
-
-                    } while (SpisReber[i] ==0);
+                    } while (SpisReber[i] != 0);
+                    c = SpisReber[i-1];
+                    if (c == 30) { c = SpisReber[i-2];}
+                    if (c == 23) { c = SpisReber[i-3];}
+                    BufferRebroSolve(cube,c);
+                } else {
+                    //Если все ребра на месте, то преобразуем буквы в слова
                 }
                 break;
+            case 25:
+                BlindMoves.Blinde25 (cube);
+                break;
+            case 28:
+                BlindMoves.Blinde28 (cube);
+                break;
+            case 30:                        //для красно-белого ребра
+                if (!CheckRebro(cube)) {
+                    int i = 0;
+                    do {
+                        i++;
+                    } while (SpisReber[i] != 0);
+                    c = SpisReber[i-1];
+                    if (c == 30) { c = SpisReber[i-2];}
+                    if (c == 23) { c = SpisReber[i-3];}
+                    BufferRebroSolve(cube,c);
+                }
+                break;
+            case 32:
+                BlindMoves.Blinde32 (cube);
+                break;
+            case 34:
+                BlindMoves.Blinde34 (cube);
+                break;
+            case 37:
+                BlindMoves.Blinde37 (cube);
+                break;
+            case 39:
+                BlindMoves.Blinde39 (cube);
+                break;
+            case 41:
+                BlindMoves.Blinde41 (cube);
+                break;
+            case 43:
+                BlindMoves.Blinde43 (cube);
+                break;
+            case 46:
+                BlindMoves.Blinde46 (cube);
+                break;
+            case 48:
+                BlindMoves.Blinde48 (cube);
+                break;
+            case 50:
+                BlindMoves.Blinde50 (cube);
+                break;
+            case 52:
+                BlindMoves.Blinde52 (cube);
+                break;
+            default:
+                Toast.makeText(getView().getContext(),"Странная грань",Toast.LENGTH_SHORT).show();
         }
         return cube;
     }
 
-//    Case 24          'для бело-красного ребра
-//    If Not CheckGran(cube] Then ' если не все ребра на своих местах
-//    i = 0
-//    Do                                'то ищем грань с макимальным номером не на своем месте
-//    i = i + 1                       'т.е. в приоритет граней такого: зеленая, желтая, красная, белая, оранжевая, синяя
-//    Loop Until SpisGran(i) = 0
-//    c = SpisGran(i - 1)
-//    If c = 31 Then c = SpisGran(i - 2)    'наверно лишнее, но на всякий случай оставил
-//    If c = 24 Then c = SpisGran(i - 3)
-//    BufferSolve cube, c
-//    Else
-//    Letter2WordGran           'Если все ребра на месте, то преобразуем буквы в слова
-//    End If
-//    Case 26           'для бело-зеленого ребра
-//    Blinde26 cube
-//    Case 29           'для красно-синей ребра
-//    Blinde29 cube
-//    Case 31          'для красно-белого ребра
-//    If Not CheckGran(cube) Then
-//    i = 0
-//    Do
-//            i = i + 1
-//    Loop Until SpisGran(i) = 0
-//    c = SpisGran(i - 1)
-//    If c = 31 Then c = SpisGran(i - 2)
-//    If c = 24 Then c = SpisGran(i - 3)
-//    BufferSolve cube, c
-//    End If
-//    Case 33           'для красно-желтого ребра
-//    Blinde33 cube
-//    Case 35           'для красно-зеленого ребра
-//    Blinde35 cube
-//    Case 38           'для желто-синей ребра
-//    Blinde38 cube
-//    Case 40           'для желто-красного ребра
-//    Blinde40 cube
-//    Case 42           'для желто-оранжевого ребра
-//    Blinde42 cube
-//    Case 44           'для желто-зеленого ребра
-//    Blinde44 cube
-//    Case 47           'для зелено-белого ребра
-//    Blinde47 cube
-//    Case 49           'для зелено-оранжевого ребра
-//    Blinde49 cube
-//    Case 51           'для зелено-красного ребра
-//    Blinde51 cube
-//    Case 53           'для зелено-желтого ребра
-//    Blinde53 cube
-//
-//    Case Else
-//    MsgBox "Странная грань в буфере " & a & b & с, vbOKOnly
-//    End Select
-//    End Sub
 
     private Boolean CheckRebro (int[] cube){    //проверяем все ли грани на своих местах
         Boolean Check = true;           //предположим что все на местах
@@ -409,31 +405,21 @@ public class ScambleFragment extends Fragment {
         for (int i = 0; i<24; i++) {    //Обнуляем список ребер на местах
             SpisReber[i] = 0;
         }
-        int j = 1;
-
+        int j = 0;
+        for (int i =0; i<53; i++) {
+            if (DopRebro[i] != 0) {
+                int a = cube[i] + 1;
+                int b = cube[DopRebro[i]] + 1;
+                int c = ((a*10) + b);
+                if (MainRebro[c] != i) {
+                    SpisReber[j] = i;
+                    j++;
+                    Check = false;
+                }
+            }
+        }
         return Check;
     }
-
-//    Function CheckGran(cube) As Boolean  'Ïðîâåðÿåì âñå ëè ãðàíè íà ñâîèõ ìåñòàõ
-//    CheckGran = True
-//    For i = 1 To 24
-//    SpisGran(i) = 0
-//    Next
-//            j = 1
-//    For i = 1 To 53
-//    If DopGran(i) <> 0 Then
-//            a = cube(i)
-//    b = cube(DopGran(i))
-//    c = a * 10 + b
-//    If MainGran(c) <> i Then
-//    SpisGran(j) = i
-//            j = j + 1
-//    CheckGran = False
-//    End If
-//    End If
-//    Next
-//
-//    End Function
 
 
 }

@@ -251,9 +251,9 @@ public class BlindMoves {
     }
 
     public static int[] Blinde1(int[] cube) {  //синежелтое
-        Scram (cube,"Dw2 L'");
-        Zapad (cube);
-        Scram (cube,"L Dw2");
+        Scram (cube,"D2 M'");
+        Yug (cube);
+        Scram (cube,"M D2");
         return cube;
     }
 
@@ -330,14 +330,14 @@ public class BlindMoves {
     public static int[] Blinde43(int[] cube) {  //желтозеленое
         Scram (cube,"D' L2");
         Zapad (cube);
-        Scram (cube,"L2 D'");
+        Scram (cube,"L2 D");
         return cube;
     }
 
     public static int[] Blinde41(int[] cube) {  //желтооранжевое
         Scram (cube,"L2");
         Zapad (cube);
-        Scram (cube,"D2");
+        Scram (cube,"L2");
         return cube;
     }
 
