@@ -1,6 +1,7 @@
 package ru.tohaman.rubicsguide.blind;
 
 import android.content.Intent;
+import android.net.rtp.RtpStream;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -27,13 +28,17 @@ public class ScambleFragment extends Fragment {
     Intent mIntent;
     GridLayout mGridLayout;
     EditText Scramble,ScrambleLength;
+    TextView solvetext;
     int red,blue,white,orange,green,yellow,back,black;
     int[] CompleteCube = new int[54];
     int[] viewCube = new int[108];
     int[] cubeColor = new int[6];
     int[] MainRebro = new int[66];
     int[] DopRebro = new int[54];
-    int[] SpisReber = new int[54];
+    int[] MainUgol = new int[66];
+    int[] DopUgol = new int[54];
+    int[] SpisReber = new int[24];
+    int[] SpisUglov = new int[24];
     LinearLayout[] mLinearLayouts = new LinearLayout[108];
     LinearLayout[] mLinearLayouts1 = new LinearLayout[108];
     final Random random = new Random();
@@ -94,6 +99,7 @@ public class ScambleFragment extends Fragment {
             public void onClick(View v) {
                 // Обработка нажатия
                 Initialize(CompleteCube);
+                solvetext.setText("Решение: ");
                 cube2view();
                 }
             });
@@ -140,10 +146,17 @@ public class ScambleFragment extends Fragment {
         ugol_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Обработка нажатия
+                int a = CompleteCube[18] + 1;       //смотрим что в буфере углов
+                int b = CompleteCube[11] + 1;
+                int c = MainUgol[(a*10)+b];
+                BufferUgolSolve(CompleteCube, c);
+                cube2view();
+
             }
         });
 
-
+        solvetext = (TextView) view.findViewById(R.id.solve_text);
+        solvetext.setText("Решение: ");
         return view;
 
     }
@@ -184,8 +197,8 @@ public class ScambleFragment extends Fragment {
 
     private void addViewToGrid(GridLayout field, View view) {
         GridLayout.LayoutParams lp = new GridLayout.LayoutParams();
-        lp.width  = 0;
-        lp.height = 0;                                                  //ViewGroup.LayoutParams.WRAP_CONTENT MATCH_PARENT
+//        lp.width  = 0;
+//        lp.height = 0;                                                  //ViewGroup.LayoutParams.WRAP_CONTENT MATCH_PARENT
         lp.columnSpec = GridLayout.spec(GridLayout.UNDEFINED    , 1f);  // позиция и вес кнопки по горизонтали
         lp.rowSpec    = GridLayout.spec(GridLayout.ALIGN_MARGINS, 1f);  // позиция и вес кнопки по вертикали
         field.addView(view, lp);
@@ -294,10 +307,70 @@ public class ScambleFragment extends Fragment {
         DopRebro[48] = 16;          //зелено-оранжевое
         DopRebro[50] = 34;          //зелено-красное
         DopRebro[52] = 43;          //зелено-желтое
+
+        for (int i = 0; i < 54; i++) {
+            MainUgol[i] = 0;
+        }
+        //Создаем табличку номеров основных углов, для определенных сочетаний цветов (по цвету его место)
+        MainUgol[12] = 0;      //для сине-оранжево-желтого угла
+        MainUgol[13] = 6;      //для сине-бело-оранжевого угла
+        MainUgol[14] = 8;      //для сине-красно-белого угла
+        MainUgol[15] = 2;      //для сине-желто-красного угла
+        MainUgol[21] = 11;     //для оранжево-сине-белого угла
+        MainUgol[23] = 17;     //для оранжево-бело-зеленого угла
+        MainUgol[25] = 9;     //для оранжево-желто-синего угла
+        MainUgol[26] = 15;     //для оранжево-зелено-желтого угла
+        MainUgol[31] = 20;     //для бело-сине-красного угла
+        MainUgol[32] = 18;     //для бело-оранжево-синего угла
+        MainUgol[34] = 26;     //для бело-красно-зеленого угла
+        MainUgol[36] = 24;     //для бело-зелено-оранжевого угла
+        MainUgol[41] = 29;     //для красно-сине-желтого угла
+        MainUgol[43] = 27;     //для красно-бело-синего угла
+        MainUgol[45] = 35;     //для красно-желто-зеленого угла
+        MainUgol[46] = 33;     //для красно-зелено-белого угла
+        MainUgol[51] = 38;     //для желто-сине-оранжевого угла
+        MainUgol[52] = 44;     //для желто-оранжево-зеленого угла
+        MainUgol[54] = 36;     //для желто-красно-синего угла
+        MainUgol[56] = 42;     //для желто-зелено-красного угла
+        MainUgol[62] = 45;     //для зелено-оранжево-белого угла
+        MainUgol[63] = 47;     //для зелено-бело-красного угла
+        MainUgol[64] = 53;     //для зелено-красно-желтого угла
+        MainUgol[65] = 51;     //для зелено-желто-оранжевого угла
+
+        for (int i = 0; i < 54; i++) {
+            DopUgol[i] = 0;
+        }
+        //Создаем табличку соответствия основного и дополнительного угла [где искать второй цвет]
+        //углы рассматриваем по часовой стрелке, поэтому достаточно первых двух цветов, чтобы пределить угол
+        DopUgol[0] = 9;       //сине-оранжево-желтый Л
+        DopUgol[2] = 36;       //сине-желто-красный К
+        DopUgol[6] = 18;       //сине-бело-оранжевый М
+        DopUgol[8] = 27;       //сине-красно-белый И
+        DopUgol[9] = 38;      //оранжево-желто-синий Р
+        DopUgol[11] = 6;       //оранжево-сине-белый Н
+        DopUgol[15] = 51;      //оранжево-зелено-желтый П
+        DopUgol[17] = 24;      //оранжево-бело-зеленый О
+        DopUgol[18] = 11;      //бело-оранжево-синий А
+        DopUgol[20] = 8 ;      //бело-сине-красный Б
+        DopUgol[24] = 45;      //бело-зелено-оранжевый Г
+        DopUgol[26] = 33;      //бело-красно-зеленый В
+        DopUgol[27] = 22;      //красно-бело-синяя Ф
+        DopUgol[29] = 2 ;      //красно-сине-желтая У
+        DopUgol[33] = 47;      //красно-зелено-белая С
+        DopUgol[35] = 42;      //красно-желто-зеленая Т
+        DopUgol[36] = 29;      //желто-красно-синяя Ц
+        DopUgol[38] = 0 ;      //желто-сине-оранжевая Х
+        DopUgol[42] = 53;      //желто-зелено-красная Ч
+        DopUgol[44] = 15;      //желто-оранжево-зеленая Ш
+        DopUgol[45] = 17;      //зелено-оранжево-белая Д
+        DopUgol[47] = 26;      //зелено-бело-красная Е
+        DopUgol[51] = 44;      //зелено-желто-оранжевая З
+        DopUgol[53] = 35;      //зелено-красно-желтая Ж
     }
 
     private int[] BufferRebroSolve (int[] cube, int c) {
-        if (!(c==23 | c == 30)) {           //если с = 23, то буфер на месте, и выводим решение на экран
+        if (!(c==23 | c == 30)) {           //если с != 23 или 30, то буфер не на месте, и добоавляем букву к решению
+            solvetext.setText(solvetext.getText() + FindLetter(c) + " ");
         }
         switch (c) {
             case 1:
@@ -421,5 +494,149 @@ public class ScambleFragment extends Fragment {
         return Check;
     }
 
+    private int[] BufferUgolSolve (int[] cube, int c) {
+        if (!(c==18 || c == 11 || c == 6)) {           //если с не равно 18,11 или 6, то буфер не на месте и добавляем букву к решению.
+            solvetext.setText(solvetext.getText() + FindLetter(c) + " ");
+        }
+        switch (c) {
+            case 0:
+                BlindMoves.Blinde0 (cube);
+                break;
+            case 2:
+                BlindMoves.Blinde2 (cube);
+                break;
+            case 6:
+                if (!CheckUgol(cube)) {
+                    int i = 0;
+                    do {                //то ищем угол с макимальным номером не на своем месте
+                        i++;            //т.е. в приоритет граней такой: зеленая, желтая, красная, белая, оранжевая, синяя
+                    } while (SpisUglov[i] != 0);
+                    c = SpisUglov[i-1];
+                    if (c == 18) { c = SpisUglov[i-2];}
+                    if (c == 11) { c = SpisUglov[i-3];}
+                    if (c == 6) { c = SpisUglov[i-3];}
+                    BufferUgolSolve(cube,c);
+                } else {
+                    //Если все ребра на месте, то преобразуем буквы в слова
+                }
+                break;
+            case 8:
+                BlindMoves.Blinde8 (cube);
+                break;
+            case 9:
+                BlindMoves.Blinde9 (cube);
+                break;
+            case 11:
+                if (!CheckUgol(cube)) {
+                    int i = 0;
+                    do {                //то ищем угол с макимальным номером не на своем месте
+                        i++;            //т.е. в приоритет граней такой: зеленая, желтая, красная, белая, оранжевая, синяя
+                    } while (SpisUglov[i] != 0);
+                    c = SpisUglov[i-1];
+                    if (c == 18) { c = SpisUglov[i-2];}
+                    if (c == 11) { c = SpisUglov[i-3];}
+                    if (c == 6) { c = SpisUglov[i-3];}
+                    BufferUgolSolve(cube,c);
+                } else {
+                    //Если все ребра на месте, то преобразуем буквы в слова
+                }
+                break;
+            case 15:
+                BlindMoves.Blinde15 (cube);
+                break;
+            case 17:
+                BlindMoves.Blinde17 (cube);
+                break;
+            case 18:
+                if (!CheckUgol(cube)) {
+                    int i = 0;
+                    do {                //то ищем угол с макимальным номером не на своем месте
+                        i++;            //т.е. в приоритет граней такой: зеленая, желтая, красная, белая, оранжевая, синяя
+                    } while (SpisUglov[i] != 0);
+                    c = SpisUglov[i-1];
+                    if (c == 18) { c = SpisUglov[i-2];}
+                    if (c == 11) { c = SpisUglov[i-3];}
+                    if (c == 6) { c = SpisUglov[i-3];}
+                    BufferUgolSolve(cube,c);
+                } else {
+                    //Если все ребра на месте, то преобразуем буквы в слова
+                }
+                break;
+            case 20:
+                BlindMoves.Blinde20 (cube);
+                break;
+            case 24:
+                BlindMoves.Blinde24 (cube);
+                break;
+            case 26:
+                BlindMoves.Blinde26 (cube);
+                break;
+            case 27:
+                BlindMoves.Blinde27 (cube);
+                break;
+            case 29:
+                BlindMoves.Blinde29 (cube);
+                break;
+            case 33:
+                BlindMoves.Blinde33 (cube);
+                break;
+            case 35:
+                BlindMoves.Blinde35 (cube);
+                break;
+            case 36:
+                BlindMoves.Blinde36 (cube);
+                break;
+            case 38:
+                BlindMoves.Blinde38 (cube);
+                break;
+            case 42:
+                BlindMoves.Blinde42 (cube);
+                break;
+            case 44:
+                BlindMoves.Blinde44 (cube);
+                break;
+            case 45:
+                BlindMoves.Blinde45 (cube);
+                break;
+            case 47:
+                BlindMoves.Blinde47 (cube);
+                break;
+            case 51:
+                BlindMoves.Blinde51 (cube);
+                break;
+            case 53:
+                BlindMoves.Blinde53 (cube);
+                break;
+            default:
+                Toast.makeText(getView().getContext(),"Страннай угол",Toast.LENGTH_SHORT).show();
+        }
+        return cube;
+    }
 
+
+    private Boolean CheckUgol (int[] cube) {    //проверяем все ли углы на своих местах
+        Boolean Check = true;           //предположим что все на местах
+        for (int i = 0; i<24; i++) {    //Обнуляем список углов на местах
+            SpisUglov[i] = 0;
+        }
+        int j = 0;
+        for (int i =0; i<53; i++) {
+            if (DopUgol[i] != 0) {
+                int a = cube[i] + 1;
+                int b = cube[DopUgol[i]] + 1;
+                int c = ((a*10) + b);
+                if (MainUgol[c] != i) {
+                    SpisUglov[j] = i;
+                    j++;
+                    Check = false;
+                }
+            }
+        }
+        return Check;
+    }
+
+    private String FindLetter (int c) {     //Доработать функцию поиска буквы из азбуки, пока просто цифра
+        String st = String.valueOf(c);
+        return st;
+    }
 }
