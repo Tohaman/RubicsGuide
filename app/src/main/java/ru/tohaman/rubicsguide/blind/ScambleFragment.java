@@ -6,18 +6,26 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.GridLayout;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.List;
 import java.util.Random;
 
 import ru.tohaman.rubicsguide.R;
+import ru.tohaman.rubicsguide.listpager.ListPager;
+import ru.tohaman.rubicsguide.listpager.ListPagerLab;
 
 
 /**
@@ -42,6 +50,7 @@ public class ScambleFragment extends Fragment {
     LinearLayout[] mLinearLayouts = new LinearLayout[108];
     LinearLayout[] mLinearLayouts1 = new LinearLayout[108];
     final Random random = new Random();
+    List<ListPager> mListPagers;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -65,6 +74,7 @@ public class ScambleFragment extends Fragment {
         cubeColor[5] = green;
 
         mGridLayout = (GridLayout) view.findViewById(R.id.grid);
+        mListPagers = ListPagerLab.get(getActivity()).getPhaseList("SCRAMBLEGEN");
         InitArrays();
         Initialize(CompleteCube);
 
@@ -112,6 +122,7 @@ public class ScambleFragment extends Fragment {
                 GenerateScramble();
                 BlindMoves.Scram(CompleteCube,String.valueOf(Scramble.getText()));
                 cube2view();
+                SetParamToBase("Scramble", Scramble.getText().toString());
             }
         });
 
@@ -126,9 +137,23 @@ public class ScambleFragment extends Fragment {
 
 
         ScrambleLength = (EditText) view.findViewById(R.id.scrambleLength);
-        ScrambleLength.setText("14");
+        ScrambleLength.setText(GetParamFromBase("ScrambleLength"));
+
         Scramble = (EditText) view.findViewById(R.id.scramble);
-        Scramble.setText("");
+        Scramble.setText(GetParamFromBase("Scramble"));
+        Scramble.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                boolean handled = false;
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    SetParamToBase("Scramble", Scramble.getText().toString());
+                }
+                return handled;
+            }
+        });
+
+
+
 
         Button gran_button = (Button) view.findViewById(R.id.button_gran);
         gran_button.setOnClickListener(new View.OnClickListener() {
@@ -158,6 +183,7 @@ public class ScambleFragment extends Fragment {
         solvetext = (TextView) view.findViewById(R.id.solve_text);
         solvetext.setText("Решение: ");
         return view;
+
 
     }
 
@@ -639,4 +665,28 @@ public class ScambleFragment extends Fragment {
         String st = String.valueOf(c);
         return st;
     }
+
+    private String GetParamFromBase (String param) {
+        String st = "";
+        for (int i = 0; i < mListPagers.size(); i++) {
+            if (mListPagers.get(i).getTitle().equals(param)) {
+                if (mListPagers.get(i).getComment().equals("")) {
+                    st = mListPagers.get(i).getUrl();
+                } else {
+                    st = mListPagers.get(i).getComment();
+                }
+            }
+        }
+        return st;
+    }
+
+    private void SetParamToBase (String param, String value) {
+        for (int i = 0; i < mListPagers.size(); i++) {
+            if (mListPagers.get(i).getTitle().equals(param)) {
+                mListPagers.get(i).setComment(value);
+                ListPagerLab.get(getActivity()).updateListPager(mListPagers.get(i));
+            }
+        }
+    }
+
 }

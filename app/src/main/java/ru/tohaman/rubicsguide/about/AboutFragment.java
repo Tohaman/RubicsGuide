@@ -25,7 +25,7 @@ public class AboutFragment extends Fragment {
     @Override
     @SuppressWarnings("deprecation")
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.about_fragment, container, false);
+        View v = inflater.inflate(R.layout.fragment_about, container, false);
 
         // Немного преобразуем текст для корректного отображения.
         String text = "<html><body style=\"text-align:justify\"> %s </body></Html>";

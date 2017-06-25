@@ -94,6 +94,12 @@ public class ListPagerLab {
         mUrl = mContext.getResources().getStringArray(R.array.blindacc_url);
         PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
 
+        mPhase = "SCRAMBLEGEN";
+        mTitles = new String[]{"Scramble", "ScrambleLength", "ChkBufRebro", "ChkBufUgol"};
+        mResId = new int[] {0,0,0,0};                       //что-то укажем, не будем использовать
+        Descr = new int[] {0,0,0,0};
+        mUrl = new String[]{"U R U' R' F", "14","1","1"};   //значения, если их еще нет в базе (комментах).
+        PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
 
     }
 
