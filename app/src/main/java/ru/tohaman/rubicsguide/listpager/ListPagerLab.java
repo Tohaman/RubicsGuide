@@ -98,7 +98,7 @@ public class ListPagerLab {
         mTitles = new String[]{"Scramble", "ScrambleLength", "ChkBufRebro", "ChkBufUgol"};
         mResId = new int[] {0,0,0,0};                       //что-то укажем, не будем использовать
         Descr = new int[] {0,0,0,0};
-        mUrl = new String[]{"U R U' R' F", "14","1","1"};   //значения, если их еще нет в базе (комментах).
+        mUrl = new String[]{"B U F' L' R B' D2 R' F U D2 U F", "14","1","1"};   //значения, если их еще нет в базе (комментах).
         PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
 
     }
