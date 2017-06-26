@@ -167,6 +167,7 @@
                     android:id="@+id/grid"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_margin="10dp"
                     app:columnCount="12"
                     app:rowCount="9">
                 </android.support.v7.widget.GridLayout>
@@ -176,6 +177,7 @@
                 android:id="@+id/solve_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:text="Решение:"/>
 
         </LinearLayout>

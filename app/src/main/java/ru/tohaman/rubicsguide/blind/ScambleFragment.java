@@ -1,14 +1,10 @@
 package ru.tohaman.rubicsguide.blind;
 
 import android.content.Intent;
-import android.net.rtp.RtpStream;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.GridLayout;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +20,7 @@ import java.util.List;
 import java.util.Random;
 
 import ru.tohaman.rubicsguide.R;
+import ru.tohaman.rubicsguide.about.AboutActivity;
 import ru.tohaman.rubicsguide.listpager.ListPager;
 import ru.tohaman.rubicsguide.listpager.ListPagerLab;
 
@@ -55,7 +52,7 @@ public class ScambleFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.scramble_gen, container, false);
+        View view = inflater.inflate(R.layout.fragment_scramble_gen, container, false);
 
         back = ContextCompat.getColor(view.getContext(), R.color.gray);
         black = ContextCompat.getColor(view.getContext(), R.color.black);
@@ -99,8 +96,8 @@ public class ScambleFragment extends Fragment {
                 // Обработка нажатия кнопки Азбука
                 // вызов активности редактирования азбуки
                 // пока "едем в Лондон"
-                BasicMoves.MoveF (CompleteCube);
-                cube2view();
+                mIntent = new Intent(getActivity(), AzbukaActivity.class);
+                startActivity(mIntent);
             }
         });
 
@@ -223,8 +220,8 @@ public class ScambleFragment extends Fragment {
 
     private void addViewToGrid(GridLayout field, View view) {
         GridLayout.LayoutParams lp = new GridLayout.LayoutParams();
-//        lp.width  = 0;
-//        lp.height = 0;                                                  //ViewGroup.LayoutParams.WRAP_CONTENT MATCH_PARENT
+        lp.width  = 0;
+        lp.height = 0;                                                  //ViewGroup.LayoutParams.WRAP_CONTENT MATCH_PARENT
         lp.columnSpec = GridLayout.spec(GridLayout.UNDEFINED    , 1f);  // позиция и вес кнопки по горизонтали
         lp.rowSpec    = GridLayout.spec(GridLayout.ALIGN_MARGINS, 1f);  // позиция и вес кнопки по вертикали
         field.addView(view, lp);

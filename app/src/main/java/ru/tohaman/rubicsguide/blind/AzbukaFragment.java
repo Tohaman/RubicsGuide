@@ -10,7 +10,12 @@ import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import ru.tohaman.rubicsguide.R;
 
@@ -19,10 +24,13 @@ import ru.tohaman.rubicsguide.R;
  */
 
 public class AzbukaFragment extends Fragment {
-    private TextView mAboutField;
+    private TextView mAzbukaField;
+    private MyGridAdapter mAdapter;
+    private List<String> mGridList = new ArrayList();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
 
         View view = inflater.inflate(R.layout.fragment_azbuka, container, false);
 
@@ -30,16 +38,7 @@ public class AzbukaFragment extends Fragment {
         String text = "<html><body style=\"text-align:justify\"> %s </body></Html>";
         String description = String.format(text,getString(R.string.azbuka));
         description = description.replace("%%", "%25");
-
-        // Android 7.0 ака N (Nougat) = API 24, начиная с версии Андроид 7.0 вместо HTML.fromHtml (String)
-        // лучше использовать HTML.fromHtml (String, int), где int различные флаги, влияющие на отображение html
-        // аналогично для метода HTML.fromHtml (String, ImageGetter, TagHandler) -> HTML.fromHtml (String, int, ImageGetter, TagHandler)
-        // поэтому используем @SuppressWarnings("deprecation") перед объявлением метода и вот такую конструкцию
-        // для преобразования String в Spanned. В принципе использование старой конструкции равноценно использованию
-        // новой с флагом Html.FROM_HTML_MODE_LEGACY... подробнее о флагах-модификаторах на developer.android.com
-        // В методе Html.fromHtml(String, imgGetter, tagHandler) - tagHandler - это метод, который вызывется, если
-        // в строке встречается тэг, который не распознан, т.е. тут можно обрабатывать свои тэги
-        // пока не используется (null), но все воозможно :)
+        description = "Выбранный элемент: ";                        //потом убрать
 
         Spanned spanresult;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
@@ -48,9 +47,38 @@ public class AzbukaFragment extends Fragment {
             spanresult = Html.fromHtml(description, imgGetter, null);
         }
 
-        mAboutField = (TextView) view.findViewById(R.id.about_textView);
-        mAboutField.setText(spanresult);
-        mAboutField.setMovementMethod(LinkMovementMethod.getInstance());
+        mAzbukaField = (TextView) view.findViewById(R.id.azbuka_textView);
+        mAzbukaField.setText(spanresult);
+        mAzbukaField.setMovementMethod(LinkMovementMethod.getInstance());
+
+        for (int i=0; i<108; i++) {
+            mGridList.add(String.valueOf(i));
+        }
+
+        GridView mGridView = (GridView) view.findViewById(R.id.azbuka_gridView);
+        mAdapter = new MyGridAdapter(view.getContext(),R.layout.grid_item,mGridList);
+        mGridView.setAdapter(mAdapter);
+        mGridView.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                mAzbukaField.setText("Выбранный элемент: " + mAdapter.getItem(position));
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                mAzbukaField.setText("Ничего не выбрано");
+            }
+        });
+        mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View v,
+                                    int position, long id) {
+                // TODO Auto-generated method stub
+                mAzbukaField.setText("Выбранный элемент: "
+                        + mAdapter.getItem(position));
+            }
+        });
 
         return view;
     }
