@@ -22,7 +22,6 @@ public class MyGridAdapter extends BaseAdapter {
 
     // Конструктор
     public MyGridAdapter(Context context, int ViewResourceId, List<String> mGridList) {
-        // TODO Auto-generated constructor stub
         this.mContext = context;
         this.mInflater = LayoutInflater.from(context);
         this.mGridList = mGridList;

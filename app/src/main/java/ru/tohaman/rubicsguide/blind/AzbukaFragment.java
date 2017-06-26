@@ -74,7 +74,6 @@ public class AzbukaFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
-                // TODO Auto-generated method stub
                 mAzbukaField.setText("Выбранный элемент: "
                         + mAdapter.getItem(position));
             }
