@@ -235,9 +235,62 @@ public class ListPagerLab {
         return idx;
     }
 
-    private String[] getMaximAzbuka() {
+    public static String[] getMaximAzbuka() {
         String[] azbuka = new String[54];
-        azbuka[1] = "А";
+        azbuka[0] = "М";    azbuka[1] = "Л";    azbuka[2] = "Л";
+        azbuka[3] = "М";    azbuka[4] = "";     azbuka[5] = "К";
+        azbuka[6] = "И";    azbuka[7] = "И";    azbuka[8] = "К";
+
+        azbuka[9] = "С";    azbuka[10] = "С";   azbuka[11] = "О";
+        azbuka[12] = "Р";   azbuka[13] = "";    azbuka[14] = "О";
+        azbuka[15] = "Р";   azbuka[16] = "П";   azbuka[17] = "П";
+
+        azbuka[18] = "А";   azbuka[19] = "А";   azbuka[20] = "Б";
+        azbuka[21] = "Г";   azbuka[22] = "";    azbuka[23] = "Б";
+        azbuka[24] = "Г";   azbuka[25] = "В";   azbuka[26] = "В";
+
+        azbuka[27] = "У";   azbuka[28] = "Ц";   azbuka[29] = "Ц";
+        azbuka[30] = "У";   azbuka[31] = "";    azbuka[32] = "Х";
+        azbuka[33] = "Ф";   azbuka[34] = "Ф";   azbuka[35] = "Х";
+
+        azbuka[36] = "Э";    azbuka[37] = "Ш";    azbuka[38] = "Ш";
+        azbuka[39] = "Э";    azbuka[40] = "";    azbuka[41] = "Я";
+        azbuka[42] = "Ю";    azbuka[43] = "Ю";    azbuka[44] = "Я";
+
+        azbuka[45] = "Е";    azbuka[46] = "Е";    azbuka[47] = "Ё";
+        azbuka[48] = "З";    azbuka[49] = "";    azbuka[50] = "Ё";
+        azbuka[51] = "З";    azbuka[52] = "Ж";    azbuka[53] = "Ж";
+
         return azbuka;
     }
+
+    public static String[] getMyAzbuka() {
+        String[] azbuka = new String[54];
+        azbuka[0] = "М";    azbuka[1] = "Л";    azbuka[2] = "Л";
+        azbuka[3] = "М";    azbuka[4] = "";     azbuka[5] = "К";
+        azbuka[6] = "И";    azbuka[7] = "И";    azbuka[8] = "К";
+
+        azbuka[9] = "Р";    azbuka[10] = "Р";   azbuka[11] = "Н";
+        azbuka[12] = "П";   azbuka[13] = "";    azbuka[14] = "Н";
+        azbuka[15] = "П";   azbuka[16] = "О";   azbuka[17] = "О";
+
+        azbuka[18] = "А";   azbuka[19] = "А";   azbuka[20] = "Б";
+        azbuka[21] = "Г";   azbuka[22] = "";    azbuka[23] = "Б";
+        azbuka[24] = "Г";   azbuka[25] = "В";   azbuka[26] = "В";
+
+        azbuka[27] = "С";   azbuka[28] = "Ф";   azbuka[29] = "Ф";
+        azbuka[30] = "С";   azbuka[31] = "";    azbuka[32] = "У";
+        azbuka[33] = "Т";   azbuka[34] = "Т";   azbuka[35] = "У";
+
+        azbuka[36] = "Ц";    azbuka[37] = "Х";    azbuka[38] = "Х";
+        azbuka[39] = "Ц";    azbuka[40] = "";    azbuka[41] = "Ш";
+        azbuka[42] = "Ч";    azbuka[43] = "Ч";    azbuka[44] = "Ш";
+
+        azbuka[45] = "Д";    azbuka[46] = "Д";    azbuka[47] = "Е";
+        azbuka[48] = "З";    azbuka[49] = "";    azbuka[50] = "Е";
+        azbuka[51] = "З";    azbuka[52] = "Ж";    azbuka[53] = "Ж";
+
+        return azbuka;
+    }
+
 }
