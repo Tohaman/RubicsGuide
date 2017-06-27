@@ -234,4 +234,10 @@ public class ListPagerLab {
         tArray.recycle();
         return idx;
     }
+
+    private String[] getMaximAzbuka() {
+        String[] azbuka = new String[54];
+        azbuka[1] = "А";
+        return azbuka;
+    }
 }

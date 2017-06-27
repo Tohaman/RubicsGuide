@@ -38,7 +38,7 @@ public class MyGridAdapter extends BaseAdapter {
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             grid = inflater.inflate(layout, parent, false);
         } else {
-            grid = (View) convertView;
+            grid = convertView;
         }
 
         TextView textView = (TextView) grid.findViewById(R.id.grid_text);

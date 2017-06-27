@@ -56,7 +56,7 @@ public class AzbukaFragment extends Fragment {
         }
 
         GridView mGridView = (GridView) view.findViewById(R.id.azbuka_gridView);
-        mAdapter = new MyGridAdapter(view.getContext(),R.layout.grid_item,mGridList);
+        mAdapter = new MyGridAdapter(view.getContext(),R.layout.grid_item2,mGridList);
         mGridView.setAdapter(mAdapter);
         mGridView.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
