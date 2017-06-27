@@ -7,6 +7,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.List;
@@ -17,11 +18,11 @@ public class MyGridAdapter extends BaseAdapter {
 
     private Context mContext;
     private LayoutInflater mInflater;
-    private List<String> mGridList;
+    private List<CubeAzbuka> mGridList;
     private int layout;
 
     // Конструктор
-    public MyGridAdapter(Context context, int ViewResourceId, List<String> mGridList) {
+    public MyGridAdapter(Context context, int ViewResourceId, List<CubeAzbuka> mGridList) {
         this.mContext = context;
         this.mInflater = LayoutInflater.from(context);
         this.mGridList = mGridList;
@@ -42,7 +43,9 @@ public class MyGridAdapter extends BaseAdapter {
         }
 
         TextView textView = (TextView) grid.findViewById(R.id.grid_text);
-        textView.setText(mGridList.get(position));
+        textView.setText(mGridList.get(position).getLetter());
+        LinearLayout linearLayout = (LinearLayout) grid.findViewById(R.id.grid_main_layout);
+        linearLayout.setBackgroundColor(mGridList.get(position).getColor());
 
         return grid;
 
@@ -80,7 +83,7 @@ public class MyGridAdapter extends BaseAdapter {
 
     // возвращает содержимое выделенного элемента списка
     public String getItem(int position) {
-        return mGridList.get(position);
+        return mGridList.get(position).toString();
     }
 
     @Override

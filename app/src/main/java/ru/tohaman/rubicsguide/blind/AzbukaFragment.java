@@ -4,6 +4,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
@@ -18,6 +19,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ru.tohaman.rubicsguide.R;
+import ru.tohaman.rubicsguide.listpager.ListPagerLab;
+
+import static ru.tohaman.rubicsguide.blind.ScambleFragment.Initialize;
 
 /**
  * Created by anton on 25.06.17.
@@ -26,14 +30,33 @@ import ru.tohaman.rubicsguide.R;
 public class AzbukaFragment extends Fragment {
     private TextView mAzbukaField;
     private MyGridAdapter mAdapter;
-    private List<String> mGridList = new ArrayList();
+    private List<CubeAzbuka> mGridList = new ArrayList();
+    ListPagerLab listPagerLab;
+    int[] cubeColor = new int[6];
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-
         View view = inflater.inflate(R.layout.fragment_azbuka, container, false);
 
+        int back = ContextCompat.getColor(view.getContext(), R.color.gray);
+        int black = ContextCompat.getColor(view.getContext(), R.color.black);
+        int red = ContextCompat.getColor(view.getContext(), R.color.red);
+        int blue = ContextCompat.getColor(view.getContext(), R.color.blue);
+        int white = ContextCompat.getColor(view.getContext(), R.color.white);
+        int orange = ContextCompat.getColor(view.getContext(), R.color.orange);
+        int green = ContextCompat.getColor(view.getContext(), R.color.green);
+        int yellow = ContextCompat.getColor(view.getContext(), R.color.yellow);
+
+        cubeColor[0] = blue;
+        cubeColor[1] = orange;
+        cubeColor[2] = white;
+        cubeColor[3] = red;
+        cubeColor[4] = yellow;
+        cubeColor[5] = green;
+
+        // Получаем синглет
+        listPagerLab = ListPagerLab.get(getActivity());
         // Немного преобразуем текст для корректного отображения.
         String text = "<html><body style=\"text-align:justify\"> %s </body></Html>";
         String description = String.format(text,getString(R.string.azbuka));
@@ -52,20 +75,22 @@ public class AzbukaFragment extends Fragment {
         mAzbukaField.setMovementMethod(LinkMovementMethod.getInstance());
 
         for (int i=0; i<108; i++) {
-            mGridList.add("");
+            CubeAzbuka ca = new CubeAzbuka(white,"");
+            mGridList.add(ca);
         }
 
-        //задаем элементам grid (viewCube) цвета куба
-        //grid это 108 квадратиков, а куб это 54 эемента
-/*        for (int i = 0; i < 9; i++) {
-            viewCube[(i/3)*12+3+(i%3)] = cubeColor[CompleteCube[i]];
-            viewCube[(i/3+3)*12+(i%3)] = cubeColor[CompleteCube[i+9]];
-            viewCube[(i/3+3)*12+3+(i%3)] = cubeColor[CompleteCube[i+18]];
-            viewCube[(i/3+3)*12+6+(i%3)] = cubeColor[CompleteCube[i+27]];
-            viewCube[(i/3+3)*12+9+(i%3)] = cubeColor[CompleteCube[i+36]];
-            viewCube[(i/3+6)*12+3+(i%3)] = cubeColor[CompleteCube[i+45]];
+        int[] cube = new int[54];
+        Initialize (cube);
+        String[] azbuka = listPagerLab.getCustomAzbuka();
+
+        for (int i = 0; i < 9; i++) {
+            mGridList.set((i/3)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i]],azbuka [i]));
+            mGridList.set((i/3+3)*12+(i%3), new CubeAzbuka(cubeColor[cube[i+9]],azbuka [i+9]));
+            mGridList.set((i/3+3)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i+18]],azbuka [i+18]));
+            mGridList.set((i/3+3)*12+6+(i%3), new CubeAzbuka(cubeColor[cube[i+27]],azbuka [i+27]));
+            mGridList.set((i/3+3)*12+9+(i%3), new CubeAzbuka(cubeColor[cube[i+36]],azbuka [i+36]));
+            mGridList.set((i/3+6)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i+45]],azbuka [i+45]));
         }
-        */
 
         GridView mGridView = (GridView) view.findViewById(R.id.azbuka_gridView);
         mAdapter = new MyGridAdapter(view.getContext(),R.layout.grid_item2,mGridList);
