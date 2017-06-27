@@ -7,9 +7,9 @@
     </string-array>
 
     <integer-array name="blind_menu_icon">
-        <item>@drawable/accel_2</item>
-        <item>@drawable/cross</item>
-        <item>@drawable/pll</item>
+        <item>@drawable/blind</item>
+        <item>@drawable/blaccel_1</item>
+        <item>@drawable/scramgen</item>
     </integer-array>
 
     <string-array name="blind_menu_phase">
