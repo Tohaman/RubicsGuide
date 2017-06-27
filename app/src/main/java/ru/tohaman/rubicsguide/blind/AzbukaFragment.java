@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.TextView;
 
@@ -33,20 +34,21 @@ public class AzbukaFragment extends Fragment {
     private List<CubeAzbuka> mGridList = new ArrayList();
     ListPagerLab listPagerLab;
     int[] cubeColor = new int[6];
+    int red,blue,white,orange,green,yellow,back,black;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_azbuka, container, false);
 
-        int back = ContextCompat.getColor(view.getContext(), R.color.gray);
-        int black = ContextCompat.getColor(view.getContext(), R.color.black);
-        int red = ContextCompat.getColor(view.getContext(), R.color.red);
-        int blue = ContextCompat.getColor(view.getContext(), R.color.blue);
-        int white = ContextCompat.getColor(view.getContext(), R.color.white);
-        int orange = ContextCompat.getColor(view.getContext(), R.color.orange);
-        int green = ContextCompat.getColor(view.getContext(), R.color.green);
-        int yellow = ContextCompat.getColor(view.getContext(), R.color.yellow);
+        back = ContextCompat.getColor(view.getContext(), R.color.gray);
+        black = ContextCompat.getColor(view.getContext(), R.color.black);
+        red = ContextCompat.getColor(view.getContext(), R.color.red);
+        blue = ContextCompat.getColor(view.getContext(), R.color.blue);
+        white = ContextCompat.getColor(view.getContext(), R.color.white);
+        orange = ContextCompat.getColor(view.getContext(), R.color.orange);
+        green = ContextCompat.getColor(view.getContext(), R.color.green);
+        yellow = ContextCompat.getColor(view.getContext(), R.color.yellow);
 
         cubeColor[0] = blue;
         cubeColor[1] = orange;
@@ -74,23 +76,7 @@ public class AzbukaFragment extends Fragment {
         mAzbukaField.setText(spanresult);
         mAzbukaField.setMovementMethod(LinkMovementMethod.getInstance());
 
-        for (int i=0; i<108; i++) {
-            CubeAzbuka ca = new CubeAzbuka(white,"");
-            mGridList.add(ca);
-        }
-
-        int[] cube = new int[54];
-        Initialize (cube);
-        String[] azbuka = listPagerLab.getCustomAzbuka();
-
-        for (int i = 0; i < 9; i++) {
-            mGridList.set((i/3)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i]],azbuka [i]));
-            mGridList.set((i/3+3)*12+(i%3), new CubeAzbuka(cubeColor[cube[i+9]],azbuka [i+9]));
-            mGridList.set((i/3+3)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i+18]],azbuka [i+18]));
-            mGridList.set((i/3+3)*12+6+(i%3), new CubeAzbuka(cubeColor[cube[i+27]],azbuka [i+27]));
-            mGridList.set((i/3+3)*12+9+(i%3), new CubeAzbuka(cubeColor[cube[i+36]],azbuka [i+36]));
-            mGridList.set((i/3+6)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i+45]],azbuka [i+45]));
-        }
+        InitGridList();
 
         GridView mGridView = (GridView) view.findViewById(R.id.azbuka_gridView);
         mAdapter = new MyGridAdapter(view.getContext(),R.layout.grid_item2,mGridList);
@@ -115,6 +101,28 @@ public class AzbukaFragment extends Fragment {
             }
         });
 
+
+        Button but_myazbuka = (Button) view.findViewById(R.id.button_myazbuka);
+        but_myazbuka.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Обработка нажатия
+                String[] azbuka = listPagerLab.getMyAzbuka();
+                listPagerLab.setCustomAzbuka(azbuka);
+                InitGridList();
+                mAdapter.notifyDataSetChanged();
+            }
+        });
+
+        Button but_maxazbuka = (Button) view.findViewById(R.id.button_maxazbuka);
+        but_maxazbuka.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Обработка нажатия
+                String[] azbuka = listPagerLab.getMaximAzbuka();
+                listPagerLab.setCustomAzbuka(azbuka);
+                InitGridList();
+                mAdapter.notifyDataSetChanged();
+            }
+        });
         return view;
     }
 
@@ -139,5 +147,27 @@ public class AzbukaFragment extends Fragment {
             return drawable;
         }
     };
+
+    private void InitGridList() {
+        if (mGridList.size()==0) {
+            for (int i=0; i<108; i++) {
+                mGridList.add(new CubeAzbuka(white, ""));
+            }
+        }
+
+        int[] cube = new int[54];
+        Initialize (cube);
+        String[] azbuka = listPagerLab.getCustomAzbuka();
+
+        for (int i = 0; i < 9; i++) {
+            mGridList.set((i/3)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i]],azbuka [i]));
+            mGridList.set((i/3+3)*12+(i%3), new CubeAzbuka(cubeColor[cube[i+9]],azbuka [i+9]));
+            mGridList.set((i/3+3)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i+18]],azbuka [i+18]));
+            mGridList.set((i/3+3)*12+6+(i%3), new CubeAzbuka(cubeColor[cube[i+27]],azbuka [i+27]));
+            mGridList.set((i/3+3)*12+9+(i%3), new CubeAzbuka(cubeColor[cube[i+36]],azbuka [i+36]));
+            mGridList.set((i/3+6)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i+45]],azbuka [i+45]));
+        }
+
+    }
 
 }

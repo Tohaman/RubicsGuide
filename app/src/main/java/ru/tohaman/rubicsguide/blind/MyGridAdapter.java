@@ -51,30 +51,6 @@ public class MyGridAdapter extends BaseAdapter {
 
     }
 
-/*
-
-        ImageView icon = (ImageView) v.findViewById(R.id.list_item_image);
-        TextView text = (TextView) v.findViewById(R.id.list_item_title_text);
-
-        ListPager listPager = pagerLists.get(position);
-
-        icon.setImageResource(listPager.getIcon());
-        text.setText(listPager.getTitle());
-
-            for (int i = 0; i < 108; i++) {
-        View v = View.inflate(view.getContext(),R.layout.grid_item,null);
-        TextView textView=(TextView) v.findViewById(R.id.grid_text);
-        String st = String.valueOf(i%10);
-        textView.setText("");
-        LinearLayout linearLayout = (LinearLayout) v.findViewById(R.id.grid_layout);
-        LinearLayout linearLayout1 = (LinearLayout) v.findViewById(R.id.grid_main_layout);
-        linearLayout.setBackgroundColor(back);
-        mLinearLayouts[i] = linearLayout;
-        mLinearLayouts1[i] = linearLayout1;
-        addViewToGrid(mGridLayout,v);
-    }
-*/
-
 
     @Override
     public int getCount() {
@@ -83,7 +59,7 @@ public class MyGridAdapter extends BaseAdapter {
 
     // возвращает содержимое выделенного элемента списка
     public String getItem(int position) {
-        return mGridList.get(position).toString();
+        return mGridList.get(position).getLetter();
     }
 
     @Override
