@@ -48,6 +48,7 @@ public class ScambleFragment extends Fragment {
     LinearLayout[] mLinearLayouts1 = new LinearLayout[108];
     final Random random = new Random();
     List<ListPager> mListPagers;
+    ListPagerLab listPagerLab;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -70,6 +71,8 @@ public class ScambleFragment extends Fragment {
         cubeColor[4] = yellow;
         cubeColor[5] = green;
 
+        // Получаем синглет
+        listPagerLab = ListPagerLab.get(getActivity());
         mGridLayout = (GridLayout) view.findViewById(R.id.grid);
         mListPagers = ListPagerLab.get(getActivity()).getPhaseList("SCRAMBLEGEN");
         InitArrays();
@@ -489,7 +492,7 @@ public class ScambleFragment extends Fragment {
                 BlindMoves.Blinde52 (cube);
                 break;
             default:
-                Toast.makeText(getView().getContext(),"Странная грань",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getView().getContext(),"Странное ребро в буфере",Toast.LENGTH_SHORT).show();
         }
         return cube;
     }
@@ -631,7 +634,7 @@ public class ScambleFragment extends Fragment {
                 BlindMoves.Blinde53 (cube);
                 break;
             default:
-                Toast.makeText(getView().getContext(),"Страннай угол",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getView().getContext(),"Страннай угол в буфере",Toast.LENGTH_SHORT).show();
         }
         return cube;
     }
@@ -659,8 +662,8 @@ public class ScambleFragment extends Fragment {
     }
 
     private String FindLetter (int c) {     //Доработать функцию поиска буквы из азбуки, пока просто цифра
-        String st = String.valueOf(c);
-        return st;
+        String[] azbuka = listPagerLab.getCustomAzbuka();
+        return azbuka[c];
     }
 
     private String GetParamFromBase (String param) {

@@ -100,6 +100,13 @@ public class ListPagerLab {
         mUrl = new String[]{"U2 F2 L' D2 R U F' L2 B2 R L2 B2 U R", "14","1","1"};   //значения, если их еще нет в базе (комментах).
         PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
 
+        mPhase = "AZBUKA";
+        mTitles = new String[]{"AZBUKA"};
+        mResId = new int[] {0,0,0,0};
+        Descr = new int[] {0,0,0,0};
+        mUrl = new String[]{""};
+        PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
+
     }
 
     // Инициализация фазы, с заданными массивами Заголовков, Иконок, Описаний, ютуб-ссылок
@@ -143,14 +150,14 @@ public class ListPagerLab {
 
     //возвращает из ListPagerLab один ListPager с заданными фазой и номером
     public ListPager getPhaseItem(int id, String phase) {
-        ListPager sPagerList = null;
+        ListPager mPagerList = null;
 
         for (ListPager listPager : mListPagers){
             if (phase.equals(listPager.getPhase())& id==listPager.getId()) {
-                    sPagerList = listPager;
+                    mPagerList = listPager;
                 }
         }
-        return sPagerList;
+        return mPagerList;
     }
 
     //обновляем элемент ListPagerLab (свой комментарий)
@@ -235,62 +242,82 @@ public class ListPagerLab {
         return idx;
     }
 
-    public static String[] getMaximAzbuka() {
+    public String[] getMaximAzbuka() {
         String[] azbuka = new String[54];
         azbuka[0] = "М";    azbuka[1] = "Л";    azbuka[2] = "Л";
-        azbuka[3] = "М";    azbuka[4] = "";     azbuka[5] = "К";
+        azbuka[3] = "М";    azbuka[4] = "-";     azbuka[5] = "К";
         azbuka[6] = "И";    azbuka[7] = "И";    azbuka[8] = "К";
 
         azbuka[9] = "С";    azbuka[10] = "С";   azbuka[11] = "О";
-        azbuka[12] = "Р";   azbuka[13] = "";    azbuka[14] = "О";
+        azbuka[12] = "Р";   azbuka[13] = "-";    azbuka[14] = "О";
         azbuka[15] = "Р";   azbuka[16] = "П";   azbuka[17] = "П";
 
         azbuka[18] = "А";   azbuka[19] = "А";   azbuka[20] = "Б";
-        azbuka[21] = "Г";   azbuka[22] = "";    azbuka[23] = "Б";
+        azbuka[21] = "Г";   azbuka[22] = "-";    azbuka[23] = "Б";
         azbuka[24] = "Г";   azbuka[25] = "В";   azbuka[26] = "В";
 
         azbuka[27] = "У";   azbuka[28] = "Ц";   azbuka[29] = "Ц";
-        azbuka[30] = "У";   azbuka[31] = "";    azbuka[32] = "Х";
+        azbuka[30] = "У";   azbuka[31] = "-";    azbuka[32] = "Х";
         azbuka[33] = "Ф";   azbuka[34] = "Ф";   azbuka[35] = "Х";
 
         azbuka[36] = "Э";    azbuka[37] = "Ш";    azbuka[38] = "Ш";
-        azbuka[39] = "Э";    azbuka[40] = "";    azbuka[41] = "Я";
+        azbuka[39] = "Э";    azbuka[40] = "-";    azbuka[41] = "Я";
         azbuka[42] = "Ю";    azbuka[43] = "Ю";    azbuka[44] = "Я";
 
         azbuka[45] = "Е";    azbuka[46] = "Е";    azbuka[47] = "Ё";
-        azbuka[48] = "З";    azbuka[49] = "";    azbuka[50] = "Ё";
+        azbuka[48] = "З";    azbuka[49] = "-";    azbuka[50] = "Ё";
         azbuka[51] = "З";    azbuka[52] = "Ж";    azbuka[53] = "Ж";
 
         return azbuka;
     }
 
-    public static String[] getMyAzbuka() {
+    public String[] getMyAzbuka() {
         String[] azbuka = new String[54];
         azbuka[0] = "М";    azbuka[1] = "Л";    azbuka[2] = "Л";
-        azbuka[3] = "М";    azbuka[4] = "";     azbuka[5] = "К";
+        azbuka[3] = "М";    azbuka[4] = "-";     azbuka[5] = "К";
         azbuka[6] = "И";    azbuka[7] = "И";    azbuka[8] = "К";
 
         azbuka[9] = "Р";    azbuka[10] = "Р";   azbuka[11] = "Н";
-        azbuka[12] = "П";   azbuka[13] = "";    azbuka[14] = "Н";
+        azbuka[12] = "П";   azbuka[13] = "-";    azbuka[14] = "Н";
         azbuka[15] = "П";   azbuka[16] = "О";   azbuka[17] = "О";
 
         azbuka[18] = "А";   azbuka[19] = "А";   azbuka[20] = "Б";
-        azbuka[21] = "Г";   azbuka[22] = "";    azbuka[23] = "Б";
+        azbuka[21] = "Г";   azbuka[22] = "-";    azbuka[23] = "Б";
         azbuka[24] = "Г";   azbuka[25] = "В";   azbuka[26] = "В";
 
         azbuka[27] = "С";   azbuka[28] = "Ф";   azbuka[29] = "Ф";
-        azbuka[30] = "С";   azbuka[31] = "";    azbuka[32] = "У";
+        azbuka[30] = "С";   azbuka[31] = "-";    azbuka[32] = "У";
         azbuka[33] = "Т";   azbuka[34] = "Т";   azbuka[35] = "У";
 
         azbuka[36] = "Ц";    azbuka[37] = "Х";    azbuka[38] = "Х";
-        azbuka[39] = "Ц";    azbuka[40] = "";    azbuka[41] = "Ш";
+        azbuka[39] = "Ц";    azbuka[40] = "-";    azbuka[41] = "Ш";
         azbuka[42] = "Ч";    azbuka[43] = "Ч";    azbuka[44] = "Ш";
 
         azbuka[45] = "Д";    azbuka[46] = "Д";    azbuka[47] = "Е";
-        azbuka[48] = "З";    azbuka[49] = "";    azbuka[50] = "Е";
+        azbuka[48] = "З";    azbuka[49] = "-";    azbuka[50] = "Е";
         azbuka[51] = "З";    azbuka[52] = "Ж";    azbuka[53] = "Ж";
 
         return azbuka;
     }
 
+    public String[] getCustomAzbuka() {
+        String[] azbuka = new String [54];
+        ListPager mListPager = getPhaseItem (0,"AZBUKA");
+        if (mListPager.getComment().equals("")) {
+            azbuka = getMaximAzbuka();
+        } else {
+            azbuka = mListPager.getComment().split(" ");
+        }
+        return azbuka;
+    }
+
+    public void setCustomAzbuka(String[] azbuka) {
+        String st = "";
+        for (int i=0; i<azbuka.length;i++) {
+            st = st + azbuka[i] + " ";
+        }
+        ListPager mListPager = getPhaseItem (0,"AZBUKA");
+        mListPager.setComment(st);
+        updateListPager(mListPager);
+    }
 }

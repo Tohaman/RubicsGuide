@@ -52,8 +52,20 @@ public class AzbukaFragment extends Fragment {
         mAzbukaField.setMovementMethod(LinkMovementMethod.getInstance());
 
         for (int i=0; i<108; i++) {
-            mGridList.add(String.valueOf(i));
+            mGridList.add("");
         }
+
+        //задаем элементам grid (viewCube) цвета куба
+        //grid это 108 квадратиков, а куб это 54 эемента
+/*        for (int i = 0; i < 9; i++) {
+            viewCube[(i/3)*12+3+(i%3)] = cubeColor[CompleteCube[i]];
+            viewCube[(i/3+3)*12+(i%3)] = cubeColor[CompleteCube[i+9]];
+            viewCube[(i/3+3)*12+3+(i%3)] = cubeColor[CompleteCube[i+18]];
+            viewCube[(i/3+3)*12+6+(i%3)] = cubeColor[CompleteCube[i+27]];
+            viewCube[(i/3+3)*12+9+(i%3)] = cubeColor[CompleteCube[i+36]];
+            viewCube[(i/3+6)*12+3+(i%3)] = cubeColor[CompleteCube[i+45]];
+        }
+        */
 
         GridView mGridView = (GridView) view.findViewById(R.id.azbuka_gridView);
         mAdapter = new MyGridAdapter(view.getContext(),R.layout.grid_item2,mGridList);
@@ -74,8 +86,7 @@ public class AzbukaFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
-                mAzbukaField.setText("Выбранный элемент: "
-                        + mAdapter.getItem(position));
+                mAzbukaField.setText("Выбранный элемент: " + mAdapter.getItem(position));
             }
         });
 
