@@ -1,7 +1,6 @@
 package ru.tohaman.rubicsguide.blind;
 
 import android.view.LayoutInflater;
-import android.widget.ArrayAdapter;
 
 import android.content.Context;
 import android.view.View;
@@ -13,6 +12,9 @@ import android.widget.TextView;
 import java.util.List;
 
 import ru.tohaman.rubicsguide.R;
+
+import static ru.tohaman.rubicsguide.R.color.white;
+
 
 public class MyGridAdapter extends BaseAdapter {
 
@@ -32,8 +34,21 @@ public class MyGridAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        View grid;
+//        CustomButton button;
+//
+//        if (convertView == null) {
+//            button = new CustomButton(mContext);
+//            button.setText(mGridList.get(position).getLetter());
+//            button.setBackgroundColor(mGridList.get(position).getColor());
+//            button.setGravity(10);
+//        } else {
+//            button = (CustomButton) convertView;
+//        }
+//        button.setId(position);
+//
+//        return button;
 
+        View grid;
         if (convertView == null) {
             grid = new View(mContext);
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -42,10 +57,15 @@ public class MyGridAdapter extends BaseAdapter {
             grid = convertView;
         }
 
-        TextView textView = (TextView) grid.findViewById(R.id.grid_text);
+        CustomButton textView = (CustomButton) grid.findViewById(R.id.grid_text);
         textView.setText(mGridList.get(position).getLetter());
-        LinearLayout linearLayout = (LinearLayout) grid.findViewById(R.id.grid_main_layout);
-        linearLayout.setBackgroundColor(mGridList.get(position).getColor());
+        textView.setBackgroundColor(mGridList.get(position).getColor());
+        MyLayout linearLayout = (MyLayout) grid.findViewById(R.id.grid_main_layout);
+
+        if (mGridList.get(position).getLetter().equals("")) {
+            linearLayout.setBackgroundColor(mGridList.get(position).getColor());
+        }
+
 
         return grid;
 

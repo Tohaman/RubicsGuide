@@ -1,18 +1,22 @@
 package ru.tohaman.rubicsguide.blind;
 
+import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
@@ -33,15 +37,15 @@ import static ru.tohaman.rubicsguide.blind.ScambleFragment.Initialize;
 public class AzbukaFragment extends Fragment {
     private TextView mAzbukaField;
     private MyGridAdapter mAdapter;
+    private GridView mGridView;
     private List<CubeAzbuka> mGridList = new ArrayList();
     ListPagerLab listPagerLab;
     int[] cubeColor = new int[6];
     int red,blue,white,orange,green,yellow,back,black;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-        View view = inflater.inflate(R.layout.fragment_azbuka, container, false);
+    public View onCreateView(LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
+        final View view = inflater.inflate(R.layout.fragment_azbuka, container, false);
 
         back = ContextCompat.getColor(view.getContext(), R.color.gray);
         black = ContextCompat.getColor(view.getContext(), R.color.black);
@@ -80,7 +84,7 @@ public class AzbukaFragment extends Fragment {
 
         InitGridList();
 
-        GridView mGridView = (GridView) view.findViewById(R.id.azbuka_gridView);
+        mGridView = (GridView) view.findViewById(R.id.azbuka_gridView);
         mAdapter = new MyGridAdapter(view.getContext(),R.layout.grid_item2,mGridList);
         mGridView.setAdapter(mAdapter);
         mGridView.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -125,8 +129,10 @@ public class AzbukaFragment extends Fragment {
                 mAdapter.notifyDataSetChanged();
             }
         });
+
         return view;
     }
+
 
     @SuppressWarnings("deprecation")
     private Html.ImageGetter imgGetter = new Html.ImageGetter() {

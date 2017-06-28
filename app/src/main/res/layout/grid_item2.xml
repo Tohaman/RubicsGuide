@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ru.tohaman.rubicsguide.blind.MyLayout
+              xmlns:android="http://schemas.android.com/apk/res/android"
               android:id="@+id/grid_main_layout"
-              android:layout_width="25dp"
-              android:layout_height="25dp"
-              android:layout_gravity="center_vertical"
-              android:background="@android:color/holo_orange_light"
-              android:orientation="vertical">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/black">
 
-        <TextView
+        <ru.tohaman.rubicsguide.blind.CustomButton
             android:id="@+id/grid_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_vertical"
+            android:layout_centerInParent="true"
+            android:background="@color/blue"
+            android:layout_margin="2dp"
+            android:gravity="center"
             android:text="1"
-            android:textStyle="bold"
-            android:textAlignment="center"/>
+            android:textStyle="bold"/>
 
-</LinearLayout>
+</ru.tohaman.rubicsguide.blind.MyLayout>
