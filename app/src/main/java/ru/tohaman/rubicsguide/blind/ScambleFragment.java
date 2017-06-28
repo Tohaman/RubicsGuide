@@ -3,6 +3,7 @@ package ru.tohaman.rubicsguide.blind;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.GridLayout;
 import android.view.KeyEvent;
@@ -19,10 +20,12 @@ import android.widget.Toast;
 import java.util.List;
 import java.util.Random;
 
+import ru.tohaman.rubicsguide.CommentFragment;
 import ru.tohaman.rubicsguide.R;
 import ru.tohaman.rubicsguide.about.AboutActivity;
 import ru.tohaman.rubicsguide.listpager.ListPager;
 import ru.tohaman.rubicsguide.listpager.ListPagerLab;
+import ru.tohaman.rubicsguide.listpager.PagerFragment;
 
 
 /**
@@ -48,6 +51,10 @@ public class ScambleFragment extends Fragment {
     final Random random = new Random();
     List<ListPager> mListPagers;
     ListPagerLab listPagerLab;
+
+    public ScambleFragment (){
+
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -132,12 +139,44 @@ public class ScambleFragment extends Fragment {
             }
         });
 
+        Button minus_button = (Button) view.findViewById(R.id.button_minus);
+        minus_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Обработка нажатия
+                int i = Integer.parseInt(ScrambleLength.getText().toString());
+                i--;
+                ScrambleLength.setText(String.valueOf(i));
+                cube2view();
+            }
+        });
 
         ScrambleLength = (TextView) view.findViewById(R.id.scrambleLength);
         ScrambleLength.setText(GetParamFromBase("ScrambleLength"));
 
+        Button plus_button = (Button) view.findViewById(R.id.button_plus);
+        plus_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Обработка нажатия
+                int i = Integer.parseInt(ScrambleLength.getText().toString());
+                i++;
+                ScrambleLength.setText(String.valueOf(i));
+                cube2view();
+            }
+        });
+
+
         Scramble = (TextView) view.findViewById(R.id.scramble);
         Scramble.setText(GetParamFromBase("Scramble"));
+        Scramble.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v) {
+                FragmentManager manager = getFragmentManager();
+                CommentFragment dialog = CommentFragment.newInstance(String.valueOf(Scramble.getText()));
+//                dialog.setTargetFragment(ScrambleFragment.this, REQUEST_COMMENT);
+//                dialog.show (manager, DIALOG_COMMENT);
+            }
+        });
+
 
         Button gran_button = (Button) view.findViewById(R.id.button_gran);
         gran_button.setOnClickListener(new View.OnClickListener() {
