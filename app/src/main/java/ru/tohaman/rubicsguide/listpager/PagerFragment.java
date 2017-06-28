@@ -41,7 +41,7 @@ import static ru.tohaman.rubicsguide.g2f.G2FFragment.RubicPhase;
 
 public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnInitializedListener {
 
-    private static final String ARG_ID = "phase_id";   //передается номер страницы, которую надо открыть в пейджере
+    private static final String ARG_ID = "ru.tohaman.rubicsguide.phase_id";   //передается номер страницы, которую надо открыть в пейджере
     private static final String DIALOG_COMMENT = "DialogComment";  //в этой "паре", передаем значение комментария для редактирования
 
     // YouTube
@@ -119,7 +119,7 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
             case R.id.menu_item_edit_comment:
                 //вызов окна редактирования комментария
                 FragmentManager manager = getFragmentManager();
-                CommentFragment dialog = CommentFragment.newInstance(mListPager.getComment());
+                CommentFragment dialog = CommentFragment.newInstance(mListPager.getComment(),"Комментарий:");
                 dialog.setTargetFragment(PagerFragment.this, REQUEST_COMMENT);
                 dialog.show (manager, DIALOG_COMMENT);
                 return true;
@@ -205,7 +205,7 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
             @Override
             public void onClick (View v) {
                 FragmentManager manager = getFragmentManager();
-                CommentFragment dialog = CommentFragment.newInstance(mListPager.getComment());
+                CommentFragment dialog = CommentFragment.newInstance(mListPager.getComment(), "Комментарий:");
                 dialog.setTargetFragment(PagerFragment.this, REQUEST_COMMENT);
                 dialog.show (manager, DIALOG_COMMENT);
             }

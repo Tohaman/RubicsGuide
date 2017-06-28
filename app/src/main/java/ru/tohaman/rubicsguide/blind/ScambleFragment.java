@@ -1,18 +1,16 @@
 package ru.tohaman.rubicsguide.blind;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.GridLayout;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,10 +20,8 @@ import java.util.Random;
 
 import ru.tohaman.rubicsguide.CommentFragment;
 import ru.tohaman.rubicsguide.R;
-import ru.tohaman.rubicsguide.about.AboutActivity;
 import ru.tohaman.rubicsguide.listpager.ListPager;
 import ru.tohaman.rubicsguide.listpager.ListPagerLab;
-import ru.tohaman.rubicsguide.listpager.PagerFragment;
 
 
 /**
@@ -51,6 +47,9 @@ public class ScambleFragment extends Fragment {
     final Random random = new Random();
     List<ListPager> mListPagers;
     ListPagerLab listPagerLab;
+
+    private static final int REQUEST_SCRAMBLE = 0;
+    private static final String DIALOG_SCRAMBLE = "DialogScramble";
 
     public ScambleFragment (){
 
@@ -171,9 +170,9 @@ public class ScambleFragment extends Fragment {
             @Override
             public void onClick (View v) {
                 FragmentManager manager = getFragmentManager();
-                CommentFragment dialog = CommentFragment.newInstance(String.valueOf(Scramble.getText()));
-//                dialog.setTargetFragment(ScrambleFragment.this, REQUEST_COMMENT);
-//                dialog.show (manager, DIALOG_COMMENT);
+                CommentFragment dialog = CommentFragment.newInstance(String.valueOf(Scramble.getText()), getResources().getString(R.string.scramble));
+                dialog.setTargetFragment(ScambleFragment.this, REQUEST_SCRAMBLE);
+                dialog.show (manager, DIALOG_SCRAMBLE);
             }
         });
 
@@ -208,6 +207,23 @@ public class ScambleFragment extends Fragment {
         return view;
 
     }
+
+    // Обрабатываем результат вызова редактирования скрамбла
+    // была ли нажата кнопка ОК, если да, то обновляем скрамбл
+    @Override
+    public void onActivityResult (int requestCode, int resultCode, Intent data) {
+        if (resultCode != Activity.RESULT_OK) {
+            return;
+        }
+        //Если все таки была нажата кнопка ОК
+        if (requestCode == REQUEST_SCRAMBLE) {
+            // Получаем значение из EXTRA_Comment (прописан в CommentFragment)
+            String string = (String) data.getSerializableExtra(CommentFragment.EXTRA_Comment);
+            Scramble.setText(string);               //обновляем текст во фрагменте
+            SetParamToBase("Scramble", string);     //сохраняем в базу
+        }
+    }
+
 
     private void cube2view () {
         //всем элемнтам задаем цвет фона

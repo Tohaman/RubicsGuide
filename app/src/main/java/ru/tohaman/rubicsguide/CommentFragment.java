@@ -11,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 
+import static android.text.InputType.TYPE_TEXT_FLAG_CAP_WORDS;
+
 /**
  * Created by Toha on 12.04.2017.
  */
@@ -20,14 +22,16 @@ public class CommentFragment extends DialogFragment {
     //стр.250
     public static final String EXTRA_Comment = "ru.tohaman.rubicsguide.comment";
     //стр.247
-    private static final String ARG_Comment = "comment";
+    private static final String ARG_Comment = "ru.tohaman.rubicsguide.comment";
+    private static final String ARG_Comment2 = "ru.tohaman.rubicsguide.comment2";
 
     private EditText mEditText;
 
-    public static CommentFragment newInstance (String string) {
+    public static CommentFragment newInstance (String string, String string2) {
         Bundle args = new Bundle();
         //передаем данные в диалог
         args.putSerializable(ARG_Comment, string);
+        args.putSerializable(ARG_Comment2, string2);
 
         CommentFragment fragment = new CommentFragment();
         fragment.setArguments(args);
@@ -39,14 +43,21 @@ public class CommentFragment extends DialogFragment {
     public Dialog onCreateDialog (Bundle savedInstaceState) {
         //принимаем данные из активности при создании диалога
         String string = (String) getArguments().getSerializable(ARG_Comment);
+        String string2 = (String) getArguments().getSerializable(ARG_Comment2);
 
         View v = LayoutInflater.from(getActivity())
                 .inflate(R.layout.fragment_comment, null);
         mEditText = (EditText) v.findViewById(R.id.comment_edittext);
+
+        //если редактируем скрамбл, то включаем каждое слово с большой буквы
+        //https://developer.android.com/reference/android/R.styleable.html#TextView_inputType
+        if (string2.equals(getResources().getString(R.string.scramble))) {
+            mEditText.setInputType(TYPE_TEXT_FLAG_CAP_WORDS);
+        }
         mEditText.setText(string);
         return new AlertDialog.Builder(getActivity())
                 .setView(v)
-                .setTitle(R.string.edit_comment_label)
+                .setTitle(string2)
                 .setPositiveButton(android.R.string.ok,
                         //стр.251
                         new DialogInterface.OnClickListener(){
