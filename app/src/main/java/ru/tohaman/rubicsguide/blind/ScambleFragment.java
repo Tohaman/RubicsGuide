@@ -32,8 +32,7 @@ import ru.tohaman.rubicsguide.listpager.ListPagerLab;
 public class ScambleFragment extends Fragment {
     Intent mIntent;
     GridLayout mGridLayout;
-    EditText Scramble,ScrambleLength;
-    TextView solvetext;
+    TextView solvetext,ScrambleLength,Scramble;
     int red,blue,white,orange,green,yellow,back,black;
     int[] CompleteCube = new int[54];
     int[] viewCube = new int[108];
@@ -97,8 +96,6 @@ public class ScambleFragment extends Fragment {
         azb_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Обработка нажатия кнопки Азбука
-                // вызов активности редактирования азбуки
-                // пока "едем в Лондон"
                 mIntent = new Intent(getActivity(), AzbukaActivity.class);
                 startActivity(mIntent);
             }
@@ -136,24 +133,11 @@ public class ScambleFragment extends Fragment {
         });
 
 
-        ScrambleLength = (EditText) view.findViewById(R.id.scrambleLength);
+        ScrambleLength = (TextView) view.findViewById(R.id.scrambleLength);
         ScrambleLength.setText(GetParamFromBase("ScrambleLength"));
 
-        Scramble = (EditText) view.findViewById(R.id.scramble);
+        Scramble = (TextView) view.findViewById(R.id.scramble);
         Scramble.setText(GetParamFromBase("Scramble"));
-        Scramble.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                boolean handled = false;
-                if (actionId == EditorInfo.IME_ACTION_DONE) {
-                    SetParamToBase("Scramble", Scramble.getText().toString());
-                }
-                return handled;
-            }
-        });
-
-
-
 
         Button gran_button = (Button) view.findViewById(R.id.button_gran);
         gran_button.setOnClickListener(new View.OnClickListener() {
@@ -183,7 +167,6 @@ public class ScambleFragment extends Fragment {
         solvetext = (TextView) view.findViewById(R.id.solve_text);
         solvetext.setText("Решение: ");
         return view;
-
 
     }
 

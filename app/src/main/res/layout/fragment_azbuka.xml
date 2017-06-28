@@ -20,7 +20,7 @@
 
         <GridView
             android:id="@+id/azbuka_gridView"
-            android:layout_width="326dp"
+            android:layout_width="322dp"
             android:layout_height="242dp"
             android:background="@color/black"
             android:columnWidth="25dp"
