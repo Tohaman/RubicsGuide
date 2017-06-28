@@ -47,7 +47,7 @@ public class AzbukaFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_azbuka, container, false);
 
-        back = ContextCompat.getColor(view.getContext(), R.color.gray);
+        back = ContextCompat.getColor(view.getContext(), R.color.transparent);
         black = ContextCompat.getColor(view.getContext(), R.color.black);
         red = ContextCompat.getColor(view.getContext(), R.color.red);
         blue = ContextCompat.getColor(view.getContext(), R.color.blue);
@@ -159,7 +159,7 @@ public class AzbukaFragment extends Fragment {
     private void InitGridList() {
         if (mGridList.size()==0) {
             for (int i=0; i<108; i++) {
-                mGridList.add(new CubeAzbuka(white, ""));
+                mGridList.add(new CubeAzbuka(back, ""));
             }
         }
 
