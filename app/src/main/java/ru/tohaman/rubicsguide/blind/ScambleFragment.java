@@ -13,10 +13,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -31,25 +33,32 @@ import ru.tohaman.rubicsguide.listpager.ListPagerLab;
  */
 
 public class ScambleFragment extends Fragment {
-    Intent mIntent;
-    GridLayout mGridLayout;
-    TextView solvetext,ScrambleLength,Scramble;
-    CheckBox mChBoxRebro,mChBoxUgol;
-    int red,blue,white,orange,green,yellow,back,black;
-    int[] CompleteCube = new int[54];
-    int[] viewCube = new int[108];
-    int[] cubeColor = new int[6];
-    int[] MainRebro = new int[66];
-    int[] DopRebro = new int[54];
-    int[] MainUgol = new int[66];
-    int[] DopUgol = new int[54];
-    int[] SpisReber = new int[25];
-    int[] SpisUglov = new int[25];
-    LinearLayout[] mLinearLayouts = new LinearLayout[108];
-    LinearLayout[] mLinearLayouts1 = new LinearLayout[108];
-    final Random random = new Random();
-    List<ListPager> mListPagers;
-    ListPagerLab listPagerLab;
+    private Intent mIntent;
+
+    private GridLayout mGridLayout;
+    private LinearLayout[] mLinearLayouts = new LinearLayout[108];
+    private LinearLayout[] mLinearLayouts1 = new LinearLayout[108];
+
+    private MyGridAdapter mAdapter;
+    private GridView mGridView;
+    private List<CubeAzbuka> mGridList = new ArrayList();
+
+    private TextView solvetext,ScrambleLength,Scramble;
+    private CheckBox mChBoxRebro,mChBoxUgol;
+    private int red,blue,white,orange,green,yellow,back,black;
+    private int[] MainCube = new int[54];
+    private int[] viewCube = new int[108];
+    private int[] cubeColor = new int[6];
+    private int[] MainRebro = new int[66];
+    private int[] DopRebro = new int[54];
+    private int[] MainUgol = new int[66];
+    private int[] DopUgol = new int[54];
+    private int[] SpisReber = new int[25];
+    private int[] SpisUglov = new int[25];
+    private final Random random = new Random();
+    private List<ListPager> mListPagers;
+    private ListPagerLab listPagerLab;
+    private String solve;
 
     private static final int REQUEST_SCRAMBLE = 0;
     private static final String DIALOG_SCRAMBLE = "DialogScramble";
@@ -79,25 +88,30 @@ public class ScambleFragment extends Fragment {
         cubeColor[4] = yellow;
         cubeColor[5] = green;
 
-        // Получаем синглет
+        // Инициализируем переменные
         listPagerLab = ListPagerLab.get(getActivity());
-        mGridLayout = (GridLayout) view.findViewById(R.id.grid);
         mListPagers = ListPagerLab.get(getActivity()).getPhaseList("SCRAMBLEGEN");
         InitArrays();
-        Initialize(CompleteCube);
+        Initialize(MainCube);
+        InitGridList();
 
-        for (int i = 0; i < 108; i++) {
-            View v = View.inflate(view.getContext(),R.layout.grid_item,null);
-            TextView textView=(TextView) v.findViewById(R.id.grid_text);
-            String st = String.valueOf(i%10);
-            textView.setText("");
-            LinearLayout linearLayout = (LinearLayout) v.findViewById(R.id.grid_layout);
-            LinearLayout linearLayout1 = (LinearLayout) v.findViewById(R.id.grid_main_layout);
-            linearLayout.setBackgroundColor(back);
-            mLinearLayouts[i] = linearLayout;
-            mLinearLayouts1[i] = linearLayout1;
-            addViewToGrid(mGridLayout,v);
-        }
+        mGridView = (GridView) view.findViewById(R.id.scram_gridView);
+        mAdapter = new MyGridAdapter(view.getContext(),R.layout.grid_item2,mGridList);
+        mGridView.setAdapter(mAdapter);
+
+//        mGridLayout = (GridLayout) view.findViewById(R.id.grid);
+//        for (int i = 0; i < 108; i++) {
+//            View v = View.inflate(view.getContext(),R.layout.grid_item,null);
+//            TextView textView=(TextView) v.findViewById(R.id.grid_text);
+//            String st = String.valueOf(i%10);
+//            textView.setText("");
+//            LinearLayout linearLayout = (LinearLayout) v.findViewById(R.id.grid_layout);
+//            LinearLayout linearLayout1 = (LinearLayout) v.findViewById(R.id.grid_main_layout);
+//            linearLayout.setBackgroundColor(back);
+//            mLinearLayouts[i] = linearLayout;
+//            mLinearLayouts1[i] = linearLayout1;
+//            addViewToGrid(mGridLayout,v);
+//        }
 
         cube2view();    //переносим куб на gridlayout
 
@@ -114,7 +128,7 @@ public class ScambleFragment extends Fragment {
         reset_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Обработка нажатия
-                Initialize(CompleteCube);
+                Initialize(MainCube);
                 solvetext.setText("Решение: ");
                 cube2view();
                 }
@@ -124,11 +138,19 @@ public class ScambleFragment extends Fragment {
         gen_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Обработка нажатия
-                Initialize(CompleteCube);
+                // берем собранный куб
+                Initialize(MainCube);
+                // генерируем скрамбл с учетом выбранных параметров (переплавки буферов и длинны)
                 String st = GenerateScrambleWithParam(mChBoxRebro.isChecked(),mChBoxUgol.isChecked(),Integer.parseInt(String.valueOf(ScrambleLength.getText())));
+                // выводим скрамбл на экран
                 Scramble.setText(st);
-                BlindMoves.Scram(CompleteCube, st);
+                // перемешиваем куб по скрамблу
+                BlindMoves.Scram(MainCube, st);
+                // выводим решение на экран
+                solvetext.setText("Решение: " + solve);
+                // выводим MainCube на экран
                 cube2view();
+                // Сохраняем скрамбл в базе
                 SetParamToBase("Scramble", st);
             }
         });
@@ -137,7 +159,7 @@ public class ScambleFragment extends Fragment {
         do_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Обработка нажатия
-                BlindMoves.Scram(CompleteCube,String.valueOf(Scramble.getText()));
+                BlindMoves.Scram(MainCube,String.valueOf(Scramble.getText()));
                 cube2view();
             }
         });
@@ -246,24 +268,47 @@ public class ScambleFragment extends Fragment {
         //задаем элементам grid (viewCube) цвета куба
         //grid это 108 квадратиков, а куб это 54 эемента
         for (int i = 0; i < 9; i++) {
-            viewCube[(i/3)*12+3+(i%3)] = cubeColor[CompleteCube[i]];
-            viewCube[(i/3+3)*12+(i%3)] = cubeColor[CompleteCube[i+9]];
-            viewCube[(i/3+3)*12+3+(i%3)] = cubeColor[CompleteCube[i+18]];
-            viewCube[(i/3+3)*12+6+(i%3)] = cubeColor[CompleteCube[i+27]];
-            viewCube[(i/3+3)*12+9+(i%3)] = cubeColor[CompleteCube[i+36]];
-            viewCube[(i/3+6)*12+3+(i%3)] = cubeColor[CompleteCube[i+45]];
+            viewCube[(i/3)*12+3+(i%3)] = cubeColor[MainCube[i]];
+            viewCube[(i/3+3)*12+(i%3)] = cubeColor[MainCube[i+9]];
+            viewCube[(i/3+3)*12+3+(i%3)] = cubeColor[MainCube[i+18]];
+            viewCube[(i/3+3)*12+6+(i%3)] = cubeColor[MainCube[i+27]];
+            viewCube[(i/3+3)*12+9+(i%3)] = cubeColor[MainCube[i+36]];
+            viewCube[(i/3+6)*12+3+(i%3)] = cubeColor[MainCube[i+45]];
         }
 
-        //задаем элементам gridlayout цвет заданный в массиве viewCube
-        for (int i = 0; i < 108; i++) {
-            mLinearLayouts[i].setBackgroundColor(viewCube[i]);
-            if (viewCube[i] == back) {
-                mLinearLayouts1[i].setBackgroundColor(back);
-            } else {
-                mLinearLayouts1[i].setBackgroundColor(black);
+//        //задаем элементам gridlayout цвет заданный в массиве viewCube
+//        for (int i = 0; i < 108; i++) {
+//            mLinearLayouts[i].setBackgroundColor(viewCube[i]);
+//            if (viewCube[i] == back) {
+//                mLinearLayouts1[i].setBackgroundColor(back);
+//            } else {
+//                mLinearLayouts1[i].setBackgroundColor(black);
+//            }
+//        }
+    }
+
+    private void InitGridList() {
+        if (mGridList.size()==0) {
+            for (int i=0; i<108; i++) {
+                mGridList.add(new CubeAzbuka(back, ""));
             }
         }
+
+        int[] cube = new int[54];
+        Initialize (cube);
+        String[] azbuka = listPagerLab.getCustomAzbuka();
+
+        for (int i = 0; i < 9; i++) {
+            mGridList.set((i/3)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i]],azbuka [i]));
+            mGridList.set((i/3+3)*12+(i%3), new CubeAzbuka(cubeColor[cube[i+9]],azbuka [i+9]));
+            mGridList.set((i/3+3)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i+18]],azbuka [i+18]));
+            mGridList.set((i/3+3)*12+6+(i%3), new CubeAzbuka(cubeColor[cube[i+27]],azbuka [i+27]));
+            mGridList.set((i/3+3)*12+9+(i%3), new CubeAzbuka(cubeColor[cube[i+36]],azbuka [i+36]));
+            mGridList.set((i/3+6)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i+45]],azbuka [i+45]));
+        }
+
     }
+
 
     public static int[] Initialize (int[] cube) {
         for (int i = 0 ; i < cube.length; i++) {
@@ -284,17 +329,20 @@ public class ScambleFragment extends Fragment {
     private String GenerateScrambleWithParam (boolean chRebro, boolean chUgol,int length) {
         String scramble;
         int[] CurCube = new int[54];
+        int j = 0;                                  //счетчик количества попыток найти скрмбл
         boolean plavRebro;
         boolean plavUgol;
         boolean resault;
 
         do {
             Initialize(CurCube);
+            j++;
             scramble = GenerateScramble(length);     //сгенерировать скрамбл длинны указанной в поле ScrambleLength
             BlindMoves.Scram(CurCube, scramble);
             plavRebro = false;
             plavUgol = false;
             resault = true;
+            solve = "";
             do {
                 int a = CurCube[23] + 1;       //смотрим что в буфере ребер
                 int b = CurCube[30] + 1;
@@ -314,7 +362,7 @@ public class ScambleFragment extends Fragment {
             if (plavRebro && chRebro) { resault = false;}
             if (plavUgol && chUgol) { resault = false;}
         } while (!resault);
-
+        //solve = solve + j;            //добавить к решению количество попыток решения
         return scramble;
     }
 
@@ -484,9 +532,9 @@ public class ScambleFragment extends Fragment {
     }
 
     private int[] BufferRebroSolve (int[] cube, int c) {
-        if (!(c==23 | c == 30)) {           //если с != 23 или 30, то буфер не на месте, и добоавляем букву к решению
-            solvetext.setText(solvetext.getText() + FindLetter(c) + " ");
-        }
+        if (!(c==23 | c == 30)) {           //проверяем, не буфер ли?, если нет, то добоавляем букву к решению
+            solve = solve + FindLetter(c) + " ";        //если буфер, то будем его переплавлять и букву уже
+        }                                               //подставим в рекурсии
         switch (c) {
             case 1:
                 BlindMoves.Blinde1 (cube);
@@ -524,9 +572,10 @@ public class ScambleFragment extends Fragment {
                     do {
                         i++;
                     } while (SpisReber[i] != 0);
-                    c = SpisReber[i-1];
-                    if (c == 30) { c = SpisReber[i-2];}
-                    BufferRebroSolve(cube,c);
+                    c = SpisReber[i-1];                     //ищем ребро не на своем месте
+                    if (c == 30) { c = SpisReber[i-2];}     //проверяем не буфер ли это, в данном случае наверно лишнее, т.к. буфер на месте
+                    if (c == 23) { c = SpisReber[i-3];}     //
+                    BufferRebroSolve(cube,c);               //переплавляем буфер (рекурсия)
                 } else {
                     //Если все ребра на месте, то преобразуем буквы в слова
                 }
@@ -540,12 +589,13 @@ public class ScambleFragment extends Fragment {
             case 30:                        //для красно-белого ребра
                 if (!CheckRebro(cube)) {
                     int i = 0;
-                    do {
+                    do {                                    //ищем пустую корзину
                         i++;
                     } while (SpisReber[i] != 0);
-                    c = SpisReber[i-1];
-                    if (c == 23) { c = SpisReber[i-2];}
-                    BufferRebroSolve(cube,c);
+                    c = SpisReber[i-1];                     //смотрим что последнее не на своем месте
+                    if (c == 30) { c = SpisReber[i-2];}     //проверяем не буфер ли,
+                    if (c == 23) { c = SpisReber[i-3];}
+                    BufferRebroSolve(cube,c);               //переплавляем
                 }
                 break;
             case 32:
@@ -579,7 +629,7 @@ public class ScambleFragment extends Fragment {
                 BlindMoves.Blinde52 (cube);
                 break;
             default:
-                Toast.makeText(getView().getContext(),"Странное ребро в буфере",Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getView().getContext(),"Странное ребро в буфере",Toast.LENGTH_SHORT).show();
         }
         return cube;
     }
@@ -609,7 +659,7 @@ public class ScambleFragment extends Fragment {
 
     private int[] BufferUgolSolve (int[] cube, int c) {
         if (!(c==18 || c == 11 || c == 6)) {           //если с не равно 18,11 или 6, то буфер не на месте и добавляем букву к решению.
-            solvetext.setText(solvetext.getText() + FindLetter(c) + " ");
+            solve = solve + FindLetter(c) + " ";
         }
         switch (c) {
             case 0:
@@ -627,6 +677,7 @@ public class ScambleFragment extends Fragment {
                     c = SpisUglov[i-1];
                     if (c == 18) { c = SpisUglov[i-2];}
                     if (c == 11) { c = SpisUglov[i-3];}
+                    if (c == 6) { c = SpisUglov[i-4];}
                     BufferUgolSolve(cube,c);
                 } else {
                     //Если все ребра на месте, то преобразуем буквы в слова
@@ -646,7 +697,8 @@ public class ScambleFragment extends Fragment {
                     } while (SpisUglov[i] != 0);
                     c =                SpisUglov[i-1];
                     if (c == 18) { c = SpisUglov[i-2];}
-                    if (c == 6)  { c = SpisUglov[i-3];}
+                    if (c == 11) { c = SpisUglov[i-3];}
+                    if (c == 6)  { c = SpisUglov[i-4];}
                     BufferUgolSolve(cube,c);
                 } else {
                     //Если все ребра на месте, то преобразуем буквы в слова
@@ -665,8 +717,9 @@ public class ScambleFragment extends Fragment {
                         i++;            //т.е. в приоритет граней такой: зеленая, желтая, красная, белая, оранжевая, синяя
                     } while (SpisUglov[i] != 0);
                     c =                SpisUglov[i-1];
-                    if (c == 11) { c = SpisUglov[i-2];}
-                    if (c == 6)  { c = SpisUglov[i-3];}
+                    if (c == 18) { c = SpisUglov[i-2];}
+                    if (c == 11) { c = SpisUglov[i-3];}
+                    if (c == 6)  { c = SpisUglov[i-4];}
                     BufferUgolSolve(cube,c);
                 } else {
                     //Если все ребра на месте, то преобразуем буквы в слова
@@ -718,7 +771,7 @@ public class ScambleFragment extends Fragment {
                 BlindMoves.Blinde53 (cube);
                 break;
             default:
-                Toast.makeText(getView().getContext(),"Страннай угол в буфере",Toast.LENGTH_SHORT).show();
+            //    Toast.makeText(getView().getContext(),"Страннай угол в буфере",Toast.LENGTH_SHORT).show();
         }
         return cube;
     }

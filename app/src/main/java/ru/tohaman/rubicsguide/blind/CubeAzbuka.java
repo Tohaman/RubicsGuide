@@ -4,7 +4,7 @@ package ru.tohaman.rubicsguide.blind;
  * Created by Toha on 27.06.2017.
  */
 
-public class CubeAzbuka {
+public class CubeAzbuka {           //свой класс для создания массива, в котором одному элементу соответствует буква и какой-то цвет
     private int color;
     private String letter;
 
