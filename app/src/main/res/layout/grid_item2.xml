@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ru.tohaman.rubicsguide.blind.MyLayout
+<ru.tohaman.rubicsguide.blind.MyRelativeLayout
               xmlns:android="http://schemas.android.com/apk/res/android"
               android:id="@+id/grid_main_layout"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:background="@android:color/black">
 
-        <ru.tohaman.rubicsguide.blind.CustomButton
+        <ru.tohaman.rubicsguide.blind.MyTextView
             android:id="@+id/grid_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -17,4 +17,4 @@
             android:text="1"
             android:textStyle="bold"/>
 
-</ru.tohaman.rubicsguide.blind.MyLayout>
+</ru.tohaman.rubicsguide.blind.MyRelativeLayout>

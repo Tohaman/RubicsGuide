@@ -6,25 +6,25 @@ import android.util.AttributeSet;
 import android.widget.TextView;
 
 @SuppressLint("AppCompatCustomView")
-public class CustomButton extends TextView {
+public class MyTextView extends TextView {  //Создаем свой TextView, который будет квадратным
 
-    public CustomButton(Context context) {
+    public MyTextView(Context context) {
         super(context);
     }
 
-    public CustomButton(Context context, AttributeSet attrs) {
+    public MyTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public CustomButton(Context context, AttributeSet attrs, int defStyle) {
+    public MyTextView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 
 
-    @Override
+    @Override       //переопределяем метод
     protected void onMeasure(final int widthMeasureSpec, final int heightMeasureSpec) {
         final int width = getDefaultSize(getSuggestedMinimumWidth(),widthMeasureSpec);
-        setMeasuredDimension(width, width);
+        setMeasuredDimension(width, width);             //высота равна ширине
     }
 
     @Override

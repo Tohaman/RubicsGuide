@@ -1,19 +1,18 @@
 package ru.tohaman.rubicsguide.blind;
 
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import java.util.List;
 
 import ru.tohaman.rubicsguide.R;
 
-import static ru.tohaman.rubicsguide.R.color.white;
+import static android.R.color.black;
 
 
 public class MyGridAdapter extends BaseAdapter {
@@ -34,20 +33,6 @@ public class MyGridAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-//        CustomButton button;
-//
-//        if (convertView == null) {
-//            button = new CustomButton(mContext);
-//            button.setText(mGridList.get(position).getLetter());
-//            button.setBackgroundColor(mGridList.get(position).getColor());
-//            button.setGravity(10);
-//        } else {
-//            button = (CustomButton) convertView;
-//        }
-//        button.setId(position);
-//
-//        return button;
-
         View grid;
         if (convertView == null) {
             grid = new View(mContext);
@@ -57,13 +42,17 @@ public class MyGridAdapter extends BaseAdapter {
             grid = convertView;
         }
 
-        CustomButton textView = (CustomButton) grid.findViewById(R.id.grid_text);
+        MyTextView textView = (MyTextView) grid.findViewById(R.id.grid_text);
         textView.setText(mGridList.get(position).getLetter());
         textView.setBackgroundColor(mGridList.get(position).getColor());
-        MyLayout linearLayout = (MyLayout) grid.findViewById(R.id.grid_main_layout);
+        MyRelativeLayout myRelativeLayout = (MyRelativeLayout) grid.findViewById(R.id.grid_main_layout);
 
+        // Если символ не задан, значит клетку делаем прозрачной (цвета, который задан в mGridList
+        // если клетка кубика, то лэйаут делаем черным.
         if (mGridList.get(position).getLetter().equals("")) {
-            linearLayout.setBackgroundColor(mGridList.get(position).getColor());
+            myRelativeLayout.setBackgroundColor(mGridList.get(position).getColor());
+        } else {
+            myRelativeLayout.setBackgroundColor(ContextCompat.getColor(grid.getContext(), R.color.black));
         }
 
 
