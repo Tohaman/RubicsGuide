@@ -3,23 +3,22 @@ package ru.tohaman.rubicsguide.blind;
 import android.content.Context;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 /**
  * Created by anton on 28.06.17.
  */
 
-public class MyLayout extends RelativeLayout {
-    public MyLayout(Context context) {
+public class MyRelativeLayout extends RelativeLayout {      //переопределяем на свой, который будет квадратным
+    public MyRelativeLayout(Context context) {
         super(context);
     }
 
-    public MyLayout(Context context, @Nullable AttributeSet attrs) {
+    public MyRelativeLayout(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public MyLayout(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public MyRelativeLayout(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
@@ -27,6 +26,6 @@ public class MyLayout extends RelativeLayout {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         int measuredWidth = getMeasuredWidth();
-        setMeasuredDimension(measuredWidth, measuredWidth);
+        setMeasuredDimension(measuredWidth, measuredWidth);     //делаем квадратным
     }
 }
