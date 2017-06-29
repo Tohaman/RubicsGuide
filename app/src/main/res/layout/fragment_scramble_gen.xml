@@ -133,7 +133,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <CheckBox
-                    android:id="@+id/checkBox_gran"
+                    android:id="@+id/checkBox_rebro"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -144,27 +144,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Без переплавки буфера углов" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/button_gran"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:textSize="12sp"
-                    android:text="Решить ребра"/>
-
-                <Button
-                    android:id="@+id/button_ugol"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:textSize="12sp"
-                    android:text="решить углы"/>
             </LinearLayout>
 
             <LinearLayout

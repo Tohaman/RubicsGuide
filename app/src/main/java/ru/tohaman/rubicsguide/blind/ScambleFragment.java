@@ -11,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,6 +34,7 @@ public class ScambleFragment extends Fragment {
     Intent mIntent;
     GridLayout mGridLayout;
     TextView solvetext,ScrambleLength,Scramble;
+    CheckBox mChBoxRebro,mChBoxUgol;
     int red,blue,white,orange,green,yellow,back,black;
     int[] CompleteCube = new int[54];
     int[] viewCube = new int[108];
@@ -122,10 +125,11 @@ public class ScambleFragment extends Fragment {
             public void onClick(View v) {
                 // Обработка нажатия
                 Initialize(CompleteCube);
-                GenerateScramble();
-                BlindMoves.Scram(CompleteCube,String.valueOf(Scramble.getText()));
+                String st = GenerateScrambleWithParam(mChBoxRebro.isChecked(),mChBoxUgol.isChecked(),Integer.parseInt(String.valueOf(ScrambleLength.getText())));
+                Scramble.setText(st);
+                BlindMoves.Scram(CompleteCube, st);
                 cube2view();
-                SetParamToBase("Scramble", Scramble.getText().toString());
+                SetParamToBase("Scramble", st);
             }
         });
 
@@ -176,29 +180,38 @@ public class ScambleFragment extends Fragment {
             }
         });
 
-
-        Button gran_button = (Button) view.findViewById(R.id.button_gran);
-        gran_button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Обработка нажатия
-                int a = CompleteCube[23] + 1;       //смотрим что в буфере ребер
-                int b = CompleteCube[30] + 1;
-                int c = MainRebro[(a*10)+b];
-                BufferRebroSolve(CompleteCube, c);
-                cube2view();
+        mChBoxRebro = (CheckBox) view.findViewById(R.id.checkBox_rebro);
+        String a = GetParamFromBase("ChkBufRebro");
+        if (a.equals("1")) {
+            mChBoxRebro.setChecked(true);
+        } else {
+            mChBoxRebro.setChecked(false);
+        }
+        mChBoxRebro.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked)
+                    SetParamToBase("ChkBufRebro","1");
+                else {
+                    SetParamToBase("ChkBufRebro","0");
+                }
             }
         });
 
-        Button ugol_button = (Button) view.findViewById(R.id.button_ugol);
-        ugol_button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Обработка нажатия
-                int a = CompleteCube[18] + 1;       //смотрим что в буфере углов
-                int b = CompleteCube[11] + 1;
-                int c = MainUgol[(a*10)+b];
-                BufferUgolSolve(CompleteCube, c);
-                cube2view();
-
+        mChBoxUgol = (CheckBox) view.findViewById(R.id.checkBox_ugol);
+        if (GetParamFromBase("ChkBufUgol").equals("1")) {
+            mChBoxUgol.setChecked(true);
+        } else {
+            mChBoxUgol.setChecked(false);
+        }
+        mChBoxUgol.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked)
+                    SetParamToBase("ChkBufUgol","1");
+                else {
+                    SetParamToBase("ChkBufUgol","0");
+                }
             }
         });
 
@@ -268,7 +281,45 @@ public class ScambleFragment extends Fragment {
         field.addView(view, lp);
     }
 
-    private String GenerateScramble (){
+    private String GenerateScrambleWithParam (boolean chRebro, boolean chUgol,int length) {
+        String scramble;
+        int[] CurCube = new int[54];
+        boolean plavRebro;
+        boolean plavUgol;
+        boolean resault;
+
+        do {
+            Initialize(CurCube);
+            scramble = GenerateScramble(length);     //сгенерировать скрамбл длинны указанной в поле ScrambleLength
+            BlindMoves.Scram(CurCube, scramble);
+            plavRebro = false;
+            plavUgol = false;
+            resault = true;
+            do {
+                int a = CurCube[23] + 1;       //смотрим что в буфере ребер
+                int b = CurCube[30] + 1;
+                int c = MainRebro[(a*10)+b];
+                if ((c == 23)|(c == 30)) { plavRebro = true; }
+                BufferRebroSolve(CurCube, c);
+            } while (!CheckRebro(CurCube));
+
+            do {
+                int a = CurCube[18] + 1;       //смотрим что в буфере углов
+                int b = CurCube[11] + 1;
+                int c = MainUgol[(a*10)+b];
+                if ((c == 18)|(c == 11)|(c == 6)) { plavUgol = true; }
+                BufferUgolSolve(CurCube, c);
+            } while (!CheckUgol(CurCube));
+
+            if (plavRebro && chRebro) { resault = false;}
+            if (plavUgol && chUgol) { resault = false;}
+        } while (!resault);
+
+        return scramble;
+    }
+
+
+    private String GenerateScramble (int length){
         String scramble = " ";
         String old_scarmble = scramble;
         int i = 1;
@@ -296,7 +347,7 @@ public class ScambleFragment extends Fragment {
                     old_scarmble = scramble;
                 }
             }
-        } while (i <= Integer.parseInt(String.valueOf(ScrambleLength.getText())));
+        } while (i <= length);
         scramble = scramble.replace(" 1"," R");
         scramble = scramble.replace(" 2"," U");
         scramble = scramble.replace(" 3"," F");
@@ -310,7 +361,7 @@ public class ScambleFragment extends Fragment {
         scramble = scramble.replace(" -5"," D'");
         scramble = scramble.replace(" -6"," B'");
         scramble = scramble.replaceFirst(" ","");
-        Scramble.setText(scramble);
+
         return scramble;
     }
 
@@ -475,7 +526,6 @@ public class ScambleFragment extends Fragment {
                     } while (SpisReber[i] != 0);
                     c = SpisReber[i-1];
                     if (c == 30) { c = SpisReber[i-2];}
-                    if (c == 23) { c = SpisReber[i-3];}
                     BufferRebroSolve(cube,c);
                 } else {
                     //Если все ребра на месте, то преобразуем буквы в слова
@@ -494,8 +544,7 @@ public class ScambleFragment extends Fragment {
                         i++;
                     } while (SpisReber[i] != 0);
                     c = SpisReber[i-1];
-                    if (c == 30) { c = SpisReber[i-2];}
-                    if (c == 23) { c = SpisReber[i-3];}
+                    if (c == 23) { c = SpisReber[i-2];}
                     BufferRebroSolve(cube,c);
                 }
                 break;
@@ -578,7 +627,6 @@ public class ScambleFragment extends Fragment {
                     c = SpisUglov[i-1];
                     if (c == 18) { c = SpisUglov[i-2];}
                     if (c == 11) { c = SpisUglov[i-3];}
-                    if (c == 6) { c = SpisUglov[i-3];}
                     BufferUgolSolve(cube,c);
                 } else {
                     //Если все ребра на месте, то преобразуем буквы в слова
@@ -598,7 +646,6 @@ public class ScambleFragment extends Fragment {
                     } while (SpisUglov[i] != 0);
                     c = SpisUglov[i-1];
                     if (c == 18) { c = SpisUglov[i-2];}
-                    if (c == 11) { c = SpisUglov[i-3];}
                     if (c == 6) { c = SpisUglov[i-3];}
                     BufferUgolSolve(cube,c);
                 } else {
@@ -618,8 +665,7 @@ public class ScambleFragment extends Fragment {
                         i++;            //т.е. в приоритет граней такой: зеленая, желтая, красная, белая, оранжевая, синяя
                     } while (SpisUglov[i] != 0);
                     c = SpisUglov[i-1];
-                    if (c == 18) { c = SpisUglov[i-2];}
-                    if (c == 11) { c = SpisUglov[i-3];}
+                    if (c == 11) { c = SpisUglov[i-2];}
                     if (c == 6) { c = SpisUglov[i-3];}
                     BufferUgolSolve(cube,c);
                 } else {
