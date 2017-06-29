@@ -43,8 +43,8 @@ public class ScambleFragment extends Fragment {
     int[] DopRebro = new int[54];
     int[] MainUgol = new int[66];
     int[] DopUgol = new int[54];
-    int[] SpisReber = new int[24];
-    int[] SpisUglov = new int[24];
+    int[] SpisReber = new int[25];
+    int[] SpisUglov = new int[25];
     LinearLayout[] mLinearLayouts = new LinearLayout[108];
     LinearLayout[] mLinearLayouts1 = new LinearLayout[108];
     final Random random = new Random();
@@ -588,7 +588,7 @@ public class ScambleFragment extends Fragment {
     private Boolean CheckRebro (int[] cube){    //проверяем все ли грани на своих местах
         Boolean Check = true;           //предположим что все на местах
 
-        for (int i = 0; i<24; i++) {    //Обнуляем список ребер на местах
+        for (int i = 0; i < 25; i++) {    //Обнуляем список ребер на местах
             SpisReber[i] = 0;
         }
         int j = 0;
@@ -644,9 +644,9 @@ public class ScambleFragment extends Fragment {
                     do {                //то ищем угол с макимальным номером не на своем месте
                         i++;            //т.е. в приоритет граней такой: зеленая, желтая, красная, белая, оранжевая, синяя
                     } while (SpisUglov[i] != 0);
-                    c = SpisUglov[i-1];
+                    c =                SpisUglov[i-1];
                     if (c == 18) { c = SpisUglov[i-2];}
-                    if (c == 6) { c = SpisUglov[i-3];}
+                    if (c == 6)  { c = SpisUglov[i-3];}
                     BufferUgolSolve(cube,c);
                 } else {
                     //Если все ребра на месте, то преобразуем буквы в слова
@@ -664,9 +664,9 @@ public class ScambleFragment extends Fragment {
                     do {                //то ищем угол с макимальным номером не на своем месте
                         i++;            //т.е. в приоритет граней такой: зеленая, желтая, красная, белая, оранжевая, синяя
                     } while (SpisUglov[i] != 0);
-                    c = SpisUglov[i-1];
+                    c =                SpisUglov[i-1];
                     if (c == 11) { c = SpisUglov[i-2];}
-                    if (c == 6) { c = SpisUglov[i-3];}
+                    if (c == 6)  { c = SpisUglov[i-3];}
                     BufferUgolSolve(cube,c);
                 } else {
                     //Если все ребра на месте, то преобразуем буквы в слова
@@ -726,7 +726,7 @@ public class ScambleFragment extends Fragment {
 
     private Boolean CheckUgol (int[] cube) {    //проверяем все ли углы на своих местах
         Boolean Check = true;           //предположим что все на местах
-        for (int i = 0; i<24; i++) {    //Обнуляем список углов на местах
+        for (int i = 0; i < 25; i++) {    //Обнуляем список углов на местах
             SpisUglov[i] = 0;
         }
         int j = 0;
