@@ -72,7 +72,7 @@ public class ScambleFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_scramble_gen, container, false);
 
-        back = ContextCompat.getColor(view.getContext(), R.color.gray);
+        back = ContextCompat.getColor(view.getContext(), R.color.transparent);
         black = ContextCompat.getColor(view.getContext(), R.color.black);
         red = ContextCompat.getColor(view.getContext(), R.color.red);
         blue = ContextCompat.getColor(view.getContext(), R.color.blue);
@@ -93,27 +93,13 @@ public class ScambleFragment extends Fragment {
         mListPagers = ListPagerLab.get(getActivity()).getPhaseList("SCRAMBLEGEN");
         InitArrays();
         Initialize(MainCube);
-        InitGridList();
+        InitGridList(MainCube);
 
         mGridView = (GridView) view.findViewById(R.id.scram_gridView);
         mAdapter = new MyGridAdapter(view.getContext(),R.layout.grid_item2,mGridList);
         mGridView.setAdapter(mAdapter);
 
-//        mGridLayout = (GridLayout) view.findViewById(R.id.grid);
-//        for (int i = 0; i < 108; i++) {
-//            View v = View.inflate(view.getContext(),R.layout.grid_item,null);
-//            TextView textView=(TextView) v.findViewById(R.id.grid_text);
-//            String st = String.valueOf(i%10);
-//            textView.setText("");
-//            LinearLayout linearLayout = (LinearLayout) v.findViewById(R.id.grid_layout);
-//            LinearLayout linearLayout1 = (LinearLayout) v.findViewById(R.id.grid_main_layout);
-//            linearLayout.setBackgroundColor(back);
-//            mLinearLayouts[i] = linearLayout;
-//            mLinearLayouts1[i] = linearLayout1;
-//            addViewToGrid(mGridLayout,v);
-//        }
-
-        cube2view();    //переносим куб на gridlayout
+        cube2view(MainCube);    //переносим куб на gridlayout
 
         Button azb_button = (Button) view.findViewById(R.id.button_azbuka);
         azb_button.setOnClickListener(new View.OnClickListener() {
@@ -130,14 +116,13 @@ public class ScambleFragment extends Fragment {
                 // Обработка нажатия
                 Initialize(MainCube);
                 solvetext.setText("Решение: ");
-                cube2view();
+                cube2view(MainCube);
                 }
             });
 
         Button gen_button = (Button) view.findViewById(R.id.button_generate);
         gen_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Обработка нажатия
                 // берем собранный куб
                 Initialize(MainCube);
                 // генерируем скрамбл с учетом выбранных параметров (переплавки буферов и длинны)
@@ -149,7 +134,7 @@ public class ScambleFragment extends Fragment {
                 // выводим решение на экран
                 solvetext.setText("Решение: " + solve);
                 // выводим MainCube на экран
-                cube2view();
+                cube2view(MainCube);
                 // Сохраняем скрамбл в базе
                 SetParamToBase("Scramble", st);
             }
@@ -160,7 +145,7 @@ public class ScambleFragment extends Fragment {
             public void onClick(View v) {
                 // Обработка нажатия
                 BlindMoves.Scram(MainCube,String.valueOf(Scramble.getText()));
-                cube2view();
+                cube2view(MainCube);
             }
         });
 
@@ -171,7 +156,6 @@ public class ScambleFragment extends Fragment {
                 int i = Integer.parseInt(ScrambleLength.getText().toString());
                 i--;
                 ScrambleLength.setText(String.valueOf(i));
-                cube2view();
             }
         });
 
@@ -185,7 +169,6 @@ public class ScambleFragment extends Fragment {
                 int i = Integer.parseInt(ScrambleLength.getText().toString());
                 i++;
                 ScrambleLength.setText(String.valueOf(i));
-                cube2view();
             }
         });
 
@@ -260,51 +243,26 @@ public class ScambleFragment extends Fragment {
     }
 
 
-    private void cube2view () {
-        //всем элемнтам задаем цвет фона
-        for (int i = 0; i <108; i++) {
-            viewCube[i] = back;
-        }
-        //задаем элементам grid (viewCube) цвета куба
-        //grid это 108 квадратиков, а куб это 54 эемента
-        for (int i = 0; i < 9; i++) {
-            viewCube[(i/3)*12+3+(i%3)] = cubeColor[MainCube[i]];
-            viewCube[(i/3+3)*12+(i%3)] = cubeColor[MainCube[i+9]];
-            viewCube[(i/3+3)*12+3+(i%3)] = cubeColor[MainCube[i+18]];
-            viewCube[(i/3+3)*12+6+(i%3)] = cubeColor[MainCube[i+27]];
-            viewCube[(i/3+3)*12+9+(i%3)] = cubeColor[MainCube[i+36]];
-            viewCube[(i/3+6)*12+3+(i%3)] = cubeColor[MainCube[i+45]];
-        }
-
-//        //задаем элементам gridlayout цвет заданный в массиве viewCube
-//        for (int i = 0; i < 108; i++) {
-//            mLinearLayouts[i].setBackgroundColor(viewCube[i]);
-//            if (viewCube[i] == back) {
-//                mLinearLayouts1[i].setBackgroundColor(back);
-//            } else {
-//                mLinearLayouts1[i].setBackgroundColor(black);
-//            }
-//        }
+    private void cube2view (int[] cube) {
+        InitGridList(cube);
+        mAdapter.notifyDataSetChanged();
     }
 
-    private void InitGridList() {
-        if (mGridList.size()==0) {
+    private void InitGridList(int[] cube) {
+        // 108 элементов GridList делаем пустыми и прозрачными back = transparent
+        if (mGridList.size()==0) {                  //только при первом запуске
             for (int i=0; i<108; i++) {
                 mGridList.add(new CubeAzbuka(back, ""));
             }
         }
-
-        int[] cube = new int[54];
-        Initialize (cube);
-        String[] azbuka = listPagerLab.getCustomAzbuka();
-
+        // если буква элемента = пробелу, то это элемент куба, если остается = "" то фона
         for (int i = 0; i < 9; i++) {
-            mGridList.set((i/3)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i]],azbuka [i]));
-            mGridList.set((i/3+3)*12+(i%3), new CubeAzbuka(cubeColor[cube[i+9]],azbuka [i+9]));
-            mGridList.set((i/3+3)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i+18]],azbuka [i+18]));
-            mGridList.set((i/3+3)*12+6+(i%3), new CubeAzbuka(cubeColor[cube[i+27]],azbuka [i+27]));
-            mGridList.set((i/3+3)*12+9+(i%3), new CubeAzbuka(cubeColor[cube[i+36]],azbuka [i+36]));
-            mGridList.set((i/3+6)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i+45]],azbuka [i+45]));
+            mGridList.set((i/3)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i]]," "));
+            mGridList.set((i/3+3)*12+(i%3), new CubeAzbuka(cubeColor[cube[i+9]]," "));
+            mGridList.set((i/3+3)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i+18]]," "));
+            mGridList.set((i/3+3)*12+6+(i%3), new CubeAzbuka(cubeColor[cube[i+27]]," "));
+            mGridList.set((i/3+3)*12+9+(i%3), new CubeAzbuka(cubeColor[cube[i+36]]," "));
+            mGridList.set((i/3+6)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i+45]]," "));
         }
 
     }
