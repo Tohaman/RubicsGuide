@@ -24,18 +24,21 @@ import static android.text.InputType.TYPE_TEXT_FLAG_CAP_WORDS;
 public class InputLetterFragment extends DialogFragment {
 
     //стр.250
-    public static final String EXTRA_Comment = "ru.tohaman.rubicsguide.letter";
+    public static final String EXTRA_Letter = "ru.tohaman.rubicsguide.letter";
+    public static final String EXTRA_Position = "ru.tohaman.rubicsguide.letter2";
     //стр.247
-    private static final String ARG_Comment = "ru.tohaman.rubicsguide.letter";
+    private static final String ARG_Letter = "ru.tohaman.rubicsguide.letter";
+    private static final String ARG_Position = "ru.tohaman.rubicsguide.letter2";
 
     private TextView mTextView;
     private Button mButton_minus;
     private Button mButton_plus;
 
-    public static InputLetterFragment newInstance (String string) {
+    public static InputLetterFragment newInstance (String letter, int position) {
         Bundle args = new Bundle();
         //передаем данные в диалог
-        args.putSerializable(ARG_Comment, string);
+        args.putSerializable(ARG_Letter, letter);
+        args.putSerializable(ARG_Position, position);
 
         InputLetterFragment fragment = new InputLetterFragment();
         fragment.setArguments(args);
@@ -46,11 +49,12 @@ public class InputLetterFragment extends DialogFragment {
     @Override
     public Dialog onCreateDialog (Bundle savedInstaceState) {
         //принимаем данные из активности при создании диалога
-        String string = (String) getArguments().getSerializable(ARG_Comment);
+        final String letter = (String) getArguments().getSerializable(ARG_Letter);
+        final int position = (int) getArguments().getSerializable(ARG_Position);
         View v = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_inputletter, null);
 
         mTextView = (TextView) v.findViewById(R.id.textView_letter);
-        mTextView.setText(string);
+        mTextView.setText(letter);
 
         mButton_plus = (Button) v.findViewById(R.id.button_plus2);
         mButton_plus.setOnClickListener(new View.OnClickListener() {
@@ -59,6 +63,7 @@ public class InputLetterFragment extends DialogFragment {
                 String st = mTextView.getText().toString();
                 char ch = st.charAt(0);
                 ch++;
+                if (ch > 'Я') { ch = 'А';}
                 mTextView.setText(Character.toString(ch));
             }
         });
@@ -70,6 +75,7 @@ public class InputLetterFragment extends DialogFragment {
                 String st = mTextView.getText().toString();
                 char ch = st.charAt(0);
                 ch--;
+                if (ch < 'А') { ch = 'Я';}
                 mTextView.setText(Character.toString(ch));
             }
         });
@@ -87,20 +93,22 @@ public class InputLetterFragment extends DialogFragment {
                             public void onClick (DialogInterface dialog, int which) {
                                 // В string надо передать новое значение текста в mEditText
                                 String string = mTextView.getText().toString();
-                                sendResult(Activity.RESULT_OK,string);
+
+                                sendResult(Activity.RESULT_OK,string,position);
                             }
                         })
                 .create();
     }
 
     //стр.250 возвращаем результат
-    private void sendResult (int resultCode, String string) {
+    private void sendResult (int resultCode, String letter, int position) {
         if (getTargetFragment() == null) {
             return;
         }
 
         Intent intent = new Intent();
-        intent.putExtra(EXTRA_Comment, string);
+        intent.putExtra(EXTRA_Letter, letter);
+        intent.putExtra(EXTRA_Position, position);
 
         getTargetFragment()
                 .onActivityResult(getTargetRequestCode(),resultCode, intent);

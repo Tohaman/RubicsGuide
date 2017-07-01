@@ -1,5 +1,7 @@
 package ru.tohaman.rubicsguide.blind;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -109,11 +111,13 @@ public class AzbukaFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
-                mAzbukaField.setText("Выбранный элемент: " + mAdapter.getItem(position));
-                FragmentManager manager = getFragmentManager();
-                InputLetterFragment dialog = InputLetterFragment.newInstance(mAdapter.getItem(position).toString());
-                dialog.setTargetFragment(AzbukaFragment.this, REQUEST_AZBUKA);
-                dialog.show (manager, DIALOG_AZBUKA);
+                String letter = mAdapter.getItem(position);
+                if (!(letter.equals("") | letter.equals("-"))){
+                    FragmentManager manager = getFragmentManager();
+                    InputLetterFragment dialog = InputLetterFragment.newInstance(mAdapter.getItem(position).toString(), position);
+                    dialog.setTargetFragment(AzbukaFragment.this, REQUEST_AZBUKA);
+                    dialog.show(manager, DIALOG_AZBUKA);
+                }
             }
         });
 
@@ -143,6 +147,27 @@ public class AzbukaFragment extends Fragment {
         return view;
     }
 
+    // Обрабатываем результат вызова редактирования буквы азбуки
+    // была ли нажата кнопка ОК, если да, то обновляем азбуку
+    @Override
+    public void onActivityResult (int requestCode, int resultCode, Intent data) {
+        if (resultCode != Activity.RESULT_OK) {
+            return;
+        }
+        //Если все таки была нажата кнопка ОК
+        if (requestCode == REQUEST_AZBUKA) {
+            // Получаем значение из диалога
+            String letter = (String) data.getSerializableExtra(InputLetterFragment.EXTRA_Letter);
+            int position = (int) data.getSerializableExtra(InputLetterFragment.EXTRA_Position);
+            CubeAzbuka cubeAzbuka = mGridList.get(position);
+            cubeAzbuka.setLetter(letter);
+            mGridList.set(position,cubeAzbuka);
+            mAdapter.notifyDataSetChanged();
+            String[] azbuka = GetCurrentAzbuka();
+            listPagerLab.setCustomAzbuka(azbuka);
+        }
+    }
+
 
     @SuppressWarnings("deprecation")
     private Html.ImageGetter imgGetter = new Html.ImageGetter() {
@@ -165,6 +190,20 @@ public class AzbukaFragment extends Fragment {
             return drawable;
         }
     };
+
+    private String[] GetCurrentAzbuka (){
+        String[] azbuka = new String[54];
+        for (int i = 0; i < 9; i++) {
+            azbuka[i] = mGridList.get((i/3)*12+3+(i%3)).getLetter();
+            azbuka[i+9] = mGridList.get((i/3+3)*12+(i%3)).getLetter();
+            azbuka[i+18] = mGridList.get((i/3+3)*12+3+(i%3)).getLetter();
+            azbuka[i+27] = mGridList.get((i/3+3)*12+6+(i%3)).getLetter();
+            azbuka[i+36] = mGridList.get((i/3+3)*12+9+(i%3)).getLetter();
+            azbuka[i+45] = mGridList.get((i/3+6)*12+3+(i%3)).getLetter();
+        }
+        return azbuka;
+    }
+
 
     private void InitGridList() {
         if (mGridList.size()==0) {
