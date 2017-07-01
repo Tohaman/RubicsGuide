@@ -172,7 +172,7 @@ public class ScambleFragment extends Fragment {
             }
         });
 
-
+        //Поле Скрамбл и клик по этому полю
         Scramble = (TextView) view.findViewById(R.id.scramble);
         Scramble.setText(GetParamFromBase("Scramble"));
         Scramble.setOnClickListener(new View.OnClickListener() {
@@ -185,6 +185,7 @@ public class ScambleFragment extends Fragment {
             }
         });
 
+        // чекбокс переплавки буфера ребер
         mChBoxRebro = (CheckBox) view.findViewById(R.id.checkBox_rebro);
         String a = GetParamFromBase("ChkBufRebro");
         if (a.equals("1")) {
@@ -203,6 +204,7 @@ public class ScambleFragment extends Fragment {
             }
         });
 
+        // чекбокс переплавки буфера углов
         mChBoxUgol = (CheckBox) view.findViewById(R.id.checkBox_ugol);
         if (GetParamFromBase("ChkBufUgol").equals("1")) {
             mChBoxUgol.setChecked(true);

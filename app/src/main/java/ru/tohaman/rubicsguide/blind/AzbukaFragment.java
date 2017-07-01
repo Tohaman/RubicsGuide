@@ -6,6 +6,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
 import android.text.Html;
 import android.text.Spanned;
@@ -25,6 +26,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import ru.tohaman.rubicsguide.CommentFragment;
 import ru.tohaman.rubicsguide.R;
 import ru.tohaman.rubicsguide.listpager.ListPagerLab;
 
@@ -42,6 +44,10 @@ public class AzbukaFragment extends Fragment {
     ListPagerLab listPagerLab;
     int[] cubeColor = new int[6];
     int red,blue,white,orange,green,yellow,back,black;
+
+    private static final int REQUEST_AZBUKA = 0;
+    private static final String DIALOG_AZBUKA = "DialogAzbuka";
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -90,12 +96,12 @@ public class AzbukaFragment extends Fragment {
         mGridView.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                mAzbukaField.setText("Выбранный элемент: " + mAdapter.getItem(position));
+//                mAzbukaField.setText("Выбранный элемент: " + mAdapter.getItem(position));
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                mAzbukaField.setText("Ничего не выбрано");
+//                mAzbukaField.setText("Ничего не выбрано");
             }
         });
         mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -104,6 +110,10 @@ public class AzbukaFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 mAzbukaField.setText("Выбранный элемент: " + mAdapter.getItem(position));
+                FragmentManager manager = getFragmentManager();
+                InputLetterFragment dialog = InputLetterFragment.newInstance(mAdapter.getItem(position).toString());
+                dialog.setTargetFragment(AzbukaFragment.this, REQUEST_AZBUKA);
+                dialog.show (manager, DIALOG_AZBUKA);
             }
         });
 
