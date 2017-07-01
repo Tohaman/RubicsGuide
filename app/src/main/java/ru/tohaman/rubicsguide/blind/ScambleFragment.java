@@ -35,16 +35,12 @@ import ru.tohaman.rubicsguide.listpager.ListPagerLab;
 public class ScambleFragment extends Fragment {
     private Intent mIntent;
 
-    private GridLayout mGridLayout;
-    private LinearLayout[] mLinearLayouts = new LinearLayout[108];
-    private LinearLayout[] mLinearLayouts1 = new LinearLayout[108];
-
     private MyGridAdapter mAdapter;
     private GridView mGridView;
     private List<CubeAzbuka> mGridList = new ArrayList();
 
     private TextView solvetext,ScrambleLength,Scramble;
-    private CheckBox mChBoxRebro,mChBoxUgol;
+    private CheckBox mChBoxRebro,mChBoxUgol,mChBoxSolve;
     private int red,blue,white,orange,green,yellow,back,black;
     private int[] MainCube = new int[54];
     private int[] viewCube = new int[108];
@@ -99,7 +95,7 @@ public class ScambleFragment extends Fragment {
         mAdapter = new MyGridAdapter(view.getContext(),R.layout.grid_item2,mGridList);
         mGridView.setAdapter(mAdapter);
 
-        cube2view(MainCube);    //переносим куб на gridlayout
+        cube2view(MainCube);    //переносим куб на gridview
 
         Button azb_button = (Button) view.findViewById(R.id.button_azbuka);
         azb_button.setOnClickListener(new View.OnClickListener() {
@@ -115,7 +111,7 @@ public class ScambleFragment extends Fragment {
             public void onClick(View v) {
                 // Обработка нажатия
                 Initialize(MainCube);
-                solvetext.setText("Решение: ");
+                solvetext.setText("");
                 cube2view(MainCube);
                 }
             });
@@ -123,16 +119,21 @@ public class ScambleFragment extends Fragment {
         Button gen_button = (Button) view.findViewById(R.id.button_generate);
         gen_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // берем собранный куб
+                // берем собранный куб и обнуляем решение
                 Initialize(MainCube);
+                solvetext.setText("");
                 // генерируем скрамбл с учетом выбранных параметров (переплавки буферов и длинны)
                 String st = GenerateScrambleWithParam(mChBoxRebro.isChecked(),mChBoxUgol.isChecked(),Integer.parseInt(String.valueOf(ScrambleLength.getText())));
                 // выводим скрамбл на экран
                 Scramble.setText(st);
                 // перемешиваем куб по скрамблу
                 BlindMoves.Scram(MainCube, st);
-                // выводим решение на экран
-                solvetext.setText("Решение: " + solve);
+                // выводим решение или длинну решения на экран
+                if (mChBoxSolve.isChecked()) {
+                    solvetext.setText(solve);
+                } else {
+                    solvetext.setText(String.valueOf(solve.length()/2));
+                }
                 // выводим MainCube на экран
                 cube2view(MainCube);
                 // Сохраняем скрамбл в базе
@@ -144,6 +145,7 @@ public class ScambleFragment extends Fragment {
         do_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Обработка нажатия
+                Initialize(MainCube);
                 BlindMoves.Scram(MainCube,String.valueOf(Scramble.getText()));
                 cube2view(MainCube);
             }
@@ -196,10 +198,10 @@ public class ScambleFragment extends Fragment {
         mChBoxRebro.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked)
-                    SetParamToBase("ChkBufRebro","1");
-                else {
-                    SetParamToBase("ChkBufRebro","0");
+                if(isChecked){
+                    SetParamToBase("ChkBufRebro", "1");
+                } else {
+                    SetParamToBase("ChkBufRebro", "0");
                 }
             }
         });
@@ -214,16 +216,36 @@ public class ScambleFragment extends Fragment {
         mChBoxUgol.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked)
-                    SetParamToBase("ChkBufUgol","1");
-                else {
-                    SetParamToBase("ChkBufUgol","0");
+                if(isChecked){
+                    SetParamToBase("ChkBufUgol", "1");
+                } else {
+                    SetParamToBase("ChkBufUgol", "0");
+                }
+            }
+        });
+
+        // чекбокс показывать или нет решения
+        mChBoxSolve = (CheckBox) view.findViewById(R.id.checkBox_solve);
+        if (GetParamFromBase("ChkSolve").equals("1")) {
+            mChBoxSolve.setChecked(true);
+        } else {
+            mChBoxSolve.setChecked(false);
+        }
+        mChBoxSolve.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    solvetext.setText(solve);
+                    SetParamToBase("ChkSolve", "1");
+                } else {
+                    SetParamToBase("ChkSolve", "0");
+                    solvetext.setText(String.valueOf(solve.length()/2));
                 }
             }
         });
 
         solvetext = (TextView) view.findViewById(R.id.solve_text);
-        solvetext.setText("Решение: ");
+        solvetext.setText("");
         return view;
 
     }
