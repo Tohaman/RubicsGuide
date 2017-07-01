@@ -30,6 +30,7 @@ import java.util.List;
 
 import ru.tohaman.rubicsguide.CommentFragment;
 import ru.tohaman.rubicsguide.R;
+import ru.tohaman.rubicsguide.listpager.ListPager;
 import ru.tohaman.rubicsguide.listpager.ListPagerLab;
 
 import static ru.tohaman.rubicsguide.blind.ScambleFragment.Initialize;
@@ -75,9 +76,8 @@ public class AzbukaFragment extends Fragment {
         listPagerLab = ListPagerLab.get(getActivity());
         // Немного преобразуем текст для корректного отображения.
         String text = "<html><body style=\"text-align:justify\"> %s </body></Html>";
-        String description = String.format(text,getString(R.string.azbuka));
+        String description = String.format(text,getString(R.string.azbuka2));
         description = description.replace("%%", "%25");
-        description = "Выбранный элемент: ";                        //потом убрать
 
         Spanned spanresult;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
@@ -143,6 +143,25 @@ public class AzbukaFragment extends Fragment {
                 mAdapter.notifyDataSetChanged();
             }
         });
+
+        Button but_saveazbuka = (Button) view.findViewById(R.id.button_saveazbuka);
+        but_saveazbuka.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                listPagerLab.saveCustomAzbuka();
+            }
+        });
+
+        Button but_loadazbuka = (Button) view.findViewById(R.id.button_loadazbuka);
+        but_loadazbuka.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                String[] azbuka = listPagerLab.loadCustomAzbuka();
+                listPagerLab.setCustomAzbuka(azbuka);
+                InitGridList();
+                mAdapter.notifyDataSetChanged();
+            }
+        });
+
+
 
         return view;
     }

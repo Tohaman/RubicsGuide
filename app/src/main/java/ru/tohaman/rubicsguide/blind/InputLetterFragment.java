@@ -64,6 +64,8 @@ public class InputLetterFragment extends DialogFragment {
                 char ch = st.charAt(0);
                 ch++;
                 if (ch > 'Я') { ch = 'А';}
+                if (ch == 'Ж') { ch = 'Ё';}
+                if (ch < 'А' && ch > 'Ё') { ch = 'Ж';}
                 mTextView.setText(Character.toString(ch));
             }
         });
@@ -74,8 +76,11 @@ public class InputLetterFragment extends DialogFragment {
                 // Обработка нажатия
                 String st = mTextView.getText().toString();
                 char ch = st.charAt(0);
+                if (ch == 'Ж') { ch = 'Ё'; ch++;}
                 ch--;
-                if (ch < 'А') { ch = 'Я';}
+                if (ch < 'Ё') { ch = 'Е';}
+                if (ch < 'А' && ch != 'Ё') { ch = 'Я';}
+
                 mTextView.setText(Character.toString(ch));
             }
         });
@@ -93,7 +98,6 @@ public class InputLetterFragment extends DialogFragment {
                             public void onClick (DialogInterface dialog, int which) {
                                 // В string надо передать новое значение текста в mEditText
                                 String string = mTextView.getText().toString();
-
                                 sendResult(Activity.RESULT_OK,string,position);
                             }
                         })

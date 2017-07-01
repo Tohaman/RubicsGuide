@@ -320,4 +320,20 @@ public class ListPagerLab {
         mListPager.setComment(st);
         updateListPager(mListPager);
     }
+    public void saveCustomAzbuka() {
+        ListPager mListPager = getPhaseItem (0,"AZBUKA");
+        mListPager.setUrl(mListPager.getComment());
+        updateListPager(mListPager);
+    }
+
+    public String[] loadCustomAzbuka () {
+        String[] azbuka = new String [54];
+        ListPager mListPager = getPhaseItem (0,"AZBUKA");
+        if (mListPager.getComment().equals("")) {
+            azbuka = getMaximAzbuka();
+        } else {
+            azbuka = mListPager.getUrl().split(" ");
+        }
+        return azbuka;
+    }
 }
