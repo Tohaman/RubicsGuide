@@ -300,6 +300,30 @@ public class ListPagerLab {
         return azbuka;
     }
 
+    public String[] getScrambleManagement() {
+        String[] azbuka = new String[54];
+
+                                                                        azbuka[0] = " ";     azbuka[1] = " ";    azbuka[2] = " ";
+                                                                        azbuka[3] = " ";     azbuka[4] = " ";    azbuka[5] = " ";
+                                                                        azbuka[6] = " ";     azbuka[7] = " ";    azbuka[8] = " ";
+
+        azbuka[9]  = " ";   azbuka[10] = " ";   azbuka[11] = " ";       azbuka[18] = " ";   azbuka[19] = " ";    azbuka[20] = "↑";       azbuka[27] = " ";   azbuka[28] = " ";   azbuka[29] = " ";
+        azbuka[12] = " ";   azbuka[13] = " ";   azbuka[14] = " ";       azbuka[21] = " ";   azbuka[22] = " ";    azbuka[23] = " ";       azbuka[30] = " ";   azbuka[31] = " ";   azbuka[32] = " ";
+        azbuka[15] = " ";   azbuka[16] = " ";   azbuka[17] = " ";       azbuka[24] = " ";   azbuka[25] = " ";    azbuka[26] = "↓";       azbuka[33] = " ";   azbuka[34] = " ";   azbuka[35] = " ";
+
+                                                                        azbuka[45] = "←";   azbuka[46] = "M'";   azbuka[47] = "→";
+                                                                        azbuka[48] = "←";   azbuka[49] = " ";   azbuka[50] = "→";
+                                                                        azbuka[51] = "←";   azbuka[52] = "M";   azbuka[53] = "→";
+
+
+        azbuka[36] = " ";    azbuka[37] = " ";    azbuka[38] = " ";
+        azbuka[39] = " ";    azbuka[40] = " ";    azbuka[41] = " ";
+        azbuka[42] = " ";    azbuka[43] = " ";    azbuka[44] = " ";
+
+        return azbuka;
+    }
+
+
     public String[] getCustomAzbuka() {
         String[] azbuka = new String [54];
         ListPager mListPager = getPhaseItem (0,"AZBUKA");

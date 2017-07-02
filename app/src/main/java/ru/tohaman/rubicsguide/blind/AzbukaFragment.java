@@ -231,8 +231,7 @@ public class AzbukaFragment extends Fragment {
             }
         }
 
-        int[] cube = new int[54];
-        Initialize (cube);
+        int[] cube = Initialize();
         String[] azbuka = listPagerLab.getCustomAzbuka();
 
         for (int i = 0; i < 9; i++) {

@@ -40,9 +40,8 @@ public class ScambleFragment extends Fragment {
     private TextView solvetext,ScrambleLength,Scramble;
     private CheckBox mChBoxRebro,mChBoxUgol,mChBoxSolve;
     private int red,blue,white,orange,green,yellow,back,black;
-    private int[] MainCube = new int[54];
-    private int[] viewCube = new int[108];
     private int[] cubeColor = new int[6];
+    private int[] MainCube = new int [54];
     private int[] MainRebro = new int[66];
     private int[] DopRebro = new int[54];
     private int[] MainUgol = new int[66];
@@ -53,6 +52,7 @@ public class ScambleFragment extends Fragment {
     private List<ListPager> mListPagers;
     private ListPagerLab listPagerLab;
     private String solve;
+
 
     private static final int REQUEST_SCRAMBLE = 0;
     private static final String DIALOG_SCRAMBLE = "DialogScramble";
@@ -82,18 +82,17 @@ public class ScambleFragment extends Fragment {
         cubeColor[4] = yellow;
         cubeColor[5] = green;
 
+
         // Инициализируем переменные
         listPagerLab = ListPagerLab.get(getActivity());
         mListPagers = ListPagerLab.get(getActivity()).getPhaseList("SCRAMBLEGEN");
         InitArrays();
-        Initialize(MainCube);
+        MainCube = Initialize();
         InitGridList(MainCube);
 
         mGridView = (GridView) view.findViewById(R.id.scram_gridView);
         mAdapter = new MyGridAdapter(view.getContext(),R.layout.grid_item2,mGridList);
         mGridView.setAdapter(mAdapter);
-
-        cube2view(MainCube);    //переносим куб на gridview
 
         Button azb_button = (Button) view.findViewById(R.id.button_azbuka);
         azb_button.setOnClickListener(new View.OnClickListener() {
@@ -108,7 +107,7 @@ public class ScambleFragment extends Fragment {
         reset_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Обработка нажатия
-                Initialize(MainCube);
+                MainCube = Initialize();
                 solvetext.setText("");
                 cube2view(MainCube);
                 }
@@ -118,7 +117,7 @@ public class ScambleFragment extends Fragment {
         gen_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // берем собранный куб и обнуляем решение
-                Initialize(MainCube);
+                MainCube =Initialize();
                 solvetext.setText("");
                 // генерируем скрамбл с учетом выбранных параметров (переплавки буферов и длинны)
                 String st = GenerateScrambleWithParam(mChBoxRebro.isChecked(),mChBoxUgol.isChecked(),Integer.parseInt(String.valueOf(ScrambleLength.getText())));
@@ -143,7 +142,7 @@ public class ScambleFragment extends Fragment {
         do_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Обработка нажатия
-                Initialize(MainCube);
+                MainCube = Initialize();
                 BlindMoves.Scram(MainCube,String.valueOf(Scramble.getText()));
                 cube2view(MainCube);
             }
@@ -233,21 +232,30 @@ public class ScambleFragment extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
-                    solvetext.setText(getSolve(MainCube));
+                    String st = GetSolve(MainCube);
+                    solvetext.setText(st);
                     SetParamToBase("ChkSolve", "1");
                 } else {
                     SetParamToBase("ChkSolve", "0");
-                    String st = getSolve(MainCube);
+                    String st = GetSolve(MainCube);
                     int a = st.split(" ").length;
                     solvetext.setText(String.valueOf(a));
                 }
             }
         });
 
+        MainCube = BlindMoves.Scram(MainCube, String.valueOf(Scramble.getText()));
+
         solvetext = (TextView) view.findViewById(R.id.solve_text);
-        BlindMoves.Scram(MainCube, Scramble.getText().toString());
-        //TODO Сделать вывод решения в зависимости от чекбокса
-        solvetext.setText(getSolve(MainCube));
+        if(mChBoxSolve.isChecked()){
+            solvetext.setText(GetSolve(MainCube));
+        } else {
+            String st = GetSolve(MainCube);
+            solvetext.setText(String.valueOf(st.split(" ").length));
+        }
+
+        cube2view(MainCube);
+
         return view;
 
     }
@@ -265,6 +273,14 @@ public class ScambleFragment extends Fragment {
             String string = (String) data.getSerializableExtra(CommentFragment.EXTRA_Comment);
             Scramble.setText(string);               //обновляем текст во фрагменте
             SetParamToBase("Scramble", string);     //сохраняем в базу
+            MainCube = BlindMoves.Scram(Initialize(), String.valueOf(Scramble.getText()));
+            cube2view(MainCube);
+            if(mChBoxSolve.isChecked()){
+                solvetext.setText(GetSolve(MainCube));
+            } else {
+                String st = GetSolve(MainCube);
+                solvetext.setText(String.valueOf(st.split(" ").length));
+            }
         }
     }
 
@@ -282,27 +298,30 @@ public class ScambleFragment extends Fragment {
             }
         }
         // если буква элемента = пробелу, то это элемент куба, если остается = "" то фона
+        String [] st = listPagerLab.getScrambleManagement();
         for (int i = 0; i < 9; i++) {
-            mGridList.set((i/3)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i]]," "));
-            mGridList.set((i/3+3)*12+(i%3), new CubeAzbuka(cubeColor[cube[i+9]]," "));
-            mGridList.set((i/3+3)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i+18]]," "));
-            mGridList.set((i/3+3)*12+6+(i%3), new CubeAzbuka(cubeColor[cube[i+27]]," "));
-            mGridList.set((i/3+3)*12+9+(i%3), new CubeAzbuka(cubeColor[cube[i+36]]," "));
-            mGridList.set((i/3+6)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i+45]]," "));
+            mGridList.set((i/3)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i]],st[i]));
+            mGridList.set((i/3+3)*12+(i%3), new CubeAzbuka(cubeColor[cube[i+9]],st[i]));
+            mGridList.set((i/3+3)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i+18]],st[i]));
+            mGridList.set((i/3+3)*12+6+(i%3), new CubeAzbuka(cubeColor[cube[i+27]],st[i]));
+            mGridList.set((i/3+3)*12+9+(i%3), new CubeAzbuka(cubeColor[cube[i+36]],st[i]));
+            mGridList.set((i/3+6)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i+45]],st[i]));
         }
 
     }
 
 
-    public static int[] Initialize (int[] cube) {
+    public static int[] Initialize () {
+        int[] cube = new int[54];
         for (int i = 0 ; i < cube.length; i++) {
             cube[i] = (i / 9);
         }
         return cube;
     }
 
-    private String getSolve (int[] cube) {
+    private String GetSolve (int[] maincube) {
         String st = "";
+        int [] cube = maincube.clone();
         do {
             int a = cube[23] + 1;       //смотрим что в буфере ребер
             int b = cube[30] + 1;
@@ -337,7 +356,7 @@ public class ScambleFragment extends Fragment {
         boolean resault;
 
         do {
-            Initialize(CurCube);
+            CurCube = Initialize();
             j++;
             scramble = GenerateScramble(length);     //сгенерировать скрамбл длинны указанной в поле ScrambleLength
             BlindMoves.Scram(CurCube, scramble);
@@ -545,34 +564,34 @@ public class ScambleFragment extends Fragment {
         }                                               //подставим в рекурсии
         switch (c) {
             case 1:
-                BlindMoves.Blinde1 (cube);
+                cube = BlindMoves.Blinde1 (cube);
                 break;
             case 3:
-                BlindMoves.Blinde3 (cube);
+                cube = BlindMoves.Blinde3 (cube);
                 break;
             case 5:
-                BlindMoves.Blinde5 (cube);
+                cube = BlindMoves.Blinde5 (cube);
                 break;
             case 7:
-                BlindMoves.Blinde7 (cube);
+                cube = BlindMoves.Blinde7 (cube);
                 break;
             case 10:
-                BlindMoves.Blinde10 (cube);
+                cube = BlindMoves.Blinde10 (cube);
                 break;
             case 12:
-                BlindMoves.Blinde12 (cube);
+                cube = BlindMoves.Blinde12 (cube);
                 break;
             case 14:
-                BlindMoves.Blinde14 (cube);
+                cube = BlindMoves.Blinde14 (cube);
                 break;
             case 16:
-                BlindMoves.Blinde16 (cube);
+                cube = BlindMoves.Blinde16 (cube);
                 break;
             case 19:
-                BlindMoves.Blinde19 (cube);
+                cube = BlindMoves.Blinde19 (cube);
                 break;
             case 21:
-                BlindMoves.Blinde21 (cube);
+                cube = BlindMoves.Blinde21 (cube);
                 break;
             case 23:                      // для бело-красного ребра
                 if (!CheckRebro(cube)) {
@@ -592,10 +611,10 @@ public class ScambleFragment extends Fragment {
                 }
                 break;
             case 25:
-                BlindMoves.Blinde25 (cube);
+                cube = BlindMoves.Blinde25 (cube);
                 break;
             case 28:
-                BlindMoves.Blinde28 (cube);
+                cube = BlindMoves.Blinde28 (cube);
                 break;
             case 30:                        //для красно-белого ребра
                 if (!CheckRebro(cube)) {
@@ -613,34 +632,34 @@ public class ScambleFragment extends Fragment {
                 }
                 break;
             case 32:
-                BlindMoves.Blinde32 (cube);
+                cube = BlindMoves.Blinde32 (cube);
                 break;
             case 34:
-                BlindMoves.Blinde34 (cube);
+                cube = BlindMoves.Blinde34 (cube);
                 break;
             case 37:
-                BlindMoves.Blinde37 (cube);
+                cube = BlindMoves.Blinde37 (cube);
                 break;
             case 39:
-                BlindMoves.Blinde39 (cube);
+                cube = BlindMoves.Blinde39 (cube);
                 break;
             case 41:
-                BlindMoves.Blinde41 (cube);
+                cube = BlindMoves.Blinde41 (cube);
                 break;
             case 43:
-                BlindMoves.Blinde43 (cube);
+                cube = BlindMoves.Blinde43 (cube);
                 break;
             case 46:
-                BlindMoves.Blinde46 (cube);
+                cube = BlindMoves.Blinde46 (cube);
                 break;
             case 48:
-                BlindMoves.Blinde48 (cube);
+                cube = BlindMoves.Blinde48 (cube);
                 break;
             case 50:
-                BlindMoves.Blinde50 (cube);
+                cube = BlindMoves.Blinde50 (cube);
                 break;
             case 52:
-                BlindMoves.Blinde52 (cube);
+                cube = BlindMoves.Blinde52 (cube);
                 break;
             default:
                 //Toast.makeText(getView().getContext(),"Странное ребро в буфере",Toast.LENGTH_SHORT).show();
@@ -677,10 +696,10 @@ public class ScambleFragment extends Fragment {
         }
         switch (c) {
             case 0:
-                BlindMoves.Blinde0 (cube);
+                cube = BlindMoves.Blinde0 (cube);
                 break;
             case 2:
-                BlindMoves.Blinde2 (cube);
+                cube = BlindMoves.Blinde2 (cube);
                 break;
             case 6:
                 if (!CheckUgol(cube)) {
@@ -701,10 +720,10 @@ public class ScambleFragment extends Fragment {
                 }
                 break;
             case 8:
-                BlindMoves.Blinde8 (cube);
+                cube = BlindMoves.Blinde8 (cube);
                 break;
             case 9:
-                BlindMoves.Blinde9 (cube);
+                cube = BlindMoves.Blinde9 (cube);
                 break;
             case 11:
                 if (!CheckUgol(cube)) {
@@ -724,10 +743,10 @@ public class ScambleFragment extends Fragment {
                 }
                 break;
             case 15:
-                BlindMoves.Blinde15 (cube);
+                cube = BlindMoves.Blinde15 (cube);
                 break;
             case 17:
-                BlindMoves.Blinde17 (cube);
+                cube = BlindMoves.Blinde17 (cube);
                 break;
             case 18:
                 if (!CheckUgol(cube)) {
@@ -747,49 +766,49 @@ public class ScambleFragment extends Fragment {
                 }
                 break;
             case 20:
-                BlindMoves.Blinde20 (cube);
+                cube = BlindMoves.Blinde20 (cube);
                 break;
             case 24:
-                BlindMoves.Blinde24 (cube);
+                cube = BlindMoves.Blinde24 (cube);
                 break;
             case 26:
-                BlindMoves.Blinde26 (cube);
+                cube = BlindMoves.Blinde26 (cube);
                 break;
             case 27:
-                BlindMoves.Blinde27 (cube);
+                cube = BlindMoves.Blinde27 (cube);
                 break;
             case 29:
-                BlindMoves.Blinde29 (cube);
+                cube = BlindMoves.Blinde29 (cube);
                 break;
             case 33:
-                BlindMoves.Blinde33 (cube);
+                cube = BlindMoves.Blinde33 (cube);
                 break;
             case 35:
-                BlindMoves.Blinde35 (cube);
+                cube = BlindMoves.Blinde35 (cube);
                 break;
             case 36:
-                BlindMoves.Blinde36 (cube);
+                cube = BlindMoves.Blinde36 (cube);
                 break;
             case 38:
-                BlindMoves.Blinde38 (cube);
+                cube = BlindMoves.Blinde38 (cube);
                 break;
             case 42:
-                BlindMoves.Blinde42 (cube);
+                cube = BlindMoves.Blinde42 (cube);
                 break;
             case 44:
-                BlindMoves.Blinde44 (cube);
+                cube = BlindMoves.Blinde44 (cube);
                 break;
             case 45:
-                BlindMoves.Blinde45 (cube);
+                cube = BlindMoves.Blinde45 (cube);
                 break;
             case 47:
-                BlindMoves.Blinde47 (cube);
+                cube = BlindMoves.Blinde47 (cube);
                 break;
             case 51:
-                BlindMoves.Blinde51 (cube);
+                cube = BlindMoves.Blinde51 (cube);
                 break;
             case 53:
-                BlindMoves.Blinde53 (cube);
+                cube = BlindMoves.Blinde53 (cube);
                 break;
             default:
             //    Toast.makeText(getView().getContext(),"Страннай угол в буфере",Toast.LENGTH_SHORT).show();
