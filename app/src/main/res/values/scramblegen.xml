@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="scramblegen_title">
+        <item>Scramble</item>
+        <item>ScrambleLength</item>
+        <item>ChkBufRebro</item>
+        <item>ChkBufUgol</item>
+        <item>ChkSolve</item>
+    </string-array>
+
+    <integer-array name="scramblegen_icon">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </integer-array>
+
+    <string-array name="scramblegen_descr">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="scramblegen_url">
+        <item>U2 F2 L\' D2 R U F\' L2 B2 R L2 B2 U R</item>
+        <item>14</item>
+        <item>1</item>
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+
+</resources>

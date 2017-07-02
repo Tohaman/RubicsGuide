@@ -103,16 +103,6 @@ public class ScambleFragment extends Fragment {
             }
         });
 
-        Button reset_button = (Button) view.findViewById(R.id.button_reset);
-        reset_button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Обработка нажатия
-                MainCube = Initialize();
-                solvetext.setText("");
-                cube2view(MainCube);
-                }
-            });
-
         Button gen_button = (Button) view.findViewById(R.id.button_generate);
         gen_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -135,16 +125,6 @@ public class ScambleFragment extends Fragment {
                 cube2view(MainCube);
                 // Сохраняем скрамбл в базе
                 SetParamToBase("Scramble", st);
-            }
-        });
-
-        Button do_button = (Button) view.findViewById(R.id.button_do);
-        do_button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Обработка нажатия
-                MainCube = Initialize();
-                BlindMoves.Scram(MainCube,String.valueOf(Scramble.getText()));
-                cube2view(MainCube);
             }
         });
 
@@ -234,9 +214,9 @@ public class ScambleFragment extends Fragment {
                 if(isChecked){
                     String st = GetSolve(MainCube);
                     solvetext.setText(st);
-                    SetParamToBase("ChkSolve", "1");
+                    SetParamToBase("ChkSolve", "1");    //поскольку данные храним в текством виде, то true = 1
                 } else {
-                    SetParamToBase("ChkSolve", "0");
+                    SetParamToBase("ChkSolve", "0");    //а false = 0;
                     String st = GetSolve(MainCube);
                     int a = st.split(" ").length;
                     solvetext.setText(String.valueOf(a));
@@ -297,15 +277,18 @@ public class ScambleFragment extends Fragment {
                 mGridList.add(new CubeAzbuka(back, ""));
             }
         }
+
+        // это если соберусь сделать элементы gridview кликабельными для задания скрамбла
+        // String [] st = listPagerLab.getScrambleManagement();
+
         // если буква элемента = пробелу, то это элемент куба, если остается = "" то фона
-        String [] st = listPagerLab.getScrambleManagement();
         for (int i = 0; i < 9; i++) {
-            mGridList.set((i/3)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i]],st[i]));
-            mGridList.set((i/3+3)*12+(i%3), new CubeAzbuka(cubeColor[cube[i+9]],st[i]));
-            mGridList.set((i/3+3)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i+18]],st[i]));
-            mGridList.set((i/3+3)*12+6+(i%3), new CubeAzbuka(cubeColor[cube[i+27]],st[i]));
-            mGridList.set((i/3+3)*12+9+(i%3), new CubeAzbuka(cubeColor[cube[i+36]],st[i]));
-            mGridList.set((i/3+6)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i+45]],st[i]));
+            mGridList.set((i/3)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i]]," "));
+            mGridList.set((i/3+3)*12+(i%3), new CubeAzbuka(cubeColor[cube[i+9]]," "));
+            mGridList.set((i/3+3)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i+18]]," "));
+            mGridList.set((i/3+3)*12+6+(i%3), new CubeAzbuka(cubeColor[cube[i+27]]," "));
+            mGridList.set((i/3+3)*12+9+(i%3), new CubeAzbuka(cubeColor[cube[i+36]]," "));
+            mGridList.set((i/3+6)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i+45]]," "));
         }
 
     }

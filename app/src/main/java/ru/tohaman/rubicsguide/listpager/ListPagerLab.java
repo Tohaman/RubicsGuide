@@ -94,10 +94,10 @@ public class ListPagerLab {
         PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
 
         mPhase = "SCRAMBLEGEN";
-        mTitles = new String[]{"Scramble", "ScrambleLength", "ChkBufRebro", "ChkBufUgol", "ChkSolve"};
-        mResId = new int[] {0,0,0,0,0};                       //что-то укажем, не будем использовать
-        Descr = new int[] {0,0,0,0,0};
-        mUrl = new String[]{"U2 F2 L' D2 R U F' L2 B2 R L2 B2 U R", "14","1","1","1"};   //значения, если их еще нет в базе (комментах).
+        mTitles = mContext.getResources().getStringArray(R.array.scramblegen_title);
+        mResId = getResID(R.array.scramblegen_icon);
+        Descr = getResID(R.array.scramblegen_descr);
+        mUrl = mContext.getResources().getStringArray(R.array.scramblegen_url);
         PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
 
         mPhase = "AZBUKA";
