@@ -233,7 +233,7 @@ public class ScambleFragment extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
-                    solvetext.setText(solve);
+                    solvetext.setText(getSolve(MainCube));
                     SetParamToBase("ChkSolve", "1");
                 } else {
                     SetParamToBase("ChkSolve", "0");
@@ -299,7 +299,28 @@ public class ScambleFragment extends Fragment {
 
     private String getSolve (int[] cube) {
         String st = "";
+        do {
+            int a = cube[23] + 1;       //смотрим что в буфере ребер
+            int b = cube[30] + 1;
+            int c = MainRebro[(a*10)+b];
+            SolveCube sc = BufferRebroSolve(cube,c, st);
+            st = sc.getSolve();
+            cube = sc.getCube();
+        } while (!CheckRebro(cube));
 
+        int j = st.split(" ").length;
+        if (j%2 != 0) { st = st + "Эк ";}
+
+        do {
+            int a = cube[18] + 1;       //смотрим что в буфере углов
+            int b = cube[11] + 1;
+            int c = MainUgol[(a*10)+b];
+            SolveCube sc = BufferUgolSolve(cube, c, st);
+            st = sc.getSolve();
+            cube = sc.getCube();
+        } while (!CheckUgol(cube));
+
+        st = st.trim();
         return st;
     }
 
@@ -329,6 +350,9 @@ public class ScambleFragment extends Fragment {
                 solve = sc.getSolve();
                 CurCube = sc.getCube();
             } while (!CheckRebro(CurCube));
+
+            int d = solve.split(" ").length;
+            if (d%2 != 0) { solve = solve + "Эк ";}
 
             do {
                 int a = CurCube[18] + 1;       //смотрим что в буфере углов
@@ -389,8 +413,7 @@ public class ScambleFragment extends Fragment {
         scramble = scramble.replace(" -4"," L'");
         scramble = scramble.replace(" -5"," D'");
         scramble = scramble.replace(" -6"," B'");
-        scramble = scramble.replaceFirst(" ","");
-
+        scramble = scramble.trim();                 //убираем лишние пробелы
         return scramble;
     }
 
