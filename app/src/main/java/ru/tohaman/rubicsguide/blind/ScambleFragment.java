@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.GridLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.GridView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -299,13 +297,10 @@ public class ScambleFragment extends Fragment {
         return cube;
     }
 
-    private void addViewToGrid(GridLayout field, View view) {
-        GridLayout.LayoutParams lp = new GridLayout.LayoutParams();
-        lp.width  = 0;
-        lp.height = 0;                                                  //ViewGroup.LayoutParams.WRAP_CONTENT MATCH_PARENT
-        lp.columnSpec = GridLayout.spec(GridLayout.UNDEFINED    , 1f);  // позиция и вес кнопки по горизонтали
-        lp.rowSpec    = GridLayout.spec(GridLayout.ALIGN_MARGINS, 1f);  // позиция и вес кнопки по вертикали
-        field.addView(view, lp);
+    private String getSolve (int[] cube) {
+        String st = "";
+
+        return st;
     }
 
     private String GenerateScrambleWithParam (boolean chRebro, boolean chUgol,int length) {
@@ -330,7 +325,9 @@ public class ScambleFragment extends Fragment {
                 int b = CurCube[30] + 1;
                 int c = MainRebro[(a*10)+b];
                 if ((c == 23)|(c == 30)) { plavRebro = true; }
-                BufferRebroSolve(CurCube, c);
+                SolveCube sc = BufferRebroSolve(CurCube,c, solve);
+                solve = sc.getSolve();
+                CurCube = sc.getCube();
             } while (!CheckRebro(CurCube));
 
             do {
@@ -338,7 +335,9 @@ public class ScambleFragment extends Fragment {
                 int b = CurCube[11] + 1;
                 int c = MainUgol[(a*10)+b];
                 if ((c == 18)|(c == 11)|(c == 6)) { plavUgol = true; }
-                BufferUgolSolve(CurCube, c);
+                SolveCube sc = BufferUgolSolve(CurCube, c, solve);
+                solve = sc.getSolve();
+                CurCube = sc.getCube();
             } while (!CheckUgol(CurCube));
 
             if (plavRebro && chRebro) { resault = false;}
@@ -513,9 +512,9 @@ public class ScambleFragment extends Fragment {
         DopUgol[53] = 35;      //зелено-красно-желтая Ж
     }
 
-    private int[] BufferRebroSolve (int[] cube, int c) {
+    private SolveCube BufferRebroSolve (int[] cube, int c, String solv) {
         if (!(c==23 | c == 30)) {           //проверяем, не буфер ли?, если нет, то добоавляем букву к решению
-            solve = solve + FindLetter(c) + " ";        //если буфер, то будем его переплавлять и букву уже
+            solv = solv + FindLetter(c) + " ";        //если буфер, то будем его переплавлять и букву уже
         }                                               //подставим в рекурсии
         switch (c) {
             case 1:
@@ -557,7 +556,10 @@ public class ScambleFragment extends Fragment {
                     c = SpisReber[i-1];                     //ищем ребро не на своем месте
                     if (c == 30) { c = SpisReber[i-2];}     //проверяем не буфер ли это, в данном случае наверно лишнее, т.к. буфер на месте
                     if (c == 23) { c = SpisReber[i-3];}     //
-                    BufferRebroSolve(cube,c);               //переплавляем буфер (рекурсия)
+                    //переплавляем буфер (рекурсия)
+                    SolveCube sc = BufferRebroSolve(cube,c, solv);
+                    solv = sc.getSolve();
+                    cube = sc.getCube();
                 } else {
                     //Если все ребра на месте, то преобразуем буквы в слова
                 }
@@ -577,7 +579,10 @@ public class ScambleFragment extends Fragment {
                     c = SpisReber[i-1];                     //смотрим что последнее не на своем месте
                     if (c == 30) { c = SpisReber[i-2];}     //проверяем не буфер ли,
                     if (c == 23) { c = SpisReber[i-3];}
-                    BufferRebroSolve(cube,c);               //переплавляем
+                    //переплавляем буфер (рекурсия)
+                    SolveCube sc = BufferRebroSolve(cube,c, solv);
+                    solv = sc.getSolve();
+                    cube = sc.getCube();
                 }
                 break;
             case 32:
@@ -613,7 +618,7 @@ public class ScambleFragment extends Fragment {
             default:
                 //Toast.makeText(getView().getContext(),"Странное ребро в буфере",Toast.LENGTH_SHORT).show();
         }
-        return cube;
+        return new SolveCube(cube,solv);
     }
 
 
@@ -639,9 +644,9 @@ public class ScambleFragment extends Fragment {
         return Check;
     }
 
-    private int[] BufferUgolSolve (int[] cube, int c) {
+    private SolveCube BufferUgolSolve (int[] cube, int c, String solv) {
         if (!(c==18 || c == 11 || c == 6)) {           //если с не равно 18,11 или 6, то буфер не на месте и добавляем букву к решению.
-            solve = solve + FindLetter(c) + " ";
+            solv = solv + FindLetter(c) + " ";
         }
         switch (c) {
             case 0:
@@ -660,7 +665,10 @@ public class ScambleFragment extends Fragment {
                     if (c == 18) { c = SpisUglov[i-2];}
                     if (c == 11) { c = SpisUglov[i-3];}
                     if (c == 6) { c = SpisUglov[i-4];}
-                    BufferUgolSolve(cube,c);
+                    //переплавляем буфер (рекурсия)
+                    SolveCube sc = BufferUgolSolve(cube,c, solv);
+                    solv = sc.getSolve();
+                    cube = sc.getCube();
                 } else {
                     //Если все ребра на месте, то преобразуем буквы в слова
                 }
@@ -681,7 +689,9 @@ public class ScambleFragment extends Fragment {
                     if (c == 18) { c = SpisUglov[i-2];}
                     if (c == 11) { c = SpisUglov[i-3];}
                     if (c == 6)  { c = SpisUglov[i-4];}
-                    BufferUgolSolve(cube,c);
+                    SolveCube sc = BufferUgolSolve(cube,c, solv);
+                    solv = sc.getSolve();
+                    cube = sc.getCube();
                 } else {
                     //Если все ребра на месте, то преобразуем буквы в слова
                 }
@@ -702,7 +712,9 @@ public class ScambleFragment extends Fragment {
                     if (c == 18) { c = SpisUglov[i-2];}
                     if (c == 11) { c = SpisUglov[i-3];}
                     if (c == 6)  { c = SpisUglov[i-4];}
-                    BufferUgolSolve(cube,c);
+                    SolveCube sc = BufferUgolSolve(cube,c, solv);
+                    solv = sc.getSolve();
+                    cube = sc.getCube();
                 } else {
                     //Если все ребра на месте, то преобразуем буквы в слова
                 }
@@ -755,7 +767,7 @@ public class ScambleFragment extends Fragment {
             default:
             //    Toast.makeText(getView().getContext(),"Страннай угол в буфере",Toast.LENGTH_SHORT).show();
         }
-        return cube;
+        return new SolveCube(cube,solv);
     }
 
 
@@ -805,6 +817,33 @@ public class ScambleFragment extends Fragment {
                 mListPagers.get(i).setComment(value);
                 ListPagerLab.get(getActivity()).updateListPager(mListPagers.get(i));
             }
+        }
+    }
+
+
+    class SolveCube {
+        int [] cube;    // куб [54]
+        String solve;   // решение
+
+        SolveCube(int [] cube, String solve){
+            this.cube = cube;
+            this.solve = solve;
+        }
+
+        public int[] getCube() {
+            return cube;
+        }
+
+        public void setCube(int[] cube) {
+            this.cube = cube;
+        }
+
+        public String getSolve() {
+            return solve;
+        }
+
+        public void setSolve(String solve) {
+            this.solve = solve;
         }
     }
 
