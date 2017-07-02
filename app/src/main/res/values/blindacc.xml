@@ -45,9 +45,10 @@
         ход U использовать его для перевернутого бело-синего элемента. Конечно же после выполнения алгоритма
         вернув все на место через U\'.
         <p style="text-align:center"><img src="blaccel_2_1.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:10&link=COfAsfx5pAA">на видео </a> <br/>
         <b>Алгоритм: (R\' U2 R) (R U R\' U\') (R\' U2 Rw) (U R U\' Rw\')</b>
     ]]></string>
-    <string name="blindacc_st2_url">sWlREfNebUI</string>
+    <string name="blindacc_st2_url">COfAsfx5pAA</string>
 
 
 </resources>
