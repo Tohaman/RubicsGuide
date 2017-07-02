@@ -237,13 +237,17 @@ public class ScambleFragment extends Fragment {
                     SetParamToBase("ChkSolve", "1");
                 } else {
                     SetParamToBase("ChkSolve", "0");
-                    solvetext.setText(String.valueOf(solve.length()/2));
+                    String st = getSolve(MainCube);
+                    int a = st.split(" ").length;
+                    solvetext.setText(String.valueOf(a));
                 }
             }
         });
 
         solvetext = (TextView) view.findViewById(R.id.solve_text);
-        solvetext.setText("");
+        BlindMoves.Scram(MainCube, Scramble.getText().toString());
+        //TODO Сделать вывод решения в зависимости от чекбокса
+        solvetext.setText(getSolve(MainCube));
         return view;
 
     }
