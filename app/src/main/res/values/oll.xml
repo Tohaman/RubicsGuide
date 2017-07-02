@@ -27,6 +27,7 @@
         <item>@string/oll_st24_title</item>
         <item>@string/oll_st25_title</item>
         <item>@string/oll_st26_title</item>
+        <item>@string/oll_st27_title</item>
     </string-array>
 
     <integer-array name="oll_icon">
@@ -56,6 +57,7 @@
         <item>@drawable/oll_24</item>
         <item>@drawable/oll_25</item>
         <item>@drawable/oll_26</item>
+        <item>@drawable/oll_27</item>
     </integer-array>
 
     <string-array name="oll_descr">
@@ -85,6 +87,7 @@
         <item>@string/oll_st24_descr</item>
         <item>@string/oll_st25_descr</item>
         <item>@string/oll_st26_descr</item>
+        <item>@string/oll_st27_descr</item>
     </string-array>
 
     <string-array name="oll_url">
@@ -114,6 +117,7 @@
         <item>@string/oll_st24_url</item>
         <item>@string/oll_st25_url</item>
         <item>@string/oll_st26_url</item>
+        <item>@string/oll_st27_url</item>
     </string-array>
 
     <string name="oll_st1_title">#1 Снежинка</string>
@@ -490,12 +494,29 @@
     <string name="oll_st26_title">#26 Левый петух с точкой</string>
     <string name="oll_st26_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
-        Все так же, как и с правым петухом, но слева.
+        <p>Все так же, как и с правым петухом, но слева.</p>
         <p style="text-align:center"><img src="oll_26_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:09&link=dNs1j2mY42g">на видео 1:09</a> <br/>
         <b>Алгоритм: (L\' U\' L U\') L\' U2 L F\' (L\' U\' L U) F</b><br/><br/>
         <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=2:05&link=dNs1j2mY42g">на видео 2:05</a>
-         нужно </b>.
+         нужно повторить данный алгоритм пять раз на собранном OLL</b>.
     ]]></string>
     <string name="oll_st26_url">dNs1j2mY42g</string>
+
+    <string name="oll_st27_title">#27 Правый петух с блоком</string>
+    <string name="oll_st27_descr" formatted="false"><![CDATA[
+        <b>Как решать:</b>
+        <p>1. Повернуть как и в предыдущих петухах вверх тормашками.</p>
+        <p style="text-align:center"><img src="oll_27_1.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=1:47&link=g2OOVob1f-E">на видео 1:47</a> <br/>
+        <b>Алгоритм: (F R\' F) R2 (U\' R\' U\') R U R\' F2</b><br/><br/>
+        <p>2. Или повернуть ногами к себе и на первый взгляд сложный, но на самом деле удобный
+        алгоритм, если изначально взять большим пальцем правой руки от себя.</p>
+        <p style="text-align:center"><img src="oll_27_2.png" width="60%%"></p>
+        <b>Алгоритм: (R2\' U R\' B\') (R U\') (R2\' U) (Lw U Lw\')</b><br/><br/>
+        <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=3:03&link=g2OOVob1f-E">на видео 3:03</a>
+         нужно выполнить данный алгоритм три раза</b>.
+    ]]></string>
+    <string name="oll_st27_url">g2OOVob1f-E</string>
+
 </resources>
