@@ -92,6 +92,7 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
 //        PLLLab.get(getActivity()).updatePLL(mPLL); обновление комментариев
     }
 
+
     public void onResume(){
         super.onResume();
         boolean isLandscape = false;

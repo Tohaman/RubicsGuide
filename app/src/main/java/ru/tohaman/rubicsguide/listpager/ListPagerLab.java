@@ -101,10 +101,10 @@ public class ListPagerLab {
         PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
 
         mPhase = "AZBUKA";
-        mTitles = new String[]{"AZBUKA"};
+        mTitles = new String[]{"CURRENTAZBUKA","CUSTOMAZBUKA"};
         mResId = new int[] {0,0,0,0};
         Descr = new int[] {0,0,0,0};
-        mUrl = new String[]{""};
+        mUrl = new String[]{"",""};
         PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
 
     }
@@ -346,17 +346,17 @@ public class ListPagerLab {
     }
     public void saveCustomAzbuka() {
         ListPager mListPager = getPhaseItem (0,"AZBUKA");
-        mListPager.setUrl(mListPager.getComment());
-        updateListPager(mListPager);
+        ListPager mLP = new ListPager(1,"AZBUKA",mListPager.getComment());
+        updateListPager(mLP);
     }
 
     public String[] loadCustomAzbuka () {
         String[] azbuka = new String [54];
-        ListPager mListPager = getPhaseItem (0,"AZBUKA");
+        ListPager mListPager = getPhaseItem (1,"AZBUKA");
         if (mListPager.getComment().equals("")) {
             azbuka = getMaximAzbuka();
         } else {
-            azbuka = mListPager.getUrl().split(" ");
+            azbuka = mListPager.getComment().split(" ");
         }
         return azbuka;
     }

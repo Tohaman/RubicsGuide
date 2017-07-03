@@ -264,6 +264,16 @@ public class ScambleFragment extends Fragment {
         }
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        if(mChBoxSolve.isChecked()){
+            solvetext.setText(GetSolve(MainCube));
+        } else {
+            String st = GetSolve(MainCube);
+            solvetext.setText(String.valueOf(st.split(" ").length));
+        }
+    }
 
     private void cube2view (int[] cube) {
         InitGridList(cube);

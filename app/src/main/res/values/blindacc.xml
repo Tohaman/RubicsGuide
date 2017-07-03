@@ -3,30 +3,72 @@
     <string-array name="blindacc_title">
         <item>@string/blindacc_st1_title</item>
         <item>@string/blindacc_st2_title</item>
+        <item>@string/blindacc_st3_title</item>
+        <item>@string/blindacc_st4_title</item>
+        <item>@string/blindacc_st5_title</item>
+        <item>@string/blindacc_st6_title</item>
+        <item>@string/blindacc_st7_title</item>
+        <item>@string/blindacc_st8_title</item>
+        <item>@string/blindacc_st9_title</item>
+        <item>@string/blindacc_st10_title</item>
+        <item>@string/blindacc_st11_title</item>
+        <item>@string/blindacc_st12_title</item>
     </string-array>
 
     <integer-array name="blindacc_icon">
         <item>@drawable/blaccel_1</item>
         <item>@drawable/blaccel_2</item>
+        <item>@drawable/blaccel_3</item>
+        <item>@drawable/blaccel_3</item>
+        <item>@drawable/blaccel_3</item>
+        <item>@drawable/blaccel_3</item>
+        <item>@drawable/blaccel_3</item>
+        <item>@drawable/blaccel_3</item>
+        <item>@drawable/blaccel_3</item>
+        <item>@drawable/blaccel_3</item>
+        <item>@drawable/blaccel_3</item>
+        <item>@drawable/blaccel_3</item>
     </integer-array>
 
     <string-array name="blindacc_descr">
         <item>@string/blindacc_st1_descr</item>
         <item>@string/blindacc_st2_descr</item>
+        <item>@string/blindacc_st3_descr</item>
+        <item>@string/blindacc_st4_descr</item>
+        <item>@string/blindacc_st5_descr</item>
+        <item>@string/blindacc_st6_descr</item>
+        <item>@string/blindacc_st7_descr</item>
+        <item>@string/blindacc_st8_descr</item>
+        <item>@string/blindacc_st9_descr</item>
+        <item>@string/blindacc_st10_descr</item>
+        <item>@string/blindacc_st11_descr</item>
+        <item>@string/blindacc_st12_descr</item>
     </string-array>
 
     <string-array name="blindacc_url">
         <item>@string/blindacc_st1_url</item>
         <item>@string/blindacc_st2_url</item>
+        <item>@string/blindacc_st3_url</item>
+        <item>@string/blindacc_st4_url</item>
+        <item>@string/blindacc_st5_url</item>
+        <item>@string/blindacc_st6_url</item>
+        <item>@string/blindacc_st7_url</item>
+        <item>@string/blindacc_st8_url</item>
+        <item>@string/blindacc_st9_url</item>
+        <item>@string/blindacc_st10_url</item>
+        <item>@string/blindacc_st11_url</item>
+        <item>@string/blindacc_st12_url</item>
     </string-array>
 
     <string name="blindacc_st1_title">Ускорение №1</string>
     <string name="blindacc_st1_descr" formatted="false"><![CDATA[
         Ускорение для ситуации, когда одно из ребер на своем месте, но перевернуто. Или не для
         слепой сборки - как перевернуть два ребра находящиеся друг напротив друга. <br/>
+        1. Вариант когда одно ребро на ближней грани, а другое на дальней.<br/>
         <p style="text-align:center"><img src="blaccel_1_1.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=7:49&link=sWlREfNebUI">на видео 7:49</a> <br/>
         <b>Алгоритм: (M\' U M\' U M\' U2) (M U M U M U2)</b><br/><br/>
-        Или вариант для классического расположения буфера и корзины, т.е. можно выполнять без
+        2. Вриант для классического расположения буфера и корзины, т.е. можно выполнять без
         перехвата кубика. К тому же без неудобного кручения среднего слоя, но с чередованием
         вращения верхней грани.
         <p style="text-align:center"><img src="blaccel_1_2.png" width="30%%"></p>
@@ -36,19 +78,93 @@
 
     <string name="blindacc_st2_title">Ускорение №2</string>
     <string name="blindacc_st2_descr" formatted="false"><![CDATA[
-        А теперь ускорение для переворота двух соседних ребер. Как наисал в комментариях к
+        А теперь ускорение для переворота двух соседних ребер. Как написал в комментариях к
         данному видео <b>A lex</b>:<br/>
         Формулу удобно запомнить так: Первая часть - это начало из "убийства в Лондоне", потом
         пиф-паф, третья часть - снова начало "убйства", но заканчивается двумя слоями. И последняя
         часть - обратный "пиф-паф", заканчивающийся двумя слоями.<br/>
-        Ну и поскольку данный алгоритм не затрагивает угловые элементы, то можно используя установочный
-        ход U использовать его для перевернутого бело-синего элемента. Конечно же после выполнения алгоритма
-        вернув все на место через U\'.
         <p style="text-align:center"><img src="blaccel_2_1.png" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:10&link=COfAsfx5pAA">на видео </a> <br/>
-        <b>Алгоритм: (R\' U2 R) (R U R\' U\') (R\' U2 Rw) (U R U\' Rw\')</b>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=4:10&link=COfAsfx5pAA">на видео 4:10</a> <br/>
+        <b>Алгоритм: (R\' U2 R) (R U R\' U\') (R\' U2 Rw) (U R U\' Rw\')</b><br/><br/>
+        P.S. Поскольку данный алгоритм не затрагивает угловые элементы и не перемещает ребра с места
+        на место, а только переворачивает их, то его можно использовать
+        не только для пары буфера и места белозеленого ребра, но и для пары буфер - белосинее место.
+        Для этого надо использовать дополнительный установочный ход U. И конечно же после выполнения
+        алгоритма не забыть про ход U\'.
     ]]></string>
     <string name="blindacc_st2_url">COfAsfx5pAA</string>
+
+    <string name="blindacc_st3_title">Ускорение №3</string>
+    <string name="blindacc_st3_descr" formatted="false"><![CDATA[
+        Ускорение для ситуаци, когда четное количество ребер находятся на своем месте, но перевернуты.
+        В этом случае, буфер не трогаем, а просто подводим одно ребро на ближнюю грань, а другое на
+        дальнюю или левую. И делаем алгоритм из ускорения №1 или №2 в зависимости, от того куда
+        поставили ребро.
+        <p style="text-align:center"><img src="blaccel_3_1.png" width="60%%"></p>
+        Вариант <a href="rubic-activity://ytactivity?time=3:28&link=e-00ucfI8DE">для дальнего</a> ребра <br/>
+        Тот же случай, <a href="rubic-activity://ytactivity?time=4:04&link=e-00ucfI8DE">для левого</a> ребра <br/>
+    ]]></string>
+    <string name="blindacc_st3_url">e-00ucfI8DE</string>
+
+    <string name="blindacc_st4_title">Ускорение №4</string>
+    <string name="blindacc_st4_descr" formatted="false"><![CDATA[
+        <p>Переходим к перевернутым углам. И для начала надо выучить один очень простой алгоритм, который
+        вам наверняка уже попадался - <b>Анти пиф-паф</b><br/>
+        <b>Алгоритм: (U R U\' R\')</b></p>
+        <p>Переходим к ускорению: данное ускорение связано с одним левым углом, находящимся на своем
+        месте, но перевернутым. Т.к. углы могут быть перевернуты только парой и один из пары это
+        буфер, то получается 3 угла. С учетом того, что вариантов одного перевернутого угла два,
+        получается шесть ситуаций перевернутого левого угла на своем месте.
+        1. <b>Г</b>о<b>П</b>ник (т.к. для переворота классическим методом использовались бы буквы
+        Г и П)
+        2. <b>ГЕ</b>й
+        3. <b>ЯР</b>ик
+        4. <b>ЯЗ</b>ь
+        5. <b>Ш</b>о<b>C</b>се
+        6. <b>ШМ</b>ель
+        </p>
+    ]]></string>
+    <string name="blindacc_st4_url">YoMKHwOr48E</string>
+
+    <string name="blindacc_st5_title">Ускорение №5</string>
+    <string name="blindacc_st5_descr" formatted="false"><![CDATA[
+    ]]></string>
+    <string name="blindacc_st5_url">rhV9ZA_mJ9I</string>
+
+    <string name="blindacc_st6_title">Ускорение №6</string>
+    <string name="blindacc_st6_descr" formatted="false"><![CDATA[
+    ]]></string>
+    <string name="blindacc_st6_url">79IOb-vLHHE</string>
+
+    <string name="blindacc_st7_title">Ускорение №7</string>
+    <string name="blindacc_st7_descr" formatted="false"><![CDATA[
+    ]]></string>
+    <string name="blindacc_st7_url">KdswbE8YIC8</string>
+
+    <string name="blindacc_st8_title">Ускорение №8</string>
+    <string name="blindacc_st8_descr" formatted="false"><![CDATA[
+    ]]></string>
+    <string name="blindacc_st8_url">YDxXfKXWDmI</string>
+
+    <string name="blindacc_st9_title">Ускорение №9</string>
+    <string name="blindacc_st9_descr" formatted="false"><![CDATA[
+    ]]></string>
+    <string name="blindacc_st9_url">oe__ZpaAqSo</string>
+
+    <string name="blindacc_st10_title">Ускорение №10</string>
+    <string name="blindacc_st10_descr" formatted="false"><![CDATA[
+    ]]></string>
+    <string name="blindacc_st10_url">D6_k4MT6Rpk</string>
+
+    <string name="blindacc_st11_title">Ускорение №11</string>
+    <string name="blindacc_st11_descr" formatted="false"><![CDATA[
+    ]]></string>
+    <string name="blindacc_st11_url">qVIFq15A6DE</string>
+
+    <string name="blindacc_st12_title">Ускорение №12</string>
+    <string name="blindacc_st12_descr" formatted="false"><![CDATA[
+    ]]></string>
+    <string name="blindacc_st12_url">Q9LVVnfyZPw</string>
 
 
 </resources>
