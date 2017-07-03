@@ -19,7 +19,7 @@
         <item>@drawable/blaccel_1</item>
         <item>@drawable/blaccel_2</item>
         <item>@drawable/blaccel_3</item>
-        <item>@drawable/blaccel_3</item>
+        <item>@drawable/blaccel_4</item>
         <item>@drawable/blaccel_3</item>
         <item>@drawable/blaccel_3</item>
         <item>@drawable/blaccel_3</item>
@@ -109,19 +109,41 @@
     <string name="blindacc_st4_title">Ускорение №4</string>
     <string name="blindacc_st4_descr" formatted="false"><![CDATA[
         <p>Переходим к перевернутым углам. И для начала надо выучить один очень простой алгоритм, который
-        вам наверняка уже попадался - <b>Анти пиф-паф</b><br/>
+        вам наверняка уже попадался - <b>Антипиф-паф</b><br/>
         <b>Алгоритм: (U R U\' R\')</b></p>
-        <p>Переходим к ускорению: данное ускорение связано с одним левым углом, находящимся на своем
+        <p>Переходим к ускорению: данное ускорение связано с одним
+        <a href="rubic-activity://ytactivity?time=2:29&link=YoMKHwOr48E">левым</a> углом, находящимся на своем
         месте, но перевернутым. Т.к. углы могут быть перевернуты только парой и один из пары это
         буфер, то получается 3 угла. С учетом того, что вариантов одного перевернутого угла два,
-        получается шесть ситуаций перевернутого левого угла на своем месте.
-        1. <b>Г</b>о<b>П</b>ник (т.к. для переворота классическим методом использовались бы буквы
-        Г и П)
-        2. <b>ГЕ</b>й
-        3. <b>ЯР</b>ик
-        4. <b>ЯЗ</b>ь
+        получается шесть ситуаций перевернутого левого угла на своем месте.</p>
+        1. <a href="rubic-activity://ytactivity?time=2:59&link=YoMKHwOr48E"><b>Г</b>о<b>П</b>ник</a><br/>
+         (т.к. для переворота классическим методом использовались бы буквы Г и П)<br/>
+         В этом случае делаем два антипиф-пафа, ставим второй угол в глаз (на место буфера), делаем
+         два пиф-пафа и вовращаем угол на место.
+         <p style="text-align:center"><img src="blaccel_4_1.png" width="30%%"></p>
+         <b>Алгоритм: (U R U\' R\')(U R U\' R\') L\' (R U R\' U\')(R U R\' U\') L</b><br/><br/>
+        2. <a href="rubic-activity://ytactivity?time=8:11&link=YoMKHwOr48E"><b>ГЕ</b>й</a><br/>
+         Обратный Гопнику, сначала два пиф-пафа, устанавливаем в глаз второй угол (установочный ход),
+          два антипиф-пафа, возвращаем угол на место (отменяем установочный ход).
+         <p style="text-align:center"><img src="blaccel_4_2.png" width="30%%"></p>
+         <b>Алгоритм: (R U R\' U\')(R U R\' U\') L\' (U R U\' R\')(U R U\' R\') L</b><br/><br/>
+        3. <a href="rubic-activity://ytactivity?time=10:06&link=YoMKHwOr48E"><b>ЯР</b>ик</a><br/>
+          Все аналогично ГЕю, два пиф-пафа, установочный ход, два антипиф-пафа, отмена установочного хода.
+         <p style="text-align:center"><img src="blaccel_4_4.png" width="30%%"></p>
+         <b>Алгоритм: (R U R\' U\')(R U R\' U\') L2 (U R U\' R\')(U R U\' R\') L2</b><br/><br/>
+        4. <a href="rubic-activity://ytactivity?time=10:57&link=YoMKHwOr48E"><b>ЯЗ</b>ь</a><br/>
+          ЯЗь противоположность ЯРику и похож на ГоПника. Начинается с двух антипиф-пафов.
+         <p style="text-align:center"><img src="blaccel_4_3.png" width="30%%"></p>
+         <b>Алгоритм: (U R U\' R\')(U R U\' R\') L2 (R U R\' U\')(R U R\' U\') L2</b><br/><br/>
         5. <b>Ш</b>о<b>C</b>се
+
+         <p style="text-align:center"><img src="blaccel_4_5.png" width="30%%"></p>
+         <b>Алгоритм: (U R U\' R\')(U R U\' R\') L2 (R U R\' U\')(R U R\' U\') L2</b><br/><br/>
+
         6. <b>ШМ</b>ель
+         <p style="text-align:center"><img src="blaccel_4_6.png" width="30%%"></p>
+         <b>Алгоритм: (U R U\' R\')(U R U\' R\') L2 (R U R\' U\')(R U R\' U\') L2</b><br/><br/>
+
         </p>
     ]]></string>
     <string name="blindacc_st4_url">YoMKHwOr48E</string>
