@@ -205,6 +205,7 @@
          хода и обратный перехват <b>y</b>.
          <p style="text-align:center"><img src="blaccel_5_7.png" width="30%%"></p>
          <b>Алгоритм: y\' (R U R\' U\')(R U R\' U\') L\' (U R U\' R\')(U R U\' R\') L y</b><br/><br/>
+
          8. <b>Б</b>ы<b>К</b><br/>
          Перехват y\'. 2 антипиф-пафа, установочный ход, 2 пиф-пафа, отмена установчного хода и обратный перехват.
          <p style="text-align:center"><img src="blaccel_5_8.png" width="30%%"></p>
