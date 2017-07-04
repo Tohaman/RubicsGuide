@@ -36,7 +36,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".blind.ScrambleActivity"></activity>
+        <activity android:name=".blind.ScrambleActivity">
+            <intent-filter>
+                <data
+                    android:host="scramblegen"
+                    android:scheme="rubic-activity" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".blind.BlindMenuActivity"></activity>
         <activity android:name=".blind.AzbukaActivity"></activity>
     </application>
