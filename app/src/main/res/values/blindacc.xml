@@ -108,8 +108,10 @@
 
     <string name="blindacc_st4_title">Ускорение №4</string>
     <string name="blindacc_st4_descr" formatted="false"><![CDATA[
-        <p>Переходим к перевернутым углам. И для начала надо выучить один очень простой алгоритм, который
-        вам наверняка уже попадался - <b>Антипиф-паф</b><br/>
+        <p>Рассмотрим перевернутые углы на своем месте. Но для начала надо выучить один очень
+        простой алгоритм, который вам наверняка уже попадался -
+        <a href="rubic-activity://ytactivity?time=1:50&link=YoMKHwOr48E"><b>Антипиф-паф</b></a>, в котором
+        все ходы противоположны пиф-пафу.<br/>
         <b>Алгоритм: (U R U\' R\')</b></p>
         <p>Переходим к ускорению: данное ускорение связано с одним
         <a href="rubic-activity://ytactivity?time=2:29&link=YoMKHwOr48E">левым</a> углом, находящимся на своем
@@ -119,7 +121,7 @@
         1. <a href="rubic-activity://ytactivity?time=2:59&link=YoMKHwOr48E"><b>Г</b>о<b>П</b>ник</a><br/>
          (т.к. для переворота классическим методом использовались бы буквы Г и П)<br/>
          В этом случае делаем два антипиф-пафа, ставим второй угол в глаз (на место буфера), делаем
-         два пиф-пафа и вовращаем угол на место.
+         два пиф-пафа и возвращаем угол на место.
          <p style="text-align:center"><img src="blaccel_4_1.png" width="30%%"></p>
          <b>Алгоритм: (U R U\' R\')(U R U\' R\') L\' (R U R\' U\')(R U R\' U\') L</b><br/><br/>
         2. <a href="rubic-activity://ytactivity?time=8:11&link=YoMKHwOr48E"><b>ГЕ</b>й</a><br/>
@@ -135,21 +137,34 @@
           ЯЗь противоположность ЯРику и похож на ГоПника. Начинается с двух антипиф-пафов.
          <p style="text-align:center"><img src="blaccel_4_3.png" width="30%%"></p>
          <b>Алгоритм: (U R U\' R\')(U R U\' R\') L2 (R U R\' U\')(R U R\' U\') L2</b><br/><br/>
-        5. <b>Ш</b>о<b>C</b>се
-
+        5. <a href="rubic-activity://ytactivity?time=12:05&link=YoMKHwOr48E"><b>Ш</b>о<b>C</b>се</a><br/>
+          Гопник с Язем идет по шоссе.. Соответственно начинаем с антипиф-пафа.
          <p style="text-align:center"><img src="blaccel_4_5.png" width="30%%"></p>
-         <b>Алгоритм: (U R U\' R\')(U R U\' R\') L2 (R U R\' U\')(R U R\' U\') L2</b><br/><br/>
-
-        6. <b>ШМ</b>ель
+         <b>Алгоритм: (U R U\' R\')(U R U\' R\') L (R U R\' U\')(R U R\' U\') L\'</b><br/><br/>
+        6. <a href="rubic-activity://ytactivity?time=12:51&link=YoMKHwOr48E"><b>ШМ</b>ель</a><br/>
+          Гея Ярика укусил Шмель. Ну или ГЕна, ЯРик и ШаМиль - нормальные парни, у них все правильно,
+          поэтому начинаем с пиф-пафа.
          <p style="text-align:center"><img src="blaccel_4_6.png" width="30%%"></p>
-         <b>Алгоритм: (U R U\' R\')(U R U\' R\') L2 (R U R\' U\')(R U R\' U\') L2</b><br/><br/>
-
+         <b>Алгоритм: (R U R\' U\')(R U R\' U\') L (U R U\' R\')(U R U\' R\') L\'</b><br/><br/>
         </p>
     ]]></string>
     <string name="blindacc_st4_url">YoMKHwOr48E</string>
 
     <string name="blindacc_st5_title">Ускорение №5</string>
     <string name="blindacc_st5_descr" formatted="false"><![CDATA[
+            Левые углы не на своем месте рассмотрели, переходим к <a href="rubic-activity://ytactivity?time=2:29&link=YoMKHwOr48E">правым.</a>
+            И поскольку буфер у нас слева, то перевернутых правых углов может быть четыре, умножаем на два
+            варианта каждого угла, получается 8 ситуаций.
+         1. <a href="rubic-activity://ytactivity?time=1:29&link=rhV9ZA_mJ9I"><b>В</b>ь<b>Ё</b>т</a><br/>
+            Все очень просто, сначала возвращением из Лондона приводим ситуацию к Гопнику, делаем
+            Гопника и уезжаем в Лондон.
+         <p style="text-align:center"><img src="blaccel_5_1.png" width="30%%"></p>
+         <b>Алгоритм: F\' (U R U\' R\')(U R U\' R\') L\' (R U R\' U\')(R U R\' U\') L F</b><br/><br/>
+         2. <a href="rubic-activity://ytactivity?time=3:00&link=rhV9ZA_mJ9I"><b>В</b>а<b>Ф</b>ля</a><br/>
+            И снова переводим угол в левую часть (из Лондона), получаем ГЕя, решаем его, уезжаем в Лондон.
+         <p style="text-align:center"><img src="blaccel_5_2.png" width="30%%"></p>
+         <b>Алгоритм: F\' (R U R\' U\')(R U R\' U\') L\' (U R U\' R\')(U R U\' R\') L F</b><br/><br/>
+
     ]]></string>
     <string name="blindacc_st5_url">rhV9ZA_mJ9I</string>
 
