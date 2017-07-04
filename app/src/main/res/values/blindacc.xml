@@ -21,7 +21,7 @@
         <item>@drawable/blaccel_3</item>
         <item>@drawable/blaccel_4</item>
         <item>@drawable/blaccel_5</item>
-        <item>@drawable/blaccel_3</item>
+        <item>@drawable/blaccel_6</item>
         <item>@drawable/blaccel_3</item>
         <item>@drawable/blaccel_3</item>
         <item>@drawable/blaccel_3</item>
@@ -215,6 +215,15 @@
 
     <string name="blindacc_st6_title">Ускорение №6</string>
     <string name="blindacc_st6_descr" formatted="false"><![CDATA[
+        Вернемся к ребрам.
+
+         <p style="text-align:center"><img src="blaccel_6_1.png" width="30%%"></p>
+
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=9:12&link=P69UVywfz04">на видео 9:12</a> <br/>
+        <b>Алгоритм: R2 U\' S\' U2 S U\' R2 </b><br/>
+
+         Фингертрикс: <a href="rubic-activity://ytactivity?time=7:18&link=dUGv4WJfJGU">на видео 7:18</a> <br/>
+        <b>Алгоритм: R2 U\' (F B\') R2 (F\' B) U\' R\' </b><br/><br/>
     ]]></string>
     <string name="blindacc_st6_url">79IOb-vLHHE</string>
 
