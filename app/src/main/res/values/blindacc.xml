@@ -20,7 +20,7 @@
         <item>@drawable/blaccel_2</item>
         <item>@drawable/blaccel_3</item>
         <item>@drawable/blaccel_4</item>
-        <item>@drawable/blaccel_3</item>
+        <item>@drawable/blaccel_5</item>
         <item>@drawable/blaccel_3</item>
         <item>@drawable/blaccel_3</item>
         <item>@drawable/blaccel_3</item>
@@ -156,37 +156,49 @@
             <p>Левые углы не на своем месте рассмотрели, переходим к <a href="rubic-activity://ytactivity?time=2:29&link=YoMKHwOr48E">правым.</a>
             И поскольку буфер у нас слева, то перевернутых правых углов может быть четыре, умножаем на два
             варианта каждого угла, получается 8 ситуаций.</p>
+
          1. <a href="rubic-activity://ytactivity?time=1:29&link=rhV9ZA_mJ9I"><b>В</b>ь<b>Ё</b>т</a><br/>
             Все очень просто, сначала возвращением из Лондона переводим угол налево, делаем
             Гопника (сначала антипиф-пафы) и уезжаем в Лондон.
          <p style="text-align:center"><img src="blaccel_5_1.png" width="30%%"></p>
          <b>Алгоритм: F\' (U R U\' R\')(U R U\' R\') L\' (R U R\' U\')(R U R\' U\') L F</b><br/><br/>
+
          2. <a href="rubic-activity://ytactivity?time=3:02&link=rhV9ZA_mJ9I"><b>В</b>а<b>Ф</b>ля</a><br/>
             И снова переводим угол в левую часть (из Лондона), делаем ГЕя (сначала пиф-пафы), уезжаем в Лондон.
          <p style="text-align:center"><img src="blaccel_5_2.png" width="30%%"></p>
          <b>Алгоритм: F\' (R U R\' U\')(R U R\' U\') L\' (U R U\' R\')(U R U\' R\') L F</b><br/><br/>
+
          3. <a href="rubic-activity://ytactivity?time=5:08&link=rhV9ZA_mJ9I"><b>ЮХ</b></a><br/>
             Первым ходом конечно же переносим угол в левый слой, удобнее всего этос сделать через D\'.
             Делаем ЯЗя (сначала антипиф-пафы) и возвращаем угол на место ходом D.
          <p style="text-align:center"><img src="blaccel_5_3.png" width="30%%"></p>
          <b>Алгоритм: D\' (U R U\' R\')(U R U\' R\') L2 (R U R\' U\')(R U R\' U\') L2 D</b><br/><br/>
+
          4. <b>ЮЖный</b><br/>
             И снова первым ходом переносим угол в левый слой (через D\'). Делаем ЯРика (сначала пиф-пафы) и возвращаем
-             угол на место ходом D.
+            угол на место ходом D.
          <p style="text-align:center"><img src="blaccel_5_4.png" width="30%%"></p>
          <b>Алгоритм: D\' (R U R\' U\')(R U R\' U\') L2 (U R U\' R\')(U R U\' R\') L2 D</b><br/><br/>
-         5. ЭЦ 6:48 через D
-         пиф-паф
-         6. ЭЛ
-         антипиф
 
-        <p>Чтобы не путаться какой алгоритм пиф-паф или антипиф-паф делать первым, можно воспользоваться
-        Максимкиной <a href="rubic-activity://ytactivity?time=7:55&link=rhV9ZA_mJ9I">системой запоминания.</a>
-        И применение данной системы <a href="rubic-activity://ytactivity?time=10:20&link=rhV9ZA_mJ9I">на примере.</a></p>
+         5. <a href="rubic-activity://ytactivity?time=6:48&link=rhV9ZA_mJ9I"><b>ЭЦ</b></a><br/>
+           Данный угол переводим на левую сторону через кручение нижней грани, ход D. В данном случае
+           Сначала делаем два пиф-пафа, ставим в буфер угол, два антипиф-пафа, возвращаем угол на место.
+         <p style="text-align:center"><img src="blaccel_5_5.png" width="30%%"></p>
+         <b>Алгоритм: D (R U R\' U\')(R U R\' U\') L (U R U\' R\')(U R U\' R\') L\' D\'</b><br/><br/>
+
+         6. <b>ЭЛ</b><br/>
+           Опять же начинаем с D. Два антипиф-пафа. Угол в буфер. Два пиф-пафа. Левую грань назад и на
+           правую сторону.
+         <p style="text-align:center"><img src="blaccel_5_6.png" width="30%%"></p>
+         <b>Алгоритм: D (U R U\' R\')(U R U\' R\') L (R U R\' U\')(R U R\' U\') L\' D\'</b><br/><br/>
+
+         <p>Чтобы не путаться какой алгоритм пиф-паф или антипиф-паф делать первым, можно воспользоваться
+         Максимкиной <a href="rubic-activity://ytactivity?time=7:55&link=rhV9ZA_mJ9I">системой запоминания.</a>
+         И применение данной системы <a href="rubic-activity://ytactivity?time=10:20&link=rhV9ZA_mJ9I">на примере.</a></p>
 
          А теперь вернемся к бело-сине-красному углу. Который можно загонять налево двумя установочными
          ходами (R\' F\' или R D) и тогда система распознавания пиф-паф/антипиф-паф работает. Или поступить
-         проще - выполнить перехват y\'. И тогда все наоборот (т.к. мы поменяли буфер и угол). Т.е.<br/>
+         проще - выполнить перехват y\'. И тогда все наоборот (т.к. мы поменяли буфер и угол). Т.е.<br/><br/>
 
          7. <a href="rubic-activity://ytactivity?time=12:55&link=rhV9ZA_mJ9I"><b>БУ</b>ква</a><br/>
          Делаем перехват <b>y\'</b>. Теперь 2 пиф-пафа, установочный ход, 2 антипиф-пафа, отмена установочного
@@ -196,9 +208,7 @@
          8. <b>Б</b>ы<b>К</b><br/>
          Перехват y\'. 2 антипиф-пафа, установочный ход, 2 пиф-пафа, отмена установчного хода и обратный перехват.
          <p style="text-align:center"><img src="blaccel_5_8.png" width="30%%"></p>
-         <b>Алгоритм: y\' (U R U\' R\')(U R U\' R\') L\' (R U R\' U\')(R U R\' U\') L y</b><br/><br/>
-
-
+         <b>Алгоритм: y\' (U R U\' R\')(U R U\' R\') L\' (R U R\' U\')(R U R\' U\') L y</b><br/>
     ]]></string>
     <string name="blindacc_st5_url">rhV9ZA_mJ9I</string>
 
