@@ -229,8 +229,8 @@
         алгоритм все углы оставляет на своих местах.</p>
 
         <p style="text-align:center"><img src="blaccel_6_1.png" width="30%%"></p>
-        Пример для <a href="rubic-activity://ytactivity?time=5:46&link=79IOb-vLHHE">комбинации АП.</a><br/>
-        <b>Алгоритм ускорения: R2 U\' (F B\') R2 (F\' B) U\' R\' </b><br/><br/>
+        <b>Алгоритм ускорения: R2 U\' (F B\') R2 (F\' B) U\' R2 </b><br/><br/>
+        Пример применения для <a href="rubic-activity://ytactivity?time=5:46&link=79IOb-vLHHE">комбинации АП.</a><br/><br/>
 
         Другой, мне кажется более удобный вариант исполнения этого же алгоритма из
         <a href="rubic-activity://ytactivity?time=11:44&link=P69UVywfz04">PLL Окошки</a> <br/>
@@ -244,9 +244,9 @@
         многие догадались сами, другое ребро можно подставлять не только вместо В, но и вместо А.
         Например рассмотрим <a href="rubic-activity://ytactivity?time=2:45&link=KdswbE8YIC8"><b>ШВ</b>ею</a><br/>
         Ставим Ш на место А, делаем Окошки, возвращаем Ш на свое место.<p>
-        <p style="text-align:center"><img src="blaccel_7_2.png" width="30%%"></p>
+        <p style="text-align:center"><img src="blaccel_7_1.png" width="30%%"></p>
         <b>Алгоритм: B2 (R2 U\' S\' U2 S U\' R2) B2</b><br/><br/>
-        <p>Итого данным алгоритмом легко решаются
+        <p>Итого, данным алгоритмом легко решаются
         <a href="rubic-activity://ytactivity?time=3:57&link=KdswbE8YIC8">16 случаев:</a><br/>
         АВ АП АЮ АФ, СВ СП СЮ СФ, ЦВ ЦП ЦЮ ЦФ, ШВ ШП ШЮ ШФ</p>
 
@@ -257,11 +257,32 @@
 
     <string name="blindacc_st8_title">Ускорение №8</string>
     <string name="blindacc_st8_descr" formatted="false"><![CDATA[
+        <p>Рассмотрим другой алгоритм -
+        <a href="rubic-activity://ytactivity?time=1:08&link=YDxXfKXWDmI">противоположные окошки,</a>
+        который так же применяется в
+        <a href="rubic-activity://ytactivity?time=9:12&link=P69UVywfz04">PLL.</a> Для ускорения
+        сборки с закрытыми глазами, этот алгоритм можно применять в случаях, противоположных
+        случаям из Ускорения №7. Т.е. когда сначала идет буква передней грани, а потом задней.
+        Таким образом, это ускорение для еще 16 ситуаций: ВА ВС ВЦ ВШ, ПА ПС ПЦ ПШ, ЮА ЮС ЮЦ Юш, ФА ФС ФЦ ФШ.</p>
+        <b>Алгоритм: R2\' U (F B\') R2 (F\' B) U R2\' </b><br/><br/>
+
+        Например ситуация <a href="rubic-activity://ytactivity?time=4:56&link=YDxXfKXWDmI">ФэйС:</a><br/>
+        Сначала делаем два установочных хода (F\' B\'), затем Противоположные окошки и отменяем
+        установочные ходы (F B).
+        <p style="text-align:center"><img src="blaccel_8_1.png" width="60%%"></p>
+        <b>Алгоритм для ситуации: (F\' B\') (R2\' U (F B\') R2 (F\' B) U R2\') (F B)</b><br/>
+        или с фингертриксом из PLL: (F\' B\') (R2 U S\' U2 S U R2) (F B)<br/>
     ]]></string>
     <string name="blindacc_st8_url">YDxXfKXWDmI</string>
 
     <string name="blindacc_st9_title">Ускорение №9</string>
     <string name="blindacc_st9_descr" formatted="false"><![CDATA[
+    Еще несколько ситуаций в которых можно применить трицикл Окошки.
+    0:40 ЕЖ - смежные окошки
+    1:34 ЖЕ - противоположные окошки
+    3:25 ЛИ - смежные окошки
+    3:49 ИЛ - противоположные окошки
+
     ]]></string>
     <string name="blindacc_st9_url">oe__ZpaAqSo</string>
 
