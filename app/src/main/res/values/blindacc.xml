@@ -23,7 +23,7 @@
         <item>@drawable/blaccel_5</item>
         <item>@drawable/blaccel_6</item>
         <item>@drawable/blaccel_7</item>
-        <item>@drawable/blaccel_3</item>
+        <item>@drawable/blaccel_8</item>
         <item>@drawable/blaccel_3</item>
         <item>@drawable/blaccel_3</item>
         <item>@drawable/blaccel_3</item>
@@ -277,7 +277,9 @@
 
     <string name="blindacc_st9_title">Ускорение №9</string>
     <string name="blindacc_st9_descr" formatted="false"><![CDATA[
-    Еще несколько ситуаций в которых можно применить трицикл Окошки.
+    <p>Еще несколько ситуаций в которых можно применить трицикл Окошки.</p>
+    1. <a href="rubic-activity://ytactivity?time=0:40&link=oe__ZpaAqSo">ЕЖ</a><br/>
+    Делаем установочный ход M\', смежные окошки, отменяем установочный ход.
     0:40 ЕЖ - смежные окошки
     1:34 ЖЕ - противоположные окошки
     3:25 ЛИ - смежные окошки
