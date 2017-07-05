@@ -22,7 +22,7 @@
         <item>@drawable/blaccel_4</item>
         <item>@drawable/blaccel_5</item>
         <item>@drawable/blaccel_6</item>
-        <item>@drawable/blaccel_3</item>
+        <item>@drawable/blaccel_7</item>
         <item>@drawable/blaccel_3</item>
         <item>@drawable/blaccel_3</item>
         <item>@drawable/blaccel_3</item>
@@ -215,20 +215,43 @@
 
     <string name="blindacc_st6_title">Ускорение №6</string>
     <string name="blindacc_st6_descr" formatted="false"><![CDATA[
-        Вернемся к ребрам.
+        <p>Вернемся к ребрам. И для начала рассмотрим ситуацию, когда в буфере буква А, а на месте
+        буквы А, буква В, т.е. слово для запоминания АВатар. В этом случае можно оба ребра поставить
+        на свои места одним, уже знакомым по
+        <a href="rubic-activity://ytactivity?time=7:18&link=dUGv4WJfJGU">Ускорению для начинающих №17</a>
+        и PLL Окошки алгоритмом.
+        И казалось бы, что
+        <a href="rubic-activity://ytactivity?time=2:05&link=79IOb-vLHHE">Аватар</a>
+        попадается очень редко, НО… данное ускорение можно использовать
+        и когда после А идет П, Ф, Ю. Надо только установить соответствующее ребро
+        <a href="rubic-activity://ytactivity?time=4:05&link=79IOb-vLHHE">на место В</a>.
+        Причем в данных установочных ходах можно крутить все грани кроме правой и верхней, т.к.
+        алгоритм все углы оставляет на своих местах.</p>
 
-         <p style="text-align:center"><img src="blaccel_6_1.png" width="30%%"></p>
+        <p style="text-align:center"><img src="blaccel_6_1.png" width="30%%"></p>
+        Пример для <a href="rubic-activity://ytactivity?time=5:46&link=79IOb-vLHHE">комбинации АП.</a><br/>
+        <b>Алгоритм ускорения: R2 U\' (F B\') R2 (F\' B) U\' R\' </b><br/><br/>
 
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=9:12&link=P69UVywfz04">на видео 9:12</a> <br/>
+        Другой, мне кажется более удобный вариант исполнения этого же алгоритма из
+        <a href="rubic-activity://ytactivity?time=11:44&link=P69UVywfz04">PLL Окошки</a> <br/>
         <b>Алгоритм: R2 U\' S\' U2 S U\' R2 </b><br/>
-
-         Фингертрикс: <a href="rubic-activity://ytactivity?time=7:18&link=dUGv4WJfJGU">на видео 7:18</a> <br/>
-        <b>Алгоритм: R2 U\' (F B\') R2 (F\' B) U\' R\' </b><br/><br/>
     ]]></string>
     <string name="blindacc_st6_url">79IOb-vLHHE</string>
 
     <string name="blindacc_st7_title">Ускорение №7</string>
     <string name="blindacc_st7_descr" formatted="false"><![CDATA[
+        <p>В данном ускорении рассмотрим другие случаи применения алгоритма из Ускорения №6. Как уже
+        многие догадались сами, другое ребро можно подставлять не только вместо В, но и вместо А.
+        Например рассмотрим <a href="rubic-activity://ytactivity?time=2:45&link=KdswbE8YIC8"><b>ШВ</b>ею</a><br/>
+        Ставим Ш на место А, делаем Окошки, возвращаем Ш на свое место.<p>
+        <p style="text-align:center"><img src="blaccel_7_2.png" width="30%%"></p>
+        <b>Алгоритм: B2 (R2 U\' S\' U2 S U\' R2) B2</b><br/><br/>
+        <p>Итого данным алгоритмом легко решаются
+        <a href="rubic-activity://ytactivity?time=3:57&link=KdswbE8YIC8">16 случаев:</a><br/>
+        АВ АП АЮ АФ, СВ СП СЮ СФ, ЦВ ЦП ЦЮ ЦФ, ШВ ШП ШЮ ШФ</p>
+
+        Кстати, алгоритмы, которые меняют местами 3 ребра называются
+        <a href="rubic-activity://ytactivity?time=6:28&link=KdswbE8YIC8">Трициклами.</a><br/>
     ]]></string>
     <string name="blindacc_st7_url">KdswbE8YIC8</string>
 
