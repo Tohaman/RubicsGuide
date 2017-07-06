@@ -24,8 +24,8 @@
         <item>@drawable/blaccel_6</item>
         <item>@drawable/blaccel_7</item>
         <item>@drawable/blaccel_8</item>
-        <item>@drawable/blaccel_3</item>
-        <item>@drawable/blaccel_3</item>
+        <item>@drawable/blaccel_9</item>
+        <item>@drawable/blaccel_10</item>
         <item>@drawable/blaccel_3</item>
         <item>@drawable/blaccel_3</item>
     </integer-array>
@@ -279,18 +279,41 @@
     <string name="blindacc_st9_descr" formatted="false"><![CDATA[
     <p>Еще несколько ситуаций в которых можно применить трицикл Окошки.</p>
     1. <a href="rubic-activity://ytactivity?time=0:40&link=oe__ZpaAqSo">ЕЖ</a><br/>
-    Делаем установочный ход M\', смежные окошки, отменяем установочный ход.
+    Делаем установочный ход <b>M\'</b>, смежные окошки, отменяем установочный ход <b>M</b>.
     <p style="text-align:center"><img src="blaccel_9_1.png" width="30%%"></p>
     <b>Алгоритм: M\' (R2 U\' S\' U2 S U\' R2) M</b><br/><br/>
-    1:34 ЖЕ - противоположные окошки
-    3:25 ЛИ - смежные окошки
-    3:49 ИЛ - противоположные окошки
+
+    2. <a href="rubic-activity://ytactivity?time=1:34&link=oe__ZpaAqSo">ЖЕ</a><br/>
+    Делаем установочный ход <b>M\'</b>, противоположные окошки, отменяем установочный ход <b>M</b>.
+    <p style="text-align:center"><img src="blaccel_9_2.png" width="30%%"></p>
+    <b>Алгоритм: M\' (R2 U S\' U2 S U R2) M</b><br/><br/>
+
+    3. <a href="rubic-activity://ytactivity?time=3:25&link=oe__ZpaAqSo">ЛИ</a><br/>
+    Делаем установочный ход <b>M</b>, смежные окошки, отменяем установочный ход <b>M\'</b>.
+    <p style="text-align:center"><img src="blaccel_9_3.png" width="30%%"></p>
+    <b>Алгоритм: M (R2 U\' S\' U2 S U\' R2) M\'</b><br/><br/>
+
+    4. <a href="rubic-activity://ytactivity?time=3:49&link=oe__ZpaAqSo">ИЛ</a><br/>
+    Делаем установочный ход <b>M</b>, противоположные окошки, отменяем установочный ход <b>M\'</b>.
+    <p style="text-align:center"><img src="blaccel_9_4.png" width="30%%"></p>
+    <b>Алгоритм: M (R2 U S\' U2 S U R2) M\'</b><br/><br/>
 
     ]]></string>
     <string name="blindacc_st9_url">oe__ZpaAqSo</string>
 
     <string name="blindacc_st10_title">Ускорение №10</string>
     <string name="blindacc_st10_descr" formatted="false"><![CDATA[
+    В данном ускорении рассмотрим группы, в которых основная наклейка находится не на боковой, а на передней или
+    задней <a href="rubic-activity://ytactivity?time=0:58&link=D6_k4MT6Rpk">грани.</a> И начнем с случаев,
+    когда первая наклейка (буква) на задней грани, а вторая на передней.<br/>
+    1. <a href="rubic-activity://ytactivity?time=2:08&link=D6_k4MT6Rpk">ИЕ</a><br/> или 3:52
+    Перехват <b>y</b>, белый центр на место красного (M), буфер направо (U), возвращаем на место центры (M\'),
+    крыша 2 раза, повторить первые 3 хода, отменить перехват <b>y\'</b>.
+    <p style="text-align:center"><img src="blaccel_10_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=3:52&link=D6_k4MT6Rpk">Алгоритм:</a> y (M U M\') U2 (M U M\') y\'</b><br/><br/>
+
+    2. МЁд 5:13
+
     ]]></string>
     <string name="blindacc_st10_url">D6_k4MT6Rpk</string>
 
