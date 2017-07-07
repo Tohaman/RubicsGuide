@@ -2,6 +2,7 @@ package ru.tohaman.rubicsguide.blind;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -56,6 +57,7 @@ public class ScambleFragment extends Fragment {
 
     private static final int REQUEST_SCRAMBLE = 0;
     private static final String DIALOG_SCRAMBLE = "DialogScramble";
+    private static final String Scram_Param = "scram";
 
     public ScambleFragment (){
 
@@ -64,8 +66,11 @@ public class ScambleFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
+        Uri uri = getActivity().getIntent().getData();
+
         View view = inflater.inflate(R.layout.fragment_scramble_gen, container, false);
 
+        String scram;
         back = ContextCompat.getColor(view.getContext(), R.color.transparent);
         black = ContextCompat.getColor(view.getContext(), R.color.black);
         red = ContextCompat.getColor(view.getContext(), R.color.red);
@@ -116,6 +121,7 @@ public class ScambleFragment extends Fragment {
                 // перемешиваем куб по скрамблу
                 BlindMoves.Scram(MainCube, st);
                 // выводим решение или длинну решения на экран
+                solve = GetSolve(MainCube);
                 if (mChBoxSolve.isChecked()) {
                     solvetext.setText(solve);
                 } else {
@@ -152,8 +158,17 @@ public class ScambleFragment extends Fragment {
         });
 
         //Поле Скрамбл и клик по этому полю
+
         Scramble = (TextView) view.findViewById(R.id.scramble);
-        Scramble.setText(GetParamFromBase("Scramble"));
+
+        if (uri != null) {
+            scram = getActivity().getIntent().getData().getQueryParameter(Scram_Param);
+            scram = scram.replace("_"," ");
+        } else {
+            scram = GetParamFromBase("Scramble");
+        }
+
+        Scramble.setText(scram);
         Scramble.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v) {
@@ -313,7 +328,7 @@ public class ScambleFragment extends Fragment {
     }
 
     private String GetSolve (int[] maincube) {
-        String st = "";
+        String st = "(";
         int [] cube = maincube.clone();
         do {
             int a = cube[23] + 1;       //смотрим что в буфере ребер
@@ -324,9 +339,12 @@ public class ScambleFragment extends Fragment {
             cube = sc.getCube();
         } while (!CheckRebro(cube));
 
+        st = st.trim();
+        st = st + ") ";
         int j = st.split(" ").length;
         if (j%2 != 0) { st = st + "Эк ";}
 
+        st = st + ("(");
         do {
             int a = cube[18] + 1;       //смотрим что в буфере углов
             int b = cube[11] + 1;
@@ -337,6 +355,7 @@ public class ScambleFragment extends Fragment {
         } while (!CheckUgol(cube));
 
         st = st.trim();
+        st = st + ") ";
         return st;
     }
 
