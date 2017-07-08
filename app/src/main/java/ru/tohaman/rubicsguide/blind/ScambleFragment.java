@@ -49,6 +49,8 @@ public class ScambleFragment extends Fragment {
     private int[] DopUgol = new int[54];
     private int[] SpisReber = new int[25];
     private int[] SpisUglov = new int[25];
+    private int[] RebroPriority = new int [11];
+    private int[] UgolPriority = new int [7];
     private final Random random = new Random();
     private List<ListPager> mListPagers;
     private ListPagerLab listPagerLab;
@@ -511,7 +513,7 @@ public class ScambleFragment extends Fragment {
         DopRebro[52] = 43;          //зелено-желтое
 
         for (int i = 0; i < 54; i++) {
-            MainUgol[i] = 0;
+            MainUgol[i] = 255;
         }
         //Создаем табличку номеров основных углов, для определенных сочетаний цветов (по цвету его место)
         MainUgol[12] = 0;      //для сине-оранжево-желтого угла
@@ -540,7 +542,7 @@ public class ScambleFragment extends Fragment {
         MainUgol[65] = 51;     //для зелено-желто-оранжевого угла
 
         for (int i = 0; i < 54; i++) {
-            DopUgol[i] = 0;
+            DopUgol[i] = 255;
         }
         //Создаем табличку соответствия основного и дополнительного угла [где искать второй цвет]
         //углы рассматриваем по часовой стрелке, поэтому достаточно первых двух цветов, чтобы пределить угол
@@ -556,7 +558,7 @@ public class ScambleFragment extends Fragment {
         DopUgol[20] = 8 ;      //бело-сине-красный Б
         DopUgol[24] = 45;      //бело-зелено-оранжевый Г
         DopUgol[26] = 33;      //бело-красно-зеленый В
-        DopUgol[27] = 22;      //красно-бело-синяя Ф
+        DopUgol[27] = 20;      //красно-бело-синяя Ф
         DopUgol[29] = 2 ;      //красно-сине-желтая У
         DopUgol[33] = 47;      //красно-зелено-белая С
         DopUgol[35] = 42;      //красно-желто-зеленая Т
@@ -568,6 +570,28 @@ public class ScambleFragment extends Fragment {
         DopUgol[47] = 26;      //зелено-бело-красная Е
         DopUgol[51] = 44;      //зелено-желто-оранжевая З
         DopUgol[53] = 35;      //зелено-красно-желтая Ж
+
+        // Порядок поиска свободной корзины для переплавки ребра
+        RebroPriority [0] = 21;     // в первую очередь проверяем не занята ли бело-оранжевое ребро
+        RebroPriority [1] = 25;     // бело-зеленое
+        RebroPriority [2] = 48;     // зелено-оранжевое
+        RebroPriority [3] = 3;      // сине-оранжевое
+        RebroPriority [4] = 41;     // желто-оранжевое
+        RebroPriority [5] = 43;     // желто-зеленое
+        RebroPriority [6] = 37;     // желто-синее
+        RebroPriority [7] = 39;     // желто-красное
+        RebroPriority [8] = 7;      // сине-белое
+        RebroPriority [9] = 34;     // красно-зеленое
+        RebroPriority [10] = 28;    // красно-синее
+
+        // Порядок поиска свободной корзины для переплавки угла
+        UgolPriority [0] = 26;     // в первую очередь проверяем не занят ли бело-красно-зеленый угол
+        UgolPriority [1] = 44;     // желто-зелено-оранжевый
+        UgolPriority [2] = 36;     // желто-красно-синий
+        UgolPriority [3] = 42;     // желто-красно-зеленый
+        UgolPriority [4] = 38;     // желто-сине-оранжевый
+        UgolPriority [5] = 20;     // бело-сине-красный
+        UgolPriority [6] = 24;     // бело-зелено-оранжевый
     }
 
     private SolveCube BufferRebroSolve (int[] cube, int c, String solv) {
@@ -607,15 +631,17 @@ public class ScambleFragment extends Fragment {
                 break;
             case 23:                      // для бело-красного ребра
                 if (!CheckRebro(cube)) {
-                    int i = 0;
-                    do {
-                        i++;
-                    } while (SpisReber[i] != 0);
-                    c = SpisReber[i-1];                     //ищем ребро не на своем месте
-                    if (c == 30) { c = SpisReber[i-2];}     //проверяем не буфер ли это, в данном случае наверно лишнее, т.к. буфер на месте
-                    if (c == 23) { c = SpisReber[i-3];}     //
+                    c = 0;
+                    // цикл поиска свободной корзины
+                    for (int j = 0; c == 0; j++) {
+                        int i = 0;
+                        do {
+                            if (RebroPriority[j] == SpisReber[i]) { c = RebroPriority[j]; } //ищем ребра на своем месте по приоритету RebroPriority
+                            i++;
+                        } while (SpisReber[i] != 0);
+                    }
                     //переплавляем буфер (рекурсия)
-                    SolveCube sc = BufferRebroSolve(cube,c, solv);
+                    SolveCube sc = BufferRebroSolve(cube, c, solv);
                     solv = sc.getSolve();
                     cube = sc.getCube();
                 } else {
@@ -630,13 +656,15 @@ public class ScambleFragment extends Fragment {
                 break;
             case 30:                        //для красно-белого ребра
                 if (!CheckRebro(cube)) {
-                    int i = 0;
-                    do {                                    //ищем пустую корзину
-                        i++;
-                    } while (SpisReber[i] != 0);
-                    c = SpisReber[i-1];                     //смотрим что последнее не на своем месте
-                    if (c == 30) { c = SpisReber[i-2];}     //проверяем не буфер ли,
-                    if (c == 23) { c = SpisReber[i-3];}
+                    c = 0;
+                    // цикл поиска свободной корзины
+                    for (int j = 0; c == 0; j++) {
+                        int i = 0;
+                        do {
+                            if (RebroPriority[j] == SpisReber[i]) { c = RebroPriority[j]; } //ищем ребра на своем месте по приоритету RebroPriority
+                            i++;
+                        } while (SpisReber[i] != 0);
+                    }
                     //переплавляем буфер (рекурсия)
                     SolveCube sc = BufferRebroSolve(cube,c, solv);
                     solv = sc.getSolve();
@@ -687,7 +715,7 @@ public class ScambleFragment extends Fragment {
             SpisReber[i] = 0;
         }
         int j = 0;
-        for (int i =0; i<53; i++) {
+        for (int i =0; i < 53; i++) {
             if (DopRebro[i] != 0) {
                 int a = cube[i] + 1;
                 int b = cube[DopRebro[i]] + 1;
@@ -715,20 +743,19 @@ public class ScambleFragment extends Fragment {
                 break;
             case 6:
                 if (!CheckUgol(cube)) {
-                    int i = 0;
-                    do {                //то ищем угол с макимальным номером не на своем месте
-                        i++;            //т.е. в приоритет граней такой: зеленая, желтая, красная, белая, оранжевая, синяя
-                    } while (SpisUglov[i] != 0);
-                    c = SpisUglov[i-1];
-                    if (c == 18) { c = SpisUglov[i-2];}
-                    if (c == 11) { c = SpisUglov[i-3];}
-                    if (c == 6) { c = SpisUglov[i-4];}
+                    c = 0;
+                    // цикл поиска свободной корзины
+                    for (int j = 0; c == 0; j++) {
+                        int i = 0;
+                        do {
+                            if (UgolPriority[j] == SpisUglov[i]) { c = UgolPriority[j]; } //ищем ребра на своем месте по приоритету RebroPriority
+                            i++;
+                        } while (SpisUglov[i] != 255);
+                    }
                     //переплавляем буфер (рекурсия)
                     SolveCube sc = BufferUgolSolve(cube,c, solv);
                     solv = sc.getSolve();
                     cube = sc.getCube();
-                } else {
-                    //Если все ребра на месте, то преобразуем буквы в слова
                 }
                 break;
             case 8:
@@ -739,19 +766,18 @@ public class ScambleFragment extends Fragment {
                 break;
             case 11:
                 if (!CheckUgol(cube)) {
-                    int i = 0;
-                    do {                //то ищем угол с макимальным номером не на своем месте
-                        i++;            //т.е. в приоритет граней такой: зеленая, желтая, красная, белая, оранжевая, синяя
-                    } while (SpisUglov[i] != 0);
-                    c =                SpisUglov[i-1];
-                    if (c == 18) { c = SpisUglov[i-2];}
-                    if (c == 11) { c = SpisUglov[i-3];}
-                    if (c == 6)  { c = SpisUglov[i-4];}
+                    c = 0;
+                    // цикл поиска свободной корзины
+                    for (int j = 0; c == 0; j++) {
+                        int i = 0;
+                        do {
+                            if (UgolPriority[j] == SpisUglov[i]) { c = UgolPriority[j]; } //ищем ребра на своем месте по приоритету RebroPriority
+                            i++;
+                        } while (SpisUglov[i] != 255);
+                    }
                     SolveCube sc = BufferUgolSolve(cube,c, solv);
                     solv = sc.getSolve();
                     cube = sc.getCube();
-                } else {
-                    //Если все ребра на месте, то преобразуем буквы в слова
                 }
                 break;
             case 15:
@@ -762,19 +788,18 @@ public class ScambleFragment extends Fragment {
                 break;
             case 18:
                 if (!CheckUgol(cube)) {
-                    int i = 0;
-                    do {                //то ищем угол с макимальным номером не на своем месте
-                        i++;            //т.е. в приоритет граней такой: зеленая, желтая, красная, белая, оранжевая, синяя
-                    } while (SpisUglov[i] != 0);
-                    c =                SpisUglov[i-1];
-                    if (c == 18) { c = SpisUglov[i-2];}
-                    if (c == 11) { c = SpisUglov[i-3];}
-                    if (c == 6)  { c = SpisUglov[i-4];}
+                    c = 0;
+                    // цикл поиска свободной корзины
+                    for (int j = 0; c == 0; j++) {
+                        int i = 0;
+                        do {
+                            if (UgolPriority[j] == SpisUglov[i]) { c = UgolPriority[j]; } //ищем ребра на своем месте по приоритету RebroPriority
+                            i++;
+                        } while (SpisUglov[i] != 255);
+                    }
                     SolveCube sc = BufferUgolSolve(cube,c, solv);
                     solv = sc.getSolve();
                     cube = sc.getCube();
-                } else {
-                    //Если все ребра на месте, то преобразуем буквы в слова
                 }
                 break;
             case 20:
@@ -832,11 +857,11 @@ public class ScambleFragment extends Fragment {
     private Boolean CheckUgol (int[] cube) {    //проверяем все ли углы на своих местах
         Boolean Check = true;           //предположим что все на местах
         for (int i = 0; i < 25; i++) {    //Обнуляем список углов на местах
-            SpisUglov[i] = 0;
+            SpisUglov[i] = 255;
         }
         int j = 0;
         for (int i =0; i<53; i++) {
-            if (DopUgol[i] != 0) {
+            if (DopUgol[i] != 255) {
                 int a = cube[i] + 1;
                 int b = cube[DopUgol[i]] + 1;
                 int c = ((a*10) + b);
