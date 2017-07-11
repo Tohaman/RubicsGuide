@@ -60,7 +60,7 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
     private TextView mTitleField;
     private TextView mDescriptionField;
     private TextView mCommentField;
-    private WebView mWebView; //Альтернатива mDescriptionField (textview)
+//    private WebView mWebView; //Альтернатива mDescriptionField (textview)
     private YouTubeThumbnailView thumbnailView;
 
     public PagerFragment() {
