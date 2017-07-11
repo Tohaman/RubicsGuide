@@ -28,6 +28,9 @@
         <item>@string/oll_st25_title</item>
         <item>@string/oll_st26_title</item>
         <item>@string/oll_st27_title</item>
+        <item>@string/oll_st28_title</item>
+        <item>@string/oll_st29_title</item>
+        <item>@string/oll_st30_title</item>
     </string-array>
 
     <integer-array name="oll_icon">
@@ -58,6 +61,9 @@
         <item>@drawable/oll_25</item>
         <item>@drawable/oll_26</item>
         <item>@drawable/oll_27</item>
+        <item>@drawable/oll_28</item>
+        <item>@drawable/oll_29</item>
+        <item>@drawable/oll_30</item>
     </integer-array>
 
     <string-array name="oll_descr">
@@ -88,6 +94,9 @@
         <item>@string/oll_st25_descr</item>
         <item>@string/oll_st26_descr</item>
         <item>@string/oll_st27_descr</item>
+        <item>@string/oll_st28_descr</item>
+        <item>@string/oll_st29_descr</item>
+        <item>@string/oll_st30_descr</item>
     </string-array>
 
     <string-array name="oll_url">
@@ -118,6 +127,9 @@
         <item>@string/oll_st25_url</item>
         <item>@string/oll_st26_url</item>
         <item>@string/oll_st27_url</item>
+        <item>@string/oll_st28_url</item>
+        <item>@string/oll_st29_url</item>
+        <item>@string/oll_st30_url</item>
     </string-array>
 
     <string name="oll_st1_title">#1 Снежинка</string>
@@ -490,7 +502,7 @@
         Фингертрикс: <a href="rubic-activity://ytactivity?time=3:30&link=CcIx5DfnKwY">на видео 3:30</a> <br/>
         <b>Алгоритм: (R U R\' U) R U2 R\' F (R U R\' U\') F\'</b><br/><br/>
         <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=4:08&link=CcIx5DfnKwY">на видео 4:08</a>
-         нужно повторить данный алгоритм пять раз на собранном OLL</b>.
+         нужно повторить данный алгоритм пять раз на собранном OLL.
     ]]></string>
     <string name="oll_st25_url">CcIx5DfnKwY</string>
 
@@ -502,7 +514,7 @@
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:09&link=dNs1j2mY42g">на видео 1:09</a> <br/>
         <b>Алгоритм: (L\' U\' L U\') L\' U2 L F\' (L\' U\' L U) F</b><br/><br/>
         <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=2:05&link=dNs1j2mY42g">на видео 2:05</a>
-         нужно повторить данный алгоритм пять раз на собранном OLL</b>.
+         нужно повторить данный алгоритм пять раз на собранном OLL.
     ]]></string>
     <string name="oll_st26_url">dNs1j2mY42g</string>
 
@@ -518,8 +530,51 @@
         <p style="text-align:center"><img src="oll_27_2.png" width="60%%"></p>
         <b>Алгоритм: (R2\' U R\' B\') (R U\') (R2\' U) (Lw U Lw\')</b><br/><br/>
         <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=3:03&link=g2OOVob1f-E">на видео 3:03</a>
-         нужно выполнить данный алгоритм три раза</b>.
+         нужно выполнить данный алгоритм три раза.
     ]]></string>
     <string name="oll_st27_url">g2OOVob1f-E</string>
+
+    <string name="oll_st28_title">#28 Левый петух с блоком</string>
+    <string name="oll_st28_descr" formatted="false"><![CDATA[
+        <b>Как решать:</b>
+        <p>Абсолютно аналогично правому петуху с блоком, только зеркально.</p>
+        <p style="text-align:center"><img src="oll_28_1.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=0:44&link=Rg9b36qBOeo">на видео 0:44</a> <br/>
+        <b>Алгоритм: (F\' L F\') L2 (U L U) L\' U\' L F2</b><br/><br/>
+        <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=1:16&link=Rg9b36qBOeo">на видео 1:16</a>
+         нужно выполнить данный алгоритм три раза.
+    ]]></string>
+    <string name="oll_st28_url">Rg9b36qBOeo</string>
+
+    <string name="oll_st29_title">#29 Левый квадрат</string>
+    <string name="oll_st29_descr" formatted="false"><![CDATA[
+        <p>Еще две ситуации, которые очень легко отличить от других, но немного сложнее друг от друга -
+        <b>Квадраты.</b> Квадрат может быть левым или правым.</p>
+        <p>Как их <a href="rubic-activity://ytactivity?time=1:01&link=mknzlNHW6_A">различать:</a>
+        Поврнуть квадратом к себе и при этом блок на противоположной боковой стороне тоже должен быть
+        спереди. Если он сзади, значит надо поставить квадрат с другой стороны. Начнем с левого квадрата.</p>
+        <b>Как решать:</b>
+        <p>Очень похоже на
+        <a href="rubic-activity://ytactivity?time=2:37&link=mknzlNHW6_A">Акулу</a>. Только второй и последний
+        ходы жирные.</p>
+        <p style="text-align:center"><img src="oll_29_1.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=3:07&link=mknzlNHW6_A">на видео 3:07</a> <br/>
+        <b>Алгоритм: (U2 Rw U2 R\') (U\' R U\' Rw\')</b><br/><br/>
+        <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=3:19&link=mknzlNHW6_A">на видео 3:19</a>
+         нужно сделать <b>Левую молнию с блоком</b>, т.е. жирную рыбку.
+    ]]></string>
+    <string name="oll_st29_url">mknzlNHW6_A</string>
+
+    <string name="oll_st30_title">#30 Правый квадрат</string>
+    <string name="oll_st30_descr" formatted="false"><![CDATA[
+        <b>Как решать:</b>
+        <p>Аналогично левому квадрату только зеркально.</p>
+        <p style="text-align:center"><img src="oll_30_1.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=1:14&link=Gqb32CfhALs">на видео 1:14</a> <br/>
+        <b>Алгоритм: (U2 Lw\' U2 L) (U L\' U Lw)</b><br/><br/>
+        <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=1:44&link=Gqb32CfhALs">на видео 1:44</a>
+         нужно сделать Жирную рыбку слева.
+    ]]></string>
+    <string name="oll_st30_url">Gqb32CfhALs</string>
 
 </resources>
