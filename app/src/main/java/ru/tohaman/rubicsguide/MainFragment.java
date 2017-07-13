@@ -1,5 +1,6 @@
 package ru.tohaman.rubicsguide;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -30,6 +31,24 @@ import static ru.tohaman.rubicsguide.listpager.ListPagerLab.getResID;
 
 public class MainFragment extends Fragment {
     private Intent mIntent;
+    private Callbacks mCallbacks;
+
+    //Обязательный интерфейс для активности-хоста
+    public interface Callbacks {
+        void onItemSelected (ListPager listPager);
+    }
+
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof Callbacks) {
+            mCallbacks = (Callbacks) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement Callbacks");
+        }
+    }
 
 
     @Override
@@ -88,4 +107,9 @@ public class MainFragment extends Fragment {
         return v;
     }
 
+    @Override
+    public void onDetach () {
+        super.onDetach();
+        mCallbacks = null;
+    }
 }
