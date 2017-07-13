@@ -1,5 +1,6 @@
 package ru.tohaman.rubicsguide.listpager;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -29,6 +30,18 @@ public class ListFragment extends Fragment {
     private RecycleAdapter mRecycleAdapter;
     private String Phase;
     private ListPagerLab listPagerLab;
+    private Callbacks mCallbacks;
+
+    //Обязательный интерфейс для активности-хоста
+    public interface Callbacks {
+        void onItemSelected (ListPager listPager);
+    }
+
+    @Override
+    public void onAttach (Activity activity) {
+        super.onAttach(activity);
+        mCallbacks = (Callbacks) activity;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -79,13 +92,14 @@ public class ListFragment extends Fragment {
 
         @Override
         public void onClick(View v) {
-            if (Phase.equals("BASIC")){
-                Toast.makeText(getActivity(),mListPager.getDescription(), Toast.LENGTH_SHORT).show();
-            } else {
-                Intent intent = PagerActivity.newIntenet(getActivity(), String.valueOf(mListPager.getId()), Phase);
-                startActivity(intent);
-            }
+            mCallbacks.onItemSelected(mListPager);
         }
+    }
+
+    @Override
+    public void onDetach () {
+        super.onDetach();
+        mCallbacks = null;
     }
 
     private class RecycleAdapter extends RecyclerView.Adapter<RecycleViewHolder> {
