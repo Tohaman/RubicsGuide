@@ -29,7 +29,9 @@ import static ru.tohaman.rubicsguide.listpager.ListPagerLab.getResID;
  */
 
 public class MainFragment extends Fragment {
-    Intent mIntent;
+    private Intent mIntent;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         //Инициализируем синглет ListPagerLab, в котором будет база.

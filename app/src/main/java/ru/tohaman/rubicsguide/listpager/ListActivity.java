@@ -20,7 +20,7 @@ public class ListActivity extends SingleFragmentActivity implements ListFragment
     @Override
     protected int getLayoutResId() {
         return R.layout.activity_masterdetail;
-    }
+    }   //стр.332
 
     @Override
     public void onItemSelected(ListPager listPager) {

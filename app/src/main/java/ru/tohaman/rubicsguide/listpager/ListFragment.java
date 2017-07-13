@@ -1,6 +1,7 @@
 package ru.tohaman.rubicsguide.listpager;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -37,11 +38,18 @@ public class ListFragment extends Fragment {
         void onItemSelected (ListPager listPager);
     }
 
+
     @Override
-    public void onAttach (Activity activity) {
-        super.onAttach(activity);
-        mCallbacks = (Callbacks) activity;
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof Callbacks) {
+            mCallbacks = (Callbacks) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement Callbacks");
+        }
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -58,6 +66,7 @@ public class ListFragment extends Fragment {
         mRecyclerView = (RecyclerView) v.findViewById(R.id.recycler_view_list);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         updateUI();
+        mCallbacks.onItemSelected(mListPagers.get(0));
         return v;
     }
 
