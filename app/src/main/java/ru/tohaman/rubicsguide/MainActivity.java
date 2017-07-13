@@ -11,4 +11,9 @@ public class MainActivity extends SingleFragmentActivity {
         return new MainFragment();
     }
 
+    @Override
+    protected int getLayoutResId() {
+        return R.layout.activity_twopane;
+    }
+
 }
