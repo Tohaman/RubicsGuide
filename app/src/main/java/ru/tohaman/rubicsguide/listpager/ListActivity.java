@@ -1,5 +1,6 @@
 package ru.tohaman.rubicsguide.listpager;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.widget.Toast;
@@ -7,23 +8,33 @@ import android.widget.Toast;
 import ru.tohaman.rubicsguide.R;
 import ru.tohaman.rubicsguide.SingleFragmentActivity;
 
+import static ru.tohaman.rubicsguide.g2f.G2FFragment.RubicPhase;
+
 /**
  * Created by Toha on 09.04.2017.
  */
 
 public class ListActivity extends SingleFragmentActivity implements ListFragment.Callbacks{
-    @Override
-    protected Fragment createFragment() {
-        return new ListFragment();
+
+    public static Intent newIntenet(Context packageContext, String phase) {
+        Intent intent = new Intent(packageContext, ListActivity.class);
+        intent.putExtra(RubicPhase, phase);
+        return intent;
     }
 
     @Override
-    protected int getLayoutResId() {
+    protected Fragment createFragment () {
+        final String phase = getIntent().getStringExtra(RubicPhase);
+        return ListFragment.newInstance(phase);
+    }
+
+    @Override
+    protected int getLayoutResId () {
         return R.layout.activity_masterdetail;
     }   //стр.332
 
     @Override
-    public void onItemSelected(ListPager listPager) {
+    public void onItemSelected (ListPager listPager) {
         if (findViewById(R.id.detail_fragment_container) == null) {
             if (listPager.getPhase().equals("BASIC")){
                 Toast.makeText(this,listPager.getDescription(), Toast.LENGTH_SHORT).show();
@@ -38,4 +49,5 @@ public class ListActivity extends SingleFragmentActivity implements ListFragment
                     .commit();
         }
     }
+
 }

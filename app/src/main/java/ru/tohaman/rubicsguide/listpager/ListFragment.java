@@ -33,6 +33,14 @@ public class ListFragment extends Fragment {
     private ListPagerLab listPagerLab;
     private Callbacks mCallbacks;
 
+    public static ListFragment newInstance (String phase) {
+        Bundle args = new Bundle();
+        args.putSerializable(RubicPhase, phase);    //Передали номер страницы
+        ListFragment fragment = new ListFragment();
+        fragment.setArguments(args);
+        return fragment;
+    }
+
     //Обязательный интерфейс для активности-хоста
     public interface Callbacks {
         void onItemSelected (ListPager listPager);
@@ -57,7 +65,9 @@ public class ListFragment extends Fragment {
         // Получаем синглет
         listPagerLab = ListPagerLab.get(getActivity());
         // Получаем данные о фазе от родителя и делаем выборку по фазе
-        Phase = getActivity().getIntent().getStringExtra(RubicPhase);
+        Phase = (String) getArguments().getSerializable(RubicPhase);  //Приняли название фазы (PLL,OLL,...)
+
+//        Phase = getActivity().getIntent().getStringExtra(RubicPhase);
         mListPagers = listPagerLab.getPhaseList(Phase);
 
         View v = inflater.inflate(R.layout.fragment_list, container, false);
@@ -66,9 +76,10 @@ public class ListFragment extends Fragment {
         mRecyclerView = (RecyclerView) v.findViewById(R.id.recycler_view_list);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         updateUI();
-        mCallbacks.onItemSelected(mListPagers.get(0));
+        //mCallbacks.onItemSelected(mListPagers.get(0));
         return v;
     }
+
 
     private void updateUI(){
         mListPagers = listPagerLab.getPhaseList(Phase);

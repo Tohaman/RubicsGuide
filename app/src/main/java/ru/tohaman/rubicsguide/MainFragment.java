@@ -35,7 +35,7 @@ public class MainFragment extends Fragment {
 
     //Обязательный интерфейс для активности-хоста
     public interface Callbacks {
-        void onItemSelected (ListPager listPager);
+        void onMainItemSelected (int id);
     }
 
 
@@ -77,28 +77,29 @@ public class MainFragment extends Fragment {
         AdapterView.OnItemClickListener itemListener = new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                String phase = getResources().getStringArray(R.array.main_phase)[position];
-
-                switch (phase) { //задаем переменые для каждого этапа
-                    case "BEGIN":
-                        mIntent = new Intent(getActivity(),ListActivity.class);
-                        mIntent.putExtra(RubicPhase,phase);
-                        break;
-                    case "G2F":
-                        mIntent = new Intent(getActivity(), G2FActivity.class);
-                        break;
-                    case "BLIND":
-                        mIntent = new Intent(getActivity(),BlindMenuActivity.class);
-                        break;
-                    case "BASIC":
-                        mIntent = new Intent(getActivity(),ListActivity.class);
-                        mIntent.putExtra(RubicPhase,phase);
-                        break;
-                    case "ABOUT":
-                        mIntent = new Intent(getActivity(), AboutActivity.class);
-                        break;
-                }
-                startActivity(mIntent);
+                mCallbacks.onMainItemSelected(position);
+//                String phase = getResources().getStringArray(R.array.main_phase)[position];
+//
+//                switch (phase) { //задаем переменые для каждого этапа
+//                    case "BEGIN":
+//                        mIntent = new Intent(getActivity(),ListActivity.class);
+//                        mIntent.putExtra(RubicPhase,phase);
+//                        break;
+//                    case "G2F":
+//                        mIntent = new Intent(getActivity(), G2FActivity.class);
+//                        break;
+//                    case "BLIND":
+//                        mIntent = new Intent(getActivity(),BlindMenuActivity.class);
+//                        break;
+//                    case "BASIC":
+//                        mIntent = new Intent(getActivity(),ListActivity.class);
+//                        mIntent.putExtra(RubicPhase,phase);
+//                        break;
+//                    case "ABOUT":
+//                        mIntent = new Intent(getActivity(), AboutActivity.class);
+//                        break;
+//                }
+//                startActivity(mIntent);
             }
         };
         mListView.setOnItemClickListener(itemListener);
