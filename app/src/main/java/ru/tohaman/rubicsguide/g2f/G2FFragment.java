@@ -1,6 +1,6 @@
 package ru.tohaman.rubicsguide.g2f;
 
-import android.content.Intent;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -11,9 +11,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import ru.tohaman.rubicsguide.R;
-import ru.tohaman.rubicsguide.listpager.ListActivity;
 import ru.tohaman.rubicsguide.listpager.ListPager;
-import ru.tohaman.rubicsguide.listpager.ListPagerLab;
 import ru.tohaman.rubicsguide.listpager.MyListAdapter;
 
 import java.util.ArrayList;
@@ -26,8 +24,31 @@ import static ru.tohaman.rubicsguide.listpager.ListPagerLab.getResID;
  * Created by Toha on 20.05.2017.
  */
 public class G2FFragment extends Fragment {
-    Intent mIntent;
-    public final static String RubicPhase = "ru.tohaman.rubicsguide.PHASE";
+
+    private Callbacks mCallbacks;
+
+    //Обязательный интерфейс для активности-хоста
+    public interface Callbacks {
+        void onG2FItemSelected (int id);
+    }
+
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof Callbacks) {
+            mCallbacks = (Callbacks) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement Callbacks");
+        }
+    }
+
+    @Override
+    public void onDetach () {
+        super.onDetach();
+        mCallbacks = null;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -53,51 +74,12 @@ public class G2FFragment extends Fragment {
         AdapterView.OnItemClickListener itemListener = new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                mCallbacks.onG2FItemSelected(position);
 
-                // вызываем активность List(RecycleView)->PagerView с параметром (ACCEL,PLL,OLL,CROSS и т.д. заданным в массиве строк g2f_phase)
-                mIntent = new Intent(getActivity(),ListActivity.class);
-                mIntent.putExtra(RubicPhase,getResources().getStringArray(R.array.g2f_phase)[position]);
-                startActivity(mIntent);
             }
         };
         mListView.setOnItemClickListener(itemListener);
 
-/*        // получаем список заголовков
-        final String[] mMainTitle= getResources().getStringArray(R.array.g2f_title);
-
-        // создаем адаптер
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(v.getContext(),android.R.layout.simple_list_item_1,mMainTitle);
-
-        // устанавливаем для списка адаптер
-        mMainList.setAdapter(adapter);
-
-        // процедура слушателя в выборе списка
-        AdapterView.OnItemClickListener itemListener = new AdapterView.OnItemClickListener(){
-          @Override
-            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-              switch (position){
-                  case 0:
-                      Toast.makeText(getActivity(),"Ускорения для начинающих",Toast.LENGTH_SHORT).show();
-                      break;
-                  case 1:
- //                     Toast.makeText(getActivity(),"Максимкин PLL",Toast.LENGTH_SHORT).show();
-                      mIntent = new Intent(getActivity(),ListActivity.class);
-                      mIntent.putExtra(RubicPhase,"PLL");
-                      startActivity(mIntent);
-                      break;
-                  case 2:
-//                      Toast.makeText(getActivity(),"Долгожданный OLL",Toast.LENGTH_SHORT).show();
-                      mIntent = new Intent(getActivity(),ListActivity.class);
-                      mIntent.putExtra(RubicPhase,"OLL");
-                      startActivity(mIntent);
-                      break;
-                  default:
-                  Toast.makeText(getActivity(),"Был выбран пункт" + position,Toast.LENGTH_SHORT).show();
-              }
-          }
-        };
-        // назначаем слушателя
-        mMainList.setOnItemClickListener(itemListener);*/
 
         // возвращаем сформированный View в активность
         return v;

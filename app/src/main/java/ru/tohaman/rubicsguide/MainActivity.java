@@ -13,9 +13,9 @@ import ru.tohaman.rubicsguide.g2f.G2FActivity;
 import ru.tohaman.rubicsguide.listpager.ListActivity;
 import ru.tohaman.rubicsguide.listpager.ListFragment;
 import ru.tohaman.rubicsguide.listpager.ListPager;
-import ru.tohaman.rubicsguide.listpager.PagerFragment;
 
-import static ru.tohaman.rubicsguide.g2f.G2FFragment.RubicPhase;
+import static ru.tohaman.rubicsguide.g2f.G2FActivity.RubicPhase;
+
 
 public class MainActivity extends SingleFragmentActivity implements MainFragment.Callbacks, ListFragment.Callbacks {
     private Intent mIntent;
@@ -35,8 +35,7 @@ public class MainActivity extends SingleFragmentActivity implements MainFragment
         String phase = getResources().getStringArray(R.array.main_phase)[id];
         switch (phase) {
             case "BEGIN":
-                mIntent = new Intent(this,ListActivity.class);
-                mIntent.putExtra(RubicPhase,phase);
+                mIntent = ListActivity.newIntenet(this, phase);
                 startActivity(mIntent);
                 break;
             case "G2F":

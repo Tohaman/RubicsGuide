@@ -1,7 +1,6 @@
 package ru.tohaman.rubicsguide;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -14,15 +13,10 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-import ru.tohaman.rubicsguide.about.AboutActivity;
-import ru.tohaman.rubicsguide.blind.BlindMenuActivity;
-import ru.tohaman.rubicsguide.g2f.G2FActivity;
-import ru.tohaman.rubicsguide.listpager.ListActivity;
 import ru.tohaman.rubicsguide.listpager.ListPager;
 import ru.tohaman.rubicsguide.listpager.ListPagerLab;
 import ru.tohaman.rubicsguide.listpager.MyListAdapter;
 
-import static ru.tohaman.rubicsguide.g2f.G2FFragment.RubicPhase;
 import static ru.tohaman.rubicsguide.listpager.ListPagerLab.getResID;
 
 /**
@@ -30,7 +24,6 @@ import static ru.tohaman.rubicsguide.listpager.ListPagerLab.getResID;
  */
 
 public class MainFragment extends Fragment {
-    private Intent mIntent;
     private Callbacks mCallbacks;
 
     //Обязательный интерфейс для активности-хоста
@@ -78,28 +71,6 @@ public class MainFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 mCallbacks.onMainItemSelected(position);
-//                String phase = getResources().getStringArray(R.array.main_phase)[position];
-//
-//                switch (phase) { //задаем переменые для каждого этапа
-//                    case "BEGIN":
-//                        mIntent = new Intent(getActivity(),ListActivity.class);
-//                        mIntent.putExtra(RubicPhase,phase);
-//                        break;
-//                    case "G2F":
-//                        mIntent = new Intent(getActivity(), G2FActivity.class);
-//                        break;
-//                    case "BLIND":
-//                        mIntent = new Intent(getActivity(),BlindMenuActivity.class);
-//                        break;
-//                    case "BASIC":
-//                        mIntent = new Intent(getActivity(),ListActivity.class);
-//                        mIntent.putExtra(RubicPhase,phase);
-//                        break;
-//                    case "ABOUT":
-//                        mIntent = new Intent(getActivity(), AboutActivity.class);
-//                        break;
-//                }
-//                startActivity(mIntent);
             }
         };
         mListView.setOnItemClickListener(itemListener);

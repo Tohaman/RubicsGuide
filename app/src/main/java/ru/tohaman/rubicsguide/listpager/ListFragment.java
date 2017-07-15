@@ -1,8 +1,6 @@
 package ru.tohaman.rubicsguide.listpager;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,14 +10,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import ru.tohaman.rubicsguide.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static ru.tohaman.rubicsguide.g2f.G2FFragment.RubicPhase;
+import static ru.tohaman.rubicsguide.g2f.G2FActivity.RubicPhase;
 
 /**
  * Created by Toha on 09.04.2017.

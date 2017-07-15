@@ -1,5 +1,6 @@
 package ru.tohaman.rubicsguide.blind;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,13 +15,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ru.tohaman.rubicsguide.R;
-import ru.tohaman.rubicsguide.about.AboutActivity;
-import ru.tohaman.rubicsguide.g2f.G2FActivity;
+import ru.tohaman.rubicsguide.g2f.G2FFragment;
 import ru.tohaman.rubicsguide.listpager.ListActivity;
 import ru.tohaman.rubicsguide.listpager.ListPager;
 import ru.tohaman.rubicsguide.listpager.MyListAdapter;
 
-import static ru.tohaman.rubicsguide.g2f.G2FFragment.RubicPhase;
 import static ru.tohaman.rubicsguide.listpager.ListPagerLab.getResID;
 
 /**
@@ -30,6 +29,31 @@ import static ru.tohaman.rubicsguide.listpager.ListPagerLab.getResID;
 public class BlindMenuFragment extends Fragment {
     Intent mIntent;
     public final static String RubicPhase = "ru.tohaman.rubicsguide.PHASE";
+    private Callbacks mCallbacks;
+
+    //Обязательный интерфейс для активности-хоста
+    public interface Callbacks {
+        void onBlindItemSelected (int id);
+    }
+
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof Callbacks) {
+            mCallbacks = (Callbacks) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement Callbacks");
+        }
+    }
+
+    @Override
+    public void onDetach () {
+        super.onDetach();
+        mCallbacks = null;
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -55,23 +79,7 @@ public class BlindMenuFragment extends Fragment {
         AdapterView.OnItemClickListener itemListener = new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-
-                String phase = getResources().getStringArray(R.array.blind_menu_phase)[position];
-                switch (phase) { //задаем переменые для каждого этапа
-                    case "BLIND":
-                        mIntent = new Intent(getActivity(),ListActivity.class);
-                        mIntent.putExtra(RubicPhase,phase);
-                        break;
-                    case "BLINDACC":
-                        mIntent = new Intent(getActivity(),ListActivity.class);
-                        mIntent.putExtra(RubicPhase,phase);
-                        break;
-                    case "SCRAMBLE":
-                        mIntent = new Intent(getActivity(), ScrambleActivity.class);
-                        break;
-                }
-                startActivity(mIntent);
-
+                mCallbacks.onBlindItemSelected(position);
             }
         };
         mListView.setOnItemClickListener(itemListener);
