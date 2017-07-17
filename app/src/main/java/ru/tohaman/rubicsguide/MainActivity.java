@@ -2,8 +2,6 @@ package ru.tohaman.rubicsguide;
 
 import android.content.Intent;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.widget.Toast;
 
 import ru.tohaman.rubicsguide.about.AboutActivity;
@@ -13,9 +11,6 @@ import ru.tohaman.rubicsguide.g2f.G2FActivity;
 import ru.tohaman.rubicsguide.listpager.ListActivity;
 import ru.tohaman.rubicsguide.listpager.ListFragment;
 import ru.tohaman.rubicsguide.listpager.ListPager;
-
-import static ru.tohaman.rubicsguide.g2f.G2FActivity.RubicPhase;
-
 
 public class MainActivity extends SingleFragmentActivity implements MainFragment.Callbacks, ListFragment.Callbacks {
     private Intent mIntent;
