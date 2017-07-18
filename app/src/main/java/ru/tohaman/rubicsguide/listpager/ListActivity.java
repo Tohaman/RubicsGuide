@@ -2,6 +2,7 @@ package ru.tohaman.rubicsguide.listpager;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.widget.Toast;
 
@@ -16,6 +17,7 @@ import static ru.tohaman.rubicsguide.g2f.G2FActivity.RubicPhase;
 
 public class ListActivity extends SingleFragmentActivity implements ListFragment.Callbacks{
     String Phase;
+    int position;
 
     public static Intent newIntenet(Context packageContext, String phase) {
         Intent intent = new Intent(packageContext, ListActivity.class);
@@ -36,27 +38,46 @@ public class ListActivity extends SingleFragmentActivity implements ListFragment
 
     @Override
     public void onItemSelected (ListPager listPager) {
+        position = listPager.getId();
         if (findViewById(R.id.detail_fragment_container) == null) {
             if (listPager.getPhase().equals("BASIC")){
                 Toast.makeText(this,listPager.getDescription(), Toast.LENGTH_SHORT).show();
             } else {
-                Intent intent = PagerActivity.newIntenet(this, String.valueOf(listPager.getId()), listPager.getPhase());
+                Intent intent = PagerActivity.newIntenet(this, String.valueOf(position), listPager.getPhase());
                 startActivity(intent);
             }
         } else {
-            Fragment newDetail = PagerFragment.newInstance(String.valueOf(listPager.getId()), listPager.getPhase());
+            Fragment newDetail = PagerFragment.newInstance(String.valueOf(position), listPager.getPhase());
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.detail_fragment_container, newDetail)
                     .commit();
         }
     }
 
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (savedInstanceState != null) {
+            position = savedInstanceState.getInt("id");
+        } else {
+            position = 0;
+        }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putInt("id",position);
+    }
+
+
     @Override
     protected void onStart () {
         super.onStart();
         if (findViewById(R.id.detail_fragment_container) != null) {
             Phase = getIntent().getStringExtra(RubicPhase);
-            Fragment newDetail = PagerFragment.newInstance(String.valueOf(0), Phase);
+            Fragment newDetail = PagerFragment.newInstance(String.valueOf(position), Phase);
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.detail_fragment_container, newDetail)
                     .commit();

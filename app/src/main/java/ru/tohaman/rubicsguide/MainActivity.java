@@ -38,6 +38,8 @@ public class MainActivity extends SingleFragmentActivity implements MainFragment
         super.onCreate(savedInstanceState);
         if (savedInstanceState != null) {
             phase = savedInstanceState.getString("phase");
+        } else {
+            phase = "ABOUT";
         }
     }
 
@@ -100,14 +102,14 @@ public class MainActivity extends SingleFragmentActivity implements MainFragment
     @Override
     protected void onStart () {
         super.onStart();
-
+        if (!phase.equals("BASIC")) { phase="ABOUT"; }
         if (findViewById(R.id.detail_fragment_container) != null) {
-            if (phase.equals("BASIC")) {
+            if (phase.equals("ABOUT")) {
                 Fragment newDetail = new AboutFragment();
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.detail_fragment_container, newDetail)
                         .commit();
-            } else { // Если не Basic, значит открываем окно About
+            } else { // Если не About, значит открываем окно
                 Fragment newDetail = ListFragment.newInstance(phase);
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.detail_fragment_container, newDetail)
