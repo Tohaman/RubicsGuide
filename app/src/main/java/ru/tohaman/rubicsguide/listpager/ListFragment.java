@@ -32,7 +32,7 @@ public class ListFragment extends Fragment {
 
     public static ListFragment newInstance (String phase) {
         Bundle args = new Bundle();
-        args.putSerializable(RubicPhase, phase);    //Передали номер страницы
+        args.putSerializable(RubicPhase, phase);    //Передали имя фазы
         ListFragment fragment = new ListFragment();
         fragment.setArguments(args);
         return fragment;
