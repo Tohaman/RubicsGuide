@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Chronometer;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import ru.tohaman.rubicsguide.R;
@@ -17,9 +18,7 @@ import ru.tohaman.rubicsguide.R;
  */
 
 public class TimerFragment extends Fragment {
-    Chronometer mChronometer;
     TextView timerTextView;
-    Button StartStopButton;
     long startTime = 0;
 
     //runs without a timer by reposting this handler at the end of the runnable
@@ -44,23 +43,41 @@ public class TimerFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_timer, container, false);
         timerTextView = (TextView) view.findViewById(R.id.texttime);
 
-        StartStopButton = (Button) view.findViewById(R.id.button_start);
-        StartStopButton.setText("start");
-        StartStopButton.setOnClickListener(new View.OnClickListener() {
+        LinearLayout mRightHand = (LinearLayout) view.findViewById(R.id.rigth_hand);
+        LinearLayout mLeftHand = (LinearLayout) view.findViewById(R.id.left_hand);
 
+        mRightHand.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Button b = (Button) v;
-                if (b.getText().equals("stop")) {
-                    timerHandler.removeCallbacks(timerRunnable);
-                    b.setText("start");
-                } else {
-                    startTime = System.currentTimeMillis();
-                    timerHandler.postDelayed(timerRunnable, 0);
-                    b.setText("stop");
-                }
+            public void onClick (View v) {
+                timerHandler.removeCallbacks(timerRunnable);
             }
         });
+
+        mLeftHand.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v) {
+                startTime = System.currentTimeMillis();
+                timerHandler.postDelayed(timerRunnable, 0);
+            }
+        });
+
+//        StartStopButton = (Button) view.findViewById(R.id.button_start);
+//        StartStopButton.setText("start");
+//        StartStopButton.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                Button b = (Button) v;
+//                if (b.getText().equals("stop")) {
+//                    timerHandler.removeCallbacks(timerRunnable);
+//                    b.setText("start");
+//                } else {
+//                    startTime = System.currentTimeMillis();
+//                    timerHandler.postDelayed(timerRunnable, 0);
+//                    b.setText("stop");
+//                }
+//            }
+//        });
         return view;
     }
 
@@ -68,7 +85,7 @@ public class TimerFragment extends Fragment {
     public void onPause() {
         super.onPause();
         timerHandler.removeCallbacks(timerRunnable);
-        StartStopButton.setText("start");
+//        StartStopButton.setText("start");
     }
 
 

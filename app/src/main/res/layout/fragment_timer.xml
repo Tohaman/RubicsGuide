@@ -13,7 +13,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="8dp"
-        android:background="@color/gray"
+        android:background="@color/blue"
         android:columnCount="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,11 +24,12 @@
         app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
+            android:id="@+id/left_hand"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_columnWeight="1"
             android:layout_marginRight="4dp"
-            android:background="@color/green"
+            android:background="@color/gray"
             android:gravity="bottom|center">
 
             <ImageView
@@ -40,12 +41,13 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/rigth_hand"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_columnWeight="1"
             android:layout_marginLeft="4dp"
             android:gravity="bottom|center"
-            android:background="@color/red">
+            android:background="@color/gray">
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -58,14 +60,40 @@
     </GridLayout>
 
     <LinearLayout
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:background="@color/orange"
+        android:layout_width="220dp"
+        android:layout_height="100dp"
+        android:background="@color/blue"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:orientation="horizontal">
-    </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dimen_margin_8"
+            android:background="@color/orange"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/texttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="monospace"
+                android:gravity="center_horizontal"
+                android:text="0:00:00"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <!--<Button-->
+                <!--android:id="@+id/button_start"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="start"/>-->
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
