@@ -1,83 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/blue"
     tools:context="ru.tohaman.rubicsguide.timer.TimerActivity">
 
+
     <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/blue"
-        android:columnCount="4"
-        android:rowCount="2">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_columnSpan="2"
-            android:layout_columnWeight="1"
-            android:layout_margin="5dp"
-            android:layout_row="0"
-            android:background="@color/gray"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/texttime"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="TextView"
-                android:textSize="28sp"
-                android:textStyle="bold"/>
-
-            <Button
-                android:id="@+id/button_start"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/dimen_margin_16"
-                android:text="Start"/>
-        </LinearLayout>
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:background="@color/gray"
+        android:columnCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_column="0"
-            android:layout_columnSpan="2"
             android:layout_columnWeight="1"
-            android:layout_margin="15dp"
-            android:layout_row="1"
-            android:background="@color/gray"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_marginRight="4dp"
+            android:background="@color/green"
+            android:gravity="bottom|center">
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
                 app:srcCompat="@drawable/timer_1"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_column="2"
-            android:layout_columnSpan="2"
             android:layout_columnWeight="1"
-            android:layout_margin="15dp"
-            android:background="@color/gray"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_marginLeft="4dp"
+            android:gravity="bottom|center"
+            android:background="@color/red">
 
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
                 app:srcCompat="@drawable/timer_2"/>
         </LinearLayout>
+
     </GridLayout>
-</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="@color/orange"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
