@@ -4,18 +4,21 @@
         <item>Методика сборки с закрытыми глазами</item>
         <item>Ускорения сборки с закрытыми глазами</item>
         <item>Генератор скрамблов</item>
+        <item>Таймер</item>
     </string-array>
 
     <integer-array name="blind_menu_icon">
         <item>@drawable/blind</item>
         <item>@drawable/blaccel_1</item>
         <item>@drawable/scramgen</item>
+        <item>@drawable/timer</item>
     </integer-array>
 
     <string-array name="blind_menu_phase">
         <item>BLIND</item>
         <item>BLINDACC</item>
         <item>SCRAMBLE</item>
+        <item>TIMER</item>
     </string-array>
 
 </resources>

@@ -7,6 +7,7 @@ import ru.tohaman.rubicsguide.R;
 import ru.tohaman.rubicsguide.SingleFragmentActivity;
 import ru.tohaman.rubicsguide.listpager.ListActivity;
 import ru.tohaman.rubicsguide.listpager.ListFragment;
+import ru.tohaman.rubicsguide.timer.TimerActivity;
 
 public class BlindMenuActivity extends SingleFragmentActivity implements BlindMenuFragment.Callbacks {
     Intent mIntent;
@@ -39,6 +40,12 @@ public class BlindMenuActivity extends SingleFragmentActivity implements BlindMe
                             .commit();
                 }
                 break;
+
+            case "TIMER":
+                mIntent = new Intent(this, TimerActivity.class);
+                startActivity(mIntent);
+                break;
+
             default:
                 mIntent = ListActivity.newIntenet(this, phase);
                 startActivity(mIntent);
