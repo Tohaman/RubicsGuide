@@ -5,5 +5,8 @@
     <string name="edit_comment">Редактировать комментарий</string>
     <string name="edit_comment_label">Комментарий</string>
     <string name="error_player">Ошибка инициализации YouTubePlayer (%1$s)</string>
+    <string name="lefthand">Левая рука</string>
+    <string name="righthand">Правая рука</string>
+    <string name="init_start_time">0:00:00</string>
 
 </resources>
