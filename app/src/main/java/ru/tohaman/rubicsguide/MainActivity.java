@@ -12,6 +12,7 @@ import ru.tohaman.rubicsguide.g2f.G2FActivity;
 import ru.tohaman.rubicsguide.listpager.ListActivity;
 import ru.tohaman.rubicsguide.listpager.ListFragment;
 import ru.tohaman.rubicsguide.listpager.ListPager;
+import ru.tohaman.rubicsguide.timer.TimerActivity;
 
 public class MainActivity extends SingleFragmentActivity implements MainFragment.Callbacks, ListFragment.Callbacks {
     private Intent mIntent;
@@ -75,6 +76,11 @@ public class MainActivity extends SingleFragmentActivity implements MainFragment
                             .replace(R.id.detail_fragment_container, newDetail)
                             .commit();
                 }
+                break;
+
+            case "TIMER":
+                mIntent = new Intent(this, TimerActivity.class);
+                startActivity(mIntent);
                 break;
 
             case "ABOUT":

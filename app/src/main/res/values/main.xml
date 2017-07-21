@@ -5,6 +5,7 @@
         <item>Переходим на Фридрих</item>
         <item>Сборка кубика вслепую</item>
         <item>Основные движения</item>
+        <item>Таймер</item>
         <item>О Программе</item>
     </string-array>
 
@@ -13,6 +14,7 @@
         <item>@drawable/g2f</item>
         <item>@drawable/blind</item>
         <item>@drawable/basic</item>
+        <item>@drawable/timer</item>
         <item>@drawable/about</item>
     </integer-array>
 
@@ -21,6 +23,7 @@
         <item>G2F</item>
         <item>BLIND</item>
         <item>BASIC</item>
+        <item>TIMER</item>
         <item>ABOUT</item>
     </string-array>
 

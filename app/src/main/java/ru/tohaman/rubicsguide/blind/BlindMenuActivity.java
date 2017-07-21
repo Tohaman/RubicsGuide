@@ -41,11 +41,6 @@ public class BlindMenuActivity extends SingleFragmentActivity implements BlindMe
                 }
                 break;
 
-            case "TIMER":
-                mIntent = new Intent(this, TimerActivity.class);
-                startActivity(mIntent);
-                break;
-
             default:
                 mIntent = ListActivity.newIntenet(this, phase);
                 startActivity(mIntent);
