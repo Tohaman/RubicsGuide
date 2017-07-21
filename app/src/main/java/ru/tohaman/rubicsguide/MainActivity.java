@@ -1,7 +1,9 @@
 package ru.tohaman.rubicsguide;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.PowerManager;
 import android.support.v4.app.Fragment;
 import android.widget.Toast;
 
@@ -18,6 +20,7 @@ public class MainActivity extends SingleFragmentActivity implements MainFragment
     private Intent mIntent;
     private String phase;
 
+
     @Override
     protected Fragment createFragment () {
         return new MainFragment();
@@ -29,7 +32,7 @@ public class MainActivity extends SingleFragmentActivity implements MainFragment
     }
 
     @Override
-    // действие для фрагмента ListFragment
+    // действие для большого (правого) фрагмента двухфрагментной активности
     public void onItemSelected(ListPager listPager) {
         Toast.makeText(this,listPager.getDescription(), Toast.LENGTH_SHORT).show();
     }
@@ -42,10 +45,12 @@ public class MainActivity extends SingleFragmentActivity implements MainFragment
         } else {
             phase = "ABOUT";
         }
+
     }
 
+
     @Override
-    // действие для фрагмента PagerFragment
+    // действие для левого фрагмента двухфрагментной активности или основного фрагмента однофрагментной
     public void onMainItemSelected (int id) {
         phase = getResources().getStringArray(R.array.main_phase)[id];
         switch (phase) {

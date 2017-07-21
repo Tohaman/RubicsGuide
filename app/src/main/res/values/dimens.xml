@@ -2,4 +2,5 @@
 <resources>
     <dimen name="dimen_margin_16">16dp</dimen>
     <dimen name="dimen_margin_8">8dp</dimen>
+    <dimen name="TimerLightSize">32dp</dimen>
 </resources>

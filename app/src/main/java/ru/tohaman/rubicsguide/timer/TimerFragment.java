@@ -39,8 +39,6 @@ public class TimerFragment extends Fragment {
     protected static final String TAG = "GestureDetectorMain";
     private GestureDetector mGestureDetector;
 
-    //TODO Сделать, чтобы на данной активности экран не гас.
-
     //runs without a timer by reposting this handler at the end of the runnable
     Handler timerHandler = new Handler();
     Runnable timerRunnable = new Runnable() {
@@ -57,7 +55,6 @@ public class TimerFragment extends Fragment {
         }
     };
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_timer, container, false);
@@ -67,21 +64,20 @@ public class TimerFragment extends Fragment {
             @Override
             public boolean onDoubleTap(MotionEvent e) {
                 //Log.i(TAG, "onDoubleTap");
-                timerTextView.setText(R.string.init_start_time);
+                timerTextView.setText(R.string.init_start_time);    // по даблтапу обнуляем таймер
                 return true;
             }
         });
 
         LinearLayout mRightHand = (LinearLayout) view.findViewById(R.id.rigth_hand);
         LinearLayout mLeftHand = (LinearLayout) view.findViewById(R.id.left_hand);
-        mLeftLight = (View) view.findViewById(R.id.left_light);
-        mRightLight = (View) view.findViewById(R.id.right_light);
-
+        mLeftLight = view.findViewById(R.id.left_light);
+        mRightLight = view.findViewById(R.id.right_light);  // равносильно mRightLight = (View) view.findViewById(R.id.right_light);
         // Обработка прикосновения к левому лэйауту
         mLeftHand.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                mGestureDetector.onTouchEvent(event);
+                mGestureDetector.onTouchEvent(event);           // даблтап
                 int action = event.getActionMasked();
 //                Log.d(TAG, String.valueOf(action));
                 leftHandDown = OnTouchAction(leftHandDown, rightHandDown, action, mLeftLight);
@@ -94,7 +90,7 @@ public class TimerFragment extends Fragment {
         mRightHand.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                mGestureDetector.onTouchEvent(event);
+                mGestureDetector.onTouchEvent(event);           // даблтап
                 int action = event.getActionMasked();
 //                Log.d(TAG, String.valueOf(action));
                 rightHandDown = OnTouchAction(rightHandDown, leftHandDown, action, mRightLight);
