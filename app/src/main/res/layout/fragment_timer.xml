@@ -94,7 +94,7 @@
                 android:fontFamily="monospace"
                 android:gravity="center_horizontal"
                 android:text="@string/init_start_time"
-                android:textSize="20sp"
+                android:textSize="24sp"
                 android:textStyle="bold"/>
 
             <View

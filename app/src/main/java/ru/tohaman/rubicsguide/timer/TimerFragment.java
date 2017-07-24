@@ -1,5 +1,6 @@
 package ru.tohaman.rubicsguide.timer;
 
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -59,6 +60,8 @@ public class TimerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_timer, container, false);
         timerTextView = (TextView) view.findViewById(R.id.texttime);
+//        Typeface typeFace = Typeface.createFromAsset(getActivity().getAssets(), "fonts/dscrystal.ttf");
+//        timerTextView.setTypeface(typeFace);
 
         mGestureDetector = new GestureDetector(getActivity(), new GestureDetector.SimpleOnGestureListener() {
             @Override
