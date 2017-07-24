@@ -113,26 +113,7 @@ public class ScambleFragment extends Fragment {
         Button gen_button = (Button) view.findViewById(R.id.button_generate);
         gen_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // берем собранный куб и обнуляем решение
-                MainCube =Initialize();
-                solvetext.setText("");
-                // генерируем скрамбл с учетом выбранных параметров (переплавки буферов и длинны)
-                String st = GenerateScrambleWithParam(mChBoxRebro.isChecked(),mChBoxUgol.isChecked(),Integer.parseInt(String.valueOf(ScrambleLength.getText())));
-                // выводим скрамбл на экран
-                Scramble.setText(st);
-                // перемешиваем куб по скрамблу
-                BlindMoves.Scram(MainCube, st);
-                // выводим решение или длинну решения на экран
-                solve = GetSolve(MainCube);
-                if (mChBoxSolve.isChecked()) {
-                    solvetext.setText(solve);
-                } else {
-                    solvetext.setText(String.valueOf(solve.length()/2));
-                }
-                // выводим MainCube на экран
-                cube2view(MainCube);
-                // Сохраняем скрамбл в базе
-                SetParamToBase("Scramble", st);
+                GenerateScrambl();
             }
         });
 
@@ -901,6 +882,29 @@ public class ScambleFragment extends Fragment {
                 ListPagerLab.get(getActivity()).updateListPager(mListPagers.get(i));
             }
         }
+    }
+
+    private void GenerateScrambl () {
+        // берем собранный куб и обнуляем решение
+        MainCube =Initialize();
+        solvetext.setText("");
+        // генерируем скрамбл с учетом выбранных параметров (переплавки буферов и длинны)
+        String st = GenerateScrambleWithParam(mChBoxRebro.isChecked(),mChBoxUgol.isChecked(),Integer.parseInt(String.valueOf(ScrambleLength.getText())));
+        // выводим скрамбл на экран
+        Scramble.setText(st);
+        // перемешиваем куб по скрамблу
+        BlindMoves.Scram(MainCube, st);
+        // выводим решение или длинну решения на экран
+        solve = GetSolve(MainCube);
+        if (mChBoxSolve.isChecked()) {
+            solvetext.setText(solve);
+        } else {
+            solvetext.setText(String.valueOf(solve.length()/2));
+        }
+        // выводим MainCube на экран
+        cube2view(MainCube);
+        // Сохраняем скрамбл в базе
+        SetParamToBase("Scramble", st);
     }
 
 
