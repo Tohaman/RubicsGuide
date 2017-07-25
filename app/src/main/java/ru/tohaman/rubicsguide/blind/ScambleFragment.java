@@ -106,6 +106,9 @@ public class ScambleFragment extends Fragment {
         mProgressBar.setVisibility(View.INVISIBLE);
 
         progressText = (TextView) view.findViewById(R.id.progressText);
+        progressText.setText(" Ищем подходящий скрамбл ");
+        progressText.setBackgroundColor(white);
+        progressText.setTextSize(12);
         progressText.setVisibility(View.INVISIBLE);
 
         mGridView = (GridView) view.findViewById(R.id.scram_gridView);
@@ -939,7 +942,9 @@ public class ScambleFragment extends Fragment {
             cube2view(MainCube);
             solvetext.setText("");
             // делаем кнопку "Генерерировать" не активной, а прогресбар активным
-            gen_button.setVisibility(View.INVISIBLE);
+            //gen_button.setVisibility(View.INVISIBLE);
+            gen_button.setEnabled(false);
+
             mProgressBar.setVisibility(View.VISIBLE);
             progressText.setVisibility(View.VISIBLE);
             ChReb = mChBoxRebro.isChecked();
@@ -956,7 +961,8 @@ public class ScambleFragment extends Fragment {
         @Override
         protected void onPostExecute(String st) {
             super.onPostExecute(st);
-            gen_button.setVisibility(View.VISIBLE);
+            //gen_button.setVisibility(View.VISIBLE);
+            gen_button.setEnabled(true);
             mProgressBar.setVisibility(View.INVISIBLE);
             progressText.setVisibility(View.INVISIBLE);
 
