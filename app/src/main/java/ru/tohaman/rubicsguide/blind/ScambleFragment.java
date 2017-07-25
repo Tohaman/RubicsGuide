@@ -106,7 +106,7 @@ public class ScambleFragment extends Fragment {
         mProgressBar.setVisibility(View.INVISIBLE);
 
         progressText = (TextView) view.findViewById(R.id.progressText);
-        progressText.setText(" Ищем подходящий скрамбл ");
+        progressText.setText(getString(R.string.scram_waiting));
         progressText.setBackgroundColor(white);
         progressText.setTextSize(12);
         progressText.setVisibility(View.INVISIBLE);
