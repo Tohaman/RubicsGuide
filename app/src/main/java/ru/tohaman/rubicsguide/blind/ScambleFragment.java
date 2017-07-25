@@ -3,6 +3,7 @@ package ru.tohaman.rubicsguide.blind;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -14,12 +15,14 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.GridView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 import ru.tohaman.rubicsguide.CommentFragment;
 import ru.tohaman.rubicsguide.R;
@@ -38,8 +41,10 @@ public class ScambleFragment extends Fragment {
     private GridView mGridView;
     private List<CubeAzbuka> mGridList = new ArrayList();
 
-    private TextView solvetext,ScrambleLength,Scramble;
+    private TextView solvetext,ScrambleLength,Scramble,progressText;
     private CheckBox mChBoxRebro,mChBoxUgol,mChBoxSolve;
+    private Button gen_button;
+    private ProgressBar mProgressBar;
     private int red,blue,white,orange,green,yellow,back,black;
     private int[] cubeColor = new int[6];
     private int[] MainCube = new int [54];
@@ -97,6 +102,12 @@ public class ScambleFragment extends Fragment {
         MainCube = Initialize();
         InitGridList(MainCube);
 
+        mProgressBar = (ProgressBar) view.findViewById(R.id.progressBar);
+        mProgressBar.setVisibility(View.INVISIBLE);
+
+        progressText = (TextView) view.findViewById(R.id.progressText);
+        progressText.setVisibility(View.INVISIBLE);
+
         mGridView = (GridView) view.findViewById(R.id.scram_gridView);
         mAdapter = new MyGridAdapter(view.getContext(),R.layout.grid_item2,mGridList);
         mGridView.setAdapter(mAdapter);
@@ -110,7 +121,7 @@ public class ScambleFragment extends Fragment {
             }
         });
 
-        Button gen_button = (Button) view.findViewById(R.id.button_generate);
+        gen_button = (Button) view.findViewById(R.id.button_generate);
         gen_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 GenerateScrambl();
@@ -884,30 +895,6 @@ public class ScambleFragment extends Fragment {
         }
     }
 
-    private void GenerateScrambl () {
-        // берем собранный куб и обнуляем решение
-        MainCube =Initialize();
-        solvetext.setText("");
-        // генерируем скрамбл с учетом выбранных параметров (переплавки буферов и длинны)
-        String st = GenerateScrambleWithParam(mChBoxRebro.isChecked(),mChBoxUgol.isChecked(),Integer.parseInt(String.valueOf(ScrambleLength.getText())));
-        // выводим скрамбл на экран
-        Scramble.setText(st);
-        // перемешиваем куб по скрамблу
-        BlindMoves.Scram(MainCube, st);
-        // выводим решение или длинну решения на экран
-        solve = GetSolve(MainCube);
-        if (mChBoxSolve.isChecked()) {
-            solvetext.setText(solve);
-        } else {
-            solvetext.setText(String.valueOf(solve.length()/2));
-        }
-        // выводим MainCube на экран
-        cube2view(MainCube);
-        // Сохраняем скрамбл в базе
-        SetParamToBase("Scramble", st);
-    }
-
-
     class SolveCube {
         int [] cube;    // куб [54]
         String solve;   // решение
@@ -932,6 +919,69 @@ public class ScambleFragment extends Fragment {
         public void setSolve(String solve) {
             this.solve = solve;
         }
+    }
+
+    private void GenerateScrambl () {
+        GenTask genTask = new GenTask();
+        genTask.execute();
+    }
+
+    class GenTask extends AsyncTask<Void, Void, String> {
+        Boolean ChReb, ChUgol;
+        int lenScr;
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            // берем собранный куб и обнуляем решение
+            MainCube =Initialize();
+            // выводим MainCube на экран
+            cube2view(MainCube);
+            solvetext.setText("");
+            // делаем кнопку "Генерерировать" не активной, а прогресбар активным
+            gen_button.setVisibility(View.INVISIBLE);
+            mProgressBar.setVisibility(View.VISIBLE);
+            progressText.setVisibility(View.VISIBLE);
+            ChReb = mChBoxRebro.isChecked();
+            ChUgol = mChBoxUgol.isChecked();
+            lenScr = Integer.parseInt(String.valueOf(ScrambleLength.getText()));
+        }
+
+        @Override
+        protected String doInBackground(Void... params) {
+            String st = GenerateScrambleWithParam(ChReb,ChUgol,lenScr);
+            return st;
+        }
+
+        @Override
+        protected void onPostExecute(String st) {
+            super.onPostExecute(st);
+            gen_button.setVisibility(View.VISIBLE);
+            mProgressBar.setVisibility(View.INVISIBLE);
+            progressText.setVisibility(View.INVISIBLE);
+
+            // выводим скрамбл на экран
+            Scramble.setText(st);
+            // перемешиваем куб по скрамблу
+            BlindMoves.Scram(MainCube, st);
+            // выводим решение или длинну решения на экран
+            solve = GetSolve(MainCube);
+            if (mChBoxSolve.isChecked()) {
+                solvetext.setText(solve);
+            } else {
+                solvetext.setText(String.valueOf(solve.length()/2));
+            }
+            // выводим MainCube на экран
+            cube2view(MainCube);
+            // Сохраняем скрамбл в базе
+            SetParamToBase("Scramble", st);
+        }
+
+        @Override
+        protected void onProgressUpdate (Void... values) {
+            super.onProgressUpdate(values);
+        }
+
     }
 
 }
