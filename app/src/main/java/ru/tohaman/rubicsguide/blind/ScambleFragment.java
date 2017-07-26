@@ -61,7 +61,6 @@ public class ScambleFragment extends Fragment {
     private ListPagerLab listPagerLab;
     private String solve;
 
-
     private static final int REQUEST_SCRAMBLE = 0;
     private static final String DIALOG_SCRAMBLE = "DialogScramble";
     private static final String Scram_Param = "scram";
