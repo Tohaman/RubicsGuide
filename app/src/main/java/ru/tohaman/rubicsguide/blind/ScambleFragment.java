@@ -65,9 +65,6 @@ public class ScambleFragment extends Fragment {
     private static final String DIALOG_SCRAMBLE = "DialogScramble";
     private static final String Scram_Param = "scram";
 
-    public ScambleFragment (){
-
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -160,7 +157,7 @@ public class ScambleFragment extends Fragment {
         Scramble = (TextView) view.findViewById(R.id.scramble);
 
         if (uri != null) {
-            scram = getActivity().getIntent().getData().getQueryParameter(Scram_Param);
+            scram = uri.getQueryParameter(Scram_Param);
             scram = scram.replace("_"," ");
         } else {
             scram = GetParamFromBase("Scramble");
@@ -250,7 +247,6 @@ public class ScambleFragment extends Fragment {
         cube2view(MainCube);
 
         return view;
-
     }
 
     // Обрабатываем результат вызова редактирования скрамбла
@@ -276,6 +272,9 @@ public class ScambleFragment extends Fragment {
             }
         }
     }
+
+
+
 
     @Override
     public void onResume() {
