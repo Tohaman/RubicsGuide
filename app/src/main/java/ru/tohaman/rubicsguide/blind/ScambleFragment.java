@@ -137,6 +137,7 @@ public class ScambleFragment extends Fragment {
                 int i = Integer.parseInt(ScrambleLength.getText().toString());
                 i--;
                 ScrambleLength.setText(String.valueOf(i));
+                SetParamToBase("ScrambleLength",String.valueOf(i));
             }
         });
 
@@ -150,6 +151,7 @@ public class ScambleFragment extends Fragment {
                 int i = Integer.parseInt(ScrambleLength.getText().toString());
                 i++;
                 ScrambleLength.setText(String.valueOf(i));
+                SetParamToBase("ScrambleLength",String.valueOf(i));
             }
         });
 

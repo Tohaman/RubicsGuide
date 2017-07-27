@@ -111,7 +111,7 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
     @Override
     public void onCreateOptionsMenu (Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
-        inflater.inflate(R.menu.fragment_menu_list, menu);
+        inflater.inflate(R.menu.pagerfragment_menu_list, menu);
     }
 
     @Override

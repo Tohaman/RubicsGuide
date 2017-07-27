@@ -9,5 +9,6 @@
     <string name="righthand">Правая рука</string>
     <string name="init_start_time">0:00:00</string>
     <string name="scram_waiting">Ищем подходящий скрамбл</string>
+    <string name="Settings">Настройки</string>
 
 </resources>
