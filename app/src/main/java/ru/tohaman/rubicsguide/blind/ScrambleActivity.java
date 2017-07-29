@@ -29,6 +29,8 @@ public class ScrambleActivity extends SingleFragmentActivity {
         if (status == BatteryManager.BATTERY_STATUS_CHARGING | status == BatteryManager.BATTERY_STATUS_FULL){
             // Если заряжается или заряжен на 100%, то не выключаем экран в данной активности.
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        } else {
+            getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         }
     }
 

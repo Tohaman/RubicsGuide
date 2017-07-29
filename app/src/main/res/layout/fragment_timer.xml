@@ -9,57 +9,54 @@
     tools:context="ru.tohaman.rubicsguide.timer.TimerActivity">
 
 
-    <GridLayout
+    <LinearLayout
+        android:id="@+id/left_hand"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="8dp"
-        android:background="@color/blue"
-        android:columnCount="2"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/dark_gray"
+        android:gravity="bottom|center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/rigth_hand"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:id="@+id/left_hand"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_columnWeight="1"
-            android:layout_marginEnd="4dp"
-            android:background="@color/dark_gray"
-            android:gravity="bottom|center">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:contentDescription="@string/lefthand"
+            app:srcCompat="@drawable/timer_1"/>
+    </LinearLayout>
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="50dp"
-                android:contentDescription="@string/lefthand"
-                app:srcCompat="@drawable/timer_1"/>
-        </LinearLayout>
+    <LinearLayout
+        android:id="@+id/rigth_hand"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/dark_gray"
+        android:gravity="bottom|center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@id/left_hand"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:id="@+id/rigth_hand"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_columnWeight="1"
-            android:layout_marginStart="4dp"
-            android:background="@color/dark_gray"
-            android:gravity="bottom|center">
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="50dp"
-                android:contentDescription="@string/righthand"
-                app:srcCompat="@drawable/timer_2"/>
-        </LinearLayout>
-
-    </GridLayout>
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:contentDescription="@string/righthand"
+            app:srcCompat="@drawable/timer_2"/>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="220dp"
@@ -68,7 +65,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="50dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -90,7 +88,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="?android:attr/colorButtonNormal"
+                android:background="@color/white"
                 android:fontFamily="monospace"
                 android:gravity="center_horizontal"
                 android:text="@string/init_start_time"
@@ -104,11 +102,6 @@
                 android:layout_margin="@dimen/dimen_margin_8"
                 android:background="@drawable/red_oval"
                 />
-            <!--<Button-->
-            <!--android:id="@+id/button_start"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="start"/>-->
 
         </LinearLayout>
 
