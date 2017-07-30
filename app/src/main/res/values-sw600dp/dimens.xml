@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="timer_image_size">150dp</dimen>
-    <dimen name="timer_image_bottom_margin">150dp</dimen>
+    <dimen name="timer_image_size">160dp</dimen>
+    <dimen name="timer_image_bottom_margin">180dp</dimen>
     <dimen name="timer_width">420dp</dimen>
     <dimen name="timer_circle_diameter">32dp</dimen>
     <dimen name="timer_text_size">40sp</dimen>

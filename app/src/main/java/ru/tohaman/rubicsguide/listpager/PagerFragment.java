@@ -3,12 +3,14 @@ package ru.tohaman.rubicsguide.listpager;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.text.Html;
@@ -23,6 +25,7 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -140,7 +143,13 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
         mTitleField = (TextView) v.findViewById(R.id.pager_title_text);
         mTitleField.setText(mListPager.getTitle());
 
-        if (!VIDEO_ID.equals("")) {
+        SharedPreferences prefs= PreferenceManager.getDefaultSharedPreferences(getActivity());
+        boolean enabled = prefs.getBoolean("video_preview", false);
+
+        LinearLayout ll = (LinearLayout) v.findViewById(R.id.frame);
+        if (enabled) {
+            ll.setVisibility(View.VISIBLE);
+
             thumbnailView = (YouTubeThumbnailView) v.findViewById(R.id.pager_youtube);
             thumbnailView.initialize(DEVELOPER_KEY,this);
             thumbnailView.setOnClickListener(new View.OnClickListener() {
@@ -160,6 +169,8 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
                     }
                 }
             });
+        } else {
+            ll.setVisibility(View.INVISIBLE);
         }
 
         // Немного преобразуем текст для корректного отображения.

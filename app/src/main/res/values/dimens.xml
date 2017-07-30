@@ -3,7 +3,7 @@
     <dimen name="dimen_margin_16">16dp</dimen>
     <dimen name="dimen_margin_8">8dp</dimen>
     <dimen name="TimerLightSize">32dp</dimen>
-    <dimen name="timer_image_size">70dp</dimen>
+    <dimen name="timer_image_size">80dp</dimen>
     <dimen name="timer_image_bottom_margin">50dp</dimen>
     <dimen name="timer_width">220dp</dimen>
     <dimen name="timer_heigth">100dp</dimen>
