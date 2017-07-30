@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.support.v4.app.Fragment;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import ru.tohaman.rubicsguide.about.AboutActivity;
@@ -48,6 +49,17 @@ public class MainActivity extends SingleFragmentActivity implements MainFragment
 
     }
 
+    @Override
+    public boolean onMyOptionsItemSelected (MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.main_settings:
+                Intent mIntent = new Intent(this, SettingsActivity.class);
+                startActivity(mIntent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item) ;
+        }
+    }
 
     @Override
     // действие для левого фрагмента двухфрагментной активности или основного фрагмента однофрагментной

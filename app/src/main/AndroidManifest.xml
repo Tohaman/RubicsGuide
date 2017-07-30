@@ -52,7 +52,8 @@
         <activity android:name=".blind.BlindMenuActivity"/>
         <activity android:name=".blind.AzbukaActivity"/>
         <activity android:name=".timer.TimerActivity">
-
+        </activity>
+        <activity android:name=".SettingsActivity">
         </activity>
     </application>
 

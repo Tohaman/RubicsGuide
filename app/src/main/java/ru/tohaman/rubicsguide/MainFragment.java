@@ -1,6 +1,7 @@
 package ru.tohaman.rubicsguide;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -16,6 +17,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
+import ru.tohaman.rubicsguide.g2f.G2FActivity;
 import ru.tohaman.rubicsguide.listpager.ListPager;
 import ru.tohaman.rubicsguide.listpager.ListPagerLab;
 import ru.tohaman.rubicsguide.listpager.MyListAdapter;
@@ -32,6 +34,7 @@ public class MainFragment extends Fragment {
     //Обязательный интерфейс для активности-хоста
     public interface Callbacks {
         void onMainItemSelected (int id);
+        boolean onMyOptionsItemSelected (MenuItem item);
     }
 
 
@@ -95,13 +98,7 @@ public class MainFragment extends Fragment {
 
     @Override
     public boolean onOptionsItemSelected (MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.main_settings:
-
-                return true;
-            default:
-                return super.onOptionsItemSelected(item) ;
-        }
+        return mCallbacks.onMyOptionsItemSelected (item);
     }
 
     @Override

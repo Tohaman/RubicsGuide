@@ -27,9 +27,9 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
+            android:layout_width="@dimen/timer_image_size"
+            android:layout_height="@dimen/timer_image_size"
+            android:layout_marginBottom="@dimen/timer_image_bottom_margin"
             android:contentDescription="@string/lefthand"
             app:srcCompat="@drawable/timer_1"/>
     </LinearLayout>
@@ -51,21 +51,21 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
+            android:layout_width="@dimen/timer_image_size"
+            android:layout_height="@dimen/timer_image_size"
+            android:layout_marginBottom="@dimen/timer_image_bottom_margin"
             android:contentDescription="@string/righthand"
             app:srcCompat="@drawable/timer_2"/>
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="220dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/timer_width"
+        android:layout_height="@dimen/timer_heigth"
         android:background="@color/blue"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="50dp">
 
         <LinearLayout
@@ -77,8 +77,8 @@
 
             <View
                 android:id="@+id/left_light"
-                android:layout_width="@dimen/dimen_margin_16"
-                android:layout_height="@dimen/dimen_margin_16"
+                android:layout_width="@dimen/timer_circle_diameter"
+                android:layout_height="@dimen/timer_circle_diameter"
                 android:layout_margin="@dimen/dimen_margin_8"
                 android:background="@drawable/red_oval"
                 />
@@ -92,13 +92,13 @@
                 android:fontFamily="monospace"
                 android:gravity="center_horizontal"
                 android:text="@string/init_start_time"
-                android:textSize="24sp"
+                android:textSize="@dimen/timer_text_size"
                 android:textStyle="bold"/>
 
             <View
                 android:id="@+id/right_light"
-                android:layout_width="@dimen/dimen_margin_16"
-                android:layout_height="@dimen/dimen_margin_16"
+                android:layout_width="@dimen/timer_circle_diameter"
+                android:layout_height="@dimen/timer_circle_diameter"
                 android:layout_margin="@dimen/dimen_margin_8"
                 android:background="@drawable/red_oval"
                 />
