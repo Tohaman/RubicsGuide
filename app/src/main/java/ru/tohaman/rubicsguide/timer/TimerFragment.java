@@ -95,6 +95,10 @@ public class TimerFragment extends Fragment {
                 return true;
             }
         });
+
+        //TODO При первом запуске вывести подсказку
+        // http://developer.alexanderklimov.ru/android/theory/sharedpreferences.php
+
         return view;
     }
 
