@@ -144,14 +144,14 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
         mTitleField = (TextView) v.findViewById(R.id.pager_title_text);
         mTitleField.setText(mListPager.getTitle());
 
-        SharedPreferences prefs= PreferenceManager.getDefaultSharedPreferences(getActivity());
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
         boolean enabled = prefs.getBoolean("video_preview", false);
+        TextView youtubetext = (TextView) v.findViewById(R.id.pager_youtubetext);
+        thumbnailView = (YouTubeThumbnailView) v.findViewById(R.id.pager_youtube);
 
-        ConstraintLayout ll = (ConstraintLayout) v.findViewById(R.id.frame);
         if (enabled) {
-            ll.setVisibility(View.VISIBLE);
-
-            thumbnailView = (YouTubeThumbnailView) v.findViewById(R.id.pager_youtube);
+            youtubetext.setVisibility(View.INVISIBLE);
+            thumbnailView.setVisibility(View.VISIBLE);
             thumbnailView.initialize(DEVELOPER_KEY,this);
             thumbnailView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -170,12 +170,23 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
                     }
                 }
             });
-        } else {
-            ll.setVisibility(View.INVISIBLE);
+        } else {    // если в настройках указано не отображать превью, то пишем текстом и делаем текст кликабельным
+            youtubetext.setVisibility(View.VISIBLE);
+            thumbnailView.setVisibility(View.INVISIBLE);
+            String text = "<html><body> <a href=\"rubic-activity://ytactivity?time=0:00&link=%s\"> %s </a></body></html>";
+            String description = String.format(text,mListPager.getUrl(),getString(R.string.pager_youtubeText));
+            Spanned spanresult;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                spanresult = Html.fromHtml(description, Html.FROM_HTML_MODE_LEGACY, imgGetter, null);
+            } else {
+                spanresult = Html.fromHtml(description, imgGetter, null);
+            }
+            youtubetext.setText(spanresult);
+            youtubetext.setMovementMethod(LinkMovementMethod.getInstance());
         }
 
         // Немного преобразуем текст для корректного отображения.
-        String text = "<html><body style=\"text-align:justify\"> %s </body></Html>";
+        String text = "<html><body style=\"text-align:justify\"> %s </body></html>";
         String description = String.format(text,getString(mListPager.getDescription()));
 //        description = description.replace("#", "%23");
         description = description.replace("%%", "%25");

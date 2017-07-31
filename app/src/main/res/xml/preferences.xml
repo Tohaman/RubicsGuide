@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-
-
     <CheckBoxPreference
-        android:defaultValue="false"
+        android:defaultValue="true"
         android:key="video_preview"
         android:title="Отображать превью видеофрагментов"/>
 </PreferenceScreen>
