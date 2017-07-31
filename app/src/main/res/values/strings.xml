@@ -10,5 +10,6 @@
     <string name="init_start_time">0:00:00</string>
     <string name="scram_waiting">Ищем подходящий скрамбл</string>
     <string name="Settings">Настройки</string>
+    <string name="pager_youtubeText">Ссылка на полное видео на youtube</string>
 
 </resources>

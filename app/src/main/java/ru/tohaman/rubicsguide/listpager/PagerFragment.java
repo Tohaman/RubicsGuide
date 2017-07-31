@@ -11,6 +11,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.text.Html;
@@ -146,7 +147,7 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
         SharedPreferences prefs= PreferenceManager.getDefaultSharedPreferences(getActivity());
         boolean enabled = prefs.getBoolean("video_preview", false);
 
-        LinearLayout ll = (LinearLayout) v.findViewById(R.id.frame);
+        ConstraintLayout ll = (ConstraintLayout) v.findViewById(R.id.frame);
         if (enabled) {
             ll.setVisibility(View.VISIBLE);
 
