@@ -3,5 +3,6 @@
     <CheckBoxPreference
         android:defaultValue="true"
         android:key="video_preview"
-        android:title="Отображать превью видеофрагментов"/>
+        android:title="Отображать превью видеофрагментов"
+        android:summary="Уберите, если не установлен YouTube Player или у вас нестабильное соединение с интернетом."/>
 </PreferenceScreen>

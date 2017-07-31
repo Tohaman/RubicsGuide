@@ -47,6 +47,7 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
 
     private static final String ARG_ID = "ru.tohaman.rubicsguide.phase_id";   //передается номер страницы, которую надо открыть в пейджере
     private static final String DIALOG_COMMENT = "DialogComment";  //в этой "паре", передаем значение комментария для редактирования
+    public static final String sVideo_preview = "video_preview";   //наименования ключа для сохранения/извлечения значения из файла настроек
 
     // YouTube
     private static String VIDEO_ID = "0TvO_rpG_aM";
@@ -145,7 +146,7 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
         mTitleField.setText(mListPager.getTitle());
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        boolean enabled = prefs.getBoolean("video_preview", false);
+        boolean enabled = prefs.getBoolean(sVideo_preview, true);
         TextView youtubetext = (TextView) v.findViewById(R.id.pager_youtubetext);
         thumbnailView = (YouTubeThumbnailView) v.findViewById(R.id.pager_youtube);
 
