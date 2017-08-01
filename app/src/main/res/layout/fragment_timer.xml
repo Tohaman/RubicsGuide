@@ -113,92 +113,14 @@
         android:background="@color/semitransparent_grey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
 
-        <TextView
-            android:id="@+id/hint_text2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="80dp"
-            android:background="@color/white"
-            android:gravity="center"
-            android:padding="@dimen/dimen_margin_16"
-            android:text="@string/timer_hint_text2"
-            android:textColor="@color/dark_gray"
-            android:textSize="@dimen/hint_text_size"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-        <TextView
-            android:id="@+id/hint_text"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="80dp"
-            android:background="@color/white"
-            android:gravity="center"
-            android:padding="@dimen/dimen_margin_16"
-            android:text="@string/timer_hint_text1"
-            android:textColor="@color/dark_gray"
-            android:textSize="@dimen/hint_text_size"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
         <LinearLayout
-            android:id="@+id/hint_left_hand"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@color/transparent"
-            android:gravity="bottom|center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@+id/hint_right_hand"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:id="@+id/hint_imageView"
-                android:layout_width="@dimen/timer_image_size"
-                android:layout_height="@dimen/timer_image_size"
-                android:layout_marginBottom="@dimen/timer_image_bottom_margin"
-                android:contentDescription="@string/lefthand"
-                app:srcCompat="@drawable/timer_1"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/hint_right_hand"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="4dp"
-            android:background="@color/transparent"
-            android:gravity="bottom|center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintStart_toEndOf="@id/hint_left_hand"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:id="@+id/hint_imageView2"
-                android:layout_width="@dimen/timer_image_size"
-                android:layout_height="@dimen/timer_image_size"
-                android:layout_marginBottom="@dimen/timer_image_bottom_margin"
-                android:contentDescription="@string/righthand"
-                app:srcCompat="@drawable/timer_2"/>
-        </LinearLayout>
-
-        <LinearLayout
+            android:id="@+id/hint_toplayout"
             android:layout_width="@dimen/timer_width"
             android:layout_height="@dimen/timer_heigth"
             android:background="@color/transparent"
@@ -243,6 +165,84 @@
             </LinearLayout>
 
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/hint_right_hand"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/transparent"
+            android:gravity="bottom|center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/hint_left_hand"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/hint_imageView2"
+                android:layout_width="@dimen/timer_image_size"
+                android:layout_height="@dimen/timer_image_size"
+                android:layout_marginBottom="@dimen/timer_image_bottom_margin"
+                android:contentDescription="@string/righthand"
+                app:srcCompat="@drawable/timer_2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/hint_left_hand"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/transparent"
+            android:gravity="bottom|center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/hint_right_hand"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/hint_imageView"
+                android:layout_width="@dimen/timer_image_size"
+                android:layout_height="@dimen/timer_image_size"
+                android:layout_marginBottom="@dimen/timer_image_bottom_margin"
+                android:contentDescription="@string/lefthand"
+                app:srcCompat="@drawable/timer_1"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/hint_text2"
+            android:layout_width="@dimen/timer_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="60dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="@dimen/dimen_margin_16"
+            android:text="@string/timer_hint_text2"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/hint_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hint_toplayout"/>
+
+        <TextView
+            android:id="@+id/hint_text"
+            android:layout_width="@dimen/timer_width"
+            android:layout_height="wrap_content"
+            android:layout_margin="60dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="@dimen/dimen_margin_16"
+            android:text="@string/timer_hint_text1"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/hint_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hint_toplayout"/>
 
     </android.support.constraint.ConstraintLayout>
 
