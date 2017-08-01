@@ -9,6 +9,7 @@
     <dimen name="timer_heigth">100dp</dimen>
     <dimen name="timer_circle_diameter">16dp</dimen>
     <dimen name="timer_text_size">24sp</dimen>
+    <dimen name="hint_text_size">18sp</dimen>
     <dimen name="preview_heigth">120dp</dimen>
 
 </resources>

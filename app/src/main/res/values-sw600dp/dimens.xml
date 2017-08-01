@@ -3,8 +3,9 @@
     <dimen name="timer_image_size">160dp</dimen>
     <dimen name="timer_image_bottom_margin">180dp</dimen>
     <dimen name="timer_width">420dp</dimen>
+    <dimen name="timer_heigth">160dp</dimen>
     <dimen name="timer_circle_diameter">32dp</dimen>
     <dimen name="timer_text_size">40sp</dimen>
-    <dimen name="timer_heigth">160dp</dimen>
+    <dimen name="hint_text_size">34sp</dimen>
     <dimen name="preview_heigth">180dp</dimen>
 </resources>

@@ -1,10 +1,14 @@
 package ru.tohaman.rubicsguide.timer;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
+import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.util.Log;
@@ -13,32 +17,30 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.Chronometer;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import ru.tohaman.rubicsguide.CommentFragment;
 import ru.tohaman.rubicsguide.R;
-import ru.tohaman.rubicsguide.listpager.PagerFragment;
-
-import static android.content.ContentValues.TAG;
 
 /**
  * Created by anton on 19.07.17.
  */
 
 public class TimerFragment extends Fragment {
-    TextView timerTextView;
+    private TextView timerTextView, hintText1, hintText2, hintTextTime;
     long startTime = 0;
     boolean leftHandDown = false;
     boolean rightHandDown = false;
     boolean timerReady = false;
     boolean timerStart = false;
+    int a;
     View mLeftLight;
     View mRightLight;
-    protected static final String TAG = "GestureDetectorMain";
     private GestureDetector mGestureDetector;
+    private ConstraintLayout mConstraintLayout;
+    private SharedPreferences sp;
+    ImageView hintLeftHand, hintRightHand;
 
     //runs without a timer by reposting this handler at the end of the runnable
     Handler timerHandler = new Handler();
@@ -71,8 +73,8 @@ public class TimerFragment extends Fragment {
 
         LinearLayout mRightHand = (LinearLayout) view.findViewById(R.id.rigth_hand);
         LinearLayout mLeftHand = (LinearLayout) view.findViewById(R.id.left_hand);
-        mLeftLight = (View) view.findViewById(R.id.left_light);
-        mRightLight = (View) view.findViewById(R.id.right_light);  // равносильно mRightLight = (View) view.findViewById(R.id.right_light);
+        mLeftLight = view.findViewById(R.id.left_light);
+        mRightLight = view.findViewById(R.id.right_light);  // равносильно mRightLight = (View) view.findViewById(R.id.right_light);
 
         // Обработка прикосновения к левому лэйауту
         mLeftHand.setOnTouchListener(new View.OnTouchListener() {
@@ -96,10 +98,54 @@ public class TimerFragment extends Fragment {
             }
         });
 
-        //TODO При первом запуске вывести подсказку
-        // http://developer.alexanderklimov.ru/android/theory/sharedpreferences.php
+        mConstraintLayout = (ConstraintLayout) view.findViewById(R.id.hint_background);
+        sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
+
+        // проверяем, первый ли раз открывается таймер
+        boolean hintTimer = sp.getBoolean("hint_Timer", true);
+        if (hintTimer) { //если первый, то выводим подсказку
+            hintText1 = (TextView) view.findViewById(R.id.hint_text);
+            hintText2 = (TextView) view.findViewById(R.id.hint_text2);
+            hintTextTime = (TextView) view.findViewById(R.id.hint_texttime);
+            hintLeftHand = (ImageView) view.findViewById(R.id.hint_imageView);
+            hintRightHand = (ImageView) view.findViewById(R.id.hint_imageView2);
+
+            mConstraintLayout.setVisibility(View.VISIBLE);
+            a = 0;
+            hintText1.setVisibility(View.VISIBLE);
+            hintTextTime.setVisibility(View.INVISIBLE);
+            hintText2.setVisibility(View.INVISIBLE);
+            hintRightHand.setVisibility(View.VISIBLE);
+            hintLeftHand.setVisibility(View.VISIBLE);
+            mConstraintLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (a == 0) {
+                        hintText1.setVisibility(View.INVISIBLE);
+                        hintText2.setVisibility(View.VISIBLE);
+                        hintRightHand.setVisibility(View.INVISIBLE);
+                        hintLeftHand.setVisibility(View.INVISIBLE);
+                        hintTextTime.setVisibility(View.VISIBLE);
+                        a++;
+                    } else {
+                        SharedPreferences.Editor e = sp.edit();
+                        e.putBoolean("hint_Timer", false);
+                        e.commit(); // подтверждаем изменения
+                        mConstraintLayout.setVisibility(View.INVISIBLE);
+                    }
+                }
+            });
+        } else {    // если не первый, то убираем подсказку
+            mConstraintLayout.setVisibility(View.INVISIBLE);
+        }
 
         return view;
+    }
+
+    @Override
+    public void onResume (){
+        super.onResume();
+
     }
 
     @Override
