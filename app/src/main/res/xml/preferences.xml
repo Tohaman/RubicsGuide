@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <CheckBoxPreference
-        android:defaultValue="true"
-        android:key="video_preview"
-        android:title="Отображать превью видеофрагментов"
-        android:summary="Уберите, если не установлен YouTube Player или у вас нестабильное соединение с интернетом."/>
-    <CheckBoxPreference
-        android:defaultValue="true"
-        android:key="hint_Timer"
-        android:title="Показать подсказку для таймера"
-        android:summary="при первом входе в таймер."/>
+    <PreferenceCategory
+        android:title="Общие">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="video_preview"
+            android:title="Отображать превью видеофрагментов"
+            android:summary="Уберите, если не установлен YouTube Player или у вас нестабильное соединение с интернетом."/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Таймер">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="hint_Timer"
+            android:title="Показать подсказку для таймера"
+            android:summary="при первом входе в таймер."/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Генератор скрамблов">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="sleep_scram_gen"
+            android:title="Не выключать экран"
+            android:summary="в генераторе скрамблов"/>
+    </PreferenceCategory>
 
 </PreferenceScreen>

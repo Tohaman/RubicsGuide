@@ -1,14 +1,11 @@
 package ru.tohaman.rubicsguide.blind;
 
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.os.BatteryManager;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.WindowManager;
 
-import ru.tohaman.rubicsguide.R;
 import ru.tohaman.rubicsguide.SingleFragmentActivity;
 
 public class ScrambleActivity extends SingleFragmentActivity {
@@ -21,18 +18,14 @@ public class ScrambleActivity extends SingleFragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        IntentFilter batteryIntentFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
-        Intent batteryIntent = registerReceiver(null, batteryIntentFilter);
-
-        int status = batteryIntent.getIntExtra(BatteryManager.EXTRA_STATUS, -1);
-        if (status == BatteryManager.BATTERY_STATUS_CHARGING | status == BatteryManager.BATTERY_STATUS_FULL){
-            // Если заряжается или заряжен на 100%, то не выключаем экран в данной активности.
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+        boolean  sleep_scram_gen= sp.getBoolean("sleep_scram_gen", false);
+        if (sleep_scram_gen) {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        } else {
+        }  else {
             getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         }
-    }
 
+    }
 
 }
