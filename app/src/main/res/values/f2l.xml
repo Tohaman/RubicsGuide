@@ -26,6 +26,7 @@
         <item>@string/f2l_st23_title</item>
         <item>@string/f2l_st24_title</item>
         <item>@string/f2l_st25_title</item>
+        <item>@string/f2l_st26_title</item>
     </string-array>
 
     <integer-array name="f2l_icon">
@@ -54,6 +55,7 @@
         <item>@drawable/f2l_23</item>
         <item>@drawable/f2l_24</item>
         <item>@drawable/f2l_25</item>
+        <item>@drawable/f2l2_1</item>
     </integer-array>
 
     <string-array name="f2l_descr">
@@ -82,6 +84,7 @@
         <item>@string/f2l_st23_descr</item>
         <item>@string/f2l_st24_descr</item>
         <item>@string/f2l_st25_descr</item>
+        <item>@string/f2l_st26_descr</item>
     </string-array>
 
     <string-array name="f2l_url">
@@ -110,6 +113,7 @@
         <item>@string/f2l_st23_url</item>
         <item>@string/f2l_st24_url</item>
         <item>@string/f2l_st25_url</item>
+        <item>@string/f2l_st26_url</item>
     </string-array>
 
 <!-- ______________________________________________________________________________ -->
@@ -733,5 +737,18 @@
     ]]></string>
     <string name="f2l_st25_url">WIFh0sXDkMM</string>
 
+    <string name="f2l_st26_title">Ускорения 2(Advanced 2FL 2.0)</string>
+    <string name="f2l_st26_descr" formatted="false"><![CDATA[
+    <p>Вторая часть усорений F2L от Кристофера Олсона <a href="http://www.cyotheking.com/about">Christopher Olson.</a></p>
+
+    <p>1. Первая <a href="rubic-activity://ytactivity?time=0:12&link=28Ln2lfkD9U">ситуация.</a>
+    Ускорение для классической \"ромашки налево\", но только для случая, когда задняя правая пара
+    еще не на своем месте.
+    </p>
+    <p style="text-align:center"><img src="f2l2_1_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=0:16&link=28Ln2lfkD9U">Алгоритм:</a> R2 U\' R\' U R2</b>
+
+    ]]></string>
+    <string name="f2l_st26_url">28Ln2lfkD9U</string>
 
 </resources>
