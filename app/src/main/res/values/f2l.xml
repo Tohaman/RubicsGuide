@@ -801,16 +801,23 @@
 
     <p>8. Восьмая <a href="rubic-activity://ytactivity?time=2:13&link=28Ln2lfkD9U">ситуация.</a>
     Редкая ситуация, но можно пропустить OLL и сразу перейти к PLL. Очень похоже на <b>Носик</b>,
-    только начинается в выключения света, а потом заселяем в 4 хода. Обратите внимание, что лучше
+    только начинается c выключения света, а потом заселяем в 4 хода. Обратите внимание, что лучше
     выполнять из стандартного положения рук, а нижнюю грань в обоих случаях крутить левой рукой.</p>
     <p style="text-align:center"><img src="f2l2_8_1.png" width="30%%"></p>
-    <b><a href="rubic-activity://ytactivity?time=2:22&link=28Ln2lfkD9U">Алгоритм:</a> (R\' D\' R U\' R\' D R) (U (R U\' R\')</b>
+    <b><a href="rubic-activity://ytactivity?time=2:22&link=28Ln2lfkD9U">Алгоритм:</a> (R\' D\' R U\' R\' D R) (U R U\' R\')</b>
 
     <p>9. Девятая <a href="rubic-activity://ytactivity?time=2:28&link=28Ln2lfkD9U">ситуация.</a>
-
-    </p>
+    Еще одна ситуация, когда легко пропустить OLL. Быстрый и удобный алгоритм, который можно испоьзовать
+    и как основной для <b>Части Е</b>.</p>
     <p style="text-align:center"><img src="f2l2_9_1.png" width="30%%"></p>
-    <b><a href="rubic-activity://ytactivity?time=2:38&link=28Ln2lfkD9U">Алгоритм:</a> (R\' D\' R U\' R\' D R) (U (R U\' R\')</b>
+    <b><a href="rubic-activity://ytactivity?time=2:38&link=28Ln2lfkD9U">Алгоритм:</a> (R U\' R2 D\' R U2 R\' D R)</b>
+
+    <p>10. Десятая <a href="rubic-activity://ytactivity?time=2:43&link=28Ln2lfkD9U">ситуация.</a>
+    Очень полезный алгоритм, для ситуации когда угол на своем месте, ребро тоже на своем, но перевернуто.
+    Это будет гораздо быстрее, чем сначала поднимать пару на верхний слой, а потом решать эту пару, но
+    данный алгоритм можно применять только, когда задняя правая пара не на своем месте (как в ускорении 1).</p>
+    <p style="text-align:center"><img src="f2l2_10_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=3:03&link=28Ln2lfkD9U">Алгоритм:</a> D\' R\' F R F\' R U\' R\' D</b>
 
 
     ]]></string>
