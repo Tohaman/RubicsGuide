@@ -3,26 +3,25 @@
     <string-array name="g2f_title">
         <item>Ускорения для начинающих</item>
         <item>Ускоряем крест</item>
+        <item>Жизненный F2L + Advanced F2L</item>
         <item>Максимкин PLL</item>
         <item>Долгожданный OLL</item>
-        <item>Жизненный F2L + Advanced F2L</item>
     </string-array>
 
     <integer-array name="g2f_icon">
         <item>@drawable/accel_2</item>
         <item>@drawable/cross</item>
+        <item>@drawable/f2l</item>
         <item>@drawable/pll</item>
         <item>@drawable/oll</item>
-        <item>@drawable/f2l</item>
     </integer-array>
 
     <string-array name="g2f_phase">
         <item>ACCEL</item>
         <item>CROSS</item>
+        <item>F2L</item>
         <item>PLL</item>
         <item>OLL</item>
-        <item>F2L</item>
     </string-array>
-
 
 </resources>
