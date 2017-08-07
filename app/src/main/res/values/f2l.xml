@@ -27,6 +27,8 @@
         <item>@string/f2l_st24_title</item>
         <item>@string/f2l_st25_title</item>
         <item>@string/f2l_st26_title</item>
+        <item>@string/f2l_st27_title</item>
+        <item>@string/f2l_st28_title</item>
     </string-array>
 
     <integer-array name="f2l_icon">
@@ -55,6 +57,8 @@
         <item>@drawable/f2l_23</item>
         <item>@drawable/f2l_24</item>
         <item>@drawable/f2l_25</item>
+        <item>@drawable/f2l2_1</item>
+        <item>@drawable/f2l2_1</item>
         <item>@drawable/f2l2_1</item>
     </integer-array>
 
@@ -114,6 +118,8 @@
         <item>@string/f2l_st24_url</item>
         <item>@string/f2l_st25_url</item>
         <item>@string/f2l_st26_url</item>
+        <item>@string/f2l_st27_url</item>
+        <item>@string/f2l_st28_url</item>
     </string-array>
 
 <!-- ______________________________________________________________________________ -->
@@ -831,5 +837,21 @@
 
     ]]></string>
     <string name="f2l_st26_url">28Ln2lfkD9U</string>
+
+    <string name="f2l_st27_title">Ускорения 3(Advanced 2FL 3.0)</string>
+    <string name="f2l_st27_descr" formatted="false"><![CDATA[
+    <p>Третья часть усорений F2L от Кристофера Олсона <a href="http://www.cyotheking.com/about">Christopher Olson.</a></p>
+
+    ]]></string>
+    <string name="f2l_st27_url">IL7VMSTatAA</string>
+
+    <string name="f2l_st28_title">Ускорения 4(Advanced 2FL 4.0)</string>
+    <string name="f2l_st28_descr" formatted="false"><![CDATA[
+    <p>Четвертая часть усорений F2L от Кристофера Олсона <a href="http://www.cyotheking.com/about">Christopher Olson.</a></p>
+
+    ]]></string>
+    <string name="f2l_st28_url">zstdjvprOAg</string>
+
+
 
 </resources>
