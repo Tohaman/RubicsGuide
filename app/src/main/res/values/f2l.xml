@@ -26,6 +26,9 @@
         <item>@string/f2l_st23_title</item>
         <item>@string/f2l_st24_title</item>
         <item>@string/f2l_st25_title</item>
+        <item>@string/f2l_st26_title</item>
+        <item>@string/f2l_st27_title</item>
+        <item>@string/f2l_st28_title</item>
     </string-array>
 
     <integer-array name="f2l_icon">
@@ -54,6 +57,9 @@
         <item>@drawable/f2l_23</item>
         <item>@drawable/f2l_24</item>
         <item>@drawable/f2l_25</item>
+        <item>@drawable/f2l2_1</item>
+        <item>@drawable/f2l2_1</item>
+        <item>@drawable/f2l2_1</item>
     </integer-array>
 
     <string-array name="f2l_descr">
@@ -82,6 +88,7 @@
         <item>@string/f2l_st23_descr</item>
         <item>@string/f2l_st24_descr</item>
         <item>@string/f2l_st25_descr</item>
+        <item>@string/f2l_st26_descr</item>
     </string-array>
 
     <string-array name="f2l_url">
@@ -110,6 +117,9 @@
         <item>@string/f2l_st23_url</item>
         <item>@string/f2l_st24_url</item>
         <item>@string/f2l_st25_url</item>
+        <item>@string/f2l_st26_url</item>
+        <item>@string/f2l_st27_url</item>
+        <item>@string/f2l_st28_url</item>
     </string-array>
 
 <!-- ______________________________________________________________________________ -->
@@ -316,6 +326,10 @@
     нестандартным начальным положением рук - правая рука как при стандартном положении, а вот у
     левой большой палец сверху.</p>
     <b><a href="rubic-activity://ytactivity?time=3:27&link=WIFh0sXDkMM">Алгоритм:</a> (R B L U\') L\' B\' R\'</b><br/><br/>
+    И еще один вариант (восьмое ускорение из второй части ускорений F2L), Очень похоже на <b>Носик</b>,
+    только начинается в выключения света, приводим ситуацию ко второй ситуации данной части - заселяем
+    в 4 хода.<br/>
+    <b><a href="rubic-activity://ytactivity?time=2:22&link=28Ln2lfkD9U">Алгоритм:</a> (R\' D\' R U\' R\' D R) (U R U\' R\')</b><br/><br/>
     2. Ну и в <a href="rubic-activity://ytactivity?time=9:01&link=r0r78ZFkK-A">случае если</a>
     девушка находится сзади наглого парня, то мы сразу видим, что они образуют идеальную пару,
     которую подводим к своей квартире и заселяем или английским пиф-пафом или обратным пиф-пафом
@@ -439,7 +453,10 @@
     этого мы им включаем свет, но свет оказывается слишком ярким и от этого едет крыша, причем
     против часовой стрелки, поэтому мы выключаем свет. И видим, что пара наша рассталась. Ставим
     парня в дальний правый угол, подгоняем к нему его квартиру. Заселяем в 3 хода.</p>
-    <b><a href="rubic-activity://ytactivity?time=4:36&link=my1HZ8kEq3U">Алгоритм:</a> (R U\' R\' U) {Dw} (R\' U\' R)</b>
+    <b><a href="rubic-activity://ytactivity?time=4:36&link=my1HZ8kEq3U">Алгоритм:</a> (R U\' R\' U) {Dw} (R\' U\' R)</b><br/><br/>
+    Или вариант из второй части ускорений:<br/>
+    <b><a href="rubic-activity://ytactivity?time=1:15&link=28Ln2lfkD9U">Алгоритм:</a> Lw R U\' R\' U Lw\' U2 R U\' R\'</b>
+
     ]]></string>
     <string name="f2l_st18_url">my1HZ8kEq3U</string>
 
@@ -473,7 +490,10 @@
     английским пиф-пафом слева после перехвата или отправляем нашу пару в свадебное путешествие
     <a href="rubic-activity://ytactivity?time=1:48&link=y4pklPQ1cTM">в Лондон</a>, выключаем свет,
     возвращаемся из Лондона и включаем свет.</p>
-    <b><a href="rubic-activity://ytactivity?time=2:32&link=y4pklPQ1cTM">Алгоритм:</a> F R\' F\' R</b>
+    <b><a href="rubic-activity://ytactivity?time=2:32&link=y4pklPQ1cTM">Алгоритм:</a> F R\' F\' R</b><br/><br/>
+    Можно обойтись и без перехватов и чуть более удобными фингертриксами из ускорений:<br/>
+    <b><a href="rubic-activity://ytactivity?time=0:48&link=WIFh0sXDkMM">Алгоритм:</a> Rw U R\' U\' M</b><br/>
+    <b><a href="rubic-activity://ytactivity?time=1:05&link=28Ln2lfkD9U">Алгоритм:</a> U R\' D\' Rw U\' Rw\' D R</b>
     ]]></string>
     <string name="f2l_st20_url">y4pklPQ1cTM</string>
 
@@ -732,6 +752,106 @@
 
     ]]></string>
     <string name="f2l_st25_url">WIFh0sXDkMM</string>
+
+    <string name="f2l_st26_title">Ускорения 2(Advanced 2FL 2.0)</string>
+    <string name="f2l_st26_descr" formatted="false"><![CDATA[
+    <p>Вторая часть усорений F2L от Кристофера Олсона <a href="http://www.cyotheking.com/about">Christopher Olson.</a></p>
+
+    <p>1. Первая <a href="rubic-activity://ytactivity?time=0:12&link=28Ln2lfkD9U">ситуация.</a>
+    Ускорение для классической \"ромашки налево\", но только для случая, когда задняя правая пара
+    еще не на своем месте. Короткий, удобный супербыстрый алгоритм. </p>
+    <p style="text-align:center"><img src="f2l2_1_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=0:29&link=28Ln2lfkD9U">Алгоритм:</a> R2 U\' R\' U R2</b>
+
+    <p>2. Вторая <a href="rubic-activity://ytactivity?time=0:35&link=28Ln2lfkD9U">ситуация.</a>
+    Противоположная предыдущей, для классической \"ромашки направо\", но опять только для случая, когда
+    передняя правая пара еще не на своем месте.</p>
+    <p style="text-align:center"><img src="f2l2_2_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=0:46&link=28Ln2lfkD9U">Алгоритм:</a> R2 U R U\' R2</b>
+
+    <p>3. Третья <a href="rubic-activity://ytactivity?time=0:53&link=28Ln2lfkD9U">ситуация.</a>
+    Вариант для <b>Части Т</b>, но пара стоит слева. Вариант без перехватов и Dw кручений.</p>
+    <p style="text-align:center"><img src="f2l2_3_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=1:05&link=28Ln2lfkD9U">Алгоритм:</a> F (U R U\' R\') F\' R U R\'</b>
+
+    <p>4. Четвертая <a href="rubic-activity://ytactivity?time=1:11&link=28Ln2lfkD9U">ситуация.</a>
+    Вариант для классической <b>Части Т</b>.</p>
+    <p style="text-align:center"><img src="f2l2_4_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=1:15&link=28Ln2lfkD9U">Алгоритм:</a> x\' R2 U\' R\' U R\' x U2 R U\' R\'<br/> или немного по другому: Lw R U\' R\' U Lw\' U2 R U\' R\'</b>
+
+    <p>5. Пятая <a href="rubic-activity://ytactivity?time=1:22&link=28Ln2lfkD9U">ситуация.</a>
+    Казалось бы что тут ускорять, если данная ситуация решается в 3 хода. Но в данной ситуации можно
+    сразу поставить на место и ребра (EO - Edge Orientation), тем самым упростив себе OLL, а может и
+    совсем его пропустив. Т.е. если у вас пара как на картинке и только одна левая верхняя грань
+    ориентирована как надо (желтой вверх), то можно выполнить данный алгоритм. По сути
+    он объединяет два хорошо знакомых алгоритма английский пиф-паф и палку - (R\' F R <b>F\') (F</b> R U R\' F\'), но
+    без ненужных \"из Лондона\" и \"в Лондон\") на стыке.</p>
+    <p style="text-align:center"><img src="f2l2_5_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=1:35&link=28Ln2lfkD9U">Алгоритм:</a> R\' F R2 U R U\' F\'</b>
+
+    <p>6. Шестая <a href="rubic-activity://ytactivity?time=1:41&link=28Ln2lfkD9U">ситуация.</a>
+    Можно ходом U\' привести ситуацию к первому ускорению перовой части, но в данном случае, обратите
+    внимание еще и на ребра, т.е. снова EO - в действии. Если ориентировано только одно дальнее ребро,
+    то все ребра для OLL встанут на место.<br/>
+    К тому же, алгоритм без перехватов и с очень удобным
+    фингертриксом, поэтому можно использовать и как основной алгоритм для <b>Части Ф</b>.</p>
+    <p style="text-align:center"><img src="f2l2_6_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=1:56&link=28Ln2lfkD9U">Алгоритм:</a> R\' D\' Rw U\' Rw\' D R</b>
+
+    <p>7. Седьмая <a href="rubic-activity://ytactivity?time=2:00&link=28Ln2lfkD9U">ситуация.</a>
+    И снова казалось бы что тут ускорять, перехват и установка в 2 хода. Но опять обращаем внимание
+    на ребра верхней грани. И снова если только одно дальнее ребро ориентировано как надо, лучше
+    выполнить очень похожий на предыдущий алгоритм.</p>
+    <p style="text-align:center"><img src="f2l2_7_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=2:09&link=28Ln2lfkD9U">Алгоритм:</a> R\' D\' Rw U\' Rw\' D R</b>
+
+    <p>8. Восьмая <a href="rubic-activity://ytactivity?time=2:13&link=28Ln2lfkD9U">ситуация.</a>
+    Редкая ситуация, но можно пропустить OLL и сразу перейти к PLL. Очень похоже на <b>Носик</b>,
+    только начинается c выключения света, а потом заселяем в 4 хода. Обратите внимание, что лучше
+    выполнять из стандартного положения рук, а нижнюю грань в обоих случаях крутить левой рукой.</p>
+    <p style="text-align:center"><img src="f2l2_8_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=2:22&link=28Ln2lfkD9U">Алгоритм:</a> (R\' D\' R U\' R\' D R) (U R U\' R\')</b>
+
+    <p>9. Девятая <a href="rubic-activity://ytactivity?time=2:28&link=28Ln2lfkD9U">ситуация.</a>
+    Еще одна ситуация, когда легко пропустить OLL. Быстрый и удобный алгоритм, который можно испоьзовать
+    и как основной для <b>Части Е</b>.</p>
+    <p style="text-align:center"><img src="f2l2_9_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=2:38&link=28Ln2lfkD9U">Алгоритм:</a> (R U\' R2 D\' R U2 R\' D R)</b>
+
+    <p>10. Десятая <a href="rubic-activity://ytactivity?time=2:43&link=28Ln2lfkD9U">ситуация.</a>
+    Очень полезный алгоритм, для ситуации когда угол на своем месте, ребро тоже на своем, но перевернуто.
+    Это будет гораздо быстрее, чем сначала поднимать пару на верхний слой, а потом решать эту пару, но
+    данный алгоритм можно применять только, когда задняя правая пара не на своем месте (как в ускорении 1).</p>
+    <p style="text-align:center"><img src="f2l2_10_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=3:03&link=28Ln2lfkD9U">Алгоритм:</a> D\' R\' F R F\' R U\' R\' D</b>
+
+    <p>11. Одиннадцатая <a href="rubic-activity://ytactivity?time=3:13&link=28Ln2lfkD9U">ситуация.</a>
+    Обычно в такой ситуации вы бы сделали U2, перехват и т.д. Но можно обойтись и без перехвата.</p>
+    <p style="text-align:center"><img src="f2l2_11_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=3:22&link=28Ln2lfkD9U">Алгоритм:</a> Rw\' U R U\' R\' U\' Rw</b>
+
+    <p>12. Двенадцатая <a href="rubic-activity://ytactivity?time=3:27&link=28Ln2lfkD9U">ситуация.</a>
+    Еще один алгоритм для <b>Части Ф</b> с OLL скипом. Тоже быстрый и удобный алгоритм.</p>
+    <p style="text-align:center"><img src="f2l2_12_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=3:43&link=28Ln2lfkD9U">Алгоритм:</a> Rw\' D\' Rw U\' Rw\' D Rw</b>
+
+    ]]></string>
+    <string name="f2l_st26_url">28Ln2lfkD9U</string>
+
+    <string name="f2l_st27_title">Ускорения 3(Advanced 2FL 3.0)</string>
+    <string name="f2l_st27_descr" formatted="false"><![CDATA[
+    <p>Третья часть усорений F2L от Кристофера Олсона <a href="http://www.cyotheking.com/about">Christopher Olson.</a></p>
+
+    ]]></string>
+    <string name="f2l_st27_url">IL7VMSTatAA</string>
+
+    <string name="f2l_st28_title">Ускорения 4(Advanced 2FL 4.0)</string>
+    <string name="f2l_st28_descr" formatted="false"><![CDATA[
+    <p>Четвертая часть усорений F2L от Кристофера Олсона <a href="http://www.cyotheking.com/about">Christopher Olson.</a></p>
+
+    ]]></string>
+    <string name="f2l_st28_url">zstdjvprOAg</string>
+
 
 
 </resources>

@@ -153,6 +153,14 @@
         <p>Взять глазками к себе, Уехать в Лондон, три пиф-пафа, вернуться из Лондона.</p>
         <p style="text-align:center"><img src="accel_4_1.png" width="60%%"></p>
         <b>Алгоритм: F (R U R\' U\') (R U R\' U\') (R U R\' U\') F\' </b>
+        <p>Альтернативный вариант, без кручения переднй грани:<br/>
+        <b>Алгоритм: (R U2) (R\' U\' R U R\' U\' R U\' R\')</b></p>
+        <p><a href="rubic-activity://ytactivity?time=0:26&link=t3KcPrjmJJ4">Бонус от JPerm:</a>
+        если углы стоят парами</p>
+        <p style="text-align:center"><img src="accel_4_2.png" width="60%%"></p>
+        <p>как на данных картинках, то в первом случае лучше использовать первый алгоритм,
+        а во втором - второй. Т.е. первый ход делать параллельно паре. В этом случае углы для
+        PLL у вас встанут на свои места.</p>
     ]]></string>
     <string name="accel_st4_url">vJS0EyEPFPY</string>
 

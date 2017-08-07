@@ -62,6 +62,7 @@
         <item>@drawable/basic_20</item>
         <item>@drawable/basic_21</item>
         <item>@drawable/basic_22</item>
+        //TODO Поправить картинку 23
         <item>@drawable/basic_23</item>
         <item>@drawable/basic_24</item>
         <item>@drawable/basic_25</item>
@@ -155,7 +156,6 @@
         <item>35_url</item>
         <item>36_url</item>
     </string-array>
-
 
     <string name="basic_st1_title">R</string>
     <string name="basic_st1_descr">Включение света</string>
