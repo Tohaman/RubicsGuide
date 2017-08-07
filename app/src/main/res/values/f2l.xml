@@ -89,6 +89,8 @@
         <item>@string/f2l_st24_descr</item>
         <item>@string/f2l_st25_descr</item>
         <item>@string/f2l_st26_descr</item>
+        <item>@string/f2l_st27_descr</item>
+        <item>@string/f2l_st28_descr</item>
     </string-array>
 
     <string-array name="f2l_url">
@@ -842,26 +844,67 @@
     <string name="f2l_st27_descr" formatted="false"><![CDATA[
     <p>Третья часть усорений F2L от Кристофера Олсона <a href="http://www.cyotheking.com/about">Christopher Olson.</a></p>
 
+    <p>1. Первая <a href="rubic-activity://ytactivity?time=0:40&link=IL7VMSTatAA">ситуация.</a>
+    Ускорение 1 </p>
+    <p style="text-align:center"><img src="f2l3_1_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=0:47&link=IL7VMSTatAA">Алгоритм:</a> Rw U2 R2 U\' R2 U\' Rw\'</b>
+
+    <p>2. Вторая <a href="rubic-activity://ytactivity?time=0:53&link=IL7VMSTatAA">ситуация.</a>
+    Ускорение 2 </p>
+    <p style="text-align:center"><img src="f2l3_2_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=1:02&link=IL7VMSTatAA">Алгоритм:</a> F\' (R U R\' U\') R\' F R</b>
+
+    <p>3. Третья <a href="rubic-activity://ytactivity?time=1:08&link=IL7VMSTatAA">ситуация.</a>
+    Ускорение 3 </p>
+    <p style="text-align:center"><img src="f2l3_3_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=1:12&link=IL7VMSTatAA">Алгоритм:</a> R\' F\' R (U R U\' R\') F</b>
+
+    <p>4. Четвертая <a href="rubic-activity://ytactivity?time=1:17&link=IL7VMSTatAA">ситуация.</a>
+    Ускорение 4 </p>
+    <p style="text-align:center"><img src="f2l3_4_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=1:21&link=IL7VMSTatAA">Алгоритм:</a> (Rw U\' Rw\') U2 (Rw U Rw\')</b>
+
+    <p>5. Пятая <a href="rubic-activity://ytactivity?time=1:28&link=IL7VMSTatAA">ситуация.</a>
+    Ускорение 5 </p>
+    <p style="text-align:center"><img src="f2l3_5_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=1:41&link=IL7VMSTatAA">Алгоритм:</a> R\' D\' (Rw U Rw\') D R2 U R\'</b>
+
+    <p>6. Шестая <a href="rubic-activity://ytactivity?time=1:47&link=IL7VMSTatAA">ситуация.</a>
+    Ускорение 6 </p>
+    <p style="text-align:center"><img src="f2l3_6_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=1:50&link=IL7VMSTatAA">Алгоритм:</a> R\' F R\' F\' R2 U\' (R\' U R)</b>
+
+    <p>7. Седьмая <a href="rubic-activity://ytactivity?time=1:57&link=IL7VMSTatAA">ситуация.</a>
+    Ускорение 7 </p>
+    <p style="text-align:center"><img src="f2l3_7_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=2:01&link=IL7VMSTatAA">Алгоритм:</a> R\' (F U\' F\') R</b><br/>
+    или с использованием ускорения из первой части <b><a href="rubic-activity://ytactivity?time=2:16&link=IL7VMSTatAA">Алгоритм:</a> Rw\' F U\' R U M\'</b>
+
+    <p>8. Восьмая <a href="rubic-activity://ytactivity?time=2:20&link=IL7VMSTatAA">ситуация.</a>
+    Ускорение 8 </p>
+    <p style="text-align:center"><img src="f2l3_8_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=2:28&link=IL7VMSTatAA">Алгоритм:</a> F U\' (R U\' R\') U2 F\'</b>
+
+    <p>9. Девятая <a href="rubic-activity://ytactivity?time=2:33&link=IL7VMSTatAA">ситуация.</a>
+    Ускорение 9 </p>
+    <p style="text-align:center"><img src="f2l3_9_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=2:44&link=IL7VMSTatAA">Алгоритм:</a> (F R\' F\' R) U\' (R U\' R\')</b>
+
+    <p>10. Десятая <a href="rubic-activity://ytactivity?time=2:51&link=IL7VMSTatAA">ситуация.</a>
+    Ускорение 10 </p>
+    <p style="text-align:center"><img src="f2l3_10_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=2:57&link=IL7VMSTatAA">Алгоритм:</a> (R2 D\') F2 (D R2)</b>
+
     ]]></string>
     <string name="f2l_st27_url">IL7VMSTatAA</string>
+
+
+
 
     <string name="f2l_st28_title">Ускорения 4(Advanced 2FL 4.0)</string>
     <string name="f2l_st28_descr" formatted="false"><![CDATA[
     <p>Четвертая часть усорений F2L от Кристофера Олсона <a href="http://www.cyotheking.com/about">Christopher Olson.</a></p>
-
-    <p>1. Первая <a href="rubic-activity://ytactivity?time=0:12&link=zstdjvprOAg">ситуация.</a>
-    Ускорение 1 </p>
-    <p style="text-align:center"><img src="f2l3_1_1.png" width="30%%"></p>
-    <b><a href="rubic-activity://ytactivity?time=0:29&link=zstdjvprOAg">Алгоритм:</a> R</b>
-
-    <p>2. Вторая <a href="rubic-activity://ytactivity?time=0:12&link=zstdjvprOAg">ситуация.</a>
-    Ускорение 2 </p>
-    <p style="text-align:center"><img src="f2l3_2_1.png" width="30%%"></p>
-    <b><a href="rubic-activity://ytactivity?time=0:29&link=zstdjvprOAg">Алгоритм:</a> R</b>
-
     ]]></string>
     <string name="f2l_st28_url">zstdjvprOAg</string>
-
-
 
 </resources>
