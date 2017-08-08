@@ -909,6 +909,12 @@
     <string name="f2l_st28_title">Ускорения 4(Advanced 2FL 4.0)</string>
     <string name="f2l_st28_descr" formatted="false"><![CDATA[
     <p>Четвертая часть усорений F2L от Кристофера Олсона <a href="http://www.cyotheking.com/about">Christopher Olson.</a></p>
+
+    <p>1. Первая <a href="rubic-activity://ytactivity?time=2:51&link=zstdjvprOAg">ситуация.</a>
+    Ускорение 1 </p>
+    <p style="text-align:center"><img src="f2l4_1_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=2:57&link=zstdjvprOAg">Алгоритм:</a> (R2 D\') F2 (D R2)</b>
+
     ]]></string>
     <string name="f2l_st28_url">zstdjvprOAg</string>
 
