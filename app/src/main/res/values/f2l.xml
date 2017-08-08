@@ -59,7 +59,7 @@
         <item>@drawable/f2l_25</item>
         <item>@drawable/f2l2_1</item>
         <item>@drawable/f2l3_1</item>
-        <item>@drawable/f2l2_1</item>
+        <item>@drawable/f2l4_1</item>
     </integer-array>
 
     <string-array name="f2l_descr">
@@ -903,17 +903,59 @@
     ]]></string>
     <string name="f2l_st27_url">IL7VMSTatAA</string>
 
-
-
-
     <string name="f2l_st28_title">Ускорения 4(Advanced 2FL 4.0)</string>
     <string name="f2l_st28_descr" formatted="false"><![CDATA[
     <p>Четвертая часть усорений F2L от Кристофера Олсона <a href="http://www.cyotheking.com/about">Christopher Olson.</a></p>
 
-    <p>1. Первая <a href="rubic-activity://ytactivity?time=2:51&link=zstdjvprOAg">ситуация.</a>
+    <p>1. Первая <a href="rubic-activity://ytactivity?time=0:32&link=zstdjvprOAg">ситуация.</a>
     Ускорение 1 </p>
     <p style="text-align:center"><img src="f2l4_1_1.png" width="30%%"></p>
-    <b><a href="rubic-activity://ytactivity?time=2:57&link=zstdjvprOAg">Алгоритм:</a> (R2 D\') F2 (D R2)</b>
+    <b><a href="rubic-activity://ytactivity?time=0:47&link=zstdjvprOAg">Алгоритм:</a> R\' F (R U R\') F\' R</b>
+
+    <p>2. Вторая <a href="rubic-activity://ytactivity?time=1:03&link=zstdjvprOAg">ситуация.</a>
+    Ускорение 2 </p>
+    <p style="text-align:center"><img src="f2l4_2_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=1:08&link=zstdjvprOAg">Алгоритм:</a> F (Rw U Rw\' U\') F\'</b>
+
+    <p>3. Третья <a href="rubic-activity://ytactivity?time=1:22&link=zstdjvprOAg">ситуация.</a>
+    Ускорение 3 </p>
+    <p style="text-align:center"><img src="f2l4_3_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=1:24&link=zstdjvprOAg">Алгоритм:</a> F (U Rw U\' Rw\') F\'</b>
+
+    <p>4. Четвертая <a href="rubic-activity://ytactivity?time=1:29&link=zstdjvprOAg">ситуация.</a>
+    Ускорение 4 </p>
+    <p style="text-align:center"><img src="f2l4_4_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=1:38&link=zstdjvprOAg">Алгоритм:</a> R\' U\' R\' D\' R U R\' D R U\' R</b>
+
+    <p>5. Пятая <a href="rubic-activity://ytactivity?time=1:45&link=zstdjvprOAg">ситуация.</a>
+    Ускорение 5 </p>
+    <p style="text-align:center"><img src="f2l4_5_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=1:50&link=zstdjvprOAg">Алгоритм:</a> Rw U R\' U R U2 B Rw\'</b>
+
+    <p>6. Шестая <a href="rubic-activity://ytactivity?time=2:10&link=zstdjvprOAg">ситуация.</a>
+    Ускорение 6 </p>
+    <p style="text-align:center"><img src="f2l4_6_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=2:17&link=zstdjvprOAg">Алгоритм:</a> M\' U R U\' Rw\' R U\' R\'</b>
+
+    <p>7. Седьмая <a href="rubic-activity://ytactivity?time=2:25&link=zstdjvprOAg">ситуация.</a>
+    Ускорение 7 </p>
+    <p style="text-align:center"><img src="f2l4_7_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=2:50&link=zstdjvprOAg">Алгоритм:</a> R\' F R U\' F\' R U\' R\'</b>
+
+    <p>8. Восьмая <a href="rubic-activity://ytactivity?time=2:55&link=zstdjvprOAg">ситуация.</a>
+    Ускорение 8 </p>
+    <p style="text-align:center"><img src="f2l4_8_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=2:59&link=zstdjvprOAg">Алгоритм:</a> R\' F R2 U\' R\' U2 F\'</b>
+
+    <p>9. Девятая <a href="rubic-activity://ytactivity?time=3:07&link=zstdjvprOAg">ситуация.</a>
+    Ускорение 9 </p>
+    <p style="text-align:center"><img src="f2l4_9_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=3:17&link=zstdjvprOAg">Алгоритм:</a> F (U R U\' R\') F\' R U R\'</b>
+
+    <p>10. Десятая <a href="rubic-activity://ytactivity?time=3:35&link=zstdjvprOAg">ситуация.</a>
+    Ускорение 10 </p>
+    <p style="text-align:center"><img src="f2l4_10_1.png" width="30%%"></p>
+    <b><a href="rubic-activity://ytactivity?time=3:44&link=zstdjvprOAg">Алгоритм:</a> R\' U\' (R2 U R2) U\' R</b>
 
     ]]></string>
     <string name="f2l_st28_url">zstdjvprOAg</string>
