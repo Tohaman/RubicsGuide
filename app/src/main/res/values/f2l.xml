@@ -845,53 +845,58 @@
     <p>Третья часть усорений F2L от Кристофера Олсона <a href="http://www.cyotheking.com/about">Christopher Olson.</a></p>
 
     <p>1. Первая <a href="rubic-activity://ytactivity?time=0:40&link=IL7VMSTatAA">ситуация.</a>
-    Ускорение 1 </p>
+    Очень полезное ускорение, позволяющее обойтись без перехвата когда квартира справа сзади, угол над
+    квартирой, ребро на передней грани, но они совместимы. </p>
     <p style="text-align:center"><img src="f2l3_1_1.png" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=0:47&link=IL7VMSTatAA">Алгоритм:</a> Rw U2 R2 U\' R2 U\' Rw\'</b>
 
     <p>2. Вторая <a href="rubic-activity://ytactivity?time=0:53&link=IL7VMSTatAA">ситуация.</a>
-    Ускорение 2 </p>
+    Можно конечно ходом U привести ситуацию к \"Ромашке налево\", а можно сделать удивительно быстрый
+    и удобный алгоритм.</p>
     <p style="text-align:center"><img src="f2l3_2_1.png" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=1:02&link=IL7VMSTatAA">Алгоритм:</a> F\' (R U R\' U\') R\' F R</b>
 
     <p>3. Третья <a href="rubic-activity://ytactivity?time=1:08&link=IL7VMSTatAA">ситуация.</a>
-    Ускорение 3 </p>
+    Классическая \"Ромашка налево\". Тоже быстрый и более удобный чем ромашка алгоритм.</p>
     <p style="text-align:center"><img src="f2l3_3_1.png" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=1:12&link=IL7VMSTatAA">Алгоритм:</a> R\' F\' R (U R U\' R\') F</b>
 
     <p>4. Четвертая <a href="rubic-activity://ytactivity?time=1:17&link=IL7VMSTatAA">ситуация.</a>
-    Ускорение 4 </p>
+    И снова все быстро, без перехватов и вращений передней грани. </p>
     <p style="text-align:center"><img src="f2l3_4_1.png" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=1:21&link=IL7VMSTatAA">Алгоритм:</a> (Rw U\' Rw\') U2 (Rw U Rw\')</b>
 
     <p>5. Пятая <a href="rubic-activity://ytactivity?time=1:28&link=IL7VMSTatAA">ситуация.</a>
-    Ускорение 5 </p>
+    Еще одно ускорение к серии ускорений из предыдущей части, касающихся ориентации ребер или скипу OLL.</p>
     <p style="text-align:center"><img src="f2l3_5_1.png" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=1:41&link=IL7VMSTatAA">Алгоритм:</a> R\' D\' (Rw U Rw\') D R2 U R\'</b>
 
     <p>6. Шестая <a href="rubic-activity://ytactivity?time=1:47&link=IL7VMSTatAA">ситуация.</a>
-    Ускорение 6 </p>
+    Можно конечно сделать U, перехват и ускорение 1.7 или 2.9. А можно и такой красивый алгоритм.</p>
     <p style="text-align:center"><img src="f2l3_6_1.png" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=1:50&link=IL7VMSTatAA">Алгоритм:</a> R\' F R\' F\' R2 U\' (R\' U R)</b>
 
     <p>7. Седьмая <a href="rubic-activity://ytactivity?time=1:57&link=IL7VMSTatAA">ситуация.</a>
-    Ускорение 7 </p>
+    В классическом F2L надо либо поднять пару наверх неудобно (F F\') либо ставить неудобно через (B B\').
+    Поэтому лучше вот таким алгоритмом, ну или поднять левой (опусть жирно правую) и воспользоваться
+    ускорением 1.2</p>
     <p style="text-align:center"><img src="f2l3_7_1.png" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=2:01&link=IL7VMSTatAA">Алгоритм:</a> R\' (F U\' F\') R</b><br/>
     или с использованием ускорения из первой части <b><a href="rubic-activity://ytactivity?time=2:16&link=IL7VMSTatAA">Алгоритм:</a> Rw\' F U\' R U M\'</b>
 
     <p>8. Восьмая <a href="rubic-activity://ytactivity?time=2:20&link=IL7VMSTatAA">ситуация.</a>
-    Ускорение 8 </p>
+    Еще один вариант для ситуации из ускорения 1.9, но без вращения средней грани (M).</p>
     <p style="text-align:center"><img src="f2l3_8_1.png" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=2:28&link=IL7VMSTatAA">Алгоритм:</a> F U\' (R U\' R\') U2 F\'</b>
 
     <p>9. Девятая <a href="rubic-activity://ytactivity?time=2:33&link=IL7VMSTatAA">ситуация.</a>
-    Ускорение 9 </p>
+    Вместо U и трех пиф-пафов можно и чуть быстрее. </p>
     <p style="text-align:center"><img src="f2l3_9_1.png" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=2:44&link=IL7VMSTatAA">Алгоритм:</a> (F R\' F\' R) U\' (R U\' R\')</b>
 
     <p>10. Десятая <a href="rubic-activity://ytactivity?time=2:51&link=IL7VMSTatAA">ситуация.</a>
-    Ускорение 10 </p>
+    Один из моих любимых алгоритмов. Быстро, красиво и удобно тренировать
+    (повтор алгоритма возвращает все на место).</p>
     <p style="text-align:center"><img src="f2l3_10_1.png" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=2:57&link=IL7VMSTatAA">Алгоритм:</a> (R2 D\') F2 (D R2)</b>
 
