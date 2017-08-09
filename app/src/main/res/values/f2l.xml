@@ -908,52 +908,57 @@
     <p>Четвертая часть усорений F2L от Кристофера Олсона <a href="http://www.cyotheking.com/about">Christopher Olson.</a></p>
 
     <p>1. Первая <a href="rubic-activity://ytactivity?time=0:32&link=zstdjvprOAg">ситуация.</a>
-    Ускорение 1 </p>
+    Вроде и ускорять нечего U2 и загнать в три хода, но можно воспользоваться и чуть более длинным,
+    но на самом деле более быстрым алгоритмом, к тому же без вращения левой грани.</p>
     <p style="text-align:center"><img src="f2l4_1_1.png" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=0:47&link=zstdjvprOAg">Алгоритм:</a> R\' F (R U R\') F\' R</b>
 
     <p>2. Вторая <a href="rubic-activity://ytactivity?time=1:03&link=zstdjvprOAg">ситуация.</a>
-    Ускорение 2 </p>
+    Двойное ускорение. Можно использовать как \"Ромашку направо\" для передней грани и в случае,
+    если надо переставить ребро на втором этаже справа налево.</p>
     <p style="text-align:center"><img src="f2l4_2_1.png" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=1:08&link=zstdjvprOAg">Алгоритм:</a> F (Rw U Rw\' U\') F\'</b>
 
     <p>3. Третья <a href="rubic-activity://ytactivity?time=1:22&link=zstdjvprOAg">ситуация.</a>
-    Ускорение 3 </p>
+    Зеркальное предыдущему ускорение. Можно использовать как \"Ромашку налево\" и если надо переставить ребро на
+    втором этаже слева направо.</p>
     <p style="text-align:center"><img src="f2l4_3_1.png" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=1:24&link=zstdjvprOAg">Алгоритм:</a> F (U Rw U\' Rw\') F\'</b>
 
     <p>4. Четвертая <a href="rubic-activity://ytactivity?time=1:29&link=zstdjvprOAg">ситуация.</a>
-    Ускорение 4 </p>
+    Чтобы не делать два перехвата, можно сделать такой не простой для запоминания алгоритм. </p>
     <p style="text-align:center"><img src="f2l4_4_1.png" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=1:38&link=zstdjvprOAg">Алгоритм:</a> R\' U\' R\' D\' R U R\' D R U\' R</b>
 
     <p>5. Пятая <a href="rubic-activity://ytactivity?time=1:45&link=zstdjvprOAg">ситуация.</a>
-    Ускорение 5 </p>
+    Обратите внимание, что квартира в данном случае находится слева сзади. Т.е. либо сделать перехват
+    (y) и Максимкин алгоритм уже без первого хода U2, либо вот так без перехватов.</p>
     <p style="text-align:center"><img src="f2l4_5_1.png" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=1:50&link=zstdjvprOAg">Алгоритм:</a> Rw U R\' U R U2 B Rw\'</b>
 
     <p>6. Шестая <a href="rubic-activity://ytactivity?time=2:10&link=zstdjvprOAg">ситуация.</a>
-    Ускорение 6 </p>
+    Вот так красиво подгоняем ребро к углу (алгоритмом обратным ускорению 1.1) и заселяем в три хода.</p>
     <p style="text-align:center"><img src="f2l4_6_1.png" width="30%%"></p>
-    <b><a href="rubic-activity://ytactivity?time=2:17&link=zstdjvprOAg">Алгоритм:</a> M\' U R U\' Rw\' R U\' R\'</b>
+    <b><a href="rubic-activity://ytactivity?time=2:17&link=zstdjvprOAg">Алгоритм:</a> (M\' U R U\' Rw\') R U\' R\'</b>
 
     <p>7. Седьмая <a href="rubic-activity://ytactivity?time=2:25&link=zstdjvprOAg">ситуация.</a>
-    Ускорение 7 </p>
+    Вроде бы неудобная ситуация и ребро и угол не на третьем этаже, но вот как просто можно ее решить.</p>
     <p style="text-align:center"><img src="f2l4_7_1.png" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=2:50&link=zstdjvprOAg">Алгоритм:</a> R\' F R U\' F\' R U\' R\'</b>
 
     <p>8. Восьмая <a href="rubic-activity://ytactivity?time=2:55&link=zstdjvprOAg">ситуация.</a>
-    Ускорение 8 </p>
+    Опять же куда быстрее чем U, два пиф-пафа, перехват и еще пиф-паф.</p>
     <p style="text-align:center"><img src="f2l4_8_1.png" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=2:59&link=zstdjvprOAg">Алгоритм:</a> R\' F R2 U\' R\' U2 F\'</b>
 
     <p>9. Девятая <a href="rubic-activity://ytactivity?time=3:07&link=zstdjvprOAg">ситуация.</a>
-    Ускорение 9 </p>
+    Ну и как же обойтись без скипа OLL. Еще один алгоритм для легко определяемой ситуации, позволяющий
+    перейти сразу к PLL.</p>
     <p style="text-align:center"><img src="f2l4_9_1.png" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=3:17&link=zstdjvprOAg">Алгоритм:</a> F (U R U\' R\') F\' R U R\'</b>
 
     <p>10. Десятая <a href="rubic-activity://ytactivity?time=3:35&link=zstdjvprOAg">ситуация.</a>
-    Ускорение 10 </p>
+    И так вроде не сложная ситуация, но можно ее решить только через кручение удобных U и R, без Лондонов.</p>
     <p style="text-align:center"><img src="f2l4_10_1.png" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=3:44&link=zstdjvprOAg">Алгоритм:</a> R\' U\' (R2 U R2) U\' R</b>
 
