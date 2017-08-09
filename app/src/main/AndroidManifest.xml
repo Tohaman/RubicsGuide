@@ -15,6 +15,7 @@
         <activity android:name=".listpager.ListActivity"/>
         <activity android:name=".listpager.PagerActivity"/>
         <activity android:name=".g2f.G2FActivity"/>
+        <activity android:name=".g2f.f2l.F2LActivity"/>
         <activity android:name=".about.AboutActivity"/>
         <activity
             android:name=".YouTubeActivity"

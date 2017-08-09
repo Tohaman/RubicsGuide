@@ -19,7 +19,7 @@
     <string-array name="g2f_phase">
         <item>ACCEL</item>
         <item>CROSS</item>
-        <item>F2L</item>
+        <item>F2LLIST</item>
         <item>PLL</item>
         <item>OLL</item>
     </string-array>
