@@ -5,9 +5,11 @@
         <item>@string/advf2l_st2_title</item>
         <item>@string/advf2l_st3_title</item>
         <item>@string/advf2l_st4_title</item>
+        <item>@string/advf2l_st5_title</item>
     </string-array>
 
     <integer-array name="advf2l_icon">
+        <item>@drawable/f2l</item>
         <item>@drawable/f2l_25</item>
         <item>@drawable/f2l2_1</item>
         <item>@drawable/f2l3_1</item>
@@ -19,6 +21,7 @@
         <item>@string/advf2l_st2_descr</item>
         <item>@string/advf2l_st3_descr</item>
         <item>@string/advf2l_st4_descr</item>
+        <item>@string/advf2l_st5_descr</item>
     </string-array>
 
     <string-array name="advf2l_url">
@@ -26,18 +29,60 @@
         <item>@string/advf2l_st2_url</item>
         <item>@string/advf2l_st3_url</item>
         <item>@string/advf2l_st4_url</item>
+        <item>@string/advf2l_st5_url</item>
     </string-array>
 
 
-    <string name="advf2l_st1_title">Advanced 2FL</string>
+    <string name="advf2l_st1_title">Интуитивный F2L от JPerm</string>
     <string name="advf2l_st1_descr" formatted="false"><![CDATA[
-    <p>В предыдущих частях для упрощения понимания F2L мы всегда подгоняли парня в ближний правый
+        <p>Как много сказано в видео от Максима, но почему-то мало уделено этому внимания, F2L как и
+        крест можно решать интуитивно, без формул, особенно на \"первых парах\". А уже потом применяя
+        формулы ускорять свою сборку. Т.е. на мой взгляд, F2L лучше начать с интуитивного F2L, сразу
+        отказавшись от новичкового метода, постепенно ускоряя формулами (от Максима и Кристофера)
+        самые \"нелюбимые\" ситуации. Пусть поначалу это и окажется медленее, чем новичковый метод.</p>
+
+        <p>Я пересмотрел много видео по F2L и к сожелению нормального интуитивного F2L на русском языке
+        так и не нашел (может дело просто в моих тараканах в голове). Поэтому за основу я взял видео от JPerm.
+        Надеюсь, что с моими комментариями будет все понятно.</p>
+
+        <p>Начнем с азов. Главное отличие F2L от метода для новичков, в том, что два нижних слоя
+        <a href="rubic-activity://ytactivity?time=0:08&link=Ar_Zit1VLG0">собираются вместе</a>
+        , угол (парень) ставится на место вместе со своим ребром (девушкой), т.е. парой.</p>
+
+        <p style="text-align:center"><img src="f2l_int_1.png" width="30%%"></p>
+
+        <p><a href="rubic-activity://ytactivity?time=0:08&link=Ar_Zit1VLG0">4 базовых алгоритма</a> (The 4 Fundamental Algorithms).<br/>
+        Когда я сказал, что решать F2L можно без формул, я слукавил. Все таки 4 алгоритма выучить придется.
+        Но во первых это трехходовки, а во вторых пара из них зеркальна (делается не справа, а слева)
+        другой паре, т.е. по сути это всего лишь два трехходовых алгоритма. Итак:</p>
+
+        1. R U\' R\'
+
+        2. L\' U L
+
+        3. R U R'
+
+        4. L\' U\' L
+
+        <p>to be continue.</p>
+    ]]></string>
+    <string name="advf2l_st1_url">Ar_Zit1VLG0</string>
+
+
+
+    <string name="advf2l_st2_title">Advanced 2FL</string>
+    <string name="advf2l_st2_descr" formatted="false"><![CDATA[
+    <p>Серия видеороликов Advanced F2L от Кристофера Олсона
+    <a href="http://www.cyotheking.com/about">Christopher Olson</a> - подразумевает, что вы уже
+    собираете кубик используя Интуитивный, а лучше Жизненный F2L.</p>
+
+    <p>В предыдущих частях (Интуитивном и Жизненном F2L) для упрощения понимания мы всегда подгоняли парня в ближний правый
     угол, подгоняли к нему его квартиру и делали различные перехваты. Т.е. перед выполнением
     непосредственно алгоритма делали установочные ходы (setup move). Если же вы хотите собирать кубик
     действительно быстро, то надо стараться сводить эти установочные ходы к минимуму, а лучше и
-    вовсе их избегать. И в этом вам помогут некоторые ускорения, которые приведены в этой серии
-    видео от Кристофера Олсона <a href="http://www.cyotheking.com/about">Christopher Olson.</a></p>
-    <p>К сожалению ориганальное видео на английском и ситуации в нем никак не упорядочены,
+    вовсе их избегать. </p>
+
+    <p>Ориганальное видео на английском и ситуации в нем никак не упорядочены,
     но надеюсь, что с моими комментариями и картинками (превьюшками ситуаций) все будет понятно.</p>
 
     <p>1. Первая ситуация - <a href="rubic-activity://ytactivity?time=0:25&link=WIFh0sXDkMM">пара</a>
@@ -152,10 +197,10 @@
     <b><a href="rubic-activity://ytactivity?time=5:54&link=WIFh0sXDkMM">Алгоритм:</a> (Rw U Rw\' U\') (Rw\' F Rw F\')</b>
 
     ]]></string>
-    <string name="advf2l_st1_url">WIFh0sXDkMM</string>
+    <string name="advf2l_st2_url">WIFh0sXDkMM</string>
 
-    <string name="advf2l_st2_title">Advanced 2FL 2.0</string>
-    <string name="advf2l_st2_descr" formatted="false"><![CDATA[
+    <string name="advf2l_st3_title">Advanced 2FL 2.0</string>
+    <string name="advf2l_st3_descr" formatted="false"><![CDATA[
     <p>Вторая часть усорений F2L от Кристофера Олсона <a href="http://www.cyotheking.com/about">Christopher Olson.</a></p>
 
     <p>1. Первая <a href="rubic-activity://ytactivity?time=0:12&link=28Ln2lfkD9U">ситуация.</a>
@@ -237,10 +282,10 @@
     <b><a href="rubic-activity://ytactivity?time=3:43&link=28Ln2lfkD9U">Алгоритм:</a> Rw\' D\' Rw U\' Rw\' D Rw</b>
 
     ]]></string>
-    <string name="advf2l_st2_url">28Ln2lfkD9U</string>
+    <string name="advf2l_st3_url">28Ln2lfkD9U</string>
 
-    <string name="advf2l_st3_title">Advanced 2FL 3.0</string>
-    <string name="advf2l_st3_descr" formatted="false"><![CDATA[
+    <string name="advf2l_st4_title">Advanced 2FL 3.0</string>
+    <string name="advf2l_st4_descr" formatted="false"><![CDATA[
     <p>Третья часть усорений F2L от Кристофера Олсона <a href="http://www.cyotheking.com/about">Christopher Olson.</a></p>
 
     <p>1. Первая <a href="rubic-activity://ytactivity?time=0:40&link=IL7VMSTatAA">ситуация.</a>
@@ -300,10 +345,10 @@
     <b><a href="rubic-activity://ytactivity?time=2:57&link=IL7VMSTatAA">Алгоритм:</a> (R2 D\') F2 (D R2)</b>
 
     ]]></string>
-    <string name="advf2l_st3_url">IL7VMSTatAA</string>
+    <string name="advf2l_st4_url">IL7VMSTatAA</string>
 
-    <string name="advf2l_st4_title">Advanced 2FL 4.0</string>
-    <string name="advf2l_st4_descr" formatted="false"><![CDATA[
+    <string name="advf2l_st5_title">Advanced 2FL 4.0</string>
+    <string name="advf2l_st5_descr" formatted="false"><![CDATA[
     <p>Четвертая часть усорений F2L от Кристофера Олсона <a href="http://www.cyotheking.com/about">Christopher Olson.</a></p>
 
     <p>1. Первая <a href="rubic-activity://ytactivity?time=0:32&link=zstdjvprOAg">ситуация.</a>
@@ -362,7 +407,7 @@
     <b><a href="rubic-activity://ytactivity?time=3:44&link=zstdjvprOAg">Алгоритм:</a> R\' U\' (R2 U R2) U\' R</b>
 
     ]]></string>
-    <string name="advf2l_st4_url">zstdjvprOAg</string>
+    <string name="advf2l_st5_url">zstdjvprOAg</string>
 
 
 </resources>
