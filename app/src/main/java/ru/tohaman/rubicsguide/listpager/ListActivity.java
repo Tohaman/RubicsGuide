@@ -39,18 +39,26 @@ public class ListActivity extends SingleFragmentActivity implements ListFragment
     @Override
     public void onItemSelected (ListPager listPager) {
         position = listPager.getId();
-        if (findViewById(R.id.detail_fragment_container) == null) {
-            if (listPager.getPhase().equals("BASIC")){
-                Toast.makeText(this,listPager.getDescription(), Toast.LENGTH_SHORT).show();
-            } else {
-                Intent intent = PagerActivity.newIntenet(this, String.valueOf(position), listPager.getPhase());
-                startActivity(intent);
-            }
+        String st = listPager.getUrl();
+        String phase = listPager.getPhase();
+        if (st.equals("F2L")) {
+            Intent mIntent = new Intent(this,ListActivity.class);
+            mIntent.putExtra(RubicPhase,st);
+            startActivity(mIntent);
         } else {
-            Fragment newDetail = PagerFragment.newInstance(String.valueOf(position), listPager.getPhase());
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.detail_fragment_container, newDetail)
-                    .commit();
+            if (findViewById(R.id.detail_fragment_container) == null) {
+                if (listPager.getPhase().equals("BASIC")) {
+                    Toast.makeText(this, listPager.getDescription(), Toast.LENGTH_SHORT).show();
+                } else {
+                    Intent intent = PagerActivity.newIntent(this, String.valueOf(position), phase);
+                    startActivity(intent);
+                }
+            } else {
+                Fragment newDetail = PagerFragment.newInstance(String.valueOf(position), listPager.getPhase());
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.detail_fragment_container, newDetail)
+                        .commit();
+            }
         }
     }
 

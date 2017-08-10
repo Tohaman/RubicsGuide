@@ -23,7 +23,7 @@ public class PagerActivity extends AppCompatActivity {
     private List<ListPager> mListPagers;
 
 
-    public static Intent newIntenet(Context packageContext, String Id, String phase) {
+    public static Intent newIntent(Context packageContext, String Id, String phase) {
         Intent intent = new Intent(packageContext, PagerActivity.class);
         intent.putExtra(EXTRA_ID, Id);
         intent.putExtra(RubicPhase, phase);

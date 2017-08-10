@@ -1,6 +1,7 @@
 package ru.tohaman.rubicsguide.listpager;
 
 import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -29,6 +30,8 @@ public class ListFragment extends Fragment {
     private String Phase;
     private ListPagerLab listPagerLab;
     private Callbacks mCallbacks;
+
+    private static final String List_Param = "phase";
 
     public static ListFragment newInstance (String phase) {
         Bundle args = new Bundle();
@@ -59,10 +62,21 @@ public class ListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
+        Uri uri = getActivity().getIntent().getData();
+        String phase;
+
         // Получаем синглет
         listPagerLab = ListPagerLab.get(getActivity());
         // Получаем данные о фазе от родителя и делаем выборку по фазе
-        Phase = (String) getArguments().getSerializable(RubicPhase);  //Приняли название фазы (PLL,OLL,...)
+
+        if (uri != null) {
+            // если активность запущена веб ссылкой вида
+            // <a href="rubic_activity://listactivity?phase=F2L">Максимкин F2L</a>
+            Phase = uri.getQueryParameter(List_Param);
+        } else {
+            // если запущена штатно
+            Phase = (String) getArguments().getSerializable(RubicPhase);  //Приняли название фазы (PLL,OLL,...)
+        }
 
 //        Phase = getActivity().getIntent().getStringExtra(RubicPhase);
         mListPagers = listPagerLab.getPhaseList(Phase);

@@ -2,6 +2,7 @@
 <resources>
     <string-array name="advf2l_title">
         <item>@string/advf2l_st1_title</item>
+        <item>@string/advf2l_max_title</item>
         <item>@string/advf2l_st2_title</item>
         <item>@string/advf2l_st3_title</item>
         <item>@string/advf2l_st4_title</item>
@@ -9,6 +10,7 @@
     </string-array>
 
     <integer-array name="advf2l_icon">
+        <item>@drawable/f2l</item>
         <item>@drawable/f2l</item>
         <item>@drawable/f2l_25</item>
         <item>@drawable/f2l2_1</item>
@@ -18,6 +20,7 @@
 
     <string-array name="advf2l_descr">
         <item>@string/advf2l_st1_descr</item>
+        <item>@string/advf2l_max_descr</item>
         <item>@string/advf2l_st2_descr</item>
         <item>@string/advf2l_st3_descr</item>
         <item>@string/advf2l_st4_descr</item>
@@ -26,47 +29,62 @@
 
     <string-array name="advf2l_url">
         <item>@string/advf2l_st1_url</item>
+        <item>F2L</item>
         <item>@string/advf2l_st2_url</item>
         <item>@string/advf2l_st3_url</item>
         <item>@string/advf2l_st4_url</item>
         <item>@string/advf2l_st5_url</item>
     </string-array>
 
+    <string name="advf2l_max_title">Жизненный F2L от Максима</string>
+    <string name="advf2l_max_descr" formatted="false"><![CDATA[
+    <p>Данный цикл обучалок предназначен для начинающих осваивать F2L и поэтому тут как и в методике
+    для начинающих Максима Чечнева используются различные ассоциации и паралелли с обычной жизнью.
+    Собственно говоря, поэтому цикл и называется Жизненный F2L.</p>
+    Для перехода к списку ситуаций -
+    <a href="rubic-activity://listactivity?phase=F2L"> щелкните сюда</a>
+    ]]></string>
 
     <string name="advf2l_st1_title">Интуитивный F2L от JPerm</string>
     <string name="advf2l_st1_descr" formatted="false"><![CDATA[
         <p>Как много было сказано в видео от Максима, но почему-то мало уделено этому внимания, F2L как и
-        крест надо понимать, т.е. можно решать интуитивно, без формул, особенно на \"первых парах\". А уже потом применяя
+        крест можно и нужно понимать, т.е. можно решать интуитивно, без формул, особенно на \"первых парах\". А уже потом применяя
         формулы ускорять свою сборку. Т.е. на мой взгляд, F2L лучше начать с интуитивного F2L, сразу
         отказавшись от новичкового метода, постепенно ускоряя формулами (от Максима и Кристофера)
-        самые \"нелюбимые\" ситуации. Пусть поначалу это и окажется медленее, чем новичковый метод.</p>
+        свои самые \"нелюбимые\" ситуации. Пусть поначалу это и окажется медленее, чем новичковый метод.</p>
 
-        <p>Я пересмотрел много видео по F2L и к сожелению нормального интуитивного F2L на русском языке
+        <p>На ютубе много видео по F2L, но к сожелению нормального интуитивного F2L на русском языке я
         так и не нашел (может дело просто в моих тараканах в голове). Поэтому за основу я взял видео от JPerm (пусть и на английском), но
-        где все четко, упоряоченно и без ненужной фоновой музыки.
+        где все четко, упорядоченно и без ненужной фоновой музыки.
         Надеюсь, что с моими комментариями будет все понятно.</p>
 
-        <p>Начнем с азов. Главное отличие F2L от метода для новичков, в том, что два нижних слоя
+        <p>1. Начнем с азов. Главное отличие F2L от метода для новичков, в том, что два нижних слоя
         <a href="rubic-activity://ytactivity?time=0:08&link=Ar_Zit1VLG0">собираются вместе</a>
         , угол (парень) ставится на место вместе со своим ребром (девушкой), т.е. парой.</p>
 
         <p style="text-align:center"><img src="f2l_int_1.png" width="30%%"></p>
 
-        <p><a href="rubic-activity://ytactivity?time=0:08&link=Ar_Zit1VLG0">4 базовых алгоритма</a> (The 4 Fundamental Algorithms).<br/>
+        <p>2. В F2L есть <a href="rubic-activity://ytactivity?time=0:08&link=Ar_Zit1VLG0">4 базовых алгоритма</a> (The 4 Fundamental Algorithms).<br/>
         Когда я сказал, что решать F2L можно без формул, я слукавил. Все таки 4 алгоритма выучить придется.
-        Но во первых это трехходовки, а во вторых пара из них зеркальна (делается не справа, а слева)
-        другой паре, т.е. по сути это всего лишь два трехходовых алгоритма. Итак:</p>
+        Но во первых это трехходовки, а во вторых пара из них зеркальна другой паре (делается не справа, а слева),
+        т.е. по сути это всего лишь два простейших трехходовых алгоритма. Итак:</p>
 
-        1. Первый базовый алгоритм: <b>R U\' R\'</b><br/>
-        Применяется для вот такой ситуации.
+        2.1. Первый базовый алгоритм: <b>R U\' R\'</b><br/>
+        Применяется для ситуации когда угол с ребром уже образуют пару.
 
         <p style="text-align:center"><img src="f2l_int_2.png" width="30%%"></p>
 
-        2. L\' U L
+        2.2. Зеркальный первому <b>L\' U L</b><br/>
+        <p style="text-align:center"><img src="f2l_int_3.png" width="30%%"></p>
 
-        3. R U R'
+        2.3. По сути, второй базовый алгоритм: <b>R U R\'</b><br/>
+        Когда наклейки крыши у угла и ребра разные.
+        <p style="text-align:center"><img src="f2l_int_4.png" width="30%%"></p>
 
-        4. L\' U\' L
+        2.4. Ну и зеркальный ему <b>L\' U\' L</b><br/>
+        <p style="text-align:center"><img src="f2l_int_5.png" width="30%%"></p>
+
+
 
         <p>to be continue.</p>
     ]]></string>
