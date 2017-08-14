@@ -138,7 +138,7 @@
 
         <p style="text-align:center"><img src="f2l_int_10.png" width="80%%"></p>
 
-        5. <b><a href="rubic-activity://ytactivity?time=2:28&link=Ar_Zit1VLG0">Ставим ребро на место.</a>
+        5. Если верхние наклейки одинаковые - <b><a href="rubic-activity://ytactivity?time=2:28&link=Ar_Zit1VLG0">ставим ребро на место.</a>
         (Move the edge piece).</b><br/>
         С местом определились. Теперь надо поставить ребро на это место, но так, чтобы угол остался там где он есть.
         Для этого опустим угол на первый этаж вращением той грани, на которой белая наклейка угла.
@@ -146,11 +146,58 @@
 
         <p style="text-align:center"><img src="f2l_int_11.png" width="80%%"></p>
 
-        <br/><br/>
-        2.2 Второй случай: Парень с завышенной самооценкой.<br/>
+        6. <b><a href="rubic-activity://ytactivity?time=2:48&link=Ar_Zit1VLG0">Заселяем.</a>
+        (Insert).</b><br/>
+        Используя один из базовых алгоритмов. Для одинаковых верхних наклеек один из первых базовых.
 
+        <p style="text-align:center"><img src="f2l_int_12.png" width="80%%"></p>
 
-        <p>to be continue.</p>
+        Видео для ситуации когда верхние наклейки <a href="rubic-activity://ytactivity?time=2:48&link=Ar_Zit1VLG0">угла и ребра разные.</a><br/><br/>
+        Абсолютно те же самые 5 и 6 шаги, только ребро ставим не к углу, а на противоположную грань и для
+        заселения используем один из вторых базовых алгоритмов.
+
+        <p style="text-align:center"><img src="f2l_int_13.png" width="60%%"></p>
+
+        2.2 Вернемся еще чуть назад к ситуаци, когда обе части на верхнем слое, но
+        <b><a href="rubic-activity://ytactivity?time=3:59&link=Ar_Zit1VLG0">белая наклейка угла сверху</a></b>,
+        т.е. парень с завышенной самооценкой. Этот случай на мой взгляд еще проще, чем когда белая наклейка сбоку.<br/>
+
+        <p style="text-align:center"><img src="f2l_int_14.png" width="60%%"></p>
+
+        3.  Тут сразу начинаем с  <b><a href="rubic-activity://ytactivity?time=4:15&link=Ar_Zit1VLG0">установки на место ребра</a>
+        (Move the edge piece).</b><be/>
+        А место у ребра в данном случае на своей грани, т.е. делаем хорошо знакомый \"Стебель ромашки\". И теперь
+        опускаем ребро на второй этаж <a href="rubic-activity://ytactivity?time=4:18&link=Ar_Zit1VLG0">от своей квартиры.</a>
+
+        <p style="text-align:center"><img src="f2l_int_15.png" width="60%%"></p>
+
+        4. <b><a href="rubic-activity://ytactivity?time=4:21&link=Ar_Zit1VLG0">Ставим угол над ребром.</a>
+        (Put corner above edge).</b> И поднимаем пару на верхний слой.
+
+        <p style="text-align:center"><img src="f2l_int_15.png" width="60%%"></p>
+
+        5. <b><a href="rubic-activity://ytactivity?time=4:28&link=Ar_Zit1VLG0">Заселяем.</a>
+        (Insert).</b><br/>
+        Используя один из первых базовых алгоритмов.<br/><br/>
+
+        Profit!<br/><br/>
+
+        Осталось рассказать про ситуации немного выходящие за рамки вышепреведенной инструкции.
+        <b><a href="rubic-activity://ytactivity?time=4:37&link=Ar_Zit1VLG0">(How to solve special cases).</a><br/>
+        Например такая ситуация:
+
+        <p style="text-align:center"><img src="f2l_int_16.png" width="30%%"></p>
+
+        В этом случае не получится собрать стебель, опустить ребро на второй этаж и подогнать к
+        ребру угол, т.к. угол окажется на первом этаже. Есть несколько вариантов решения:<br/><br/>
+        1. Алгоритмы - их вы можете найти в других частях F2L (Жизненном и Advanced)<br/><br/>
+        2. <b><a href="rubic-activity://ytactivity?time=5:21&link=Ar_Zit1VLG0">Надо разбить такую пару.</a> (Split it up)<br/>
+        И простой алгоритм для разбивки пар такой: опустите угол на первый этаж, уведите ребро в сторону, верните угол наверх
+        <b>(R\' U R)</b>. Но как вы заметили, данный алгоритм выселяет пару из задней правой квартиры.
+        Ничего страшного, просто поверните два нижних слоя так, чтобы задняя правая квартира
+        <a href="rubic-activity://ytactivity?time=6:05&link=Ar_Zit1VLG0">не была занята.</a>
+
+        <p>Просто пример <a href="rubic-activity://ytactivity?time=6:20&link=Ar_Zit1VLG0">интуитивной сборки F2L</a></p>
     ]]></string>
     <string name="advf2l_st1_url">Ar_Zit1VLG0</string>
 
