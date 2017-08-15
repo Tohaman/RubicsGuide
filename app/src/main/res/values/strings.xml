@@ -2,6 +2,19 @@
     <string name="app_name">RubicsGuide</string>
     <string name="scramble">Скрамбл:</string>
 
+    <string name="version">20170815</string>
+    <string name="whatsnew">Что нового в этой версии. \n
+    1. Переработан F2L:\n
+        Добавлен Интуитивный F2L\n
+        Advaced F2L отделен от Жизненного F2L.\n\n
+
+    2. При первом запуске новой версии программы, выводится это окно.\n\n
+
+    3. Добавлен совет и алгоритм для НТВ+.\n\n
+
+    4. Исправлены найденные синтаксические ошибки.
+    </string>
+
     <string name="edit_comment">Редактировать комментарий</string>
     <string name="edit_comment_label">Комментарий</string>
     <string name="error_player">Ошибка инициализации YouTubePlayer (%1$s)</string>

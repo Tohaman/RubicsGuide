@@ -2,7 +2,10 @@ package ru.tohaman.rubicsguide;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -11,8 +14,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +36,9 @@ import static ru.tohaman.rubicsguide.listpager.ListPagerLab.getResID;
 
 public class MainFragment extends Fragment {
     private Callbacks mCallbacks;
+    private ConstraintLayout mConstraintLayout;
+    private SharedPreferences sp;
+    int ver,cur_ver,count;
 
     //Обязательный интерфейс для активности-хоста
     public interface Callbacks {
@@ -79,6 +88,39 @@ public class MainFragment extends Fragment {
             }
         };
         mListView.setOnItemClickListener(itemListener);
+
+        mConstraintLayout = (ConstraintLayout) v.findViewById(R.id.hint_main);
+        sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        ver = Integer.parseInt(getString(R.string.version));
+        count = sp.getInt("startcount", 0);
+        // Увеличиваем число запусков программы на 1 и сохраняем результат.
+        count++;
+        SharedPreferences.Editor e = sp.edit();
+        e.putInt("startcount", count);
+        e.commit(); // подтверждаем изменения
+
+
+
+        // проверяем версию программы в файле настроек, если она отлична от текущей, то выводим окно с описанием обновлений
+        cur_ver = sp.getInt("version", ver-1);
+        if (cur_ver!=ver) { //если версии разные
+            mConstraintLayout.setVisibility(View.VISIBLE);
+            Button hintbutton = (Button) v.findViewById(R.id.hint_mainbutton);
+            mConstraintLayout.setVisibility(View.VISIBLE);
+            hintbutton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                        SharedPreferences.Editor e = sp.edit();
+                        e.putInt("version", ver);
+                        e.commit(); // подтверждаем изменения
+                        mConstraintLayout.setVisibility(View.INVISIBLE);
+                    }
+            });
+        } else {    // если не первый, то убираем подсказку
+            mConstraintLayout.setVisibility(View.INVISIBLE);
+        }
+
+
 
         // возвращаем сформированный View в активность
         return v;
