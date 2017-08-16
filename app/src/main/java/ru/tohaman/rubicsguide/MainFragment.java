@@ -3,6 +3,7 @@ package ru.tohaman.rubicsguide;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.constraint.ConstraintLayout;
@@ -27,6 +28,7 @@ import ru.tohaman.rubicsguide.g2f.G2FActivity;
 import ru.tohaman.rubicsguide.listpager.ListPager;
 import ru.tohaman.rubicsguide.listpager.ListPagerLab;
 import ru.tohaman.rubicsguide.listpager.MyListAdapter;
+import ru.tohaman.rubicsguide.BuildConfig;
 
 import static ru.tohaman.rubicsguide.listpager.ListPagerLab.getResID;
 
@@ -91,18 +93,17 @@ public class MainFragment extends Fragment {
 
         mConstraintLayout = (ConstraintLayout) v.findViewById(R.id.hint_main);
         sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        ver = Integer.parseInt(getString(R.string.version));
-        count = sp.getInt("startcount", 0);
+        cur_ver = BuildConfig.VERSION_CODE;
+
+        count = sp.getInt("startcount", 1);
         // Увеличиваем число запусков программы на 1 и сохраняем результат.
         count++;
         SharedPreferences.Editor e = sp.edit();
         e.putInt("startcount", count);
         e.commit(); // подтверждаем изменения
 
-
-
         // проверяем версию программы в файле настроек, если она отлична от текущей, то выводим окно с описанием обновлений
-        cur_ver = sp.getInt("version", ver-1);
+        ver = sp.getInt("version", 1);
         if (cur_ver!=ver) { //если версии разные
             mConstraintLayout.setVisibility(View.VISIBLE);
             Button hintbutton = (Button) v.findViewById(R.id.hint_mainbutton);
@@ -111,7 +112,7 @@ public class MainFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                         SharedPreferences.Editor e = sp.edit();
-                        e.putInt("version", ver);
+                        e.putInt("version", cur_ver);
                         e.commit(); // подтверждаем изменения
                         mConstraintLayout.setVisibility(View.INVISIBLE);
                     }

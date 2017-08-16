@@ -135,6 +135,7 @@ public class ScambleFragment extends Fragment {
                 // Обработка нажатия
                 int i = Integer.parseInt(ScrambleLength.getText().toString());
                 i--;
+                if (i<1) {i = 1;}
                 ScrambleLength.setText(String.valueOf(i));
                 SetParamToBase("ScrambleLength",String.valueOf(i));
             }
@@ -149,6 +150,7 @@ public class ScambleFragment extends Fragment {
                 // Обработка нажатия
                 int i = Integer.parseInt(ScrambleLength.getText().toString());
                 i++;
+                if (i>30) {i = 30;}
                 ScrambleLength.setText(String.valueOf(i));
                 SetParamToBase("ScrambleLength",String.valueOf(i));
             }
