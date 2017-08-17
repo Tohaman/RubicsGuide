@@ -1,15 +1,11 @@
 package ru.tohaman.rubicsguide;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageInfo;
-import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -18,19 +14,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import ru.tohaman.rubicsguide.g2f.G2FActivity;
 import ru.tohaman.rubicsguide.listpager.ListPager;
 import ru.tohaman.rubicsguide.listpager.ListPagerLab;
 import ru.tohaman.rubicsguide.listpager.MyListAdapter;
-import ru.tohaman.rubicsguide.BuildConfig;
 
 import static ru.tohaman.rubicsguide.listpager.ListPagerLab.getResID;
 
@@ -71,7 +63,7 @@ public class MainFragment extends Fragment {
 
         // начальная инициализация списка для ListView c адаптером MyListAdapter
         // получаем элемент ListView
-        ListView mListView = (ListView) v.findViewById(R.id.main_listview);
+        ListView mListView = (ListView) v.findViewById(R.id.main_listview2);
 
         // создаем адаптер и задаем массивы к адаптеру
         List<ListPager> mListPagers = new ArrayList();

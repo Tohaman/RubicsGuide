@@ -2,8 +2,10 @@ package ru.tohaman.rubicsguide;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.PowerManager;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -20,6 +22,9 @@ import ru.tohaman.rubicsguide.timer.TimerActivity;
 public class MainActivity extends SingleFragmentActivity implements MainFragment.Callbacks, ListFragment.Callbacks {
     private Intent mIntent;
     private String phase;
+    private static long back_pressed;
+    private SharedPreferences sp;
+    int count;
 
 
     @Override
@@ -117,9 +122,29 @@ public class MainActivity extends SingleFragmentActivity implements MainFragment
     }
 
     @Override
+    public void onBackPressed() {
+        if (back_pressed + 2000 > System.currentTimeMillis()){
+            super.onBackPressed();
+        } else {
+            if (count > 10) {
+                //TODO Сделать вывод окна "оставьте отзыв"
+            }
+            Toast.makeText(getBaseContext(), "Нажмите еще раз для выхода", Toast.LENGTH_SHORT).show();
+            back_pressed = System.currentTimeMillis();
+        }
+    }
+
+    @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
         savedInstanceState.putString("phase",phase);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        sp = PreferenceManager.getDefaultSharedPreferences(this);
+        count = sp.getInt("startcount", 1);
     }
 
     @Override

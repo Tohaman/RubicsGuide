@@ -15,8 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ru.tohaman.rubicsguide.R;
-import ru.tohaman.rubicsguide.g2f.G2FFragment;
-import ru.tohaman.rubicsguide.listpager.ListActivity;
 import ru.tohaman.rubicsguide.listpager.ListPager;
 import ru.tohaman.rubicsguide.listpager.MyListAdapter;
 
@@ -58,7 +56,7 @@ public class BlindMenuFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.fragment_mainscreen, container, false);
+        View v = inflater.inflate(R.layout.fragment_mainlist, container, false);
 
         // начальная инициализация списка для ListView c адаптером MyListAdapter
         // получаем элемент ListView
