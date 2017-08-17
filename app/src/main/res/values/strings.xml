@@ -2,6 +2,9 @@
     <string name="app_name">RubicsGuide</string>
     <string name="scramble">Скрамбл:</string>
 
+    <string name="fivestartitle">Пожалуйста оцените приложение</string>
+    <string name="fivestar_button_text">Если вам понравилось приложение, пожалуйста оставьте отзыв в PlayMarket</string>
+
     <string name="edit_comment">Редактировать комментарий</string>
     <string name="edit_comment_label">Комментарий</string>
     <string name="error_player">Ошибка инициализации YouTubePlayer (%1$s)</string>

@@ -1,6 +1,8 @@
 package ru.tohaman.rubicsguide.about;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,6 +12,7 @@ import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import ru.tohaman.rubicsguide.R;
@@ -21,6 +24,7 @@ import ru.tohaman.rubicsguide.R;
 
 public class AboutFragment extends Fragment {
     private TextView mAboutField;
+    private Button mFiveStarButton;
 
     @Override
     @SuppressWarnings("deprecation")
@@ -28,7 +32,7 @@ public class AboutFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_about, container, false);
 
         // Немного преобразуем текст для корректного отображения.
-        String text = "<html><body style=\"text-align:justify\"> %s </body></Html>";
+        String text = "<html> %s </Html>";
         String description = String.format(text,getString(R.string.about));
         description = description.replace("%%", "%25");
 
@@ -53,7 +57,18 @@ public class AboutFragment extends Fragment {
         mAboutField.setText(spanresult);
         mAboutField.setMovementMethod(LinkMovementMethod.getInstance());
 
-
+        mFiveStarButton = (Button) v.findViewById(R.id.fivestarbutton);
+        mFiveStarButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                final String appPackageName = getActivity().getPackageName(); // getPackageName() from Context or Activity object
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+                } catch (android.content.ActivityNotFoundException anfe) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+                }
+            }
+        });
         return v;
     }
 

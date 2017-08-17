@@ -4,10 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -92,9 +94,9 @@ public class MainFragment extends Fragment {
         mListView.setOnItemClickListener(itemListener);
 
         mConstraintLayout = (ConstraintLayout) v.findViewById(R.id.hint_main);
-        sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
         cur_ver = BuildConfig.VERSION_CODE;
 
+        sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
         count = sp.getInt("startcount", 1);
         // Увеличиваем число запусков программы на 1 и сохраняем результат.
         count++;
@@ -121,8 +123,6 @@ public class MainFragment extends Fragment {
             mConstraintLayout.setVisibility(View.INVISIBLE);
         }
 
-
-
         // возвращаем сформированный View в активность
         return v;
     }
@@ -131,6 +131,23 @@ public class MainFragment extends Fragment {
     public void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
+    }
+
+    @Override
+    public void onResume (){
+        super.onResume();
+//        sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
+//        count = sp.getInt("startcount", 1);
+//        boolean visited = sp.getBoolean("isMark5Stars", false);
+//        if ((count > 10)&&(!visited)) {
+//
+//        }
+//        final String appPackageName = getActivity().getPackageName(); // getPackageName() from Context or Activity object
+//        try {
+//            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+//        } catch (android.content.ActivityNotFoundException anfe) {
+//            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+//        }
     }
 
     @Override
