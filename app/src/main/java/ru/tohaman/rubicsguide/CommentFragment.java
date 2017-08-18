@@ -66,8 +66,8 @@ public class CommentFragment extends DialogFragment {
                             public void onClick (DialogInterface dialog, int which) {
                                 // В string надо передать новое значение текста в mEditText
 
-                                String string = mEditText.getText().toString();
-                                sendResult(Activity.RESULT_OK,string);
+                                String text = mEditText.getText().toString();
+                                sendResult(Activity.RESULT_OK,text);
                             }
                         })
                 .create();

@@ -4,9 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.PowerManager;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -24,7 +24,8 @@ public class MainActivity extends SingleFragmentActivity implements MainFragment
     private String phase;
     private static long back_pressed;
     private SharedPreferences sp;
-    int count;
+    private int count;
+    private FiveStarFragment FSF;
 
 
     @Override
@@ -127,7 +128,8 @@ public class MainActivity extends SingleFragmentActivity implements MainFragment
             super.onBackPressed();
         } else {
             if (count > 10) {
-                //TODO Сделать вывод окна "оставьте отзыв"
+                //TODO Сделать вывод окна "оставьте отзыв", т.к. это вызов из активности
+                //FSF = new FiveStarFragment();
             }
             Toast.makeText(getBaseContext(), "Нажмите еще раз для выхода", Toast.LENGTH_SHORT).show();
             back_pressed = System.currentTimeMillis();

@@ -1,11 +1,13 @@
 package ru.tohaman.rubicsguide.about;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
@@ -15,7 +17,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import ru.tohaman.rubicsguide.CommentFragment;
+import ru.tohaman.rubicsguide.FiveStarFragment;
 import ru.tohaman.rubicsguide.R;
+import ru.tohaman.rubicsguide.listpager.PagerFragment;
 
 
 /**
@@ -25,6 +30,9 @@ import ru.tohaman.rubicsguide.R;
 public class AboutFragment extends Fragment {
     private TextView mAboutField;
     private Button mFiveStarButton;
+    //стр.249
+    private static final int REQUEST_COMMENT = 0;
+    private static final String DIALOG_COMMENT = "DialogComment";  //в этой "паре", передаем значение комментария для редактирования
 
     @Override
     @SuppressWarnings("deprecation")
@@ -61,15 +69,27 @@ public class AboutFragment extends Fragment {
         mFiveStarButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                final String appPackageName = getActivity().getPackageName(); // getPackageName() from Context or Activity object
-                try {
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
-                } catch (android.content.ActivityNotFoundException anfe) {
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
-                }
+                //вызов окна оценки приложения
+                FragmentManager manager = getFragmentManager();
+                FiveStarFragment window = new FiveStarFragment();
+                window.setTargetFragment(AboutFragment.this, REQUEST_COMMENT);
+                window.show (manager, DIALOG_COMMENT);
+//                final String appPackageName = getActivity().getPackageName(); // getPackageName() from Context or Activity object
+//                try {
+//                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+//                } catch (android.content.ActivityNotFoundException anfe) {
+//                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+//                }
             }
         });
         return v;
+    }
+
+    @Override
+    public void onActivityResult (int requestCode, int resultCode, Intent data) {
+        if (resultCode != Activity.RESULT_OK) {
+            return;
+        }
     }
 
     @SuppressWarnings("deprecation")
