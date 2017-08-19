@@ -1,12 +1,12 @@
 package ru.tohaman.rubicsguide;
 
-import android.content.Context;
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -26,6 +26,7 @@ public class MainActivity extends SingleFragmentActivity implements MainFragment
     private SharedPreferences sp;
     private int count;
     private FiveStarFragment FSF;
+    private Boolean neverAskRate;
 
 
     @Override
@@ -52,7 +53,6 @@ public class MainActivity extends SingleFragmentActivity implements MainFragment
         } else {
             phase = "ABOUT";
         }
-
     }
 
     @Override
@@ -124,12 +124,19 @@ public class MainActivity extends SingleFragmentActivity implements MainFragment
 
     @Override
     public void onBackPressed() {
-        if (back_pressed + 2000 > System.currentTimeMillis()){
+        if (back_pressed + 1000 > System.currentTimeMillis()){
             super.onBackPressed();
         } else {
-            if (count > 10) {
-                //TODO Сделать вывод окна "оставьте отзыв", т.к. это вызов из активности
-                //FSF = new FiveStarFragment();
+            // если программа запускалась больше 50 раз и флаг "больше не спрашивать" не установлен - выводим окно
+            if ((count > 50) && (!neverAskRate)) {
+                // обновим данные, на случай если были нажаты "Больше не спрашивать" или "Спросить позже"
+                count = sp.getInt("startcount", 1);
+                neverAskRate = sp.getBoolean("neverAskRate", false);
+                if ((count > 50) && (!neverAskRate)) {
+                    FSF = new FiveStarFragment();
+                    FSF.setCancelable(false);
+                    FSF.show(getSupportFragmentManager(), "RateUsPlease");
+                }
             }
             Toast.makeText(getBaseContext(), "Нажмите еще раз для выхода", Toast.LENGTH_SHORT).show();
             back_pressed = System.currentTimeMillis();
@@ -147,6 +154,7 @@ public class MainActivity extends SingleFragmentActivity implements MainFragment
         super.onResume();
         sp = PreferenceManager.getDefaultSharedPreferences(this);
         count = sp.getInt("startcount", 1);
+        neverAskRate = sp.getBoolean("neverAskRate", false);
     }
 
     @Override

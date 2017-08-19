@@ -1,13 +1,15 @@
 package ru.tohaman.rubicsguide;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
+import android.view.View;
 import android.widget.Toast;
 
 /**
@@ -31,6 +33,9 @@ public class FiveStarFragment extends DialogFragment {
         ad.setPositiveButton("Конечно, перейти в GooglePlay", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+                SharedPreferences.Editor e = PreferenceManager.getDefaultSharedPreferences(getActivity()).edit();
+                e.putBoolean("neverAskRate", true); //ставим флаг - Больше не спрашивать "Оцените приложение"... надеемся, что после перехода в googleplay, оценка будет поставлена
+                e.commit(); // подтверждаем изменения
                 final String appPackageName = getActivity().getPackageName(); // getPackageName() from Context or Activity object
                 try {
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
@@ -42,15 +47,23 @@ public class FiveStarFragment extends DialogFragment {
         ad.setNegativeButton("Больше не напоминать", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-
+                SharedPreferences.Editor e = PreferenceManager.getDefaultSharedPreferences(getActivity()).edit();
+                e.putBoolean("neverAskRate", true); //ставим флаг - Больше не спрашивать "Оцените приложение"
+                e.commit(); // подтверждаем изменения
             }
         });
+        // Напомнить через 30 заупсков
         ad.setNeutralButton("Напомнить позже", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-
+                SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
+                SharedPreferences.Editor e = sp.edit();
+                e.putBoolean("neverAskRate", false); //на всякий случай сбрасываем флаг - Больше не спрашивать "Оцените приложение"
+                e.putInt("startcount",sp.getInt("startcount", 1)-30); //уменьшаем счетчик количество запусков приложения на 30
+                e.commit(); // подтверждаем изменения
             }
         });
         return ad.create();
     }
+
 }

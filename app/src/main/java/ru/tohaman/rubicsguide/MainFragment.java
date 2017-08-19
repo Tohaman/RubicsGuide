@@ -42,7 +42,6 @@ public class MainFragment extends Fragment {
         boolean onMyOptionsItemSelected (MenuItem item);
     }
 
-
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -128,18 +127,6 @@ public class MainFragment extends Fragment {
     @Override
     public void onResume (){
         super.onResume();
-//        sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
-//        count = sp.getInt("startcount", 1);
-//        boolean visited = sp.getBoolean("isMark5Stars", false);
-//        if ((count > 10)&&(!visited)) {
-//
-//        }
-//        final String appPackageName = getActivity().getPackageName(); // getPackageName() from Context or Activity object
-//        try {
-//            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
-//        } catch (android.content.ActivityNotFoundException anfe) {
-//            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
-//        }
     }
 
     @Override

@@ -69,17 +69,17 @@ public class AboutFragment extends Fragment {
         mFiveStarButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                //вызов окна оценки приложения
-                FragmentManager manager = getFragmentManager();
-                FiveStarFragment window = new FiveStarFragment();
-                window.setTargetFragment(AboutFragment.this, REQUEST_COMMENT);
-                window.show (manager, DIALOG_COMMENT);
-//                final String appPackageName = getActivity().getPackageName(); // getPackageName() from Context or Activity object
-//                try {
-//                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
-//                } catch (android.content.ActivityNotFoundException anfe) {
-//                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
-//                }
+//                //вызов окна оценки приложения
+//                FragmentManager manager = getFragmentManager();
+//                FiveStarFragment window = new FiveStarFragment();
+//                window.setTargetFragment(AboutFragment.this, REQUEST_COMMENT);
+//                window.show (manager, DIALOG_COMMENT);
+                final String appPackageName = getActivity().getPackageName(); // getPackageName() from Context or Activity object
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+                } catch (android.content.ActivityNotFoundException anfe) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+                }
             }
         });
         return v;

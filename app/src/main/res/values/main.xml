@@ -6,7 +6,7 @@
         <item>Сборка кубика вслепую</item>
         <item>Основные движения</item>
         <item>Таймер</item>
-        <item>О Программе</item>
+        <item>О программе</item>
     </string-array>
 
     <integer-array name="main_icon">

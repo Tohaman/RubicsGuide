@@ -3,8 +3,8 @@
     <string name="scramble">Скрамбл:</string>
 
     <string name="fivestartitle">Оцените приложение</string>
-    <string name="fivestar_button_text">Открыть приложение в GooglePlay</string>
-    <string name="fivestar_text">Если вам понравилось приложение, пожалуйста оставьте отзыв в GooglePlay</string>
+    <string name="fivestar_button_text">Оценить приложение в GooglePlay</string>
+    <string name="fivestar_text">Если вам понравилось приложение, пожалуйста оставьте свой отзыв в GooglePlay</string>
 
     <string name="edit_comment">Редактировать комментарий</string>
     <string name="edit_comment_label">Комментарий</string>
