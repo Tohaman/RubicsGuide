@@ -37,7 +37,7 @@ public class BlindMenuActivity extends SingleFragmentActivity implements BlindMe
                     startActivity(mIntent);
                 } else {
                     // для планшета открываем во фрагменте
-                    Fragment newDetail = ListFragment.newInstance(phase);
+                    Fragment newDetail = new ScambleFragment();
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.detail_fragment_container, newDetail)
                             .commit();

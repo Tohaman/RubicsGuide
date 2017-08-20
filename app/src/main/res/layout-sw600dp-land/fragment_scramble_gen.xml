@@ -8,60 +8,75 @@
               android:gravity="center_vertical"
               android:orientation="vertical">
 
-    <GridLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:columnCount="2">
-
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:layout_margin="15dp"
-            android:gravity="center">
-
-            <GridView
-                android:id="@+id/scram_gridView"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:horizontalSpacing="1dp"
-                android:numColumns="12"
-                android:stretchMode="columnWidth"
-                android:verticalSpacing="1dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="h,4:3"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-            </GridView>
-
-            <ProgressBar
-                android:id="@+id/progressBar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-            </ProgressBar>
-
-            <TextView
-                android:id="@+id/progressText"
-                android:text="@string/scram_waiting"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/progressBar"/>
-
-        </android.support.constraint.ConstraintLayout>
-
+        android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/scram_LL1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/scram_LL2"
+            android:orientation="horizontal">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:gravity="center_vertical">
+
+                <GridView
+                    android:id="@+id/scram_gridView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:horizontalSpacing="1dp"
+                    android:numColumns="12"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="1dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="h,4:3"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                </GridView>
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="69dp">
+                </ProgressBar>
+
+                <TextView
+                    android:id="@+id/progressText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/scram_waiting"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/progressBar"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scram_LL2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/scram_LL1"
+            app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -124,7 +139,7 @@
 
                     <Button
                         android:id="@+id/button_minus"
-                        android:layout_width="60dp"
+                        android:layout_width="88dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
                         android:text="-"
@@ -146,7 +161,7 @@
 
                     <Button
                         android:id="@+id/button_plus"
-                        android:layout_width="60dp"
+                        android:layout_width="88dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
                         android:text="+"
@@ -173,15 +188,16 @@
         </LinearLayout>
 
         <android.support.constraint.ConstraintLayout
+            android:id="@+id/scram_LL3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_columnSpan="2"
             android:layout_columnWeight="1"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/scram_LL1"
+            app:layout_constraintTop_toBottomOf="@+id/scram_LL2">
 
             <TextView
                 android:id="@+id/scramble_textView"
@@ -220,9 +236,9 @@
             android:layout_columnSpan="2"
             android:layout_columnWeight="1"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="parent">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scram_LL3">
 
             <CheckBox
                 android:id="@+id/checkBox_solve"
@@ -247,5 +263,5 @@
 
         </android.support.constraint.ConstraintLayout>
 
-    </GridLayout>
+    </android.support.constraint.ConstraintLayout>
 </LinearLayout>
