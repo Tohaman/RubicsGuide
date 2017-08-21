@@ -124,6 +124,7 @@ public class MainActivity extends SingleFragmentActivity implements MainFragment
 
     @Override
     public void onBackPressed() {
+        //Если в течении секунды нажали второй раз, то выходим
         if (back_pressed + 1000 > System.currentTimeMillis()){
             super.onBackPressed();
         } else {
@@ -134,6 +135,7 @@ public class MainActivity extends SingleFragmentActivity implements MainFragment
                 neverAskRate = sp.getBoolean("neverAskRate", false);
                 if ((count > 50) && (!neverAskRate)) {
                     FSF = new FiveStarFragment();
+                    // отменяем закрытие окна по кнопке back
                     FSF.setCancelable(false);
                     FSF.show(getSupportFragmentManager(), "RateUsPlease");
                 }
