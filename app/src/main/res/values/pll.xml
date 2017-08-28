@@ -430,10 +430,14 @@
         сами глазки противоположны блоку по цвету.</p>
         <p>Со стороны светофора и глазок: если смотреть слева направо, то четыре наклейки разного цвета, а потом повторяются две последние.</p>
         <b>Как решать:</b><br/>
-        <p>Двойным блоком справа. <br/>
+        <p>1. Двойным блоком справа. <br/>
         <p style="text-align:center"><img src="pll_17_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=5:10&link=w8pDuyhAdVo">на видео 5:10</a> <br/>
         <b>Алгоритм: (UD\' R2 U) (R\' U R\' U\' R U\') (R2 U\'D R\' U R) </b></p>
+        <p>1. Двойным блоком к себе. <br/>
+
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=0:32&link=nBMCuMiSFIg">от J Perm</a> <br/>
+        <b>Алгоритм: R2 U R\' U R\' U\' R U\' R2 (DU\') R\' U R D\'</b></p>
     ]]></string>
     <string name="pll_st17_url">w8pDuyhAdVo</string>
 
