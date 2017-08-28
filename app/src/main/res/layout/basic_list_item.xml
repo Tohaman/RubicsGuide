@@ -10,7 +10,8 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:orientation="horizontal"
-        android:id="@+id/linearLayout_main">
+        android:id="@+id/linearLayout_main"
+        android:baselineAligned="false">
 
 
     <LinearLayout
@@ -44,7 +45,7 @@
             android:id="@+id/list_item_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            android:padding="@dimen/list_item_padding"
             app:srcCompat="@drawable/basic_1"/>
 
     </LinearLayout>

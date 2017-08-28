@@ -19,13 +19,19 @@
     </integer-array>
 
     <string-array name="main_phase">
-        <item>BEGIN</item>
-        <item>G2F</item>
-        <item>BLIND</item>
-        <item>BASIC</item>
-        <item>TIMER</item>
-        <item>ABOUT</item>
+        <item>@string/mphase1</item>
+        <item>@string/mphase2</item>
+        <item>@string/mphase3</item>
+        <item>@string/mphase4</item>
+        <item>@string/mphase5</item>
+        <item>@string/mphase6</item>
     </string-array>
 
+    <string name="mphase1">BEGIN</string>
+    <string name="mphase2">G2F</string>
+    <string name="mphase3">BLIND</string>
+    <string name="mphase4">BASIC</string>
+    <string name="mphase5">TIMER</string>
+    <string name="mphase6">ABOUT</string>
 
 </resources>

@@ -18,5 +18,8 @@
     <string name="timer_hint_text1">Для старта и остановки, одновременно коснитесь обеих половинок экрана.</string>
     <string name="timer_hint_text2">Двойной щелчок по экрану обнуляет время.</string>
     <string name="hint_start_time">0:04:73</string>
+    <string name="input_letter">A</string>
+    <string name="input_letter_minus">-</string>
+    <string name="input_letter_plus">+</string>
 
 </resources>

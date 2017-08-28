@@ -7,35 +7,35 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/textView_letter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="А"
+        android:text="@string/input_letter"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/textView_letter"/>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <Button
         android:id="@+id/button_minus2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="-"
+        android:layout_marginEnd="8dp"
+        android:text="@string/input_letter_minus"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/textView_letter"
-        android:layout_marginRight="8dp"/>
+        app:layout_constraintEnd_toStartOf="@+id/textView_letter"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <Button
         android:id="@+id/button_plus2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="+"
+        android:layout_marginStart="@dimen/dimen_margin_8"
+        android:text="@string/input_letter_plus"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/textView_letter"
-        android:layout_marginLeft="8dp"/>
+        app:layout_constraintStart_toEndOf="@+id/textView_letter"
+        app:layout_constraintTop_toTopOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>
