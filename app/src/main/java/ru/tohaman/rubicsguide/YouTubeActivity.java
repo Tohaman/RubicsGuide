@@ -2,8 +2,11 @@ package ru.tohaman.rubicsguide;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.google.android.youtube.player.YouTubeInitializationResult;
@@ -34,6 +37,16 @@ public class YouTubeActivity extends Activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Проверяем значения из настроек, выключать экран или нет при прсмотре видео
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+        boolean  sleep_youtube = sp.getBoolean("videoscreen_on", false);
+        if (sleep_youtube) {
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        }  else {
+            getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        }
+
 /**
  В активность передается ссылка на видео и время с которого надо воспроизводить видео в виде
  <a href="rubic_activity://ytactivity?time=1:15&link=Vt9dHndW7-E">Time 1:15</a>

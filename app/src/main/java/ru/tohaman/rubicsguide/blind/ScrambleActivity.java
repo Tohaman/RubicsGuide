@@ -19,7 +19,7 @@ public class ScrambleActivity extends SingleFragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
-        boolean  sleep_scram_gen= sp.getBoolean("sleep_scram_gen", false);
+        boolean  sleep_scram_gen= sp.getBoolean("videoscreen_on", false);
         if (sleep_scram_gen) {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         }  else {

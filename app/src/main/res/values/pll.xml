@@ -430,14 +430,23 @@
         сами глазки противоположны блоку по цвету.</p>
         <p>Со стороны светофора и глазок: если смотреть слева направо, то четыре наклейки разного цвета, а потом повторяются две последние.</p>
         <b>Как решать:</b><br/>
-        <p>1. Двойным блоком справа. <br/>
+        1. Двойным блоком справа.<br/>
         <p style="text-align:center"><img src="pll_17_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=5:10&link=w8pDuyhAdVo">на видео 5:10</a> <br/>
-        <b>Алгоритм: (UD\' R2 U) (R\' U R\' U\' R U\') (R2 U\'D R\' U R) </b></p>
-        <p>1. Двойным блоком к себе. <br/>
-
+        <b>Алгоритм: (UD\' R2 U) (R\' U R\' U\' R U\') (R2 U\'D R\' U R) </b><br/><br/>
+        2. Двойным блоком к себе, глазками налево.<br/>
+        <p style="text-align:center"><img src="pll_17_2.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=0:32&link=nBMCuMiSFIg">от J Perm</a> <br/>
-        <b>Алгоритм: R2 U R\' U R\' U\' R U\' R2 (DU\') R\' U R D\'</b></p>
+        <b>Алгоритм: R2 U R\' U R\' U\' R U\' R2 (DU\') R\' U R D\'</b>
+        <p>P.S. <a href="rubic-activity://ytactivity?time=4:28&link=nBMCuMiSFIg">совет от J Perm</a>
+        на примере встречной машинки, но применим для всех GPerm\'ов. Если вы понимаете, что после
+        выполнения алгоритма, вам придется сделать U2 (довернуть крышу дважды).
+        Если делать варианты алгоритмов G Perm для глазок слева, то это легко понять по
+        цвету глазок, которые в данном случае будут противоположны основному цвету левой грани.
+        Начните алгоритм с последнего хода нижней грани D или D\' в зависимости от алгоритма. В
+        этом случае не придется крутить неудобно D и U2 последним ходом.
+        </p>
+
     ]]></string>
     <string name="pll_st17_url">w8pDuyhAdVo</string>
 
@@ -456,11 +465,20 @@
         1. Двойным блоком справа.<br/>
         <p style="text-align:center"><img src="pll_18_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=9:55&link=w8pDuyhAdVo">на видео 9:55</a> <br/>
-        <b>Алгоритм: (U\'D R2 U\') (R U\' R U R\' U) (R2 UD\' R U\' R\') </b><br/>
+        <b>Алгоритм: (U\'D R2 U\') (R U\' R U R\' U) (R2 UD\' R U\' R\') </b><br/><br/>
+
         2. Блоком к себе, глазками направо.<br/>
         <p style="text-align:center"><img src="pll_18_2.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=14:30&link=w8pDuyhAdVo">на видео 14:30</a> (большой палец сверху) <br/>
-        <b>Алгоритм: R2\' F2 (R U2) (R U2) R\' F (R U R\' U\') R\' F R2 </b>
+        <b>Алгоритм: R2\' F2 (R U2) (R U2) R\' F (R U R\' U\') R\' F R2 </b><br/><br/>
+
+        3. Блоком от себя, глазками налево.<br/>
+        <p style="text-align:center"><img src="pll_18_3.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=1:56&link=nBMCuMiSFIg">от J Perm</a> <br/>
+        или чуть другой вариант <a href="rubic-activity://ytactivity?time=2:09&link=nBMCuMiSFIg">фингертрикса</a>
+        с нестандартным врещением крыши большим пальцем правой руки.<br/>
+        <b>Алгоритм: R2 U\' R U\' R U R\' U R2 (D\'U) R U\' R\' D </b>
+
     ]]></string>
     <string name="pll_st18_url">w8pDuyhAdVo</string>
 
@@ -475,9 +493,10 @@
         <p>Со стороны блока и светофора или блока и глазок очень похоже на машинки. Но в отличии от машинок,
         что центр глазок, что наклейка рядом с блоком противоположеы глазкам/блоку, а не смежны как у машинок.</p>
         <b>Как решать:</b><br/>
-        Двойным блоком справа. <br/>
+        Двойным блоком справа, глазками налево. <br/>
         <p style="text-align:center"><img src="pll_19_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=3:00&link=F-ODZtge9Ig">на видео 3:00</a> <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:50&link=nBMCuMiSFIg">от J Perm</a> <br/>
         <b>Алгоритм: (R U R\' U\'D) (R2 U\' R U\') (R\' U R\' U) R2 UD\' </b>
     ]]></string>
     <string name="pll_st19_url">F-ODZtge9Ig</string>
@@ -489,10 +508,11 @@
         Отличительная особенность улиток, двойной блок и глазки на противоположной этому блоку стороне.
         Если поставить блоком справа, то блок будет примыкать к задней грани.</p>
         <b>Как решать:</b><br/>
-        Двойным блоком справа. <br/>
+        1. Двойным блоком справа, глазками налево.<br/>
         <p style="text-align:center"><img src="pll_20_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=8:05&link=F-ODZtge9Ig">на видео 8:05</a> <br/>
-        <b>Алгоритм: (R\' U\' R UD\') (R2 U R\' U) (R U\' R U\') R2\' U\'D </b>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=0:59&link=nBMCuMiSFIg">от J Perm</a> <br/>
+        <b>Алгоритм: (R\' U\' R UD\') (R2 U R\' U) (R U\' R U\') R2\' U\'D </b><br/><br/>
     ]]></string>
     <string name="pll_st20_url">F-ODZtge9Ig</string>
 
