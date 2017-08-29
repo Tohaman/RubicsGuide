@@ -69,6 +69,7 @@
                  android:id="@+id/pager_youtubetext"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
+                 android:textAlignment="center"
                  android:text="@string/pager_youtubeText"
                  app:layout_constraintBottom_toBottomOf="parent"
                  app:layout_constraintEnd_toEndOf="parent"
