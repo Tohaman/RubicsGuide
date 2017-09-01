@@ -495,7 +495,9 @@
         <p style="text-align:center"><img src="pll_19_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=3:00&link=F-ODZtge9Ig">на видео 3:00</a> <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=2:50&link=nBMCuMiSFIg">от J Perm</a> <br/>
-        <b>Алгоритм: (R U R\' U\'D) (R2 U\' R U\') (R\' U R\' U) R2 UD\' </b>
+        <b>Алгоритм: (R U R\' U\'D) (R2 U\' R U\') (R\' U R\' U) R2 UD\' </b><br/><br/>
+        P.S. Вы наверно заметили что алгоритмы Максима и J Perm отличаются последним ходом U, все
+        дело в том, что у Максима привязка идет к двойному блоку, а у J Perm к глазкам.
     ]]></string>
     <string name="pll_st19_url">F-ODZtge9Ig</string>
 
