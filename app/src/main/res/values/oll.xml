@@ -31,6 +31,8 @@
         <item>@string/oll_st28_title</item>
         <item>@string/oll_st29_title</item>
         <item>@string/oll_st30_title</item>
+        <item>@string/oll_st31_title</item>
+        <item>@string/oll_st32_title</item>
     </string-array>
 
     <integer-array name="oll_icon">
@@ -63,6 +65,33 @@
         <item>@drawable/oll_27</item>
         <item>@drawable/oll_28</item>
         <item>@drawable/oll_29</item>
+        <item>@drawable/oll_30</item>
+        <item>@drawable/oll_31</item>
+        <item>@drawable/oll_32</item>
+        <item>@drawable/oll_30</item>
+        <item>@drawable/oll_30</item>
+        <item>@drawable/oll_30</item>
+        <item>@drawable/oll_30</item>
+        <item>@drawable/oll_30</item>
+        <item>@drawable/oll_30</item>
+        <item>@drawable/oll_30</item>
+        <item>@drawable/oll_30</item>
+        <item>@drawable/oll_30</item>
+        <item>@drawable/oll_30</item>
+        <item>@drawable/oll_30</item>
+        <item>@drawable/oll_30</item>
+        <item>@drawable/oll_30</item>
+        <item>@drawable/oll_30</item>
+        <item>@drawable/oll_30</item>
+        <item>@drawable/oll_30</item>
+        <item>@drawable/oll_30</item>
+        <item>@drawable/oll_30</item>
+        <item>@drawable/oll_30</item>
+        <item>@drawable/oll_30</item>
+        <item>@drawable/oll_30</item>
+        <item>@drawable/oll_30</item>
+        <item>@drawable/oll_30</item>
+        <item>@drawable/oll_30</item>
         <item>@drawable/oll_30</item>
     </integer-array>
 
@@ -97,6 +126,11 @@
         <item>@string/oll_st28_descr</item>
         <item>@string/oll_st29_descr</item>
         <item>@string/oll_st30_descr</item>
+        <item>@string/oll_st31_descr</item>
+        <item>@string/oll_st32_descr</item>
+        <item>@string/oll_st33_descr</item>
+        <item>@string/oll_st34_descr</item>
+        <item>@string/oll_st35_descr</item>
     </string-array>
 
     <string-array name="oll_url">
@@ -130,6 +164,11 @@
         <item>@string/oll_st28_url</item>
         <item>@string/oll_st29_url</item>
         <item>@string/oll_st30_url</item>
+        <item>@string/oll_st31_url</item>
+        <item>@string/oll_st32_url</item>
+        <item>@string/oll_st33_url</item>
+        <item>@string/oll_st34_url</item>
+        <item>@string/oll_st35_url</item>
     </string-array>
 
     <string name="oll_st1_title">#1 Снежинка</string>
@@ -454,10 +493,10 @@
         Заметьте, что <b>Левый мягкий знак</b> делается правой рукой, а <b>Правый мягкий знак</b> - левой. </p>
         <p style="text-align:center"><img src="oll_22_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=0:48&link=OIZDlsU0RjQ">на видео 0:48</a> <br/>
-        <b>Алгоритм: (U2) Fw\' (L\' U\' L U) Fw  </b><br/><br/>
+        <b>Алгоритм: {U2} Fw\' (L\' U\' L U) Fw  </b><br/><br/>
         <p>2. Тот же самый алгоритм, но выполнить чуть-чуть по другому. Левая рука стандартно, большой
         палец правой руки сверху.</p>
-        <b>Алгоритм: (U2) B\' (U\' R\' U R) B</b><br/><br/>
+        <b>Алгоритм: {U2} B\' (U\' R\' U R) B</b><br/><br/>
         <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=1:14&link=OIZDlsU0RjQ">на видео 1:14</a>
         в Лондон слева, пиф-паф слева, из Лондона слева.
     ]]></string>
@@ -466,10 +505,16 @@
     <string name="oll_st23_title">#23 Левый мягкий знак с блоком</string>
     <string name="oll_st23_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
-        <p>Крыша дважды, средний слой, пиф-паф, английский пиф-паф с последним жирным ходом. </p>
+        <p>1. Крыша дважды, средний слой, пиф-паф, английский пиф-паф с последним жирным ходом. </p>
         <p style="text-align:center"><img src="oll_23_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:00&link=fb00j4900Cw">на видео 1:00</a> <br/>
-        <b>Алгоритм: U2 S (R U R\' U\') (R\' F R Fw\')</b><br/><br/>
+        <b>Алгоритм: {U2} S (R U R\' U\') (R\' F R Fw\')</b>
+
+        <p>2. В принципе так же из положения палочкой вверх справа.<p>
+        <p style="text-align:center"><img src="oll_23_2.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=3:45&link=IasVqtCHoj0">от Феликса Земдекса</a> <br/>
+        <b>Алгоритм: (R U B\') (U\' R\' U) (R B R\')</b><br/><br/>
+
         <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=2:00&link=fb00j4900Cw">на видео 2:00</a>
           - <b>L F\' (L\' U\' L U) F U\' L\'</b>.
     ]]></string>
@@ -481,6 +526,7 @@
         <p style="text-align:center"><img src="oll_24_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:13&link=Qq10hEWLDXQ">на видео 1:13</a>
         (<a href="rubic-activity://ytactivity?time=2:25&link=Qq10hEWLDXQ">или 2:25</a>) <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=3:36&link=IasVqtCHoj0">от Феликса Земдекса</a> <br/>
         <b>Алгоритм: R\' U\' F (U R U\' R\') F\' R </b><br/><br/>
         <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=2:06&link=Qq10hEWLDXQ">на видео 2:06</a>
          противположными ходами <b>R\' F (R U R\' U\') F\' U R</b>.
@@ -591,5 +637,53 @@
          нужно сделать Жирную рыбку слева.
     ]]></string>
     <string name="oll_st30_url">Gqb32CfhALs</string>
+
+    <string name="oll_st31_title">#31 Левая буква М</string>
+    <string name="oll_st31_descr" formatted="false"><![CDATA[
+        <p>Еще две ситуации, которые назовем <b>буква М</b>. Как не сложно догадаться, <b>буква М</b> может быть
+        правой, а может быть левой. Чтобы определить, какая буква нам досталась, надо повернуть ее
+        точкой к себе. Для начала рассмотрим левую букву М.</p>
+        <b>Как решать:</b>
+        <p>Морской пиф-паф, морской пиф-паф с обратными ходами крыши, английский пиф-паф.</p>
+        <p style="text-align:center"><img src="oll_31_1.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:55&link=IasVqtCHoj0">от Феликса Земдекса</a> <br/>
+        <b>Алгоритм: (R U R\' U) (R U\' R\' U\') (R\' F R F\')</b><br/><br/>
+        ]]></string>
+    <string name="oll_st31_url"></string>
+
+    <string name="oll_st32_title">#32 Правая буква М</string>
+    <string name="oll_st32_descr" formatted="false"><![CDATA[
+        <b>Как решать:</b>
+        <p>1. Поставить как на кртинке. Зеркальный морской пиф-паф (все ходы обратные), морской пиф-паф с обратными включениями
+        выключениями света, жирно гасим свет слева, крыша против, гасим свет справа и крыша
+        снова против, поворачиваем кубик желтой стороной вверх.</p>
+        <p style="text-align:center"><img src="oll_32_1.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:40&link=IasVqtCHoj0">от Феликса Земдекса</a> <br/>
+        <b>Алгоритм: (R\' U\' R U\') (R\' U R U) (Lw U\' R\' U) x</b><br/><br/>
+
+        <p>2. Из другого положения: так же как и Левую М, но слева. Морской пиф-паф слева, левый морской пиф-паф с обратными
+        ходами крыши, левый английский пиф-паф.</p>
+        <p style="text-align:center"><img src="oll_32_2.png" width="60%%"></p>
+        <b>Алгоритм: (L\' U\' L U\') (L\' U L\' U) (L F\' L\' F)</b><br/><br/>
+        ]]></string>
+    <string name="oll_st32_url"></string>
+
+    <string name="oll_st33_title">#33</string>
+    <string name="oll_st33_descr" formatted="false"><![CDATA[
+        <b>Как решать:</b>
+        ]]></string>
+    <string name="oll_st33_url"></string>
+
+    <string name="oll_st34_title">#34</string>
+    <string name="oll_st34_descr" formatted="false"><![CDATA[
+        <b>Как решать:</b>
+        ]]></string>
+    <string name="oll_st34_url"></string>
+
+    <string name="oll_st35_title">#35</string>
+    <string name="oll_st35_descr" formatted="false"><![CDATA[
+        <b>Как решать:</b>
+        ]]></string>
+    <string name="oll_st35_url"></string>
 
 </resources>
