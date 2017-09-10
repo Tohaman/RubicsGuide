@@ -22,6 +22,7 @@
         <item>@string/accel_st18_title</item>
         <item>@string/accel_st19_title</item>
         <item>@string/accel_st20_title</item>
+        <item>@string/accel_st21_title</item>
     </string-array>
 
     <integer-array name="accel_icon">
@@ -45,6 +46,8 @@
         <item>@drawable/accel_17</item>
         <item>@drawable/accel_18</item>
         <item>@drawable/accel_19</item>
+        <item>@drawable/accel_20</item>
+        <item>@drawable/accel_20</item>
         <item>@drawable/accel_20</item>
     </integer-array>
 
@@ -70,6 +73,8 @@
         <item>@string/accel_st18_descr</item>
         <item>@string/accel_st19_descr</item>
         <item>@string/accel_st20_descr</item>
+        <item>@string/accel_st21_descr</item>
+        <item>@string/accel_st22_descr</item>
     </string-array>
 
     <string-array name="accel_url">
@@ -94,6 +99,8 @@
         <item>@string/accel_st18_url</item>
         <item>@string/accel_st19_url</item>
         <item>@string/accel_st20_url</item>
+        <item>@string/accel_st21_url</item>
+        <item>@string/accel_st22_url</item>
     </string-array>
 
     <string name="accel_st0_title">Вступление</string>
@@ -397,4 +404,70 @@
         <b>Алгоритм: (R, U\', R) D2 (R\' U R) D2 R2</b>
     ]]></string>
     <string name="accel_st20_url">B_Fkals9Svk</string>
+
+    <string name="accel_st21_title">Немного терминологии</string>
+    <string name="accel_st21_descr" formatted="false"><![CDATA[
+    <p><b>10 терминов</b>, которые должен знать каждый спидкубер. Пригодится, если будете смотреть
+    видео на английском.<br/><br/>
+
+    1. <a href="rubic-activity://ytactivity?time=0:00&link=4nSnsav3bIU">Sexy Move</a>
+    - в русском варианте пиф-паф. Простая четырехходовая комбинация R U R\' U\'. Ну а почему в
+    английском варианте это так называется,
+    <a href="rubic-activity://ytactivity?time=0:06&link=4nSnsav3bIU">смотрите в видео</a> :)))<br/><br/>
+
+    2. <a href="rubic-activity://ytactivity?time=0:18&link=4nSnsav3bIU">TPS</a> = Turns Per Second -
+    количество ходов (поворотов) в секунду. Величина позволяющая оценить на сколько быстро вы
+    крутите кубик. Чтобы оценить свой TPS выполните какую-то достаточно длинную комбинацию и заметьте
+    время за которое вы это сделаете. Теперь поделите количество сделанных ходов, на время. Например
+    <a href="rubic-activity://ytactivity?time=0:35&link=4nSnsav3bIU">Рыбку</a>, в которой семь ходов.
+    Но, то что вы крутите кубик очень быстро не означает что вы быстро собираете кубик.
+    <a href="rubic-activity://ytactivity?time=0:52&link=4nSnsav3bIU">Иначе говоря</a>,
+    именно потому, что вы крутите слишком быстро, вы не сможете сохранять высокий TPS для всей сборки.
+    Т.к. между выполнениями комбинаций у вас будут бОльшие паузы. Гораздо эффективнее, вращать кубик
+    медленнее, но без пауз между комбинациями.<br/><br/>
+
+    3. <a href="rubic-activity://ytactivity?time=1:42&link=4nSnsav3bIU">Sune</a> = Рыбка из Ускорения N2,
+    <a href="rubic-activity://ytactivity?time=2:07&link=4nSnsav3bIU">Antisune</a> = Акула из Ускорения N11,
+    <a href="rubic-activity://ytactivity?time=2:13&link=4nSnsav3bIU">Pi</a> = Вертолет из Ускорения N14,
+    <a href="rubic-activity://ytactivity?time=2:19&link=4nSnsav3bIU">U</a> = Глазки из Ускорения N13,
+    <a href="rubic-activity://ytactivity?time=2:27&link=4nSnsav3bIU">T</a> = Ушки из Ускорения N8,
+    <a href="rubic-activity://ytactivity?time=2:30&link=4nSnsav3bIU">L</a> = Носик из Ускорения N9 и
+    <a href="rubic-activity://ytactivity?time=2:39&link=4nSnsav3bIU">H</a> = НТВ+ из Ускорения N8.
+    Данные алгоритмы объединены в один блок как базовые OLL алгоритмы. В терминах применяемых в данной
+    программе, именно эти алгоритмы позволяют решать 7-ой этап не новичковым методом.<br/><br/>
+
+    4. <a href="rubic-activity://ytactivity?time=2:43&link=4nSnsav3bIU">2-gen</a> = Turns 2 Layer,
+    вращение двух слоев. Проще говоря, 2-gen алгоритмы, это такие алгоритмы, при выполнении которых вращаются только
+    2 слоя. Чаще всего R и U. Например: пиф-паф, рыбка, PLL окошки, PLL рельсы. Такие алгоритмы можно
+    выполнять очень быстро (с высоким TPS) и они очень удобны для сборки
+    <a href="rubic-activity://ytactivity?time=3:16&link=4nSnsav3bIU">одной рукой</a>(One Hand).
+    3-gen алгоритмы - соответственно те, при выполнении которых, вращаются 3 грани.<br/><br/>
+
+    5. <a href="rubic-activity://ytactivity?time=3:22&link=4nSnsav3bIU">Average vs Mean</a> - Усредненное
+    и среднее время. Если дословное переводить с агнглийского, то и mean time и average time означает
+    среднее время (сборки). Но считается оно по разному. Mean time - это суммарное время всех
+    попыток поделенное на количество попыток, т.е. точное среднее время. В то время как Average это более
+    абстрактное понятие, скорее не среднее, а усредненное время. Т.е. при его расчете, например не берутся
+    лучший и худший результат. Или под понятием Average time может пониматься примерное среднее время
+    сборок.
+
+    5. <a href="rubic-activity://ytactivity?time=4:27&link=4nSnsav3bIU">Sleagehammer</a> -
+    Английский пиф-паф (R\' F R F\'). Еще одна простая четырехходовка из Усорения N1. Используется как часть многих
+    алгоритмов. Так же можно использовать и как альтернативу первому базовому (U R U\' R\') алгоритму интуитивного
+    F2L, особенно при постановке на свое место последней
+    <a href="rubic-activity://ytactivity?time=4:42&link=4nSnsav3bIU">пары F2L</a>, а в такой
+    <a href="rubic-activity://ytactivity?time=4:54&link=4nSnsav3bIU">ситуации</a> и вовсе можно получить OLL Skip.
+
+    </p>
+    ]]></string>
+    <string name="accel_st21_url">4nSnsav3bIU</string>
+
+    <string name="accel_st22_title">Немного терминологии #2</string>
+    <string name="accel_st22_descr" formatted="false"><![CDATA[
+    <p><b>Еще 11+ терминов</b>, которые должен знать каждый спидкубер.<br/><br/>
+
+    </p>
+    ]]></string>
+    <string name="accel_st22_url">XhjQNdEaHJw</string>
+
 </resources>
