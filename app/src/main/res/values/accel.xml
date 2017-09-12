@@ -47,7 +47,7 @@
         <item>@drawable/accel_18</item>
         <item>@drawable/accel_19</item>
         <item>@drawable/accel_20</item>
-        <item>@drawable/accel_20</item>
+        <item>@drawable/accel_21</item>
         <item>@drawable/accel_20</item>
     </integer-array>
 
@@ -407,58 +407,104 @@
 
     <string name="accel_st21_title">Немного терминологии</string>
     <string name="accel_st21_descr" formatted="false"><![CDATA[
-    <p><b>10 терминов</b>, которые должен знать каждый спидкубер. Пригодится, если будете смотреть
-    видео на английском.<br/><br/>
+    <p> Если вы дошли до данного видео, то вам полезно будет познакомиться с некоторыми международными
+    терминами спидкубинга. Пригодится, если будете смотреть видео на английском, в том числе и
+    приведенные в данной программе.<br/><br/>
 
-    1. <a href="rubic-activity://ytactivity?time=0:00&link=4nSnsav3bIU">Sexy Move</a>
-    - в русском варианте пиф-паф. Простая четырехходовая комбинация R U R\' U\'. Ну а почему в
+    <b>1. <a href="rubic-activity://ytactivity?time=0:00&link=4nSnsav3bIU">Sexy Move</a></b>
+    - в русском варианте <b>пиф-паф</b>. Простая четырехходовая комбинация <b>R U R\' U\'</b>. Ну а почему в
     английском варианте это так называется,
     <a href="rubic-activity://ytactivity?time=0:06&link=4nSnsav3bIU">смотрите в видео</a> :)))<br/><br/>
 
-    2. <a href="rubic-activity://ytactivity?time=0:18&link=4nSnsav3bIU">TPS</a> = Turns Per Second -
+    <b>2. <a href="rubic-activity://ytactivity?time=0:18&link=4nSnsav3bIU">TPS</a></b> = Turns Per Second -
     количество ходов (поворотов) в секунду. Величина позволяющая оценить на сколько быстро вы
     крутите кубик. Чтобы оценить свой TPS выполните какую-то достаточно длинную комбинацию и заметьте
     время за которое вы это сделаете. Теперь поделите количество сделанных ходов, на время. Например
-    <a href="rubic-activity://ytactivity?time=0:35&link=4nSnsav3bIU">Рыбку</a>, в которой семь ходов.
+    <a href="rubic-activity://ytactivity?time=0:35&link=4nSnsav3bIU">Рыбку</a>, в которой семь ходов.<br/>
     Но, то что вы крутите кубик очень быстро не означает что вы быстро собираете кубик.
     <a href="rubic-activity://ytactivity?time=0:52&link=4nSnsav3bIU">Иначе говоря</a>,
     именно потому, что вы крутите слишком быстро, вы не сможете сохранять высокий TPS для всей сборки.
     Т.к. между выполнениями комбинаций у вас будут бОльшие паузы. Гораздо эффективнее, вращать кубик
     медленнее, но без пауз между комбинациями.<br/><br/>
 
-    3. <a href="rubic-activity://ytactivity?time=1:42&link=4nSnsav3bIU">Sune</a> = Рыбка из Ускорения N2,
-    <a href="rubic-activity://ytactivity?time=2:07&link=4nSnsav3bIU">Antisune</a> = Акула из Ускорения N11,
-    <a href="rubic-activity://ytactivity?time=2:13&link=4nSnsav3bIU">Pi</a> = Вертолет из Ускорения N14,
-    <a href="rubic-activity://ytactivity?time=2:19&link=4nSnsav3bIU">U</a> = Глазки из Ускорения N13,
-    <a href="rubic-activity://ytactivity?time=2:27&link=4nSnsav3bIU">T</a> = Ушки из Ускорения N8,
-    <a href="rubic-activity://ytactivity?time=2:30&link=4nSnsav3bIU">L</a> = Носик из Ускорения N9 и
-    <a href="rubic-activity://ytactivity?time=2:39&link=4nSnsav3bIU">H</a> = НТВ+ из Ускорения N8.
+    <b>3. <a href="rubic-activity://ytactivity?time=1:42&link=4nSnsav3bIU">Sune</a></b> = Рыбка из Ускорения N2,
+    <b><a href="rubic-activity://ytactivity?time=2:07&link=4nSnsav3bIU">Antisune</a></b> = Акула из Ускорения N11,
+    <b><a href="rubic-activity://ytactivity?time=2:13&link=4nSnsav3bIU">Pi</a></b> = Вертолет из Ускорения N14,
+    <b><a href="rubic-activity://ytactivity?time=2:19&link=4nSnsav3bIU">U</a></b> = Глазки из Ускорения N13,
+    <b><a href="rubic-activity://ytactivity?time=2:27&link=4nSnsav3bIU">T</a></b> = Ушки из Ускорения N8,
+    <b><a href="rubic-activity://ytactivity?time=2:30&link=4nSnsav3bIU">L</a></b> = Носик из Ускорения N9 и
+    <b><a href="rubic-activity://ytactivity?time=2:39&link=4nSnsav3bIU">H</a></b> = НТВ+ из Ускорения N8.
     Данные алгоритмы объединены в один блок как базовые OLL алгоритмы. В терминах применяемых в данной
     программе, именно эти алгоритмы позволяют решать 7-ой этап не новичковым методом.<br/><br/>
 
-    4. <a href="rubic-activity://ytactivity?time=2:43&link=4nSnsav3bIU">2-gen</a> = Turns 2 Layer,
+    <b>4. <a href="rubic-activity://ytactivity?time=2:43&link=4nSnsav3bIU">2-gen</a></b> = Turns 2 Layer,
     вращение двух слоев. Проще говоря, 2-gen алгоритмы, это такие алгоритмы, при выполнении которых вращаются только
     2 слоя. Чаще всего R и U. Например: пиф-паф, рыбка, PLL окошки, PLL рельсы. Такие алгоритмы можно
     выполнять очень быстро (с высоким TPS) и они очень удобны для сборки
     <a href="rubic-activity://ytactivity?time=3:16&link=4nSnsav3bIU">одной рукой</a>(One Hand).
     3-gen алгоритмы - соответственно те, при выполнении которых, вращаются 3 грани.<br/><br/>
 
-    5. <a href="rubic-activity://ytactivity?time=3:22&link=4nSnsav3bIU">Average vs Mean</a> - Усредненное
+    <b>5. <a href="rubic-activity://ytactivity?time=3:22&link=4nSnsav3bIU">Average vs Mean</a></b> - Усредненное
     и среднее время. Если дословное переводить с агнглийского, то и mean time и average time означает
     среднее время (сборки). Но считается оно по разному. Mean time - это суммарное время всех
     попыток поделенное на количество попыток, т.е. точное среднее время. В то время как Average это более
     абстрактное понятие, скорее не среднее, а усредненное время. Т.е. при его расчете, например не берутся
     лучший и худший результат. Или под понятием Average time может пониматься примерное среднее время
-    сборок.
+    сборок.<br/><br/>
 
-    5. <a href="rubic-activity://ytactivity?time=4:27&link=4nSnsav3bIU">Sleagehammer</a> -
-    Английский пиф-паф (R\' F R F\'). Еще одна простая четырехходовка из Усорения N1. Используется как часть многих
-    алгоритмов. Так же можно использовать и как альтернативу первому базовому (U R U\' R\') алгоритму интуитивного
-    F2L, особенно при постановке на свое место последней
-    <a href="rubic-activity://ytactivity?time=4:42&link=4nSnsav3bIU">пары F2L</a>, а в такой
-    <a href="rubic-activity://ytactivity?time=4:54&link=4nSnsav3bIU">ситуации</a> и вовсе можно получить OLL Skip.
+    <b>6. <a href="rubic-activity://ytactivity?time=4:27&link=4nSnsav3bIU">Sleagehammer</a></b> -
+    Кувалда или Английский пиф-паф <b>(R\' F R F\')</b>. Еще одна простая четырехходовка из Ускорения N1.
+    Используется как часть многих алгоритмов. Так же можно использовать и как альтернативу первому
+    базовому <b>U (R U\' R\')</b> алгоритму интуитивного F2L, особенно при постановке на свое место
+    <a href="rubic-activity://ytactivity?time=4:42&link=4nSnsav3bIU">последней пары </a>. А в
+    <a href="rubic-activity://ytactivity?time=4:54&link=4nSnsav3bIU">такой ситуации</a> и вовсе можно
+    получить OLL Skip.<br/><br/>
 
+    <b>7. <a href="rubic-activity://ytactivity?time=4:56&link=4nSnsav3bIU">AUF</a></b> - Adjust Upper Face.
+    Установка верхней грани - установочные ходы для PLL алгоритмов, а также
+    установка на свое место собранной верхней грани после PLL алгоритма. Обычно быстрее крутить верх,
+    чем делать перехваты.<br/><br/>
+
+    <b>8. <a href="rubic-activity://ytactivity?time=5:21&link=4nSnsav3bIU">CFOP, Roux, ZZ</a></b><br/>
+    <b>CFOP</b> = Cross, F2L, OLL, PLL. Скоростной метод сборки, которым пользуется большинство спидкуберов.
+    Так же известен как метод Джесики Фридрих. Как видно из названия состоит из последовательной
+    сборки креста (Cross), первых двух слоев (F2L),
+    ориентации последнего слоя (OLL) и перестановки последнего слоя (PLL).<br/>
+    <b>Roux</b> (читается как Ру)- альтернативный скоростной метод сборки кубика. Основные моменты сборки
+    отражены в видео.<br/>
+    <b>ZZ</b> - еще один метод, суть котрого в первоначальном правильном ориентировании ребер.<br/><br/>
+
+    <b>9. <a href="rubic-activity://ytactivity?time=7:37&link=4nSnsav3bIU">COLL vs OLLCP</a></b><br/>
+    <b>COLL</b> = Corners & OLL (углы и OLL),<br/>
+    <b>OLLCP</b> = OLL & Corner Permutation (OLL и установка углов
+    на свои места). Результат и тех и других алгоритмов одинаков - PLL с углами на своих местах,
+    т.е. окошки, рельсы, шахматы или PLL скип. Но OLLCP - это набор алгоритмов для любой OLL ситуации,
+    а COLL только для ситуации, когда желтый крест уже собран. Т.е. <b>COLL</b> это варианты алгоритмов для ситуаций
+    из третьей части данного видео, по 6 на каждую ситуацию минус 2 ситуации для HTB+ где их всего 4,
+    всего получается 40 алгоритмов.<br/><br/>
+
+    <b>10. <a href="rubic-activity://ytactivity?time=8:51&link=4nSnsav3bIU">Metrics</a></b>
+    Метрики - различные варианты подсчета ходов.<br/>
+    <b><a href="rubic-activity://ytactivity?time=9:15&link=4nSnsav3bIU">STM</a></b>
+    = Slice Turn Metric. Метрика в которой ходы среднего слоя (M, S) считаются как один ход.
+    Вот <a href="rubic-activity://ytactivity?time=9:23&link=4nSnsav3bIU">пример подсчета</a> STM
+    ходов для алгоритма <b>M2 U\' M U2 M\' U\' M2</b>.<br/>
+    <b><a href="rubic-activity://ytactivity?time=9:32&link=4nSnsav3bIU">HTM</a></b>
+    = Half Turn Metric. В HTM ходы среднего слоя считаются как 2 хода, т.е. как последовательные
+    ходы боковых граней. Например тот же самый алгоритм <b>M2 U\' M U2 M\' U\' M2</b> в метрике HTM
+    будет подсчитан как 11 ходов.<br/>
+    <b><a href="rubic-activity://ytactivity?time=9:53&link=4nSnsav3bIU">QTM</a></b>
+    = Quarter Turn Metric. В данной метрике поворот любой грани на 90 градусов означает один ход.
+    Т.е. ход типа R2 или U2 в данной метрике будет считаться как 2 хода.<br/>
+    <b><a href="rubic-activity://ytactivity?time=9:53&link=4nSnsav3bIU">ETM</a></b>
+    = Execution Turn Metric. Тут все еще интереснее, как видно из названия,
+    в данной метрике количество ходов зависит от того как вы исполняете данный алгоритм. Т.е.
+    одно действие = один ход. Например если вы
+    <a href="rubic-activity://ytactivity?time=10:15&link=4nSnsav3bIU">делаете U2 так</a>,
+    то это 2 хода, а <a href="rubic-activity://ytactivity?time=10:18&link=4nSnsav3bIU">если так</a>,
+    то один. Так же в ETM перехват куба считается за один ход.
     </p>
+
     ]]></string>
     <string name="accel_st21_url">4nSnsav3bIU</string>
 
