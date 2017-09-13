@@ -48,7 +48,6 @@
         <item>@drawable/accel_19</item>
         <item>@drawable/accel_20</item>
         <item>@drawable/accel_21</item>
-        <item>@drawable/accel_20</item>
     </integer-array>
 
     <string-array name="accel_descr">
@@ -74,7 +73,6 @@
         <item>@string/accel_st19_descr</item>
         <item>@string/accel_st20_descr</item>
         <item>@string/accel_st21_descr</item>
-        <item>@string/accel_st22_descr</item>
     </string-array>
 
     <string-array name="accel_url">
@@ -100,7 +98,6 @@
         <item>@string/accel_st19_url</item>
         <item>@string/accel_st20_url</item>
         <item>@string/accel_st21_url</item>
-        <item>@string/accel_st22_url</item>
     </string-array>
 
     <string name="accel_st0_title">Вступление</string>
@@ -502,18 +499,19 @@
     одно действие = один ход. Например если вы
     <a href="rubic-activity://ytactivity?time=10:15&link=4nSnsav3bIU">делаете U2 так</a>,
     то это 2 хода, а <a href="rubic-activity://ytactivity?time=10:18&link=4nSnsav3bIU">если так</a>,
-    то один. Так же в ETM перехват куба считается за один ход.
+    то один. Так же в ETM перехват куба считается за один ход.<br/><br/>
+
+    <b>11. <a href="rubic-activity://ytactivity?time=0:00&link=XhjQNdEaHJw">VLS</a></b>
+    Valk Last Slot - алгоритмы позволяющие решать OLL без постановки на место последней пары F2L.
+    Называются так в честь разработчика и популяризатора этой методики Матса Валька (Mats Valk).
+    Методика включает в себя порядка 200 алгоритмов. Поэтому для начала можно освоить
+    <b><a href="rubic-activity://ytactivity?time=0:20&link=XhjQNdEaHJw">Winter Variation</a></b>.
+    Данные алгоритмы являются частью VLS и отличаются тем, что крест на верхней сторне уже собран
+    и соответственно таких алгоритмов уже меньше - всего 27.<br/><br/>
+
     </p>
 
     ]]></string>
     <string name="accel_st21_url">4nSnsav3bIU</string>
-
-    <string name="accel_st22_title">Немного терминологии #2</string>
-    <string name="accel_st22_descr" formatted="false"><![CDATA[
-    <p><b>Еще 11+ терминов</b>, которые должен знать каждый спидкубер.<br/><br/>
-
-    </p>
-    ]]></string>
-    <string name="accel_st22_url">XhjQNdEaHJw</string>
 
 </resources>

@@ -273,7 +273,11 @@
         <p>3. В предыдущем алгоритме вместо последнего хода морского пиф-пафа и перехвата (U y\')
         крутить два нижеих слоя (Dw). Но и акценты тогда уже несколько по другому будут стоять. <br/>
         <b>Алгоритм: (F R) (U R\') Dw (R\' U2) (R\' F R F\') </b> </p>
-        <b>Как смоделировать</b>: Сделать домино.
+        <p>4. Взять бородой влево.<br/>
+        <p style="text-align:center"><img src="oll_7_3.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=11:13&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: (R U2\') (R2\' F R F\') U2\' M\' (U R U\' Rw\')</b> </p>
+        <b>Как смоделировать</b>: Сделать домино или алгоритм от Феликса.
     ]]></string>
     <string name="oll_st7_url">2TKJWiA7Yzg</string>
 
@@ -286,8 +290,9 @@
         английский пиф-паф.</p>
         <p style="text-align:center"><img src="oll_8_1.png" width="60%%"></p> <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:29&link=VuQfVI8a6nY">на видео 1:29</a> <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=11:27&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: M U (R U R\' U\') M\' (R\' F R F\')  </b><br/><br/>
-        <b>Как смоделировать</b>: Сделать Микки Мауса с бородой.
+        <b>Как смоделировать</b>: Сделать Микки Мауса с бородой от Максима.
     ]]></string>
     <string name="oll_st8_url">VuQfVI8a6nY</string>
 
@@ -512,7 +517,7 @@
 
         <p>2. В принципе так же из положения палочкой вверх справа.<p>
         <p style="text-align:center"><img src="oll_23_2.png" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=3:45&link=IasVqtCHoj0">от Феликса Земдекса</a> <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=3:45&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (R U B\') (U\' R\' U) (R B R\')</b><br/><br/>
 
         <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=2:00&link=fb00j4900Cw">на видео 2:00</a>
@@ -526,7 +531,7 @@
         <p style="text-align:center"><img src="oll_24_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:13&link=Qq10hEWLDXQ">на видео 1:13</a>
         (<a href="rubic-activity://ytactivity?time=2:25&link=Qq10hEWLDXQ">или 2:25</a>) <br/>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=3:36&link=IasVqtCHoj0">от Феликса Земдекса</a> <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=3:36&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: R\' U\' F (U R U\' R\') F\' R </b><br/><br/>
         <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=2:06&link=Qq10hEWLDXQ">на видео 2:06</a>
          противположными ходами <b>R\' F (R U R\' U\') F\' U R</b>.
@@ -646,7 +651,7 @@
         <b>Как решать:</b>
         <p>Морской пиф-паф, морской пиф-паф с обратными ходами крыши, английский пиф-паф.</p>
         <p style="text-align:center"><img src="oll_31_1.png" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:55&link=IasVqtCHoj0">от Феликса Земдекса</a> <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:55&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (R U R\' U) (R U\' R\' U\') (R\' F R F\')</b><br/><br/>
         ]]></string>
     <string name="oll_st31_url"></string>
@@ -658,7 +663,7 @@
         выключениями света, жирно гасим свет слева, крыша против, гасим свет справа и крыша
         снова против, поворачиваем кубик желтой стороной вверх.</p>
         <p style="text-align:center"><img src="oll_32_1.png" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:40&link=IasVqtCHoj0">от Феликса Земдекса</a> <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:40&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (R\' U\' R U\') (R\' U R U) (Lw U\' R\' U) x</b><br/><br/>
 
         <p>2. Из другого положения: так же как и Левую М, но слева. Морской пиф-паф слева, левый морской пиф-паф с обратными
