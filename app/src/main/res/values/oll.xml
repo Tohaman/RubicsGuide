@@ -184,6 +184,10 @@
         <p>2. Альтернативный вариант, но не такой быстрый
         <a href="rubic-activity://ytactivity?time=4:08&link=vDG7tg__FNo">на видео 4:08</a> <br/>
         <b>Алгоритм: (M U\' M U\' M U\' M U\') (M\' U\' M\' U\' M\' U\' M\' U\') </b></p>
+        <p>3. Вариант от Феликса Земдегса<br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=11:51&link=IasVqtCHoj0">от Феликса</a> <br/>
+        <b>Алгоритм: M U (R U R\' U\') M2\' (U R U\' Rw\')</b> хотя судя по исполнению, правильнее
+        записать так:<br/> <b>Rw\' R U (R U R\' U\') Rw2 R2\' (U R U\' Rw\')</b></p>
         <b>Как смоделировать</b>: выполнить Снежинку еще раз :)
     ]]></string>
     <string name="oll_st1_url">vDG7tg__FNo</string>
@@ -196,6 +200,7 @@
         Морской пиф-паф, английский пиф-паф, крыша 2 раза, английский пиф-паф. <br/>
          <p style="text-align:center"><img src="oll_2_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=2:03&link=OCcpJ62kO9s">на видео 2:03</a> <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=11:39&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (R U R\' U) (R\' F R F\') U2 (R\' F R F\') </b><br/></p><br/>
         <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=3:25&link=OCcpJ62kO9s">на видео 3:25</a>, сделать  <br/>
         <b>(F R\' F\' R) U2 (F R\' F\' R) (U\' R U\' R\')</b>
@@ -209,6 +214,7 @@
         R, U2, R\', английский пиф-паф, крыша 2 раза, английский пиф-паф.</p>
         <p style="text-align:center"><img src="oll_3_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=2:12&link=mkQPh6bCk7c">на видео 2:12</a><br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=10:18&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (R U2 R\') (R\' F R F\') U2 (R\' F R F\') </b><br/><br/>
         <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=3:32&link=mkQPh6bCk7c">на видео 3:32</a> </br>
         <b>(F R\' F\' R) U2 (F R\' F\' R) (R U2 R\')</b>
@@ -225,6 +231,7 @@
         <b>Алгоритм: (Rw U Rw\' U2) Rw U2 R\' U2 R U\' Rw\' </b></p>
         <p>2. Повернуть стенкой слева - F, пиф-паф, S, пиф-паф, Fw\' <br/>
         <p style="text-align:center"><img src="oll_4_2.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=10:32&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: F (R U R\' U\') S (R U R\' U\') Fw\'  </b> </p> <br/> <br/>
         <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=3:18&link=kQZFmvkb1eg">на видео 3:18</a> сделать
         пулю в коридоре или пулю в стену еще раз. В любом случае получается пуля в стену.</p>
@@ -237,6 +244,7 @@
         <p>Установить Вектор на юго-восток. Жирно в Лондон, пиф-паф, жирно из Лондона, крыша против, в Лондон, пиф-паф, из Лондона.
         <p style="text-align:center"><img src="oll_5_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=2:22&link=WD3C99fU7dc">на видео 2:22</a> <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=10:46&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: Fw (R U R\' U\') Fw\' U\' F (R U R\' U\') F\' </b> </p> <br/> <br/>
         <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=3:00&link=WD3C99fU7dc">на видео 3:00</a>
          - выполнить данный алгоритм 3 раза или выполнить Вектор с блоком.
@@ -252,6 +260,7 @@
         <b>Алгоритм: M U\' Rw U2 Rw\' U\' R U\' M\' R </b></p>
         <p>2. Поставить вектор на северо-восток и выполнить вектор с точкой, но другим ходом U между Лондонами.  <br/>
         <p style="text-align:center"><img src="oll_6_2.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=10:59&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: Fw (R U R\' U\') Fw\' (U) F (R U R\' U\') F\' </b> </p> <br/> <br/>
         <b>Как смоделировать</b>: Сделать вектор с точкой.
     ]]></string>
@@ -273,9 +282,9 @@
         <p>3. В предыдущем алгоритме вместо последнего хода морского пиф-пафа и перехвата (U y\')
         крутить два нижеих слоя (Dw). Но и акценты тогда уже несколько по другому будут стоять. <br/>
         <b>Алгоритм: (F R) (U R\') Dw (R\' U2) (R\' F R F\') </b> </p>
-        <p>4. Взять бородой влево.<br/>
+        <p>4. Взять бородой влево.</p>
         <p style="text-align:center"><img src="oll_7_3.png" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=11:13&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <p>Фингертрикс: <a href="rubic-activity://ytactivity?time=11:13&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (R U2\') (R2\' F R F\') U2\' M\' (U R U\' Rw\')</b> </p>
         <b>Как смоделировать</b>: Сделать домино или алгоритм от Феликса.
     ]]></string>
