@@ -709,14 +709,15 @@
     <string name="oll_st30_title">#30 Правый квадрат</string>
     <string name="oll_st30_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
-        <p>1. Аналогично левому квадрату только зеркально. Соответственно из положения квадрат к себе справа.</p>
-        <p style="text-align:center"><img src="oll_30_1.png" width="60%%"></p>
+        <p>1. Аналогично левому квадрату только зеркально. Соответственно если из положения квадрат к себе справа, то сначала U2.</p>
+        <p style="text-align:center"><img src="oll_30_2.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:14&link=Gqb32CfhALs">на видео 1:14</a> <br/>
-        <b>Алгоритм: (U2 Lw\' U2 L) (U L\' U Lw)</b><br/><br/>
-        <p>2. В данном случае можно сделать очень похожий на
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:18&link=47JfJxU7EjM">от J Perm</a> <br/>
+        <b>Алгоритм: {U2} (Lw\' U2 L U L\' U Lw)</b><br/><br/>
+        <p>2. Действительно из положения квадрат к себе справа. В данном случае можно сделать очень похожий на
         левый квадрат алгоритм, только крышу надо крутить по часовой стрелке (т.е. в середине
         получается морской пиф-паф) и поменять местами жирные ходы.
-        <p style="text-align:center"><img src="oll_30_2.png" width="60%%"></p>
+        <p style="text-align:center"><img src="oll_30_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:55&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: Rw\' U2 (R U R\' U) Rw</b><br/><br/>
         <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=1:44&link=Gqb32CfhALs">на видео 1:44</a>
@@ -750,6 +751,7 @@
         <p>2. Из другого положения: так же как и Левую М, но слева. Морской пиф-паф слева, левый морской пиф-паф с обратными
         ходами крыши, левый английский пиф-паф.</p>
         <p style="text-align:center"><img src="oll_32_2.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=1:54&link=47JfJxU7EjM">от J Perm</a> <br/>
         <b>Алгоритм: (L\' U\' L U\') (L\' U L\' U) (L F\' L\' F)</b><br/><br/>
         ]]></string>
     <string name="oll_st32_url"></string>

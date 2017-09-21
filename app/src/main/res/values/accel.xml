@@ -296,11 +296,8 @@
         выключаем свет, крыша 2 раза и еще раз выключаем свет.</p>
         <p style="text-align:center"><img src="accel_13_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=6:15&link=dzINk50Y1jI">на видео 6:15</a> <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=1:08&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: R2 D R\' U2 R D\' R\' U2 R\' </b><br/>
-        <b>Альтернативный фингертрикс:</b> начальное положение рук как при пиф-пафе, дважды включаем свет,
-        нижнюю грань левой рукой, выкл.свет, верх дважды правыми указательным и средним пальцами,
-        вкл.свет, низ правым средним или безымянным, выкл.свет, опять верх указательным и средним
-        правой руки и выключаем свет.
     ]]></string>
     <string name="accel_st13_url">dzINk50Y1jI</string>
 
@@ -312,6 +309,7 @@
         против часовой, включаем 2 раза, снова крыша против, опять выключаем 2 раза, крыша 2 раза и включаем свет.</p>
         <p style="text-align:center"><img src="accel_3_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=3:08&link=m2EkIKd6efA">на видео 3:08</a> <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=0:14&link=47JfJxU7EjM">от J Perm</a> <br/>
         <b>Алгоритм: R U2 R2\' U\' R2 U\' R2\' U2 R </b>
     ]]></string>
     <string name="accel_st14_url">m2EkIKd6efA</string>
@@ -353,8 +351,8 @@
         <b>Алгоритм: R2 U\' (F B\') R2 (F\' B) U\' R2 </b><br/><br/>
         <b>Противоположные глазки (окошки):</b><br/>
         <p style="text-align:center"><img src="accel_17_2.png" width="60%%"></p>
-        Пока просто повторить данный алгоритм два раза, ну или выполнить данный алгоритм в обратном порядке.
-        Или все так же, но вместо U\' делать U.<br/>
+        Пока просто повторить данный алгоритм два раза, ну или выполнить данный алгоритм в обратном порядке,
+        т.е. по сути вместо U\' делать U.<br/>
         Подробнее данная ситуация будет рассмотрена в <a href="rubic-activity://ytactivity?time=0:00&link=P69UVywfz04">Окошках PLL</a>.
     ]]></string>
     <string name="accel_st17_url">dUGv4WJfJGU</string>
