@@ -14,5 +14,12 @@
     <color name="orange">#FF9800</color>
     <color name="black">#000000</color>
     <color name="dark_gray">#424242</color>
+    <color name="cube_blue">#0062AC</color>
+    <color name="cube_green">#009846</color>
+    <color name="cube_red">#E31E24</color>
+    <color name="cube_orange">#EF7F1A</color>
+    <color name="cube_yellow">#FFED00</color>
+    <color name="cube_white">#FFFFFF</color>
+    <color name="cube_gray">#424242</color>
     <color name="semitransparent_grey">#cc424242</color>
 </resources>
