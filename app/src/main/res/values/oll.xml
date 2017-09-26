@@ -35,6 +35,8 @@
         <item>@string/oll_st32_title</item>
         <item>@string/oll_st33_title</item>
         <item>@string/oll_st34_title</item>
+        <item>@string/oll_st35_title</item>
+        <item>@string/oll_st36_title</item>
     </string-array>
 
     <integer-array name="oll_icon">
@@ -72,8 +74,8 @@
         <item>@drawable/oll_32</item>
         <item>@drawable/oll_33</item>
         <item>@drawable/oll_34</item>
-        <item>@drawable/oll_30</item>
-        <item>@drawable/oll_30</item>
+        <item>@drawable/oll_35</item>
+        <item>@drawable/oll_36</item>
         <item>@drawable/oll_30</item>
         <item>@drawable/oll_30</item>
         <item>@drawable/oll_30</item>
@@ -133,6 +135,20 @@
         <item>@string/oll_st33_descr</item>
         <item>@string/oll_st34_descr</item>
         <item>@string/oll_st35_descr</item>
+        <item>@string/oll_st36_descr</item>
+        <item>@string/oll_st37_descr</item>
+        <item>@string/oll_st38_descr</item>
+        <item>@string/oll_st39_descr</item>
+        <item>@string/oll_st40_descr</item>
+        <item>@string/oll_st41_descr</item>
+        <item>@string/oll_st42_descr</item>
+        <item>@string/oll_st43_descr</item>
+        <item>@string/oll_st44_descr</item>
+        <item>@string/oll_st45_descr</item>
+        <item>@string/oll_st46_descr</item>
+        <item>@string/oll_st47_descr</item>
+        <item>@string/oll_st48_descr</item>
+        <item>@string/oll_st49_descr</item>
     </string-array>
 
     <string-array name="oll_url">
@@ -171,6 +187,20 @@
         <item>@string/oll_st33_url</item>
         <item>@string/oll_st34_url</item>
         <item>@string/oll_st35_url</item>
+        <item>@string/oll_st36_url</item>
+        <item>@string/oll_st37_url</item>
+        <item>@string/oll_st38_url</item>
+        <item>@string/oll_st39_url</item>
+        <item>@string/oll_st40_url</item>
+        <item>@string/oll_st41_url</item>
+        <item>@string/oll_st42_url</item>
+        <item>@string/oll_st43_url</item>
+        <item>@string/oll_st44_url</item>
+        <item>@string/oll_st45_url</item>
+        <item>@string/oll_st46_url</item>
+        <item>@string/oll_st47_url</item>
+        <item>@string/oll_st48_url</item>
+        <item>@string/oll_st49_url</item>
     </string-array>
 
     <string name="oll_st1_title">#1 Снежинка</string>
@@ -778,10 +808,97 @@
         ]]></string>
     <string name="oll_st34_url"></string>
 
-    <string name="oll_st35_title">#35</string>
+    <string name="oll_st35_title">#35 Галстук с блоком</string>
     <string name="oll_st35_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
+        <p style="text-align:center"><img src="oll_36_1.png" width="60%%"></p>
         ]]></string>
     <string name="oll_st35_url"></string>
+
+    <string name="oll_st36_title">#36 Галстук с точкой</string>
+    <string name="oll_st36_descr" formatted="false"><![CDATA[
+        <b>Как решать:</b>
+        <p style="text-align:center"><img src="oll_36_1.png" width="60%%"></p>
+        ]]></string>
+    <string name="oll_st36_url"></string>
+
+    <string name="oll_st37_title">#37</string>
+    <string name="oll_st37_descr" formatted="false"><![CDATA[
+        <b>Как решать:</b>
+        ]]></string>
+    <string name="oll_st37_url"></string>
+
+    <string name="oll_st38_title">#38</string>
+    <string name="oll_st38_descr" formatted="false"><![CDATA[
+        <b>Как решать:</b>
+        ]]></string>
+    <string name="oll_st38_url"></string>
+
+    <string name="oll_st39_title">#39</string>
+    <string name="oll_st39_descr" formatted="false"><![CDATA[
+        <b>Как решать:</b>
+        ]]></string>
+    <string name="oll_st39_url"></string>
+
+    <string name="oll_st40_title">#40</string>
+    <string name="oll_st40_descr" formatted="false"><![CDATA[
+        <b>Как решать:</b>
+        ]]></string>
+    <string name="oll_st40_url"></string>
+
+    <string name="oll_st41_title">#41</string>
+    <string name="oll_st41_descr" formatted="false"><![CDATA[
+        <b>Как решать:</b>
+        ]]></string>
+    <string name="oll_st41_url"></string>
+
+    <string name="oll_st42_title">#42</string>
+    <string name="oll_st42_descr" formatted="false"><![CDATA[
+        <b>Как решать:</b>
+        ]]></string>
+    <string name="oll_st42_url"></string>
+
+    <string name="oll_st43_title">#43</string>
+    <string name="oll_st43_descr" formatted="false"><![CDATA[
+        <b>Как решать:</b>
+        ]]></string>
+    <string name="oll_st43_url"></string>
+
+    <string name="oll_st44_title">#44</string>
+    <string name="oll_st44_descr" formatted="false"><![CDATA[
+        <b>Как решать:</b>
+        ]]></string>
+    <string name="oll_st44_url"></string>
+
+    <string name="oll_st45_title">#45</string>
+    <string name="oll_st45_descr" formatted="false"><![CDATA[
+        <b>Как решать:</b>
+        ]]></string>
+    <string name="oll_st45_url"></string>
+
+    <string name="oll_st46_title">#46</string>
+    <string name="oll_st46_descr" formatted="false"><![CDATA[
+        <b>Как решать:</b>
+        ]]></string>
+    <string name="oll_st46_url"></string>
+
+    <string name="oll_st47_title">#47</string>
+    <string name="oll_st47_descr" formatted="false"><![CDATA[
+        <b>Как решать:</b>
+        ]]></string>
+    <string name="oll_st47_url"></string>
+
+    <string name="oll_st48_title">#48</string>
+    <string name="oll_st48_descr" formatted="false"><![CDATA[
+        <b>Как решать:</b>
+        ]]></string>
+    <string name="oll_st48_url"></string>
+
+    <string name="oll_st49_title">#49</string>
+    <string name="oll_st49_descr" formatted="false"><![CDATA[
+        <b>Как решать:</b>
+        ]]></string>
+    <string name="oll_st49_url"></string>
+
 
 </resources>
