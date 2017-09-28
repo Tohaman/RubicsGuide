@@ -756,8 +756,8 @@
     <string name="oll_st31_title">#31 Галстук с блоком</string>
     <string name="oll_st31_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
-        Сделать первую часть алгоритма PLL Австралия: В Лондон, неполный пиф-паф, антипиф-паф, из Лондона.
-        Ну или В Лондон, включили свет, три хода против часовой, неполный пиф-паф и из Лондона.
+        Сделать первую часть алгоритма PLL Австралия: В Лондон, включили свет, три хода против
+        часовой, неполный пиф-паф и из Лондона.
         <p style="text-align:center"><img src="oll_31_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:00&link=yqcAJD1W590">на видео 1:00</a> <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=5:43&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
