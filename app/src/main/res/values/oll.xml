@@ -33,10 +33,6 @@
         <item>@string/oll_st30_title</item>
         <item>@string/oll_st31_title</item>
         <item>@string/oll_st32_title</item>
-        <item>@string/oll_st33_title</item>
-        <item>@string/oll_st34_title</item>
-        <item>@string/oll_st35_title</item>
-        <item>@string/oll_st36_title</item>
     </string-array>
 
     <integer-array name="oll_icon">
@@ -756,34 +752,27 @@
     ]]></string>
     <string name="oll_st30_url">Gqb32CfhALs</string>
 
-    <string name="oll_st31_title">#31 Левая буква М</string>
+    <string name="oll_st31_title">#31 Галстук с блоком</string>
     <string name="oll_st31_descr" formatted="false"><![CDATA[
-        <p>Еще две ситуации, которые назовем <b>буква М</b>. Как не сложно догадаться, <b>буква М</b> может быть
-        правой, а может быть левой. Чтобы определить, какая буква нам досталась, надо повернуть ее
-        точкой к себе. Для начала рассмотрим левую букву М.</p>
         <b>Как решать:</b>
-        <p>Морской пиф-паф, морской пиф-паф с обратными ходами крыши, английский пиф-паф.</p>
+        Сделать первую часть алгоритма PLL Австралия: В Лондон, неполный пиф-паф, антипиф-паф, из Лондона.
+        Ну или В Лондон, включили свет, три хода против часовой, неполный пиф-паф и из Лондона.
         <p style="text-align:center"><img src="oll_31_1.png" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:55&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: (R U R\' U) (R U\' R\' U\') (R\' F R F\')</b><br/><br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=1:00&link=yqcAJD1W590">на видео 1:00</a> <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=5:43&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: F R (U\' R\' U\') (R U R\') F\'</b><br/><br/>
+        <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=1:25&link=yqcAJD1W590">на видео 1:25</a>
+        выполнить вторую часть Австралии: пиф-паф, английский пиф-паф.
         ]]></string>
-    <string name="oll_st31_url"></string>
+    <string name="oll_st31_url">yqcAJD1W590</string>
 
-    <string name="oll_st32_title">#32 Правая буква М</string>
+    <string name="oll_st32_title">#32 Галстук с точкой</string>
     <string name="oll_st32_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
-        <p>1. Поставить как на кртинке. Зеркальный морской пиф-паф (все ходы обратные), морской пиф-паф с обратными включениями
-        выключениями света, жирно гасим свет слева, крыша против, гасим свет справа и крыша
-        снова против, поворачиваем кубик желтой стороной вверх.</p>
+        Поставить большим квадратом к себе справа.
         <p style="text-align:center"><img src="oll_32_1.png" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:40&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: (R\' U\' R U\') (R\' U R U) (Lw U\' R\' U) x</b><br/><br/>
-
-        <p>2. Из другого положения: так же как и Левую М, но слева. Морской пиф-паф слева, левый морской пиф-паф с обратными
-        ходами крыши, левый английский пиф-паф.</p>
-        <p style="text-align:center"><img src="oll_32_2.png" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=1:54&link=47JfJxU7EjM">от J Perm</a> <br/>
-        <b>Алгоритм: (L\' U\' L U\') (L\' U L\' U) (L F\' L\' F)</b><br/><br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=5:32&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: (R U2) (R2 F R F\') (R U2 R\')</b><br/><br/>
         ]]></string>
     <string name="oll_st32_url"></string>
 
@@ -808,17 +797,34 @@
         ]]></string>
     <string name="oll_st34_url"></string>
 
-    <string name="oll_st35_title">#35 Галстук с блоком</string>
+    <string name="oll_st35_title">#35 Левая буква М</string>
     <string name="oll_st35_descr" formatted="false"><![CDATA[
+        <p>Еще две ситуации, которые назовем <b>буква М</b>. Как не сложно догадаться, <b>буква М</b> может быть
+        правой, а может быть левой. Чтобы определить, какая буква нам досталась, надо повернуть ее
+        точкой к себе. Для начала рассмотрим левую букву М.</p>
         <b>Как решать:</b>
-        <p style="text-align:center"><img src="oll_36_1.png" width="60%%"></p>
+        <p>Морской пиф-паф, морской пиф-паф с обратными ходами крыши, английский пиф-паф.</p>
+        <p style="text-align:center"><img src="oll_35_1.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:55&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: (R U R\' U) (R U\' R\' U\') (R\' F R F\')</b><br/><br/>
         ]]></string>
     <string name="oll_st35_url"></string>
 
-    <string name="oll_st36_title">#36 Галстук с точкой</string>
+    <string name="oll_st36_title">#36 Правая буква М</string>
     <string name="oll_st36_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
+        <p>1. Поставить как на кртинке. Зеркальный морской пиф-паф (все ходы обратные), морской пиф-паф с обратными включениями
+        выключениями света, жирно гасим свет слева, крыша против, гасим свет справа и крыша
+        снова против, поворачиваем кубик желтой стороной вверх.</p>
         <p style="text-align:center"><img src="oll_36_1.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:40&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: (R\' U\' R U\') (R\' U R U) (Lw U\' R\' U) x</b><br/><br/>
+
+        <p>2. Из другого положения: так же как и Левую М, но слева. Морской пиф-паф слева, левый морской пиф-паф с обратными
+        ходами крыши, левый английский пиф-паф.</p>
+        <p style="text-align:center"><img src="oll_36_2.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=1:54&link=47JfJxU7EjM">от J Perm</a> <br/>
+        <b>Алгоритм: (L\' U\' L U\') (L\' U L\' U) (L F\' L\' F)</b><br/><br/>
         ]]></string>
     <string name="oll_st36_url"></string>
 
