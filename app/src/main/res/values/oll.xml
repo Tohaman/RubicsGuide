@@ -33,6 +33,7 @@
         <item>@string/oll_st30_title</item>
         <item>@string/oll_st31_title</item>
         <item>@string/oll_st32_title</item>
+
     </string-array>
 
     <integer-array name="oll_icon">
