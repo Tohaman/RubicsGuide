@@ -12,5 +12,7 @@
     <dimen name="hint_text_size">18sp</dimen>
     <dimen name="preview_heigth">120dp</dimen>
     <dimen name="list_item_padding">10dp</dimen>
+    <dimen name="dimen_padding10">10dp</dimen>
+    <dimen name="list_image_height">85dp</dimen>
 
 </resources>
