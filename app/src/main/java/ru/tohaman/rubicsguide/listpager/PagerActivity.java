@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.AppCompatDelegate;
 
 import ru.tohaman.rubicsguide.R;
 
@@ -32,6 +33,7 @@ public class PagerActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate (Bundle savedInstanceState){
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pager);
         final String Phase = getIntent().getStringExtra(RubicPhase);

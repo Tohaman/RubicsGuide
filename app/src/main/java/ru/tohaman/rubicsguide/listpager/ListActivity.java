@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatDelegate;
 import android.widget.Toast;
 
 import ru.tohaman.rubicsguide.R;
@@ -65,6 +66,7 @@ public class ListActivity extends SingleFragmentActivity implements ListFragment
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
         super.onCreate(savedInstanceState);
         if (savedInstanceState != null) {
             position = savedInstanceState.getInt("id");
