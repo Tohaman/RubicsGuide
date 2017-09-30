@@ -115,6 +115,7 @@ public class ScambleFragment extends Fragment {
 
         Button azb_button = (Button) view.findViewById(R.id.button_azbuka);
         azb_button.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
                 // Обработка нажатия кнопки Азбука
                 mIntent = new Intent(getActivity(), AzbukaActivity.class);
@@ -124,6 +125,7 @@ public class ScambleFragment extends Fragment {
 
         gen_button = (Button) view.findViewById(R.id.button_generate);
         gen_button.setOnClickListener(new View.OnClickListener() {
+
             public void onClick(View v) {
                 GenerateScrambl();
             }
