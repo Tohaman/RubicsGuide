@@ -13,6 +13,19 @@
     <dimen name="preview_heigth">120dp</dimen>
     <dimen name="list_item_padding">10dp</dimen>
     <dimen name="dimen_padding10">10dp</dimen>
-    <dimen name="list_image_height">85dp</dimen>
+    <dimen name="list_view_w">85dp</dimen>
+    <dimen name="list_view_h">85dp</dimen>
+    <dimen name="lp_icon_w">80dp</dimen>
+    <dimen name="lp_icon_h">80dp</dimen>
 
+    <dimen name="z_3d_w">100dp</dimen>
+    <dimen name="z_3d_h">100dp</dimen>
+    <dimen name="z_3s_w">100dp</dimen>
+    <dimen name="z_3s_h">100dp</dimen>
+
+    <dimen name="oll_left_sw">115dp</dimen>
+    <dimen name="oll_right_sw">115dp</dimen>
+    <dimen name="z_oll_w">100dp</dimen>
+    <dimen name="z_oll_wbig">100dp</dimen>
+    <dimen name="z_oll_h">100dp</dimen>
 </resources>

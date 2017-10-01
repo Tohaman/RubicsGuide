@@ -37,8 +37,8 @@
     </string-array>
 
     <integer-array name="oll_icon">
-        <item>@drawable/oll_1</item>
-        <item>@drawable/oll_2</item>
+        <item>@drawable/voll_1</item>
+        <item>@drawable/voll_2</item>
         <item>@drawable/oll_3</item>
         <item>@drawable/oll_4</item>
         <item>@drawable/oll_5</item>
