@@ -73,27 +73,27 @@
         <item>@drawable/oll_34</item>
         <item>@drawable/oll_35</item>
         <item>@drawable/oll_36</item>
-        <item>@drawable/oll_30</item>
-        <item>@drawable/oll_30</item>
-        <item>@drawable/oll_30</item>
-        <item>@drawable/oll_30</item>
-        <item>@drawable/oll_30</item>
-        <item>@drawable/oll_30</item>
-        <item>@drawable/oll_30</item>
-        <item>@drawable/oll_30</item>
-        <item>@drawable/oll_30</item>
-        <item>@drawable/oll_30</item>
-        <item>@drawable/oll_30</item>
-        <item>@drawable/oll_30</item>
-        <item>@drawable/oll_30</item>
-        <item>@drawable/oll_30</item>
-        <item>@drawable/oll_30</item>
-        <item>@drawable/oll_30</item>
-        <item>@drawable/oll_30</item>
-        <item>@drawable/oll_30</item>
-        <item>@drawable/oll_30</item>
-        <item>@drawable/oll_30</item>
-        <item>@drawable/oll_30</item>
+        <item>@drawable/voll_30</item>
+        <item>@drawable/voll_30</item>
+        <item>@drawable/voll_30</item>
+        <item>@drawable/voll_30</item>
+        <item>@drawable/voll_30</item>
+        <item>@drawable/voll_30</item>
+        <item>@drawable/voll_30</item>
+        <item>@drawable/voll_30</item>
+        <item>@drawable/voll_30</item>
+        <item>@drawable/voll_30</item>
+        <item>@drawable/voll_30</item>
+        <item>@drawable/voll_30</item>
+        <item>@drawable/voll_30</item>
+        <item>@drawable/voll_30</item>
+        <item>@drawable/voll_30</item>
+        <item>@drawable/voll_30</item>
+        <item>@drawable/voll_30</item>
+        <item>@drawable/voll_30</item>
+        <item>@drawable/voll_30</item>
+        <item>@drawable/voll_30</item>
+        <item>@drawable/voll_30</item>
     </integer-array>
 
     <string-array name="oll_descr">
