@@ -62,13 +62,13 @@
         <item>@drawable/voll_23</item>
         <item>@drawable/voll_24</item>
         <item>@drawable/voll_25</item>
-        <item>@drawable/oll_26</item>
-        <item>@drawable/oll_27</item>
-        <item>@drawable/oll_28</item>
-        <item>@drawable/oll_29</item>
-        <item>@drawable/oll_30</item>
-        <item>@drawable/oll_31</item>
-        <item>@drawable/oll_32</item>
+        <item>@drawable/voll_26</item>
+        <item>@drawable/voll_27</item>
+        <item>@drawable/voll_28</item>
+        <item>@drawable/voll_29</item>
+        <item>@drawable/voll_30</item>
+        <item>@drawable/voll_31</item>
+        <item>@drawable/voll_32</item>
         <item>@drawable/oll_33</item>
         <item>@drawable/oll_34</item>
         <item>@drawable/oll_35</item>
@@ -674,7 +674,7 @@
     <string name="oll_st27_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         <p>1. Повернуть как и в предыдущих петухах вверх тормашками.</p>
-        <p style="text-align:center"><img src="oll_27_1.png" width="60%%"></p>
+        <p style="text-align:center"><img src="voll_27_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:47&link=g2OOVob1f-E">на видео 1:47</a> <br/>
         <b>Алгоритм: (F R\' F) R2 (U\' R\' U\') R U R\' F2</b><br/><br/>
 
@@ -685,7 +685,7 @@
         <p>3. Или повернуть ногами к себе и на первый взгляд сложный, но на самом деле удобный
         алгоритм, если изначально взять большим пальцем правой руки от себя. Хотя лично мне больше
         нравится вариант Феликса.</p>
-        <p style="text-align:center"><img src="oll_27_2.png" width="60%%"></p>
+        <p style="text-align:center"><img src="voll_27_2.png" width="60%%"></p>
         <b>Алгоритм: (R2\' U R\' B\') (R U\' R2\' U) (Lw U Lw\')</b><br/><br/>
 
         <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=3:03&link=g2OOVob1f-E">на видео 3:03</a>
@@ -697,12 +697,12 @@
     <string name="oll_st28_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         <p>1. Абсолютно аналогично правому петуху с блоком, только слева.</p>
-        <p style="text-align:center"><img src="oll_28_1.png" width="60%%"></p>
+        <p style="text-align:center"><img src="voll_28_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=0:44&link=Rg9b36qBOeo">на видео 0:44</a> <br/>
         <b>Алгоритм: (F\' L F\') L2 (U L U) L\' U\' L F2</b><br/><br/>
 
         <p>2. Поставить петуха блоком к себе.</p>
-        <p style="text-align:center"><img src="oll_28_2.png" width="60%%"></p>
+        <p style="text-align:center"><img src="voll_28_2.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=6:41&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (R U R\' U\') (R U\' R\') (F\' U\' F) (R U R\')</b><br/><br/>
 
@@ -717,13 +717,13 @@
         <b>Квадраты.</b> Квадрат может быть левым или правым.</p>
         <p>Как их <a href="rubic-activity://ytactivity?time=1:01&link=mknzlNHW6_A">различать:</a>
         Поврнуть квадратом к себе и при этом блок на противоположной боковой стороне тоже должен быть
-        спереди. Если он сзади, значит надо поставить квадрат с другой стороны. Или еще один вариант:
+        спереди. Если он сзади, значит надо поставить квадрат с другой стороны. Или еще один вариант определения:
         К какой стороне примыкают двойные блоки, такой и квадрат. Начнем с левого квадрата.</p>
         <b>Как решать:</b>
         <p>Из положения квадрат к себе слева (как в видео). Очень похоже на обычную
         <a href="rubic-activity://ytactivity?time=2:37&link=mknzlNHW6_A">Акулу</a>, которая
         уплывает вправо. Только второй и последний ходы жирные. </p>
-        <p style="text-align:center"><img src="oll_29_1.png" width="60%%"></p>
+        <p style="text-align:center"><img src="voll_29_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=3:07&link=mknzlNHW6_A">на видео 3:07</a> <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=2:06&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: Rw U2 R\' U\' R U\' Rw\'</b><br/><br/>
@@ -736,14 +736,14 @@
     <string name="oll_st30_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         <p>1. Аналогично левому квадрату только зеркально. Соответственно если из положения квадрат к себе справа, то сначала U2.</p>
-        <p style="text-align:center"><img src="oll_30_2.png" width="60%%"></p>
+        <p style="text-align:center"><img src="voll_30_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:14&link=Gqb32CfhALs">на видео 1:14</a> <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=2:18&link=47JfJxU7EjM">от J Perm</a> <br/>
         <b>Алгоритм: {U2} (Lw\' U2 L U L\' U Lw)</b><br/><br/>
         <p>2. Действительно из положения квадрат к себе справа. В данном случае можно сделать очень похожий на
         левый квадрат алгоритм, только крышу надо крутить по часовой стрелке (т.е. в середине
         получается морской пиф-паф) и поменять местами жирные ходы.
-        <p style="text-align:center"><img src="oll_30_1.png" width="60%%"></p>
+        <p style="text-align:center"><img src="voll_30_2.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:55&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: Rw\' U2 (R U R\' U) Rw</b><br/><br/>
         <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=1:44&link=Gqb32CfhALs">на видео 1:44</a>
@@ -756,7 +756,7 @@
         <b>Как решать:</b>
         Сделать первую часть алгоритма PLL Австралия: В Лондон, включили свет, три хода против
         часовой, неполный пиф-паф и из Лондона.
-        <p style="text-align:center"><img src="oll_31_1.png" width="60%%"></p>
+        <p style="text-align:center"><img src="voll_31_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:00&link=yqcAJD1W590">на видео 1:00</a> <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=5:43&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: F R (U\' R\' U\') (R U R\') F\'</b><br/><br/>
@@ -769,7 +769,7 @@
     <string name="oll_st32_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         Поставить большим квадратом к себе справа.
-        <p style="text-align:center"><img src="oll_32_1.png" width="60%%"></p>
+        <p style="text-align:center"><img src="voll_32_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=5:32&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (R U2) (R2 F R F\') (R U2 R\')</b><br/><br/>
         ]]></string>
