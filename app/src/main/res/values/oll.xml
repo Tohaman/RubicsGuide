@@ -59,9 +59,9 @@
         <item>@drawable/voll_20</item>
         <item>@drawable/voll_21</item>
         <item>@drawable/voll_22</item>
-        <item>@drawable/oll_23</item>
-        <item>@drawable/oll_24</item>
-        <item>@drawable/oll_25</item>
+        <item>@drawable/voll_23</item>
+        <item>@drawable/voll_24</item>
+        <item>@drawable/voll_25</item>
         <item>@drawable/oll_26</item>
         <item>@drawable/oll_27</item>
         <item>@drawable/oll_28</item>
@@ -613,7 +613,7 @@
     <string name="oll_st24_title">#24 Правый мягкий знак с блоком</string>
     <string name="oll_st24_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
-        <p style="text-align:center"><img src="oll_24_1.png" width="60%%"></p>
+        <p style="text-align:center"><img src="voll_24_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:13&link=Qq10hEWLDXQ">на видео 1:13</a>
         (<a href="rubic-activity://ytactivity?time=2:25&link=Qq10hEWLDXQ">или 2:25</a>) <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=3:36&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
@@ -628,7 +628,7 @@
         <p>И снова четыре похожие ситуации, которые назовем <b>петухами</b>. Т.к. если включить
         воображение, то действительно похоже на петуха вид сбоку. Хотя на счет того, где голвова,
         а где хвост, я бы с Максимом поспорил :)</p>
-        <p style="text-align:center"><img src="oll_25_2.png" width="30%%"></p>
+        <p style="text-align:center"><img src="voll_25_2.png" width="30%%"></p>
         <p>Петухи как и молнии бывают
         правые/левые и с точкой/блоком. Чтобы их отличить друг от друга, надо поставить петуха
         головой и хвостом к себе (двумя правильно ориентированными углами) и для начала посмотреть
@@ -642,7 +642,7 @@
         <b>Как решать:</b><br/>
         1. Сначала делаем рыбку, получаем <b>Букву Т с точкой</b>, и соответственно едем в Лондон, пиф-паф,
         из Лондона.<br/>
-        <p style="text-align:center"><img src="oll_25_1.png" width="60%%"></p>
+        <p style="text-align:center"><img src="voll_25_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=3:30&link=CcIx5DfnKwY">на видео 3:30</a> <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=7:05&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (R U R\' U R U2 R\') F (R U R\' U\') F\'</b><br/><br/>
@@ -655,13 +655,13 @@
     <string name="oll_st26_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         <p>1. Все так же, как и с правым петухом, но слева.</p>
-        <p style="text-align:center"><img src="oll_26_1.png" width="60%%"></p>
+        <p style="text-align:center"><img src="voll_26_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:09&link=dNs1j2mY42g">на видео 1:09</a> <br/>
         <b>Алгоритм: (L\' U\' L U\') L\' U2 L F\' (L\' U\' L U) F</b><br/><br/>
 
         <p>2. Поставить петуха головой вверх. Делаем северо-западную <b>Акулу</b>, получаем <b>Букву Т с
         точкой</b>, и соответственно едем в Лондон, пиф-паф, из Лондона.</p>
-        <p style="text-align:center"><img src="oll_26_2.png" width="60%%"></p>
+        <p style="text-align:center"><img src="voll_26_2.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=6:53&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (R\' U\' R U\' R\' U2 R) F (R U R\' U\') F\'</b><br/><br/>
 
@@ -683,7 +683,8 @@
         <b>Алгоритм: F U (R U2 R\' U\') (R U2 R\' U\') F\'</b><br/><br/>
 
         <p>3. Или повернуть ногами к себе и на первый взгляд сложный, но на самом деле удобный
-        алгоритм, если изначально взять большим пальцем правой руки от себя.</p>
+        алгоритм, если изначально взять большим пальцем правой руки от себя. Хотя лично мне больше
+        нравится вариант Феликса.</p>
         <p style="text-align:center"><img src="oll_27_2.png" width="60%%"></p>
         <b>Алгоритм: (R2\' U R\' B\') (R U\' R2\' U) (Lw U Lw\')</b><br/><br/>
 
