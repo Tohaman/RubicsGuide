@@ -38,6 +38,9 @@
         <item>@string/oll_st35_title</item>
         <item>@string/oll_st36_title</item>
         <item>@string/oll_st37_title</item>
+        <item>@string/oll_st38_title</item>
+        <item>@string/oll_st39_title</item>
+        <item>@string/oll_st40_title</item>
     </string-array>
 
     <integer-array name="oll_icon">
@@ -78,9 +81,9 @@
         <item>@drawable/voll_35</item>
         <item>@drawable/voll_36</item>
         <item>@drawable/voll_37</item>
-        <item>@drawable/voll_30</item>
-        <item>@drawable/voll_30</item>
-        <item>@drawable/voll_30</item>
+        <item>@drawable/voll_38</item>
+        <item>@drawable/voll_39</item>
+        <item>@drawable/voll_40</item>
         <item>@drawable/voll_30</item>
         <item>@drawable/voll_30</item>
         <item>@drawable/voll_30</item>
@@ -842,7 +845,7 @@
         <b>Как решать:</b>
         <p>Жирно едем в Лондон, два пиф-пафа, жирно из Лондона.</p>
         <p style="text-align:center"><img src="voll_37_1.png" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=4:16&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=4:22&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: Fw (R U R\' U\') (R U R\' U\') Fw\'</b><br/><br/>
         <b>Как смоделировать</b>: Почти так же как и выполнять, только в Лондон уезжать и возвращаться надо не жирно, т.е.
         В Лондон, два пиф-пафа, из Лондона.
@@ -854,7 +857,7 @@
         <b>Как решать:</b>
         <p>Поставить палку горизонтально. </p>
         <p style="text-align:center"><img src="voll_38_1.png" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=4:31&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=4:32&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: Rw\' U\' Rw (U\' R\' U R) (U\' R\' U R) Rw\' U Rw</b><br/><br/>
         ]]></string>
     <string name="oll_st38_url"></string>
@@ -869,12 +872,12 @@
     ]]></string>
     <string name="oll_st39_url"></string>
 
-    <string name="oll_st40_title">#40 Симметричная палка с точкой</string>
+    <string name="oll_st40_title">#40 Симметричная палка с блоком</string>
     <string name="oll_st40_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         <p style="text-align:center"><img src="voll_40_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=4:55&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: </b><br/><br/>
+        <b>Алгоритм: (R\' F R U) (R U\' R2\' F\') R2 U\' R\' (U R U R\')</b><br/><br/>
         ]]></string>
     <string name="oll_st40_url"></string>
 
