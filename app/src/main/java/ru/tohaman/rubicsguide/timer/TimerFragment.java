@@ -54,7 +54,7 @@ public class TimerFragment extends Fragment {
             int minutes = seconds / 60;
             seconds = seconds % 60;
             timerTextView.setText(String.format("%d:%02d:%02d", minutes, seconds, sotki));
-            timerHandler.postDelayed(this, 50);
+            timerHandler.postDelayed(this, 20);
         }
     };
 

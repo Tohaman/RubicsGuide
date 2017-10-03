@@ -37,6 +37,7 @@
         <item>@string/oll_st34_title</item>
         <item>@string/oll_st35_title</item>
         <item>@string/oll_st36_title</item>
+        <item>@string/oll_st37_title</item>
     </string-array>
 
     <integer-array name="oll_icon">
@@ -74,9 +75,9 @@
         <item>@drawable/voll_32</item>
         <item>@drawable/voll_33</item>
         <item>@drawable/voll_34</item>
-        <item>@drawable/oll_35</item>
-        <item>@drawable/oll_36</item>
-        <item>@drawable/voll_30</item>
+        <item>@drawable/voll_35</item>
+        <item>@drawable/voll_36</item>
+        <item>@drawable/voll_37</item>
         <item>@drawable/voll_30</item>
         <item>@drawable/voll_30</item>
         <item>@drawable/voll_30</item>
@@ -809,7 +810,7 @@
         точкой к себе. Для начала рассмотрим левую букву М.</p>
         <b>Как решать:</b>
         <p>Морской пиф-паф, морской пиф-паф с обратными ходами крыши, английский пиф-паф.</p>
-        <p style="text-align:center"><img src="oll_35_1.png" width="60%%"></p>
+        <p style="text-align:center"><img src="voll_35_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=2:55&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (R U R\' U) (R U\' R\' U\') (R\' F R F\')</b><br/><br/>
         ]]></string>
@@ -821,39 +822,59 @@
         <p>1. Поставить как на кртинке. Зеркальный морской пиф-паф (все ходы обратные), морской пиф-паф с обратными включениями
         выключениями света, жирно гасим свет слева, крыша против, гасим свет справа и крыша
         снова против, поворачиваем кубик желтой стороной вверх.</p>
-        <p style="text-align:center"><img src="oll_36_1.png" width="60%%"></p>
+        <p style="text-align:center"><img src="voll_36_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=2:40&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (R\' U\' R U\') (R\' U R U) (Lw U\' R\' U) x</b><br/><br/>
 
         <p>2. Из другого положения: так же как и Левую М, но слева. Морской пиф-паф слева, левый морской пиф-паф с обратными
         ходами крыши, левый английский пиф-паф.</p>
-        <p style="text-align:center"><img src="oll_36_2.png" width="60%%"></p>
+        <p style="text-align:center"><img src="voll_36_2.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:54&link=47JfJxU7EjM">от J Perm</a> <br/>
         <b>Алгоритм: (L\' U\' L U\') (L\' U L\' U) (L F\' L\' F)</b><br/><br/>
         ]]></string>
     <string name="oll_st36_url"></string>
 
-    <string name="oll_st37_title">#37</string>
+    <string name="oll_st37_title">#37 Ассиметричная палка с блоком</string>
     <string name="oll_st37_descr" formatted="false"><![CDATA[
+        <p>Закончили с бумерангами, переходим к <b>палкам</b>. Начнем с чистых палок, которые бывают 4 видов:
+        Симметричные/ассиметричные и с точкой/блоком. Первой будет ассиметричная палка с блоком.
+        Поставить ее надо горизонтально, глазками налево, ушками направо.</p>
         <b>Как решать:</b>
+        <p>Жирно едем в Лондон, два пиф-пафа, жирно из Лондона.</p>
+        <p style="text-align:center"><img src="voll_37_1.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=4:16&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: Fw (R U R\' U\') (R U R\' U\') Fw\'</b><br/><br/>
+        <b>Как смоделировать</b>: Почти так же как и выполнять, только в Лондон уезжать и возвращаться надо не жирно, т.е.
+        В Лондон, два пиф-пафа, из Лондона.
         ]]></string>
     <string name="oll_st37_url"></string>
 
-    <string name="oll_st38_title">#38</string>
+    <string name="oll_st38_title">#38 Симметричная палка с точкой</string>
     <string name="oll_st38_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
+        <p>Поставить палку горизонтально. </p>
+        <p style="text-align:center"><img src="voll_38_1.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=4:31&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: Rw\' U\' Rw (U\' R\' U R) (U\' R\' U R) Rw\' U Rw</b><br/><br/>
         ]]></string>
     <string name="oll_st38_url"></string>
 
-    <string name="oll_st39_title">#39</string>
+    <string name="oll_st39_title">#39 Ассиметричная палка с точкой</string>
     <string name="oll_st39_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
-        ]]></string>
+        <p>Поставить палку вертикально, тройным блоком справа.</p>
+        <p style="text-align:center"><img src="voll_39_1.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=4:45&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: (R\' U\' R U\' R\' U) y\' (R\' U R) B</b><br/><br/>
+    ]]></string>
     <string name="oll_st39_url"></string>
 
-    <string name="oll_st40_title">#40</string>
+    <string name="oll_st40_title">#40 Симметричная палка с точкой</string>
     <string name="oll_st40_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
+        <p style="text-align:center"><img src="voll_40_1.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=4:55&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: </b><br/><br/>
         ]]></string>
     <string name="oll_st40_url"></string>
 
