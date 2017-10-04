@@ -794,8 +794,8 @@
     <string name="oll_st31_title">#31 Галстук с блоком</string>
     <string name="oll_st31_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
-        Сделать первую часть алгоритма PLL Австралия: В Лондон, включили свет, три хода против
-        часовой, неполный пиф-паф и из Лондона.
+        <p>Сделать первую часть алгоритма PLL Австралия: В Лондон, включили свет, три хода против
+        часовой, неполный пиф-паф и из Лондона.</p>
         <p style="text-align:center"><img src="voll_31_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:00&link=yqcAJD1W590">на видео 1:00</a> <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=5:43&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
@@ -808,12 +808,22 @@
     <string name="oll_st32_title">#32 Галстук с точкой</string>
     <string name="oll_st32_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
-        Поставить большим квадратом к себе справа.
+        <p>1. Поставить так же как и галстук с блоком. Выключаем свет слева, крыша дважды,
+        жирно выключаем свет дважды, в Лондон, жирно включаем
+        свет, крыша против, снова включаем свет жирно, крыша дважды, включаем свет слева.</p>
+        <p style="text-align:center"><img src="voll_32_2.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=0:37&link=rlHhiQQVv1M">на видео 0:37</a> <br/>
+        или <a href="rubic-activity://ytactivity?time=1:44&link=rlHhiQQVv1M">на видео 1:44</a> <br/>
+        <b>Алгоритм: L U2 Rw2\' F Rw U\' Rw U2 L\'</b><br/><br/>
+        <p>2. Поставить большим квадратом к себе справа и сделать более удобный алгоритм без кручения
+        левой грани.</p>
         <p style="text-align:center"><img src="voll_32_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=5:32&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (R U2) (R2 F R F\') (R U2 R\')</b><br/><br/>
+        <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=1:11&link=rlHhiQQVv1M">на видео 1:11</a>
+        выполнить алгоритм несколько раз.
         ]]></string>
-    <string name="oll_st32_url"></string>
+    <string name="oll_st32_url">rlHhiQQVv1M</string>
 
     <string name="oll_st33_title">#33 Левая рюмка</string>
     <string name="oll_st33_descr" formatted="false"><![CDATA[
@@ -918,25 +928,39 @@
     <string name="oll_st41_title">#41 Левая клюшка с блоком</string>
     <string name="oll_st41_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
+        <p style="text-align:center"><img src="voll_41_1.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=6:03&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: (Rw U\' Rw\') (U\' Rw U Rw\') y\' (R\' U R)</b><br/><br/>
         ]]></string>
     <string name="oll_st41_url"></string>
 
     <string name="oll_st42_title">#42 Правая клюшка с блоком</string>
     <string name="oll_st42_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
+        <p style="text-align:center"><img src="voll_42_1.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=6:13&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: (R\' F R) (U R\' F\' R) (F U\' F\')</b><br/><br/>
         ]]></string>
     <string name="oll_st42_url"></string>
 
     <string name="oll_st43_title">#43 Правая клюшка с точкой</string>
     <string name="oll_st43_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
+        <p>Поставить клюшку загнутым концом вверх.</p>
+        <p style="text-align:center"><img src="voll_43_1.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=6:23&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: (Rw U Rw\') (R U R\' U\') (Rw U\' Rw\')</b><br/><br/>
         ]]></string>
     <string name="oll_st43_url"></string>
 
     <string name="oll_st44_title">#44 Левая клюшка с точкой</string>
     <string name="oll_st44_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
-        ]]></string>
+        <p>Поставить клюшку загнутым концом вниз.</p>
+        <p style="text-align:center"><img src="voll_44_1.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=6:23&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: </b><br/><br/>
+    ]]></string>
     <string name="oll_st44_url"></string>
 
     <string name="oll_st45_title">#45 Скобка с блоком</string>
