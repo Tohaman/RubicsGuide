@@ -41,6 +41,23 @@
         <item>@string/oll_st38_title</item>
         <item>@string/oll_st39_title</item>
         <item>@string/oll_st40_title</item>
+        <item>@string/oll_st41_title</item>
+        <item>@string/oll_st42_title</item>
+        <item>@string/oll_st43_title</item>
+        <item>@string/oll_st44_title</item>
+        <item>@string/oll_st45_title</item>
+        <item>@string/oll_st46_title</item>
+        <item>@string/oll_st47_title</item>
+        <item>@string/oll_st48_title</item>
+        <item>@string/oll_st49_title</item>
+        <item>@string/oll_st50_title</item>
+        <item>@string/oll_st51_title</item>
+        <item>@string/oll_st52_title</item>
+        <item>@string/oll_st53_title</item>
+        <item>@string/oll_st54_title</item>
+        <item>@string/oll_st55_title</item>
+        <item>@string/oll_st56_title</item>
+        <item>@string/oll_st57_title</item>
     </string-array>
 
     <integer-array name="oll_icon">
@@ -84,23 +101,23 @@
         <item>@drawable/voll_38</item>
         <item>@drawable/voll_39</item>
         <item>@drawable/voll_40</item>
-        <item>@drawable/voll_30</item>
-        <item>@drawable/voll_30</item>
-        <item>@drawable/voll_30</item>
-        <item>@drawable/voll_30</item>
-        <item>@drawable/voll_30</item>
-        <item>@drawable/voll_30</item>
-        <item>@drawable/voll_30</item>
-        <item>@drawable/voll_30</item>
-        <item>@drawable/voll_30</item>
-        <item>@drawable/voll_30</item>
-        <item>@drawable/voll_30</item>
-        <item>@drawable/voll_30</item>
-        <item>@drawable/voll_30</item>
-        <item>@drawable/voll_30</item>
-        <item>@drawable/voll_30</item>
-        <item>@drawable/voll_30</item>
-        <item>@drawable/voll_30</item>
+        <item>@drawable/voll_41</item>
+        <item>@drawable/voll_42</item>
+        <item>@drawable/voll_43</item>
+        <item>@drawable/voll_44</item>
+        <item>@drawable/voll_45</item>
+        <item>@drawable/voll_46</item>
+        <item>@drawable/voll_47</item>
+        <item>@drawable/voll_48</item>
+        <item>@drawable/voll_49</item>
+        <item>@drawable/voll_50</item>
+        <item>@drawable/voll_51</item>
+        <item>@drawable/voll_52</item>
+        <item>@drawable/voll_53</item>
+        <item>@drawable/voll_54</item>
+        <item>@drawable/voll_55</item>
+        <item>@drawable/voll_56</item>
+        <item>@drawable/voll_57</item>
     </integer-array>
 
     <string-array name="oll_descr">
@@ -880,6 +897,7 @@
 
     <string name="oll_st39_title">#39 Ассиметричная палка с точкой</string>
     <string name="oll_st39_descr" formatted="false"><![CDATA[
+        <p>В этой палке есть и блок и точка, но будем считать ее палкой с точкой.</p>
         <b>Как решать:</b>
         <p>Поставить палку вертикально, тройным блоком справа.</p>
         <p style="text-align:center"><img src="voll_39_1.png" width="60%%"></p>
@@ -897,107 +915,112 @@
         ]]></string>
     <string name="oll_st40_url"></string>
 
-    <string name="oll_st41_title">#41 Клюшки</string>
+    <string name="oll_st41_title">#41 Левая клюшка с блоком</string>
     <string name="oll_st41_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         ]]></string>
     <string name="oll_st41_url"></string>
 
-    <string name="oll_st42_title">#42</string>
+    <string name="oll_st42_title">#42 Правая клюшка с блоком</string>
     <string name="oll_st42_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         ]]></string>
     <string name="oll_st42_url"></string>
 
-    <string name="oll_st43_title">#43</string>
+    <string name="oll_st43_title">#43 Правая клюшка с точкой</string>
     <string name="oll_st43_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         ]]></string>
     <string name="oll_st43_url"></string>
 
-    <string name="oll_st44_title">#44</string>
+    <string name="oll_st44_title">#44 Левая клюшка с точкой</string>
     <string name="oll_st44_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         ]]></string>
     <string name="oll_st44_url"></string>
 
-    <string name="oll_st45_title">#45</string>
+    <string name="oll_st45_title">#45 Скобка с блоком</string>
     <string name="oll_st45_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         ]]></string>
     <string name="oll_st45_url"></string>
 
-    <string name="oll_st46_title">#46</string>
+    <string name="oll_st46_title">#46 Скобка с точкой</string>
     <string name="oll_st46_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         ]]></string>
     <string name="oll_st46_url"></string>
 
-    <string name="oll_st47_title">#47</string>
+    <string name="oll_st47_title">#47 Левый пропеллер</string>
     <string name="oll_st47_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         ]]></string>
     <string name="oll_st47_url"></string>
 
-    <string name="oll_st48_title">#48</string>
+    <string name="oll_st48_title">#48 Правый пропеллер</string>
     <string name="oll_st48_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         ]]></string>
     <string name="oll_st48_url"></string>
 
-    <string name="oll_st49_title">#49</string>
+    <string name="oll_st49_title">#49 Буква Т с точкой</string>
     <string name="oll_st49_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         ]]></string>
-    <string name="oll_st49_url"></string>
+    <string name="oll_st49_url">SRsEGxXLqrc</string>
 
-    <string name="oll_st50_title">#50</string>
+    <string name="oll_st50_title">#50 Буква Т с блоком</string>
     <string name="oll_st50_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         ]]></string>
-    <string name="oll_st50_url"></string>
+    <string name="oll_st50_url">SRsEGxXLqrc</string>
 
-    <string name="oll_st51_title">#51</string>
+    <string name="oll_st51_title">#51 Рыбка</string>
     <string name="oll_st51_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         ]]></string>
-    <string name="oll_st51_url"></string>
+    <string name="oll_st51_url">PUTeFKC9R2Y</string>
 
-    <string name="oll_st52_title">#52</string>
+    <string name="oll_st52_title">#52 Акула</string>
     <string name="oll_st52_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         ]]></string>
-    <string name="oll_st52_url"></string>
+    <string name="oll_st52_url">blOgwHue1PE</string>
 
-    <string name="oll_st53_title">#53</string>
+    <string name="oll_st53_title">#53 Носик</string>
     <string name="oll_st53_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         ]]></string>
-    <string name="oll_st53_url"></string>
+    <string name="oll_st53_url">ICMhcSF54OM</string>
 
-    <string name="oll_st54_title">#54</string>
+    <string name="oll_st54_title">#54 Ушки</string>
     <string name="oll_st54_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         ]]></string>
-    <string name="oll_st54_url"></string>
+    <string name="oll_st54_url">gbuLeCv_fRM</string>
 
-    <string name="oll_st55_title">#55</string>
+    <string name="oll_st55_title">#55 Глазки</string>
     <string name="oll_st55_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         ]]></string>
-    <string name="oll_st55_url"></string>
+    <string name="oll_st55_url">dzINk50Y1jI</string>
 
-    <string name="oll_st56_title">#56</string>
+    <string name="oll_st56_title">#56 НТВ+</string>
     <string name="oll_st56_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         ]]></string>
-    <string name="oll_st56_url"></string>
+    <string name="oll_st56_url">vJS0EyEPFPY</string>
 
-    <string name="oll_st57_title">#57</string>
+    <string name="oll_st57_title">#57 Вертолет</string>
     <string name="oll_st57_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
+        <p>Ситуация из Ускорения N14.</p>
+        <p style="text-align:center"><img src="accel_3_1.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=3:08&link=m2EkIKd6efA">на видео 3:08</a> <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=0:14&link=47JfJxU7EjM">от J Perm</a> <br/>
+        <b>Алгоритм: R U2 R2\' U\' R2 U\' R2\' U2 R </b>
         ]]></string>
-    <string name="oll_st57_url"></string>
+    <string name="oll_st57_url">m2EkIKd6efA</string>
 
 
 </resources>
