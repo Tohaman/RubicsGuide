@@ -138,7 +138,6 @@
         <p style="text-align:center"><img src="voll_51_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=7:04&link=PUTeFKC9R2Y">на видео 7:04</a><br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=0:20&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        или альтернативный <a href="rubic-activity://ytactivity?time=1:50&link=XxRLdzm7N5Y">фингертрикс</a> от J Prem<br/>
         <b>Алгоритм: (R U R\' U) R U2 R\'</b>
     ]]></string>
     <string name="accel_st2_url">PUTeFKC9R2Y</string>
@@ -159,6 +158,7 @@
         <p style="text-align:center"><img src="accel_4_1.png" width="60%%"></p>
         <b>Алгоритм: F (R U R\' U\') (R U R\' U\') (R U R\' U\') F\' </b>
         <p>Альтернативный вариант, без кручения передней грани:<br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=0:28&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (R U2) (R\' U\' R U R\' U\' R U\' R\')</b></p>
         <p><a href="rubic-activity://ytactivity?time=0:26&link=t3KcPrjmJJ4">Бонус от JPerm:</a>
         если углы стоят парами</p>
@@ -267,7 +267,7 @@
         <p>Альтернативный вариант: поставить рыбку головой ВЛЕВО взад, назовем этот вариант <b>Акулы</b> северо-западным,
         т.к. акула уплывает на северо-запад.:</p>
         <p style="text-align:center"><img src="voll_52_2.png" width="60%%"></p>
-        Алгоритм: <b>R\' U\' R U\' R U2 R\' </b><br/>
+        <b>Алгоритм: R\' U\' R U\' R U2 R\' </b><br/>
         Для этого алгоритма очень удобный и быстрый фингертрикс с начальным положением большого пальца правой руки
         сверху. Т.е. стандартное положение рук получается после первого хода и двойное кручение крыши
         можно делать указательным и средним пальцами правой руки.
@@ -287,6 +287,7 @@
         в палку или бумеранг, а потом решать их.</p>
         <p style="text-align:center"><img src="accel_12_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=3:30&link=ZsybuodfAqM">на видео 3:30</a> <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=11:39&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (R U R\' U) (R\' F R F\') U2 (R\' F R F\') </b>
     ]]></string>
     <string name="accel_st12_url">ZsybuodfAqM</string>

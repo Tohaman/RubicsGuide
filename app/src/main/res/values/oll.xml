@@ -113,7 +113,7 @@
         <item>@drawable/voll_50</item>
         <item>@drawable/voll_51</item>
         <item>@drawable/voll_52</item>
-        <item>@drawable/voll_53</item>
+        <item>@drawable/voll_53_11</item>
         <item>@drawable/voll_54</item>
         <item>@drawable/voll_55</item>
         <item>@drawable/voll_56</item>
@@ -909,7 +909,7 @@
     <string name="oll_st39_descr" formatted="false"><![CDATA[
         <p>В этой палке есть и блок и точка, но будем считать ее палкой с точкой.</p>
         <b>Как решать:</b>
-        <p>Поставить палку вертикально, тройным блоком справа.</p>
+        <p>Поставить палку вертикально, тройным блоком справа, точкой слева.</p>
         <p style="text-align:center"><img src="voll_39_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=4:45&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (R\' U\' R U\' R\' U) y\' (R\' U R) B</b><br/><br/>
@@ -1055,27 +1055,30 @@
     <string name="oll_st53_title">#53 Носик</string>
     <string name="oll_st53_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
-        <p style="text-align:center"><img src="voll_52_1.png" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=0:08&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: </b><br/><br/>
+        <p style="text-align:center"><img src="voll_53_1.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=1:00&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: F\' (Rw U R\' U\') Rw F R</b><br/><br/>
+        <p style="text-align:center"><img src="voll_53_2.png" width="60%%"></p>
+        <b>Алгоритм: (R\' F R B\') (R\' F\' R B)</b><br/><br/>
         ]]></string>
     <string name="oll_st53_url">ICMhcSF54OM</string>
 
     <string name="oll_st54_title">#54 Ушки</string>
     <string name="oll_st54_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
-        <p style="text-align:center"><img src="voll_52_1.png" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=0:08&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: </b><br/><br/>
+        <p style="text-align:center"><img src="voll_54_1.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=0:51&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: (Rw U R\' U\') (Rw\' F R F\')</b><br/><br/>
         ]]></string>
     <string name="oll_st54_url">gbuLeCv_fRM</string>
 
     <string name="oll_st55_title">#55 Глазки</string>
     <string name="oll_st55_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
-        <p style="text-align:center"><img src="voll_52_1.png" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=0:08&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: </b><br/><br/>
+        <p style="text-align:center"><img src="voll_55_1.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=6:15&link=dzINk50Y1jI">от Максима</a> <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=1:08&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: R2 D R\' U2 R D\' R\' U2 R\'</b><br/><br/>
         ]]></string>
     <string name="oll_st55_url">dzINk50Y1jI</string>
 
@@ -1083,8 +1086,8 @@
     <string name="oll_st56_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         <p style="text-align:center"><img src="voll_52_1.png" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=0:08&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: </b><br/><br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=0:28&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: (R U2) (R\' U\' R U R\' U\' R U\' R\')</b><br/><br/>
         ]]></string>
     <string name="oll_st56_url">vJS0EyEPFPY</string>
 
@@ -1093,7 +1096,8 @@
         <b>Как решать:</b>
         <p>Ситуация из Ускорения N14.</p>
         <p style="text-align:center"><img src="accel_3_1.png" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=3:08&link=m2EkIKd6efA">на видео 3:08</a> <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=3:08&link=m2EkIKd6efA">от Максима</a> <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=0:41&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=0:14&link=47JfJxU7EjM">от J Perm</a> <br/>
         <b>Алгоритм: R U2 R2\' U\' R2 U\' R2\' U2 R </b>
         ]]></string>
