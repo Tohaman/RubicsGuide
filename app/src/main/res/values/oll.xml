@@ -1067,9 +1067,14 @@
     <string name="oll_st54_title">#54 Ушки</string>
     <string name="oll_st54_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
+        <p>Ушками слева.</p>
         <p style="text-align:center"><img src="voll_54_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=0:51&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (Rw U R\' U\') (Rw\' F R F\')</b><br/><br/>
+        <p>Вариант из Ускорения N8 от Максима. Ушками назад, да еще нижней гранью к себе.</p>
+        <p style="text-align:center"><img src="voll_54_2.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=6:50&link=gbuLeCv_fRM">от Максима</a> <br/>
+        <b>Алгоритм: x D\' R\' U R D R\' U\' R x\'</b>
         ]]></string>
     <string name="oll_st54_url">gbuLeCv_fRM</string>
 
@@ -1086,9 +1091,12 @@
     <string name="oll_st56_title">#56 НТВ+</string>
     <string name="oll_st56_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
-        <p style="text-align:center"><img src="voll_52_1.png" width="60%%"></p>
+        <p>Взять глазками к себе, Уехать в Лондон, три пиф-пафа, вернуться из Лондона.</p>
+        <p style="text-align:center"><img src="voll_56_1.png" width="60%%"></p>
+        <b>Алгоритм: F (R U R\' U\') (R U R\' U\') (R U R\' U\') F\' </b>
+        <p>Альтернативный вариант, без кручения передней грани:<br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=0:28&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: (R U2) (R\' U\' R U R\' U\' R U\' R\')</b><br/><br/>
+        <b>Алгоритм: (R U2) (R\' U\' R U R\' U\' R U\' R\')</b></p>
         ]]></string>
     <string name="oll_st56_url">vJS0EyEPFPY</string>
 
@@ -1096,7 +1104,7 @@
     <string name="oll_st57_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         <p>Ситуация из Ускорения N14.</p>
-        <p style="text-align:center"><img src="accel_3_1.png" width="60%%"></p>
+        <p style="text-align:center"><img src="voll_57_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=3:08&link=m2EkIKd6efA">от Максима</a> <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=0:41&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=0:14&link=47JfJxU7EjM">от J Perm</a> <br/>
