@@ -1009,7 +1009,7 @@
     <string name="oll_st49_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         <p>Все дальнейшие ситуации уже должны быть знакомы по ускорениям для начинающих.
-        Ситуация из ускорения N7. Обычный алгоритм \"палка\" для новичков. В Лондон, пиф-паф, из Лондона.</p>
+        Ситуация из <b>Ускорения N7</b>. Обычный алгоритм \"палка\" для новичков. В Лондон, пиф-паф, из Лондона.</p>
         <p style="text-align:center"><img src="voll_49_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:47&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: F (R U R\' U\') F\'</b><br/><br/>
@@ -1019,7 +1019,7 @@
     <string name="oll_st50_title">#50 Буква Т с блоком</string>
     <string name="oll_st50_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
-        <p>Еще одна ситуация из Ускорения N7. Все просто: обычный пиф-паф, потом английский пиф-паф</p>
+        <p>Еще одна ситуация из <b>Ускорения N7</b>. Все просто: обычный пиф-паф, потом английский пиф-паф</p>
         <p style="text-align:center"><img src="voll_50_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:39&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (R U R\' U\') (R\' F R F\')</b><br/><br/>
@@ -1029,7 +1029,7 @@
     <string name="oll_st51_title">#51 Рыбка</string>
     <string name="oll_st51_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
-        <p>Ситуация из Ускорения N2.</p>
+        <p>Ситуация из <b>Ускорения N2</b>.</p>
         <p style="text-align:center"><img src="voll_51_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=0:20&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=7:04&link=PUTeFKC9R2Y">от Максима</a><br/>
@@ -1040,7 +1040,7 @@
     <string name="oll_st52_title">#52 Акула</string>
     <string name="oll_st52_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
-        <p>Ситуация из Ускорения N11.<br/>
+        <p>Ситуация из <b>Ускорения N11</b>.<br/>
         1. Акула уплывает вправо:</p>
         <p style="text-align:center"><img src="voll_52_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=0:08&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
@@ -1058,6 +1058,7 @@
     <string name="oll_st53_title">#53 Носик</string>
     <string name="oll_st53_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
+        <p>Ситуация из <b>Ускорения N9</b>.<br/>
         <p style="text-align:center"><img src="voll_53_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:00&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: F\' (Rw U R\' U\') Rw F R</b><br/><br/>
@@ -1073,7 +1074,7 @@
         <p style="text-align:center"><img src="voll_54_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=0:51&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (Rw U R\' U\') (Rw\' F R F\')</b><br/><br/>
-        <p>Вариант из Ускорения N8 от Максима. Ушками назад, да еще нижней гранью к себе.</p>
+        <p>Вариант из <b>Ускорения N8</b> от Максима. Ушками назад, да еще нижней гранью к себе.</p>
         <p style="text-align:center"><img src="voll_54_2.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=6:50&link=gbuLeCv_fRM">от Максима</a> <br/>
         <b>Алгоритм: x D\' R\' U R D R\' U\' R x\'</b>
@@ -1083,6 +1084,7 @@
     <string name="oll_st55_title">#55 Глазки</string>
     <string name="oll_st55_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
+        <p>Ситуация из <b>Ускорения N13</b>.<br/>
         <p style="text-align:center"><img src="voll_55_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=6:15&link=dzINk50Y1jI">от Максима</a> <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:08&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
@@ -1093,7 +1095,7 @@
     <string name="oll_st56_title">#56 НТВ+</string>
     <string name="oll_st56_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
-        <p>Взять глазками к себе, Уехать в Лондон, три пиф-пафа, вернуться из Лондона.</p>
+        <p>Ситуация из <b>Ускорения N4</b>. Взять глазками к себе, Уехать в Лондон, три пиф-пафа, вернуться из Лондона.</p>
         <p style="text-align:center"><img src="voll_56_1.png" width="60%%"></p>
         <b>Алгоритм: F (R U R\' U\') (R U R\' U\') (R U R\' U\') F\' </b>
         <p>Альтернативный вариант, без кручения передней грани:<br/>
@@ -1105,7 +1107,7 @@
     <string name="oll_st57_title">#57 Вертолет</string>
     <string name="oll_st57_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
-        <p>Ситуация из Ускорения N14.</p>
+        <p>Ситуация из <b>Ускорения N14</b>.</p>
         <p style="text-align:center"><img src="voll_57_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=3:08&link=m2EkIKd6efA">от Максима</a> <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=0:41&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
