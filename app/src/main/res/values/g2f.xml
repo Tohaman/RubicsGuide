@@ -13,7 +13,7 @@
         <item>@drawable/cross</item>
         <item>@drawable/f2l</item>
         <item>@drawable/pll</item>
-        <item>@drawable/oll</item>
+        <item>@drawable/voll_56</item>
     </integer-array>
 
     <string-array name="g2f_phase">

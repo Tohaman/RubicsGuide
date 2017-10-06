@@ -15,7 +15,7 @@
         <item>@drawable/blind</item>
         <item>@drawable/basic</item>
         <item>@drawable/timer</item>
-        <item>@drawable/about</item>
+        <item>@drawable/vabout</item>
     </integer-array>
 
     <string-array name="main_phase">

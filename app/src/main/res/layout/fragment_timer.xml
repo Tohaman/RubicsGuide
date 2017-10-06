@@ -30,7 +30,7 @@
             android:layout_height="@dimen/timer_image_size"
             android:layout_marginBottom="@dimen/timer_image_bottom_margin"
             android:contentDescription="@string/lefthand"
-            app:srcCompat="@drawable/timer_1"/>
+            app:srcCompat="@drawable/vtimer_1"/>
     </LinearLayout>
 
     <LinearLayout
@@ -54,7 +54,7 @@
             android:layout_height="@dimen/timer_image_size"
             android:layout_marginBottom="@dimen/timer_image_bottom_margin"
             android:contentDescription="@string/righthand"
-            app:srcCompat="@drawable/timer_2"/>
+            app:srcCompat="@drawable/vtimer_2"/>
     </LinearLayout>
 
     <LinearLayout
@@ -186,7 +186,7 @@
                 android:layout_height="@dimen/timer_image_size"
                 android:layout_marginBottom="@dimen/timer_image_bottom_margin"
                 android:contentDescription="@string/righthand"
-                app:srcCompat="@drawable/timer_2"/>
+                app:srcCompat="@drawable/vtimer_2"/>
         </LinearLayout>
 
         <LinearLayout
@@ -210,7 +210,7 @@
                 android:layout_height="@dimen/timer_image_size"
                 android:layout_marginBottom="@dimen/timer_image_bottom_margin"
                 android:contentDescription="@string/lefthand"
-                app:srcCompat="@drawable/timer_1"/>
+                app:srcCompat="@drawable/vtimer_1"/>
         </LinearLayout>
 
         <TextView
