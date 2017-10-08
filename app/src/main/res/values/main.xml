@@ -13,7 +13,7 @@
         <item>@drawable/begin</item>
         <item>@drawable/g2f</item>
         <item>@drawable/blind</item>
-        <item>@drawable/basic</item>
+        <item>@drawable/vbasic</item>
         <item>@drawable/timer</item>
         <item>@drawable/vabout</item>
     </integer-array>
