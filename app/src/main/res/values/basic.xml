@@ -54,28 +54,28 @@
         <item>@drawable/vbasic_12</item>
         <item>@drawable/vbasic_13</item>
         <item>@drawable/vbasic_14</item>
-        <item>@drawable/basic_15</item>
-        <item>@drawable/basic_16</item>
-        <item>@drawable/basic_17</item>
-        <item>@drawable/basic_18</item>
-        <item>@drawable/basic_19</item>
-        <item>@drawable/basic_20</item>
-        <item>@drawable/basic_21</item>
-        <item>@drawable/basic_22</item>
-        <item>@drawable/basic_23</item>
-        <item>@drawable/basic_24</item>
-        <item>@drawable/basic_25</item>
-        <item>@drawable/basic_26</item>
-        <item>@drawable/basic_27</item>
-        <item>@drawable/basic_28</item>
-        <item>@drawable/basic_29</item>
-        <item>@drawable/basic_30</item>
-        <item>@drawable/basic_31</item>
-        <item>@drawable/basic_32</item>
-        <item>@drawable/basic_33</item>
-        <item>@drawable/basic_34</item>
-        <item>@drawable/basic_35</item>
-        <item>@drawable/basic_36</item>
+        <item>@drawable/vbasic_15</item>
+        <item>@drawable/vbasic_16</item>
+        <item>@drawable/vbasic_17</item>
+        <item>@drawable/vbasic_18</item>
+        <item>@drawable/vbasic_19</item>
+        <item>@drawable/vbasic_20</item>
+        <item>@drawable/vbasic_21</item>
+        <item>@drawable/vbasic_22</item>
+        <item>@drawable/vbasic_23</item>
+        <item>@drawable/vbasic_24</item>
+        <item>@drawable/vbasic_25</item>
+        <item>@drawable/vbasic_26</item>
+        <item>@drawable/vbasic_27</item>
+        <item>@drawable/vbasic_28</item>
+        <item>@drawable/vbasic_29</item>
+        <item>@drawable/vbasic_30</item>
+        <item>@drawable/vbasic_31</item>
+        <item>@drawable/vbasic_32</item>
+        <item>@drawable/vbasic_33</item>
+        <item>@drawable/vbasic_34</item>
+        <item>@drawable/vbasic_35</item>
+        <item>@drawable/vbasic_36</item>
     </integer-array>
 
     <string-array name="basic_descr">
