@@ -40,10 +40,10 @@
     </string-array>
 
     <integer-array name="basic_icon">
-        <item>@drawable/basic_1</item>
-        <item>@drawable/basic_2</item>
-        <item>@drawable/basic_3</item>
-        <item>@drawable/basic_4</item>
+        <item>@drawable/vbasic_1</item>
+        <item>@drawable/vbasic_2</item>
+        <item>@drawable/vbasic_3</item>
+        <item>@drawable/vbasic_4</item>
         <item>@drawable/basic_5</item>
         <item>@drawable/basic_6</item>
         <item>@drawable/basic_7</item>
