@@ -44,16 +44,16 @@
         <item>@drawable/vbasic_2</item>
         <item>@drawable/vbasic_3</item>
         <item>@drawable/vbasic_4</item>
-        <item>@drawable/basic_5</item>
-        <item>@drawable/basic_6</item>
-        <item>@drawable/basic_7</item>
-        <item>@drawable/basic_8</item>
-        <item>@drawable/basic_9</item>
-        <item>@drawable/basic_10</item>
-        <item>@drawable/basic_11</item>
-        <item>@drawable/basic_12</item>
-        <item>@drawable/basic_13</item>
-        <item>@drawable/basic_14</item>
+        <item>@drawable/vbasic_5</item>
+        <item>@drawable/vbasic_6</item>
+        <item>@drawable/vbasic_7</item>
+        <item>@drawable/vbasic_8</item>
+        <item>@drawable/vbasic_9</item>
+        <item>@drawable/vbasic_10</item>
+        <item>@drawable/vbasic_11</item>
+        <item>@drawable/vbasic_12</item>
+        <item>@drawable/vbasic_13</item>
+        <item>@drawable/vbasic_14</item>
         <item>@drawable/basic_15</item>
         <item>@drawable/basic_16</item>
         <item>@drawable/basic_17</item>
@@ -62,7 +62,6 @@
         <item>@drawable/basic_20</item>
         <item>@drawable/basic_21</item>
         <item>@drawable/basic_22</item>
-        //TODO Поправить картинку 23
         <item>@drawable/basic_23</item>
         <item>@drawable/basic_24</item>
         <item>@drawable/basic_25</item>
