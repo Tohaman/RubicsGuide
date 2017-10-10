@@ -827,58 +827,60 @@
         ]]></string>
     <string name="oll_st32_url">rlHhiQQVv1M</string>
 
-    <string name="oll_st33_title">#33 Левая рюмка</string>
+    <string name="oll_st33_title">#33 Метро с точкой</string>
     <string name="oll_st33_descr" formatted="false"><![CDATA[
+        <p>Еще две ситуации, которые назовем <b>Метро</b>. Как не сложно догадаться, <b>Метро</b> может быть
+        с точкой, а может быть с блоком. Чтобы определить, что нам досталось, поверните кубик буквой М как на
+        картинке и посмотрите на переднюю грань, что там, блок или точка.</p>
+        <b>Как решать:</b>
+        <p>Морской пиф-паф, морской пиф-паф с обратными ходами крыши, английский пиф-паф.</p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=0:52&link=KixrDe28A3Y">на видео 0:52</a> <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:55&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: (R U R\' U) (R U\' R\' U\') (R\' F R F\')</b><br/><br/>
+        <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=2:00&link=KixrDe28A3Y">на видео 2:00</a>
+        выполнить данный алгоритм 5 раз.
+    ]]></string>
+    <string name="oll_st33_url">KixrDe28A3Y</string>
+
+    <string name="oll_st34_title">#34 Метро с блоком</string>
+    <string name="oll_st34_descr" formatted="false"><![CDATA[
+        <b>Как решать:</b>
+        <p>1. Поставить как на кртинке. Зеркальный морской пиф-паф (все ходы обратные), морской пиф-паф с обратными включениями
+        выключениями света, жирно гасим свет слева, крыша против, гасим свет справа и крыша
+        снова против, поворачиваем кубик желтой стороной вверх.</p>
+        <p style="text-align:center"><img src="voll_34_1.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:40&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: (R\' U\' R U\') (R\' U R U) (Lw U\' R\' U) x</b><br/><br/>
+
+        <p>2. Из другого положения: так же как и Метро с точкой, но слева. Морской пиф-паф слева, левый морской пиф-паф с обратными
+        ходами крыши, левый английский пиф-паф.</p>
+        <p style="text-align:center"><img src="voll_34_2.png" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=1:54&link=47JfJxU7EjM">от J Perm</a> <br/>
+        <b>Алгоритм: (L\' U\' L U\') (L\' U L\' U) (L F\' L\' F)</b><br/><br/>
+        ]]></string>
+    <string name="oll_st34_url"></string>
+
+    <string name="oll_st35_title">#35 Левая рюмка</string>
+    <string name="oll_st35_descr" formatted="false"><![CDATA[
         <p>Еще две ситуации, которые назовем <b>Рюмка</b>. Как не сложно догадаться, <b>Рюмка</b> может быть
         правой, а может быть левой. Чтобы определить, какая нам досталась, надо поставить рюмку
         двойным блоком к себе и посмотреть в какую сторону она наклонена.</p>
         <b>Как решать:</b>
         <p>Поставить двойным блоком к себе. Пиф-паф, выключить свет и уехать в Лонодон, включить
         свет, пиф-паф, вернуться из Лондона.</p>
-        <p style="text-align:center"><img src="voll_33_1.png" width="60%%"></p>
+        <p style="text-align:center"><img src="voll_35_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=5:08&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (R U R\' U\') R\' F (R2 U R\' U\') F\'</b><br/><br/>
-    ]]></string>
-    <string name="oll_st33_url"></string>
-
-    <string name="oll_st34_title">#34 Правая рюмка</string>
-    <string name="oll_st34_descr" formatted="false"><![CDATA[
-        <b>Как решать:</b>
-        <p>Перевернуть рюмку. Морской пиф-паф, английский пиф-паф, включить свет, дважды крышу, выключить свет.
-        <p style="text-align:center"><img src="voll_34_1.png" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=5:20&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: (R U R\' U) (R\' F R F\') (R U2 R\')</b><br/><br/>
-        ]]></string>
-    <string name="oll_st34_url"></string>
-
-    <string name="oll_st35_title">#35 Левая буква М</string>
-    <string name="oll_st35_descr" formatted="false"><![CDATA[
-        <p>Еще две ситуации, которые назовем <b>буква М</b>. Как не сложно догадаться, <b>буква М</b> может быть
-        правой, а может быть левой. Чтобы определить, какая буква нам досталась, надо повернуть ее
-        точкой к себе. Для начала рассмотрим левую букву М.</p>
-        <b>Как решать:</b>
-        <p>Морской пиф-паф, морской пиф-паф с обратными ходами крыши, английский пиф-паф.</p>
-        <p style="text-align:center"><img src="voll_35_1.png" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:55&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: (R U R\' U) (R U\' R\' U\') (R\' F R F\')</b><br/><br/>
         ]]></string>
     <string name="oll_st35_url"></string>
 
-    <string name="oll_st36_title">#36 Правая буква М</string>
+    <string name="oll_st36_title">#36 Правая рюмка</string>
     <string name="oll_st36_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
-        <p>1. Поставить как на кртинке. Зеркальный морской пиф-паф (все ходы обратные), морской пиф-паф с обратными включениями
-        выключениями света, жирно гасим свет слева, крыша против, гасим свет справа и крыша
-        снова против, поворачиваем кубик желтой стороной вверх.</p>
+        <p>Перевернуть рюмку. Морской пиф-паф, английский пиф-паф, включить свет, дважды крышу, выключить свет.
         <p style="text-align:center"><img src="voll_36_1.png" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:40&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: (R\' U\' R U\') (R\' U R U) (Lw U\' R\' U) x</b><br/><br/>
-
-        <p>2. Из другого положения: так же как и Левую М, но слева. Морской пиф-паф слева, левый морской пиф-паф с обратными
-        ходами крыши, левый английский пиф-паф.</p>
-        <p style="text-align:center"><img src="voll_36_2.png" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=1:54&link=47JfJxU7EjM">от J Perm</a> <br/>
-        <b>Алгоритм: (L\' U\' L U\') (L\' U L\' U) (L F\' L\' F)</b><br/><br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=5:20&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: (R U R\' U) (R\' F R F\') (R U2 R\')</b><br/><br/>
         ]]></string>
     <string name="oll_st36_url"></string>
 
