@@ -10,9 +10,9 @@
     </string-array>
 
     <integer-array name="main_icon">
-        <item>@drawable/begin</item>
-        <item>@drawable/g2f</item>
-        <item>@drawable/blind</item>
+        <item>@drawable/vbegin</item>
+        <item>@drawable/vg2f</item>
+        <item>@drawable/vblind</item>
         <item>@drawable/vbasic</item>
         <item>@drawable/timer</item>
         <item>@drawable/vabout</item>
