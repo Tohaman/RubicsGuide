@@ -145,11 +145,19 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
         mTitleField = (TextView) v.findViewById(R.id.pager_title_text);
         mTitleField.setText(mListPager.getTitle());
 
+        //смотрим в настройках программы, показывать превью видео или текст
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
         boolean enabled = prefs.getBoolean(sVideo_preview, true);
+
         TextView youtubetext = (TextView) v.findViewById(R.id.pager_youtubetext);
         thumbnailView = (YouTubeThumbnailView) v.findViewById(R.id.pager_youtube);
 
+        ConstraintLayout frame = (ConstraintLayout) v.findViewById(R.id.frame);
+        if (mListPager.getUrl().equals("")){
+            frame.setVisibility(View.INVISIBLE);
+        } else {
+            frame.setVisibility(View.VISIBLE);
+        }
         if (enabled) {
             youtubetext.setVisibility(View.INVISIBLE);
             thumbnailView.setVisibility(View.VISIBLE);
@@ -215,7 +223,7 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
         mDescriptionField.setText(spanresult);
         mDescriptionField.setMovementMethod(LinkMovementMethod.getInstance());
 
-        // Вместо TextView можно использовать WebView, но он медленее чем TextView, но
+        // Вместо TextView можно использовать WebView, но он значительно медленее чем TextView, но
         // поддерживает выравнивание по ширине и изменение выравнивания (по центру/левому краю/ширине)
         // TextView поддерживает изменение выравнивания только начиная с Android 7.0
 //        mWebView = (WebView) v.findViewById(R.id.pager_webview_text);

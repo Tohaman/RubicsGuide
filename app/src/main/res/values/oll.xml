@@ -1081,7 +1081,8 @@
     <string name="oll_st54_title">#54 Ушки</string>
     <string name="oll_st54_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
-        <p>Ушками слева.</p>
+        <p>Ушками слева. Простой для запоминания и исполнения алгоритм, к тому же без перехватов.
+        Пиф-паф с первым жирным ходом, английский пиф-паф опять же с первым жирным ходом.</p>
         <p style="text-align:center"><img src="voll_54_1.png" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=0:51&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (Rw U R\' U\') (Rw\' F R F\')</b><br/><br/>
