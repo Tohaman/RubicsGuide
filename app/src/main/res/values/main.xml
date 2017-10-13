@@ -14,7 +14,7 @@
         <item>@drawable/vg2f</item>
         <item>@drawable/vblind</item>
         <item>@drawable/vbasic</item>
-        <item>@drawable/timer</item>
+        <item>@drawable/vtimer</item>
         <item>@drawable/vabout</item>
     </integer-array>
 
