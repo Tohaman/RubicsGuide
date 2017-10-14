@@ -323,6 +323,7 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
         public Drawable getDrawable(String source) {
             Drawable drawable = null;
             source = source.replace(".png", "");
+            source = source.replace(".xml", "");
             int resID = getResources().getIdentifier(source , "drawable", getActivity().getPackageName());
             //если картинка в drawable не найдена, то подсовываем заведомо существующую картинку
             if (resID == 0 ) {
