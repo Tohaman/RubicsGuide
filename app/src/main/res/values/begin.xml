@@ -21,7 +21,7 @@
         <item>@drawable/vbegin_4</item>
         <item>@drawable/vbegin_5a</item>
         <item>@drawable/vbegin_5b</item>
-        <item>@drawable/begin_6</item>
+        <item>@drawable/vbegin_6</item>
         <item>@drawable/begin_7</item>
         <item>@drawable/begin_8</item>
         <item>@drawable/begin_9</item>
@@ -197,16 +197,16 @@
         данном этапе мы видим только оружие: палку (три в ряд), бумеранг (три буквой Г)
         или пулю (все ребра не в цвет крыши). Как их решать: </p>
         - <b>Палка.</b>
-        <p style="text-align:center"><img src="begin_6_1.xml" width="30%%"></p>
+        <p style="text-align:center"><img src="vbegin_6_1.xml" width="30%%"></p>
         <p>Палку надо поставить так чтобы она нас не била (на 3 и 9 часов), теперь едем в
         Лондон, делаем пиф-паф, возвращаемся из Лондона.</p>
         - <b>Бумеранг.</b>
-        <p style="text-align:center"><img src="begin_6_2.xml" width="30%%"></p>
+        <p style="text-align:center"><img src="vbegin_6_2.xml" width="30%%"></p>
         <p>Его надо поставит на 9 и 12 часов (налево и взад), т.к. бумеранг более
         совершенное оружие, чем палка, то выполнять его чуть сложнее. Едем в Лондон и делаем 2 (два)
         пиф-пафа, и возвращаемся из Лондона.</p>
         - <b>Пуля.</b>
-        <p style="text-align:center"><img src="begin_6_3.xml" width="30%%"></p>
+        <p style="text-align:center"><img src="vbegin_6_3.xml" width="30%%"></p>
         <p>Как ставить, абсолютно без разницы. Пуля еще более совершенное оружие, поэтому
         комбинация еще сложнее. Делаем <b>палку</b> (едем в Лондон, делаем пиф-паф, возвращаемся из
         Лондона), получаем из пули <b>бумеранг</b>, поворачиваем его как надо (на 9 и 12) и делаем
