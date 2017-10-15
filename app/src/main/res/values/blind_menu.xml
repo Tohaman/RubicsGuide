@@ -10,7 +10,7 @@
     <integer-array name="blind_menu_icon">
         <item>@drawable/blind</item>
         <item>@drawable/blaccel_1</item>
-        <item>@drawable/scramgen</item>
+        <item>@drawable/vscramgen</item>
 
     </integer-array>
 
