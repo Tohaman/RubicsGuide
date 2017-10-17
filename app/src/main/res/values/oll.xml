@@ -869,27 +869,32 @@
         ]]></string>
     <string name="oll_st34_url">6mWixWwb-Rw</string>
 
-    <string name="oll_st35_title">#35 Левая рюмка</string>
+    <string name="oll_st35_title">#35 Рюмка с точкой</string>
     <string name="oll_st35_descr" formatted="false"><![CDATA[
+        <b>Как решать:</b>
+        <p>Перевернуть рюмку как на картинке (ход U\'). Морской пиф-паф, английский пиф-паф, включить свет, дважды крышу, выключить свет.
+        <p style="text-align:center"><img src="voll_35_1.xml" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=1:23&link=R32nstcHIRQ">на видео 1:23</a> <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=5:20&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: (R U R\' U) (R\' F R F\') (R U2 R\')</b><br/><br/>
+
+        <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=1:52&link=R32nstcHIRQ">на видео 1:52</a>
+        выполнить алгоритм 5 раз, можно с ходом U\' в начале, а можно и без него, главное 5 раз одинаково.
+
+        ]]></string>
+    <string name="oll_st35_url">R32nstcHIRQ</string>
+
+    <string name="oll_st36_title">#36 Рюмка с блоком</string>
+    <string name="oll_st36_descr" formatted="false"><![CDATA[
         <p>Еще две ситуации, которые назовем <b>Рюмка</b>. Как не сложно догадаться, <b>Рюмка</b> может быть
         правой, а может быть левой. Чтобы определить, какая нам досталась, надо поставить рюмку
         двойным блоком к себе и посмотреть в какую сторону она наклонена.</p>
         <b>Как решать:</b>
         <p>Поставить двойным блоком к себе. Пиф-паф, выключить свет и уехать в Лонодон, включить
         свет, пиф-паф, вернуться из Лондона.</p>
-        <p style="text-align:center"><img src="voll_35_1.xml" width="60%%"></p>
+        <p style="text-align:center"><img src="voll_36_1.xml" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=5:08&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (R U R\' U\') R\' F (R2 U R\' U\') F\'</b><br/><br/>
-        ]]></string>
-    <string name="oll_st35_url"></string>
-
-    <string name="oll_st36_title">#36 Правая рюмка</string>
-    <string name="oll_st36_descr" formatted="false"><![CDATA[
-        <b>Как решать:</b>
-        <p>Перевернуть рюмку. Морской пиф-паф, английский пиф-паф, включить свет, дважды крышу, выключить свет.
-        <p style="text-align:center"><img src="voll_36_1.xml" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=5:20&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: (R U R\' U) (R\' F R F\') (R U2 R\')</b><br/><br/>
         ]]></string>
     <string name="oll_st36_url"></string>
 
