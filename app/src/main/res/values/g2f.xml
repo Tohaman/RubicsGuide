@@ -10,7 +10,7 @@
 
     <integer-array name="g2f_icon">
         <item>@drawable/accel_2</item>
-        <item>@drawable/cross</item>
+        <item>@drawable/vcross</item>
         <item>@drawable/f2l</item>
         <item>@drawable/pll</item>
         <item>@drawable/voll_56</item>
