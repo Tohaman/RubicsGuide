@@ -870,14 +870,30 @@
         ]]></string>
     <string name="oll_st34_url">6mWixWwb-Rw</string>
 
-    <string name="oll_st35_title">#35 Рюмка с точкой</string>
+    <string name="oll_st35_title">#35 Рюмка с блоком</string>
     <string name="oll_st35_descr" formatted="false"><![CDATA[
         <p>Еще две ситуации, которые назовем <b>Рюмка</b>. Как не сложно догадаться, <b>Рюмка</b> может быть
         с точкой, а может быть с блоком. Чтобы определить, какая нам досталась, надо поставить рюмку
         ножкой вправо и посмотреть что на передней грани, блок или точка.</p>
         <b>Как решать:</b>
-        <p>Перевернуть рюмку как на картинке (ход U\'). Морской пиф-паф, английский пиф-паф, включить свет, дважды крышу, выключить свет.
+        <p>Поставить двойным блоком к себе. Пиф-паф, выключить свет и уехать в Лонодон, включить
+        свет ярко (дважды), крыша по, выключить свет, крыша против, вернуться из Лондона.
+        Ну или Пиф-паф, выключить свет и уехать в Лонодон, включить свет, пиф-паф, вернуться из Лондона.</p>
         <p style="text-align:center"><img src="voll_35_1.xml" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=1:35&link=BSl34nXFvPQ">на видео 1:35</a> <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=5:08&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: (R U R\' U\') R\' F (R2 U R\' U\') F\'</b><br/><br/>
+
+        <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=2:25&link=BSl34nXFvPQ">на видео 2:25</a>
+        выполнить алгоритм 8 раз.
+        ]]></string>
+    <string name="oll_st35_url">BSl34nXFvPQ</string>
+
+    <string name="oll_st36_title">#36 Рюмка с точкой</string>
+    <string name="oll_st36_descr" formatted="false"><![CDATA[
+        <b>Как решать:</b>
+        <p>Перевернуть рюмку как на картинке (ход U\'). Морской пиф-паф, английский пиф-паф, включить свет, дважды крышу, выключить свет.
+        <p style="text-align:center"><img src="voll_36_1.xml" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:23&link=R32nstcHIRQ">на видео 1:23</a> <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=5:20&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (R U R\' U) (R\' F R F\') (R U2 R\')</b><br/><br/>
@@ -885,43 +901,29 @@
         <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=1:52&link=R32nstcHIRQ">на видео 1:52</a>
         выполнить алгоритм 5 раз, можно с ходом U\' в начале, а можно и без него, главное 5 раз одинаково.
         ]]></string>
-    <string name="oll_st35_url">R32nstcHIRQ</string>
+    <string name="oll_st36_url">R32nstcHIRQ</string>
 
-    <string name="oll_st36_title">#36 Рюмка с блоком</string>
-    <string name="oll_st36_descr" formatted="false"><![CDATA[
-        <b>Как решать:</b>
-        <p>Поставить двойным блоком к себе. Пиф-паф, выключить свет и уехать в Лонодон, включить
-        свет, пиф-паф, вернуться из Лондона.</p>
-        <p style="text-align:center"><img src="voll_36_1.xml" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=5:08&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: (R U R\' U\') R\' F (R2 U R\' U\') F\'</b><br/><br/>
-        ]]></string>
-    <string name="oll_st36_url"></string>
-
-    <string name="oll_st37_title">#37 Ассиметричная палка с блоком</string>
+    <string name="oll_st37_title">#37 Буква Т (Тесла) с точкой</string>
     <string name="oll_st37_descr" formatted="false"><![CDATA[
-        <p>Закончили с бумерангами, переходим к <b>палкам</b>. Начнем с чистых палок, которые бывают 4 видов:
-        Симметричные/ассиметричные и с точкой/блоком. Первой будет ассиметричная палка с блоком.
-        Поставить ее надо горизонтально, глазками налево, ушками направо.</p>
+        <p>Переходим к палкам, и начнем со знакомых по ускорениям Букв Т или Тесла.</p>
         <b>Как решать:</b>
-        <p>Жирно едем в Лондон, два пиф-пафа, жирно из Лондона.</p>
+        <p>Ситуация из <b>Ускорения N7</b>. Обычный алгоритм \"палка\" для новичков. В Лондон, пиф-паф, из Лондона.</p>
         <p style="text-align:center"><img src="voll_37_1.xml" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=4:22&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: Fw (R U R\' U\') (R U R\' U\') Fw\'</b><br/><br/>
-        <b>Как смоделировать</b>: Почти так же как и выполнять, только в Лондон уезжать и возвращаться надо не жирно, т.е.
-        В Лондон, два пиф-пафа, из Лондона.
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=1:13&link=HcLUcMWL7Ic">на видео 1:13</a> <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=1:47&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: F (R U R\' U\') F\'</b><br/><br/>
         ]]></string>
-    <string name="oll_st37_url"></string>
+    <string name="oll_st37_url">HcLUcMWL7Ic</string>
 
-    <string name="oll_st38_title">#38 Симметричная палка с точкой</string>
+    <string name="oll_st38_title">#38 Буква Т (Тесла) с блоком</string>
     <string name="oll_st38_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
-        <p>Поставить палку горизонтально. </p>
+        <p>Еще одна ситуация из <b>Ускорения N7</b>. Все просто: обычный пиф-паф, потом английский пиф-паф</p>
         <p style="text-align:center"><img src="voll_38_1.xml" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=4:32&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: Rw\' U\' Rw (U\' R\' U R) (U\' R\' U R) Rw\' U Rw</b><br/><br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=1:39&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: (R U R\' U\') (R\' F R F\')</b><br/><br/>
         ]]></string>
-    <string name="oll_st38_url"></string>
+    <string name="oll_st38_url">SRsEGxXLqrc</string>
 
     <string name="oll_st39_title">#39 Ассиметричная палка с точкой</string>
     <string name="oll_st39_descr" formatted="false"><![CDATA[
@@ -1021,26 +1023,30 @@
         ]]></string>
     <string name="oll_st48_url"></string>
 
-    <string name="oll_st49_title">#49 Буква Т с точкой</string>
+    <string name="oll_st49_title">#49 Ассиметричная палка с блоком</string>
     <string name="oll_st49_descr" formatted="false"><![CDATA[
+        <p>Рассмотрим чистые палки, которые бывают 4 видов:
+        Симметричные/ассиметричные и с точкой/блоком. Первой будет ассиметричная палка с блоком.
+        Поставить ее надо горизонтально, глазками налево, ушками направо.</p>
         <b>Как решать:</b>
-        <p>Все дальнейшие ситуации уже должны быть знакомы по ускорениям для начинающих.
-        Ситуация из <b>Ускорения N7</b>. Обычный алгоритм \"палка\" для новичков. В Лондон, пиф-паф, из Лондона.</p>
+        <p>Жирно едем в Лондон, два пиф-пафа, жирно из Лондона.</p>
         <p style="text-align:center"><img src="voll_49_1.xml" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=1:47&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: F (R U R\' U\') F\'</b><br/><br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=4:22&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: Fw (R U R\' U\') (R U R\' U\') Fw\'</b><br/><br/>
+        <b>Как смоделировать</b>: Почти так же как и выполнять, только в Лондон уезжать и возвращаться надо не жирно, т.е.
+        В Лондон, два пиф-пафа, из Лондона.
         ]]></string>
     <string name="oll_st49_url">SRsEGxXLqrc</string>
 
-    <string name="oll_st50_title">#50 Буква Т с блоком</string>
+    <string name="oll_st50_title">#50 Симметричная палка с точкой</string>
     <string name="oll_st50_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
-        <p>Еще одна ситуация из <b>Ускорения N7</b>. Все просто: обычный пиф-паф, потом английский пиф-паф</p>
+        <p>Поставить палку горизонтально. </p>
         <p style="text-align:center"><img src="voll_50_1.xml" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=1:39&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: (R U R\' U\') (R\' F R F\')</b><br/><br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=4:32&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: Rw\' U\' Rw (U\' R\' U R) (U\' R\' U R) Rw\' U Rw</b><br/><br/>
         ]]></string>
-    <string name="oll_st50_url">SRsEGxXLqrc</string>
+    <string name="oll_st50_url"></string>
 
     <string name="oll_st51_title">#51 Рыбка</string>
     <string name="oll_st51_descr" formatted="false"><![CDATA[
