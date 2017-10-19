@@ -25,27 +25,27 @@
     </string-array>
 
     <integer-array name="pll_icon">
-        <item>@drawable/pll_1</item>
-        <item>@drawable/pll_2</item>
-        <item>@drawable/pll_3</item>
-        <item>@drawable/pll_4</item>
-        <item>@drawable/pll_5</item>
-        <item>@drawable/pll_6</item>
-        <item>@drawable/pll_7</item>
-        <item>@drawable/pll_8</item>
-        <item>@drawable/pll_9</item>
-        <item>@drawable/pll_10</item>
-        <item>@drawable/pll_11</item>
-        <item>@drawable/pll_12</item>
-        <item>@drawable/pll_13</item>
-        <item>@drawable/pll_14</item>
-        <item>@drawable/pll_15</item>
-        <item>@drawable/pll_16</item>
-        <item>@drawable/pll_17</item>
-        <item>@drawable/pll_18</item>
-        <item>@drawable/pll_19</item>
-        <item>@drawable/pll_20</item>
-        <item>@drawable/pll_21</item>
+        <item>@drawable/vpll_1</item>
+        <item>@drawable/vpll_2</item>
+        <item>@drawable/vpll_3</item>
+        <item>@drawable/vpll_4</item>
+        <item>@drawable/vpll_5</item>
+        <item>@drawable/vpll_6</item>
+        <item>@drawable/vpll_7</item>
+        <item>@drawable/vpll_8</item>
+        <item>@drawable/vpll_9</item>
+        <item>@drawable/vpll_10</item>
+        <item>@drawable/vpll_11</item>
+        <item>@drawable/vpll_12</item>
+        <item>@drawable/vpll_13</item>
+        <item>@drawable/vpll_14</item>
+        <item>@drawable/vpll_15</item>
+        <item>@drawable/vpll_16</item>
+        <item>@drawable/vpll_17</item>
+        <item>@drawable/vpll_18</item>
+        <item>@drawable/vpll_19</item>
+        <item>@drawable/vpll_20</item>
+        <item>@drawable/vpll_21</item>
     </integer-array>
 
     <string-array name="pll_descr">
