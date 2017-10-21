@@ -16,7 +16,7 @@
             android:layout_width="@dimen/lp_icon_w"
             android:layout_height="@dimen/lp_icon_h"
             android:padding="5dp"
-            app:srcCompat="@drawable/pll_1"/>
+            app:srcCompat="@drawable/vpll_1"/>
 
         <TextView
             android:id="@+id/pager_title_text"
