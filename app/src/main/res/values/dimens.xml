@@ -37,5 +37,6 @@
     <dimen name="begin_pager_width">100dp</dimen>
     <dimen name="begin_pager_d_width">203dp</dimen>
     <dimen name="begin_pager_t_width">283dp</dimen>
-
+    <dimen name="pll_pager_d_width">213dp</dimen>
+    <dimen name="pll_pager_d_height">100dp</dimen>
 </resources>
