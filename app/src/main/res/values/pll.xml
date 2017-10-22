@@ -486,17 +486,16 @@
         <b>Алгоритм: (U\'D R2 U\') (R U\' R U R\' U) (R2 UD\' R U\' R\') </b><br/><br/>
 
         2. Блоком к себе, глазками направо.<br/>
-        <p style="text-align:center"><img src="pll_18_2.xml" width="60%%"></p>
+        <p style="text-align:center"><img src="vpll_18_2.xml" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=14:30&link=w8pDuyhAdVo">на видео 14:30</a> (большой палец сверху) <br/>
         <b>Алгоритм: R2\' F2 (R U2) (R U2) R\' F (R U R\' U\') R\' F R2 </b><br/><br/>
 
         3. Блоком от себя, глазками налево.<br/>
-        <p style="text-align:center"><img src="pll_18_3.xml" width="60%%"></p>
+        <p style="text-align:center"><img src="vpll_18_3.xml" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:56&link=nBMCuMiSFIg">от J Perm</a> <br/>
         или чуть другой вариант <a href="rubic-activity://ytactivity?time=2:09&link=nBMCuMiSFIg">фингертрикса</a>
         с нестандартным врещением крыши большим пальцем правой руки.<br/>
         <b>Алгоритм: R2 U\' R U\' R U R\' U R2 (D\'U) R U\' R\' D </b>
-
     ]]></string>
     <string name="pll_st18_url">w8pDuyhAdVo</string>
 
@@ -508,11 +507,12 @@
         улиток, двойной блок и глазки на противоположной этому блоку стороне, причем центр глазок противоположен самим глазкам.
         Ситуацию когда двойной блок находится справа и примыкает к передней стороне, улитку будем называть ближней,
         а если примыкает к задней стороне, то дальней.</p>
+        <p style="text-align:center"><img src="vpll_19.xml" width="30%%"></p>
         <p>Со стороны блока и светофора или блока и глазок очень похоже на машинки. Но в отличии от машинок,
         что центр глазок, что наклейка рядом с блоком противоположеы глазкам/блоку, а не смежны как у машинок.</p>
         <b>Как решать:</b><br/>
         Двойным блоком справа, глазками налево. <br/>
-        <p style="text-align:center"><img src="pll_19_1.xml" width="60%%"></p>
+        <p style="text-align:center"><img src="vpll_19_1.xml" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=3:00&link=F-ODZtge9Ig">на видео 3:00</a> <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=2:50&link=nBMCuMiSFIg">от J Perm</a> <br/>
         <b>Алгоритм: (R U R\' U\'D) (R2 U\' R U\') (R\' U R\' U) R2 UD\' </b><br/><br/>
@@ -529,7 +529,7 @@
         Если поставить блоком справа, то блок будет примыкать к задней грани.</p>
         <b>Как решать:</b><br/>
         1. Двойным блоком справа, глазками налево.<br/>
-        <p style="text-align:center"><img src="pll_20_1.xml" width="60%%"></p>
+        <p style="text-align:center"><img src="vpll_20_1.xml" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=8:05&link=F-ODZtge9Ig">на видео 8:05</a> <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=0:59&link=nBMCuMiSFIg">от J Perm</a> <br/>
         <b>Алгоритм: (R\' U\' R UD\') (R2 U R\' U) (R U\' R U\') R2\' U\'D </b><br/><br/>
@@ -542,13 +542,14 @@
         <p><b>Как определить:</b><br/>
         Тройной блок и примыкающий к нему справа двойной. С остальных сторон похоже на левые кирпичи,
         но с одним кирпичем наклейка противоположная, а с другим смежная.</p>
+        <p style="text-align:center"><img src="vpll_21.xml" width="30%%"></p>
         <b>Как решать:</b><br/>
         1. Тройным блоком слева (<a href="rubic-activity://ytactivity?time=3:15&link=AoqKnYoDrio">Вариант из Ускорений N19</a>)<br/>
-        <p style="text-align:center"><img src="pll_21_1.xml" width="60%%"></p>
+        <p style="text-align:center"><img src="vpll_21_1.xml" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=3:10&link=4ulPytSlCR0">на видео 3:10</a> <br/>
         <b>Алгоритм: F2 (L\' U\' L) F2 (R\' D R\' D\') R2 </b> <br/>
         2. Крышей вправо, тройной блок снизу, т.е. поставить тройным блоком справа и наклонить (ход z)<br/>
-        <p style="text-align:center"><img src="pll_21_2.xml" width="60%%"></p>
+        <p style="text-align:center"><img src="vpll_21_2.xml" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=5:40&link=4ulPytSlCR0">на видео 5:40</a> <br/>
         <b>Алгоритм: U\' (R2 U R U\') R2 D R\' U R D\' </b>
     ]]></string>
