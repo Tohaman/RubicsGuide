@@ -26,13 +26,13 @@
     </string-array>
 
     <integer-array name="accel_icon">
-        <item>@drawable/accel</item>
-        <item>@drawable/accel_1</item>
-        <item>@drawable/accel_2</item>
-        <item>@drawable/accel_3</item>
-        <item>@drawable/accel_4</item>
-        <item>@drawable/accel_5</item>
-        <item>@drawable/accel_6</item>
+        <item>@drawable/vaccel</item>
+        <item>@drawable/vaccel_1</item>
+        <item>@drawable/vaccel_2</item>
+        <item>@drawable/vaccel_3</item>
+        <item>@drawable/vaccel_4</item>
+        <item>@drawable/vaccel_5</item>
+        <item>@drawable/vaccel_6</item>
         <item>@drawable/accel_7</item>
         <item>@drawable/accel_8</item>
         <item>@drawable/accel_9</item>
@@ -120,7 +120,7 @@
             что в этом пиф-пафе мы будем крутить не крышу, а Биг-Бэн (т.е. едем в или
             возвращаемся из Лондона). И делается он следующим образом: выключаем свет, едем в
             Лондон, включаем свет, возвращаемся из Лондона.</p>
-        <p style="text-align:center"><img src="accel_1_1.png" width="60%%"></p>
+        <p style="text-align:center"><img src="vaccel_1_1.xml" width="60%%"></p>
         <b>Алгоритм: (R\' F R F\')</b>
     ]]></string>
     <string name="accel_st1_url">GV6Z3naPO4Q</string>
@@ -135,7 +135,7 @@
         Как отличить рыбку которая выполнится с первого раза (золотую) от той для которой алгоритм нужно
         делать два раза (назовем её акулой), да очень просто, у золотой рыбки (правильной) точка на передней
         грани справа, а у акулы слева.</p>
-        <p style="text-align:center"><img src="voll_51_1.png" width="60%%"></p>
+        <p style="text-align:center"><img src="vaccel_2_1.xml" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=7:04&link=PUTeFKC9R2Y">на видео 7:04</a><br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=0:20&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (R U R\' U) R U2 R\'</b>
@@ -147,7 +147,7 @@
         <p>Почему начали именно с рыбки, потому что рыбкой можно решать и еще одну ситуацию, когда с одной
         стороны ушки, а с другой глазки. Ставим глазками налево и делаем рыбку, "крыша против" и еще раз рыбку.</p>
         <p>Более скоростной алгоритм "вертолет" для данной ситуации будет рассмотрен в Ускорении N14.</p>
-        <p style="text-align:center"><img src="voll_57_1.png" width="60%%"></p>
+        <p style="text-align:center"><img src="vaccel_3_1.xml" width="60%%"></p>
         <b>Алгоритм: ((R U R\' U) R U2 R\') U\' ((R U R\' U) R U2 R\')</b>
     ]]></string>
     <string name="accel_st3_url">7bazgCpB-zE</string>
@@ -196,11 +196,11 @@
        <p>Ускорение для 6 этапа. Палка с двумя собранными углами. Главное правильно развернуть вершиной
        буквы Т направо и посмотреть на 3ий этаж, какая буква Т, с точкой или с блоком (двуми точками).</p>
        <p>Если <b>\"Т с точкой\"</b>, то выполнить обычную \"палку\", т.е. в Лондон, пиф-паф, из Лондона.<p>
-       <p style="text-align:center"><img src="voll_49_1.png" width="60%%"></p>
+       <p style="text-align:center"><img src="voll_37_1.png" width="60%%"></p>
        Фингертрикс: <a href="rubic-activity://ytactivity?time=1:47&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
        <b>Алгоритм: F (R U R\' U\') F\' </b><br/>
        <p>Если <b>\"Т с блоком\"</b>, то сначала обычный пиф-паф, потом английский пиф-паф.</p>
-       <p style="text-align:center"><img src="voll_50_1.png" width="60%%"></p>
+       <p style="text-align:center"><img src="voll_38_1.png" width="60%%"></p>
        <b>Алгоритм: (R U R\' U\') (R\' F R F\') </b>
     ]]></string>
     <string name="accel_st7_url">SRsEGxXLqrc</string>
