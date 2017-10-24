@@ -7,8 +7,8 @@ android {
         applicationId "ru.tohaman.rubicsguide"
         minSdkVersion 19
         targetSdkVersion 25
-        versionCode 12
-        versionName "1.1.171012"
+        versionCode 13
+        versionName "1.1.171024"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }

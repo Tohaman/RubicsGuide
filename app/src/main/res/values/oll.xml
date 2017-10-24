@@ -912,6 +912,7 @@
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:13&link=HcLUcMWL7Ic">на видео 1:13</a> <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:47&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: F (R U R\' U\') F\'</b><br/><br/>
+        <b>Как смоделировать</b>: В Лондон, 5 пиф-пафов, из Лондона.
         ]]></string>
     <string name="oll_st37_url">HcLUcMWL7Ic</string>
 
@@ -920,13 +921,18 @@
         <b>Как решать:</b>
         <p>Еще одна ситуация из <b>Ускорения N7</b>. Все просто: обычный пиф-паф, потом английский пиф-паф</p>
         <p style="text-align:center"><img src="voll_38_1.xml" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=0:33&link=TsIcvobaPXY">на видео 0:33</a> <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:39&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (R U R\' U\') (R\' F R F\')</b><br/><br/>
+        <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=0:45&link=TsIcvobaPXY">на видео 0:45</a>
+        выполнить <b>Галстук с блоком: F R (U\' R\' U\') (R U R\') F\'</b> или
+        <a href="rubic-activity://ytactivity?time=1:24&link=TsIcvobaPXY">на видео 1:24</a> - два раза выполнить данный алгоритм.
         ]]></string>
-    <string name="oll_st38_url">SRsEGxXLqrc</string>
+    <string name="oll_st38_url">TsIcvobaPXY</string>
 
     <string name="oll_st39_title">#39 Ассиметричная палка с точкой</string>
     <string name="oll_st39_descr" formatted="false"><![CDATA[
+        <p>Пока не знаю в какой последовательности выйдут видео от Максима, поэтому дальше пока так.</p>
         <p>В этой палке есть и блок и точка, но будем считать ее палкой с точкой.</p>
         <b>Как решать:</b>
         <p>Поставить палку вертикально, тройным блоком справа, точкой слева.</p>
@@ -1036,7 +1042,7 @@
         <b>Как смоделировать</b>: Почти так же как и выполнять, только в Лондон уезжать и возвращаться надо не жирно, т.е.
         В Лондон, два пиф-пафа, из Лондона.
         ]]></string>
-    <string name="oll_st49_url">SRsEGxXLqrc</string>
+    <string name="oll_st49_url"></string>
 
     <string name="oll_st50_title">#50 Симметричная палка с точкой</string>
     <string name="oll_st50_descr" formatted="false"><![CDATA[

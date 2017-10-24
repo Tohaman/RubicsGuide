@@ -33,20 +33,20 @@
         <item>@drawable/vaccel_4</item>
         <item>@drawable/vaccel_5</item>
         <item>@drawable/vaccel_6</item>
-        <item>@drawable/accel_7</item>
-        <item>@drawable/accel_8</item>
-        <item>@drawable/accel_9</item>
-        <item>@drawable/accel_10</item>
-        <item>@drawable/accel_11</item>
-        <item>@drawable/accel_12</item>
-        <item>@drawable/accel_13</item>
+        <item>@drawable/vaccel_7</item>
+        <item>@drawable/vaccel_8</item>
+        <item>@drawable/vaccel_9</item>
+        <item>@drawable/vaccel_10</item>
+        <item>@drawable/vaccel_11</item>
+        <item>@drawable/vaccel_12</item>
+        <item>@drawable/vaccel_13</item>
         <item>@drawable/vaccel_3</item>
-        <item>@drawable/accel_15</item>
-        <item>@drawable/accel_16</item>
-        <item>@drawable/accel_17</item>
-        <item>@drawable/accel_18</item>
-        <item>@drawable/accel_19</item>
-        <item>@drawable/accel_20</item>
+        <item>@drawable/vaccel_15</item>
+        <item>@drawable/vaccel_16</item>
+        <item>@drawable/vaccel_17</item>
+        <item>@drawable/vaccel_18</item>
+        <item>@drawable/vaccel_19</item>
+        <item>@drawable/vaccel_20</item>
         <item>@drawable/accel_21</item>
     </integer-array>
 
@@ -322,7 +322,7 @@
         <p>Если на 8 этапе вам попались дяди друг напротив друга и есть два двойных блока, которые тоже
         располагаются друг напротив друга, то надо повернуть кубик двойным блоком слева и выполнить
         <b>Запад</b> - кубик соберется.</p>
-        <p style="text-align:center"><img src="accel_15_1.png" width="60%%"></p>
+        <p style="text-align:center"><img src="vaccel_15_1.xml" width="60%%"></p>
         <b>Алгоритм: (R U R\' U\' R\' F R2 U\' R\' U\') (R U R\' F\') </b><br/>
         З.Ы. Почему скобки в алгоритме поставлены именно так вы поймете в следующем ускорении.
     ]]></string>
@@ -336,7 +336,7 @@
         <p>В этом ускорении рассмотрим ситуацию, когда на передней грани вы видите двойной
         блок справа. Надо применить комбинацию Юг, которая очень похожа на комбинацию запад. Только
         сначала надо выполнить 4 последних хода Запада, а потом Запад без этих четырех ходов.</p>
-        <p style="text-align:center"><img src="accel_16_1.png" width="60%%"></p>
+        <p style="text-align:center"><img src="vaccel_16_1.xml" width="60%%"></p>
         Фингертрикс: см.слепую <a href="rubic-activity://ytactivity?time=2:33&link=rzGqTZKG74o">сборку N7 с 2:33</a> <br/>
         <b>Алгоритм: (R U R\' F\') (R U R\' U\' R\' F R2 U\' R\' U\')</b>
     ]]></string>
@@ -344,16 +344,16 @@
 
     <string name="accel_st17_title">N17 Окошки (тройной блок с глазками)</string>
     <string name="accel_st17_descr" formatted="false"><![CDATA[
-        <p>Если есть тройной блок, а на остальных гранях глазки, то повернуть тройным блоком слевв и
+        <p>Если есть тройной блок, а на остальных гранях глазки, то повернуть тройным блоком слева и
         посмотреть на глазки или в окошко между глазками. Глазки могут быть противоположные окошку,
         а могут быть смежные. Как выполнять посмотрите на видео, после этого станет понятно, почему
         в алгоритме скобки стоят именно так.</p>
         <b>Смежные глазки (окошки):</b><br/>
-        <p style="text-align:center"><img src="accel_17_1.png" width="60%%"></p>
+        <p style="text-align:center"><img src="vaccel_17_1.xml" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=7:18&link=dUGv4WJfJGU">на видео 7:18</a> <br/>
         <b>Алгоритм: R2 U\' (F B\') R2 (F\' B) U\' R2 </b><br/><br/>
         <b>Противоположные глазки (окошки):</b><br/>
-        <p style="text-align:center"><img src="accel_17_2.png" width="60%%"></p>
+        <p style="text-align:center"><img src="vaccel_17_2.xml" width="60%%"></p>
         Пока просто повторить данный алгоритм два раза, ну или выполнить данный алгоритм в обратном порядке,
         т.е. по сути вместо U\' делать U.<br/>
         Подробнее данная ситуация будет рассмотрена в <a href="rubic-activity://ytactivity?time=0:00&link=P69UVywfz04">Окошках PLL</a>.
@@ -362,12 +362,14 @@
 
     <string name="accel_st18_title">N18 Светофор (параллельный перенос)</string>
     <string name="accel_st18_descr" formatted="false"><![CDATA[
-        <p>Если тройной блок слева, а на передней грани все наклейки разного цвета (светофор), то придется делать
+        <p>Если тройной блок слева, а на передней грани все наклейки разного цвета (светофор). Например так:</p>
+        <p style="text-align:center"><img src="vpll_7.xml" width="30%%"></p>
+        <p> То придется делать
         очень длинный 18-ти ходовый алгоритм. Но все не так сложно, как кажется на первый взгляд.
         Выучить придется только 5 ходов. Три первых и два последних, а между ними Запад без последнего хода.
         Итак, первые три хода против часовой стрелки (правая, верхняя, передняя), теперь Запад без
         последнего хода и два хода по часовой стрелке - верхняя и правая грани.</p>
-        <p style="text-align:center"><img src="accel_18_1.png" width="60%%"></p>
+        <p style="text-align:center"><img src="vaccel_18_1.xml" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=5:30&link=ir8W-IBgmas">на видео 5:30</a> <br/>
         <b>Алгоритм: (R\' U\' F\') {R U R\' U\' R\' F R2 U\' R\' U\' (R U R\')} (U R) </b>
     ]]></string>
@@ -375,13 +377,15 @@
 
     <string name="accel_st19_title">N19 Север (Тройной блок с блоком слева)</string>
     <string name="accel_st19_descr" formatted="false"><![CDATA[
+        <p>Если на грани справа от тройного блока есть двойной блок и он примыкает к тройному, например так:</p>
+        <p style="text-align:center"><img src="vpll_21.xml" width="30%%"></p>
         <p>Тройной блок как обычно ставим слева и если на передней грани есть двойной блок и он слева,
         то придется делать неудобный алгоритм, т.к. в нем будет кручение левой грани.</p>
         <p>Поехали на 2 года в Лондон, и делаем 3 хода левого пиф-пафа, т.е. включаем свет слева,
         крыша против часовой, выключаем свет слева, возвращаемся на 2 года из Лондона, выключаем
         правый свет и от этого у нас едет земля под ногами, мы еще раз выключили свет и земля
         вернулась на место и от радости включаем свет 2 раза.</p>
-        <p style="text-align:center"><img src="accel_19_1.png" width="60%%"></p>
+        <p style="text-align:center"><img src="vaccel_19_1.xml" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=3:15&link=AoqKnYoDrio">на видео 3:15</a> <br/>
         <b>Алгоритм: F2 (L\' U\' L) F2 R\' D R\' D\' R2</b>
     ]]></string>
@@ -392,12 +396,12 @@
     <string name="accel_st20_title">N20 9ый этап</string>
     <string name="accel_st20_descr" formatted="false"><![CDATA[
         <p>Ускорение для 9го этапа. Ставим собранный угол влево взад вверх, но наклоняем кубик крышей на себя,
-        а не на лево, как раньше. И смотрим на наклейку рядом с двойным блоком.
+        а не налево, как раньше. И смотрим на наклейку рядом с двойным блоком.
         Она может быть противоположной по цвету, а может быть смежной.</p>
         <p><b>\"Противоположная наклейка\"</b> - включаем свет, крыша против часовой, еще включаем свет,
         дважды крутим низ, выключаем свет, крыша назад (по часовой) и включаем свет, снова два раз низ,
         и два раза выключаем свет. Т.е. 3 хода, двойной низ, 3 хода двойной низ и двойной свет.</p>
-        <p style="text-align:center"><img src="accel_20_1.png" width="60%%"></p>
+        <p style="text-align:center"><img src="vaccel_20_1.xml" width="60%%"></p>
         <p><b>\"Смежная наклейка\"</b> - пока делаем старым алгоритмом. Альтернативные варианты рассмотрим
         в <a href="rubic-activity://ytactivity?time=0:00&link=L_r41Y1MuAY">PLL Треугольники</a> <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=6:00&link=B_Fkals9Svk">на видео 6:00</a> <br/>

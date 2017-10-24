@@ -9,7 +9,7 @@
     </string-array>
 
     <integer-array name="g2f_icon">
-        <item>@drawable/accel_2</item>
+        <item>@drawable/vaccel_2</item>
         <item>@drawable/vcross</item>
         <item>@drawable/f2l</item>
         <item>@drawable/vpll</item>
