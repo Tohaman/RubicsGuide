@@ -40,7 +40,7 @@
         <item>@drawable/accel_11</item>
         <item>@drawable/accel_12</item>
         <item>@drawable/accel_13</item>
-        <item>@drawable/accel_3</item>
+        <item>@drawable/vaccel_3</item>
         <item>@drawable/accel_15</item>
         <item>@drawable/accel_16</item>
         <item>@drawable/accel_17</item>
@@ -155,14 +155,14 @@
     <string name="accel_st4_title">N4 НТВ+ (глазки-глазки)</string>
     <string name="accel_st4_descr" formatted="false"><![CDATA[
         <p>Взять глазками к себе, Уехать в Лондон, три пиф-пафа, вернуться из Лондона.</p>
-        <p style="text-align:center"><img src="voll_56_1.png" width="60%%"></p>
+        <p style="text-align:center"><img src="vaccel_4_1.xml" width="60%%"></p>
         <b>Алгоритм: F (R U R\' U\') (R U R\' U\') (R U R\' U\') F\' </b>
         <p>Альтернативный вариант, без кручения передней грани:<br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=0:28&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (R U2) (R\' U\' R U R\' U\' R U\' R\')</b></p>
         <p><a href="rubic-activity://ytactivity?time=0:26&link=t3KcPrjmJJ4">Бонус от JPerm:</a>
         если углы стоят парами</p>
-        <p style="text-align:center"><img src="accel_4_2.png" width="60%%"></p>
+        <p style="text-align:center"><img src="vaccel_4_2.xml" width="60%%"></p>
         <p>как на данных картинках, то в первом случае лучше использовать первый алгоритм,
         а во втором - второй. Т.е. первый ход делать параллельно паре. В этом случае углы для
         PLL у вас встанут на свои места.</p>
@@ -175,7 +175,7 @@
         выкл.свет, уехать в Лондон, вкл.яркий свет (2 раза), крыша против, убавили яркость, крыша продолжила
         (против часовой), добавили яркость, крыша назад (по часовой), выкл.свет, из Лондона.</p>
         <p>На данном этапе пока не смотрим на углы, на них обратим внимание в Ускорении N15.</p>
-        <p style="text-align:center"><img src="accel_5_1.png" width="60%%"></p>
+        <p style="text-align:center"><img src="vaccel_5_1.xml" width="60%%"></p>
         <p>Более подробно комбинация рассмотрена в методе слепой сборки N3</p>
         <b>Алгоритм: (R U R\' U\') R\' F R2 U\' R\' U\' (R U R\' F\')</b>
     ]]></string>
@@ -185,8 +185,8 @@
     <string name="accel_st6_descr" formatted="false"><![CDATA[
         <p>Если на 9ом этапе ни одного угла нет на месте и все центры противоположны глазкам на своих гранях,
         значит это ситуация "шахматы". Повторяем 6 раз: средний слой 2 раза, крышу против часовой.</p>
-        <p style="text-align:center"><img src="accel_6_1.png" width="60%%"></p>
-        <p>Фингертрикс:  <a href="rubic-activity://ytactivity?time=3:50&link=1lyDpI5-5m4">на видео 3:50</a> </p>
+        <p style="text-align:center"><img src="vaccel_6_1.xml" width="60%%"></p>
+        <p>Фингертрикс: <a href="rubic-activity://ytactivity?time=3:50&link=1lyDpI5-5m4">на видео 3:50</a> </p>
         <b>Алгоритм: 6 раз (M2 U\')</b>
     ]]></string>
     <string name="accel_st6_url">1lyDpI5-5m4</string>
@@ -196,11 +196,11 @@
        <p>Ускорение для 6 этапа. Палка с двумя собранными углами. Главное правильно развернуть вершиной
        буквы Т направо и посмотреть на 3ий этаж, какая буква Т, с точкой или с блоком (двуми точками).</p>
        <p>Если <b>\"Т с точкой\"</b>, то выполнить обычную \"палку\", т.е. в Лондон, пиф-паф, из Лондона.<p>
-       <p style="text-align:center"><img src="voll_37_1.png" width="60%%"></p>
+       <p style="text-align:center"><img src="vaccel_7_1.xml" width="60%%"></p>
        Фингертрикс: <a href="rubic-activity://ytactivity?time=1:47&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
        <b>Алгоритм: F (R U R\' U\') F\' </b><br/>
        <p>Если <b>\"Т с блоком\"</b>, то сначала обычный пиф-паф, потом английский пиф-паф.</p>
-       <p style="text-align:center"><img src="voll_38_1.png" width="60%%"></p>
+       <p style="text-align:center"><img src="vaccel_7_2.xml" width="60%%"></p>
        <b>Алгоритм: (R U R\' U\') (R\' F R F\') </b>
     ]]></string>
     <string name="accel_st7_url">SRsEGxXLqrc</string>
@@ -214,7 +214,7 @@
         теперь соответственно правую вниз, т.е. выключаем свет, теперь верхнюю туда же куда и нижнюю
         влево, но для верхней это будет по часовой, теперь правую вверх, нижнюю возвращаем на место,
         правую вниз, верхнюю на место и правую вверх.</p>
-        <p style="text-align:center"><img src="voll_54_2.png" width="60%%"></p>
+        <p style="text-align:center"><img src="vaccel_8_1.xml" width="60%%"></p>
         Фингертрикс: Cтандартное положение рук.
         <a href="rubic-activity://ytactivity?time=6:50&link=gbuLeCv_fRM">на видео 6:50</a> <br/>
         <b>Алгоритм: D\' R\' U R D R\' U\' R </b>
@@ -229,7 +229,7 @@
         от себя. И сделать "ушки" только верхнюю грань крутить сначала против часовой, а потом по
         часовой. Т.е. низ против часовой, правую вниз, верх против часовой, правую вверх,
         низ по часовой, правую вниз, верх по часовой, правую вверх.
-        <p style="text-align:center"><img src="voll_53_1.png" width="60%%"></p>
+        <p style="text-align:center"><img src="vaccel_9_1.xml" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=7:36&link=gbuLeCv_fRM">на видео 7:36</a> <br/>
         <b>Алгоритм: D\' R\' U\' R D R\' U R </b>
     ]]></string>
