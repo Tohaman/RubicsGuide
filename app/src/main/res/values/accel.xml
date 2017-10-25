@@ -47,7 +47,7 @@
         <item>@drawable/vaccel_18</item>
         <item>@drawable/vaccel_19</item>
         <item>@drawable/vaccel_20</item>
-        <item>@drawable/accel_21</item>
+        <item>@drawable/vaccel_21</item>
     </integer-array>
 
     <string-array name="accel_descr">
