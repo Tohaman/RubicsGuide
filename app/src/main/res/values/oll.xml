@@ -930,24 +930,30 @@
         ]]></string>
     <string name="oll_st38_url">TsIcvobaPXY</string>
 
-    <string name="oll_st39_title">#39 Ассиметричная палка с точкой</string>
+    <string name="oll_st39_title">#39 Правый пропеллер</string>
     <string name="oll_st39_descr" formatted="false"><![CDATA[
-        <p>Пока не знаю в какой последовательности выйдут видео от Максима, поэтому дальше пока так.</p>
-        <p>В этой палке есть и блок и точка, но будем считать ее палкой с точкой.</p>
         <b>Как решать:</b>
-        <p>Поставить палку вертикально, тройным блоком справа, точкой слева.</p>
+        <p>Еще одна разновидность палки - пропеллеры. Пропеллеры бывают левые и правые. Чтобы было
+        легче запомнить - левый пропеллер делается через вращение левой грани, а правый через вращение правой.</p>
+        <p>Пропеллер необходимо поставить палкой горизонтально и точкой к себе. Выключаем свет,
+        едем в Лондон, пиф-паф, из Лондона, крыша по, включаем свет.</p>
         <p style="text-align:center"><img src="voll_39_1.xml" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=4:45&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: (R\' U\' R U\' R\' U) y\' (R\' U R) B</b><br/><br/>
-    ]]></string>
-    <string name="oll_st39_url"></string>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=1:52&link=w-DIz-DfNrg">на видео 1:52</a> <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=9:56&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: (R\' F) (R U R\' U\') F\' U R</b><br/><br/>
+        <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=2:15&link=w-DIz-DfNrg">на видео 2:15</a>
+        выполнить <b> S (R U R\' U\') (R\' F R Fw\')</b>, т.е. S, пиф-паф, английский пиф-паф с последним
+        жирным ходом.
+        ]]></string>
+    <string name="oll_st39_url">w-DIz-DfNrg</string>
 
-    <string name="oll_st40_title">#40 Симметричная палка с блоком</string>
+    <string name="oll_st40_title">#40 Левый пропеллер</string>
     <string name="oll_st40_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
+        <p>Аналогично правому пропеллеру, но через вращение левой грани.</p>
         <p style="text-align:center"><img src="voll_40_1.xml" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=4:55&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: (R\' F R U) (R U\' R2\' F\') R2 U\' R\' (U R U R\')</b><br/><br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=9:45&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: (L F\') (L\' U\' L U) F U\' L\'</b><br/><br/>
         ]]></string>
     <string name="oll_st40_url"></string>
 
@@ -1008,25 +1014,24 @@
         ]]></string>
     <string name="oll_st46_url"></string>
 
-    <string name="oll_st47_title">#47 Левый пропеллер</string>
+    <string name="oll_st47_title">#47 Симметричная палка с блоком</string>
     <string name="oll_st47_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
-        <p>Еще одна разновидность палки - пропеллеры. Пропеллеры бывают левые и правые. Чтобы было
-        легче запомнить - левый пропеллер делается через вращение левой грани.</p>
         <p style="text-align:center"><img src="voll_47_1.xml" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=9:45&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: (L F\') (L\' U\' L U) F U\' L\'</b><br/><br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=4:55&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: (R\' F R U) (R U\' R2\' F\') R2 U\' R\' (U R U R\')</b><br/><br/>
         ]]></string>
     <string name="oll_st47_url"></string>
 
-    <string name="oll_st48_title">#48 Правый пропеллер</string>
+    <string name="oll_st48_title">#48 Ассиметричная палка с точкой</string>
     <string name="oll_st48_descr" formatted="false"><![CDATA[
+        <p>В этой палке есть и блок и точка, но будем считать ее палкой с точкой.</p>
         <b>Как решать:</b>
-        <p>Аналогично левому пропеллеру, но через вращение правой грани.</p>
+        <p>Поставить палку вертикально, тройным блоком справа, точкой слева.</p>
         <p style="text-align:center"><img src="voll_48_1.xml" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=9:56&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: (R\' F) (R U R\' U\') F\' U R</b><br/><br/>
-        ]]></string>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=4:45&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: (R\' U\' R U\' R\' U) y\' (R\' U R) B</b><br/><br/>
+    ]]></string>
     <string name="oll_st48_url"></string>
 
     <string name="oll_st49_title">#49 Ассиметричная палка с блоком</string>

@@ -10,8 +10,8 @@
     </string-array>
 
     <integer-array name="advf2l_icon">
-        <item>@drawable/f2l</item>
-        <item>@drawable/f2l</item>
+        <item>@drawable/vf2l</item>
+        <item>@drawable/vf2l</item>
         <item>@drawable/f2l_25</item>
         <item>@drawable/f2l2_1</item>
         <item>@drawable/f2l3_1</item>
