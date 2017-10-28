@@ -23,5 +23,6 @@
     <color name="cube_white">#FFFFFF</color>
     <color name="cube_gray">#424242</color>
     <color name="cube_ollgray">#696969</color>
+    <color name="cube_litegray">#bdbdbd</color>
     <color name="semitransparent_grey">#cc424242</color>
 </resources>
