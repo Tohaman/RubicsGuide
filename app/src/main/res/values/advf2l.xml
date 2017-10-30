@@ -13,7 +13,7 @@
         <item>@drawable/vf2l</item>
         <item>@drawable/vf2l</item>
         <item>@drawable/vf2l1</item>
-        <item>@drawable/f2l2_1</item>
+        <item>@drawable/vf2l2_1</item>
         <item>@drawable/f2l3_1</item>
         <item>@drawable/f2l4_1</item>
     </integer-array>
@@ -373,23 +373,23 @@
     <p>1. Первая <a href="rubic-activity://ytactivity?time=0:12&link=28Ln2lfkD9U">ситуация.</a>
     Ускорение для классической \"ромашки налево\", но только для случая, когда задняя правая пара
     еще не на своем месте. Короткий, удобный супербыстрый алгоритм. </p>
-    <p style="text-align:center"><img src="f2l2_1_1.png" width="30%%"></p>
+    <p style="text-align:center"><img src="vf2l2_1.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=0:29&link=28Ln2lfkD9U">Алгоритм:</a> R2 U\' R\' U R2</b>
 
     <p>2. Вторая <a href="rubic-activity://ytactivity?time=0:35&link=28Ln2lfkD9U">ситуация.</a>
     Противоположная предыдущей, для классической \"ромашки направо\", но опять только для случая, когда
     передняя правая пара еще не на своем месте.</p>
-    <p style="text-align:center"><img src="f2l2_2_1.png" width="30%%"></p>
+    <p style="text-align:center"><img src="vf2l2_2.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=0:46&link=28Ln2lfkD9U">Алгоритм:</a> R2 U R U\' R2</b>
 
     <p>3. Третья <a href="rubic-activity://ytactivity?time=0:53&link=28Ln2lfkD9U">ситуация.</a>
     Вариант для <b>Части Т</b>, но пара стоит слева. Вариант без перехватов и Dw кручений.</p>
-    <p style="text-align:center"><img src="f2l2_3_1.png" width="30%%"></p>
+    <p style="text-align:center"><img src="vf2l2_3.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=1:05&link=28Ln2lfkD9U">Алгоритм:</a> F (U R U\' R\') F\' R U R\'</b>
 
     <p>4. Четвертая <a href="rubic-activity://ytactivity?time=1:11&link=28Ln2lfkD9U">ситуация.</a>
     Вариант для классической <b>Части Т</b>.</p>
-    <p style="text-align:center"><img src="f2l2_4_1.png" width="30%%"></p>
+    <p style="text-align:center"><img src="vf2l2_4.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=1:15&link=28Ln2lfkD9U">Алгоритм:</a> x\' R2 U\' R\' U R\' x U2 R U\' R\'<br/> или немного по другому: Lw R U\' R\' U Lw\' U2 R U\' R\'</b>
 
     <p>5. Пятая <a href="rubic-activity://ytactivity?time=1:22&link=28Ln2lfkD9U">ситуация.</a>
@@ -399,7 +399,7 @@
     ориентирована как надо (желтой вверх), то можно выполнить данный алгоритм. По сути
     он объединяет два хорошо знакомых алгоритма английский пиф-паф и палку - (R\' F R <b>F\') (F</b> R U R\' F\'), но
     без ненужных \"из Лондона\" и \"в Лондон\") на стыке.</p>
-    <p style="text-align:center"><img src="f2l2_5_1.png" width="30%%"></p>
+    <p style="text-align:center"><img src="vf2l2_5.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=1:35&link=28Ln2lfkD9U">Алгоритм:</a> R\' F R2 U R U\' F\'</b>
 
     <p>6. Шестая <a href="rubic-activity://ytactivity?time=1:41&link=28Ln2lfkD9U">ситуация.</a>
@@ -408,44 +408,44 @@
     то все ребра для OLL встанут на место.<br/>
     К тому же, алгоритм без перехватов и с очень удобным
     фингертриксом, поэтому можно использовать и как основной алгоритм для <b>Части Ф</b>.</p>
-    <p style="text-align:center"><img src="f2l2_6_1.png" width="30%%"></p>
+    <p style="text-align:center"><img src="vf2l2_6.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=1:56&link=28Ln2lfkD9U">Алгоритм:</a> R\' D\' Rw U\' Rw\' D R</b>
 
     <p>7. Седьмая <a href="rubic-activity://ytactivity?time=2:00&link=28Ln2lfkD9U">ситуация.</a>
     И снова казалось бы что тут ускорять, перехват и установка в 2 хода. Но опять обращаем внимание
     на ребра верхней грани. И снова если только одно дальнее ребро ориентировано как надо, лучше
     выполнить очень похожий на предыдущий алгоритм.</p>
-    <p style="text-align:center"><img src="f2l2_7_1.png" width="30%%"></p>
+    <p style="text-align:center"><img src="vf2l2_7.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=2:09&link=28Ln2lfkD9U">Алгоритм:</a> R\' D\' Rw U\' Rw\' D R</b>
 
     <p>8. Восьмая <a href="rubic-activity://ytactivity?time=2:13&link=28Ln2lfkD9U">ситуация.</a>
     Редкая ситуация, но можно пропустить OLL и сразу перейти к PLL. Очень похоже на <b>Носик</b>,
     только начинается c выключения света, а потом заселяем в 4 хода. Обратите внимание, что лучше
     выполнять из стандартного положения рук, а нижнюю грань в обоих случаях крутить левой рукой.</p>
-    <p style="text-align:center"><img src="f2l2_8_1.png" width="30%%"></p>
+    <p style="text-align:center"><img src="vf2l2_8.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=2:22&link=28Ln2lfkD9U">Алгоритм:</a> (R\' D\' R U\' R\' D R) (U R U\' R\')</b>
 
     <p>9. Девятая <a href="rubic-activity://ytactivity?time=2:28&link=28Ln2lfkD9U">ситуация.</a>
     Еще одна ситуация, когда легко пропустить OLL. Быстрый и удобный алгоритм, который можно испоьзовать
     и как основной для <b>Части Е</b>.</p>
-    <p style="text-align:center"><img src="f2l2_9_1.png" width="30%%"></p>
+    <p style="text-align:center"><img src="vf2l2_9.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=2:38&link=28Ln2lfkD9U">Алгоритм:</a> (R U\' R2 D\' R U2 R\' D R)</b>
 
     <p>10. Десятая <a href="rubic-activity://ytactivity?time=2:43&link=28Ln2lfkD9U">ситуация.</a>
     Очень полезный алгоритм, для ситуации когда угол на своем месте, ребро тоже на своем, но перевернуто.
     Это будет гораздо быстрее, чем сначала поднимать пару на верхний слой, а потом решать эту пару, но
     данный алгоритм можно применять только, когда задняя правая пара не на своем месте (как в ускорении 1).</p>
-    <p style="text-align:center"><img src="f2l2_10_1.png" width="30%%"></p>
+    <p style="text-align:center"><img src="vf2l2_10.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=3:03&link=28Ln2lfkD9U">Алгоритм:</a> D\' R\' F R F\' R U\' R\' D</b>
 
     <p>11. Одиннадцатая <a href="rubic-activity://ytactivity?time=3:13&link=28Ln2lfkD9U">ситуация.</a>
     Обычно в такой ситуации вы бы сделали U2, перехват и т.д. Но можно обойтись и без перехвата.</p>
-    <p style="text-align:center"><img src="f2l2_11_1.png" width="30%%"></p>
+    <p style="text-align:center"><img src="vf2l2_11.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=3:22&link=28Ln2lfkD9U">Алгоритм:</a> Rw\' U R U\' R\' U\' Rw</b>
 
     <p>12. Двенадцатая <a href="rubic-activity://ytactivity?time=3:27&link=28Ln2lfkD9U">ситуация.</a>
     Еще один алгоритм для <b>Части Ф</b> с OLL скипом. Тоже быстрый и удобный алгоритм.</p>
-    <p style="text-align:center"><img src="f2l2_12_1.png" width="30%%"></p>
+    <p style="text-align:center"><img src="vf2l2_12.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=3:43&link=28Ln2lfkD9U">Алгоритм:</a> Rw\' D\' Rw U\' Rw\' D Rw</b>
 
     ]]></string>
