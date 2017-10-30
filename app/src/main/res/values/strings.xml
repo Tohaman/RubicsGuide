@@ -22,4 +22,14 @@
     <string name="input_letter_minus">-</string>
     <string name="input_letter_plus">+</string>
 
+    <string-array name="guesses_list">
+        <item>2</item>
+        <item>4</item>
+        <item>6</item>
+        <item>8</item>
+    </string-array>
+    <string name="number_of_choices">Количество вариантов в тесте PLL</string>
+    <string name="number_of_choices_description">Выбрать 2, 4, 6 или 8 вариантов</string>
+    <string name="pll_test_title">Тест PLL</string>
+
 </resources>

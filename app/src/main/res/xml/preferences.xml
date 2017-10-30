@@ -33,4 +33,16 @@
             android:summary="в генераторе скрамблов"/>
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/pll_test_title">
+    <ListPreference
+        android:entries="@array/guesses_list"
+        android:entryValues="@array/guesses_list"
+        android:key="pref_numberOfChoices"
+        android:title="@string/number_of_choices"
+        android:summary="@string/number_of_choices_description"
+        android:persistent="true"
+        android:defaultValue="8" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
