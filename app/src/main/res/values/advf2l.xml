@@ -12,7 +12,7 @@
     <integer-array name="advf2l_icon">
         <item>@drawable/vf2l</item>
         <item>@drawable/vf2l</item>
-        <item>@drawable/f2l_25</item>
+        <item>@drawable/vf2l1</item>
         <item>@drawable/f2l2_1</item>
         <item>@drawable/f2l3_1</item>
         <item>@drawable/f2l4_1</item>
@@ -249,32 +249,32 @@
     <p>1. Первая ситуация - <a href="rubic-activity://ytactivity?time=0:25&link=WIFh0sXDkMM">пара</a>
     около своей квартиры, но и пара и квартира на задней стороне слева. Обычно вы сделали бы перехват
     (ход y\') и левый английский пиф-паф или первый левый базовый алгоритм, но есть другой вариант: </p>
-    <p style="text-align:center"><img src="f2l_25_1.png" width="60%%"></p>
+    <p style="text-align:center"><img src="vf2l1_1.xml" width="60%%"></p>
     <b><a href="rubic-activity://ytactivity?time=0:40&link=WIFh0sXDkMM">Алгоритм:</a> Lw U L\' U\' M\'</b><br/>
     Можно использовать зеркальный алгоритм и для классического случая из <b>Части Ф</b>, когда пара и квартира спереди:<br/>
     <b><a href="rubic-activity://ytactivity?time=0:48&link=WIFh0sXDkMM">Алгоритм:</a> Rw U R\' U\' M</b>
 
     <p>2. Вторая ситуация - <a href="rubic-activity://ytactivity?time=0:56&link=WIFh0sXDkMM">снова пара</a>
     на задней грани около своей квартиры, но уже справа.</p>
-    <p style="text-align:center"><img src="f2l_25_2.png" width="30%%"></p>
+    <p style="text-align:center"><img src="vf2l1_2.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=0:40&link=WIFh0sXDkMM">Алгоритм:</a> Rw\' U\' R U M\'</b>
 
     <p>3. Третья ситуация - <a href="rubic-activity://ytactivity?time=1:10&link=WIFh0sXDkMM">пара</a>
     на передней грани слева, а квартира ее сзади справа. Можно сделать U2 и привести к ситуации 2, но
     как обычно есть и другой вариант.</p>
-    <p style="text-align:center"><img src="f2l_25_3.png" width="30%%"></p>
+    <p style="text-align:center"><img src="vf2l1_3.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=1:15&link=WIFh0sXDkMM">Алгоритм:</a> R2 F R F\' R</b>
 
     <p>4. Четвертая ситуация - <a href="rubic-activity://ytactivity?time=1:26&link=WIFh0sXDkMM">девушка</a>
     дома, но перевернута, парень с завышенной самооценкой справа сзади. Опять же можно использовать
     и вместо обычного алгоритма, только первым ходом поставить парня назад, пусть и разбив пару. Данный
     алгоритм быстрее, т.к. в нем нет двойных кручений.</p>
-    <p style="text-align:center"><img src="f2l_25_4.png" width="30%%"></p>
+    <p style="text-align:center"><img src="vf2l1_4.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=1:33&link=WIFh0sXDkMM">Алгоритм:</a> (R\' F R F\') R U\' R\'</b>
 
     <p>5. Пятая ситуация - <a href="rubic-activity://ytactivity?time=1:49&link=WIFh0sXDkMM">пара</a>
     в своем доме, но перевернута, а дом находится справа сзади.</p>
-    <p style="text-align:center"><img src="f2l_25_5.png" width="30%%"></p>
+    <p style="text-align:center"><img src="vf2l1_5.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=1:55&link=WIFh0sXDkMM">Алгоритм:</a> R\' U R\' F R F\' R</b>
 
     <p>6. Шестая ситуация - <a href="rubic-activity://ytactivity?time=2:07&link=WIFh0sXDkMM">парень</a>
@@ -285,14 +285,14 @@
     <a href="rubic-activity://ytactivity?time=2:39&link=WIFh0sXDkMM"><b>Части Ж</b></a>, хотя, когда
     квартира находится справа сзади, лучше использовать алгоритм с двойным кручением, а не
     делать перхват <b>y</b>.</p>
-    <p style="text-align:center"><img src="f2l_25_6.png" width="60%%"></p>
+    <p style="text-align:center"><img src="vf2l1_6.xml" width="60%%"></p>
     <b><a href="rubic-activity://ytactivity?time=2:14&link=WIFh0sXDkMM">Алгоритм:</a> (F U R U\' R\' F\') R U\' R\'</b><br/>
     <b><a href="rubic-activity://ytactivity?time=2:32&link=WIFh0sXDkMM">Алгоритм для квартиры сзади:</a> (U2 R2 U2 R) U R\' U R2</b>
 
     <p>7. Седьмая <a href="rubic-activity://ytactivity?time=2:42&link=WIFh0sXDkMM">ситуация</a>
     из <b>Части Е</b>, альтернативный вариант c удобным фингертриксом из стандартного положения рук.
     Максимкин алгоритм вроде бы и короче, но мне кажется что данный алгоритм быстрее.</p>
-    <p style="text-align:center"><img src="f2l_25_7.png" width="30%%"></p>
+    <p style="text-align:center"><img src="vf2l1_7.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=2:47&link=WIFh0sXDkMM">Алгоритм:</a> U2 (R U R\' U\') R U\' R\' U2 R U\' R\'</b><br/>
     или старый <b><a href="rubic-activity://ytactivity?time=3:07&link=WIFh0sXDkMM">Алгоритм:</a> (U2 R2 U2 R\') U\' R U\' R2</b><br/>
 
@@ -301,7 +301,7 @@
     <a href="rubic-activity://ytactivity?time=3:37&link=WIFh0sXDkMM">фингертриксом</a>. С очень
     нестандартным начальным положением рук - правая рука как при стандартном положении, а вот у
     левой большой палец сверху.</p>
-    <p style="text-align:center"><img src="f2l_25_8.png" width="30%%"></p>
+    <p style="text-align:center"><img src="vf2l1_8.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=3:27&link=WIFh0sXDkMM">Алгоритм:</a> (R B L U\') L\' B\' R\'</b><br/>
     или тоже самое, но в другой интерпретации:<br/>
     <b>(Lw U Rw U\') Rw\' U\' Lw\'</b>
@@ -309,7 +309,7 @@
     <p>9. Девятая <a href="rubic-activity://ytactivity?time=3:40&link=WIFh0sXDkMM">ситуация</a>
     из <b>Части Т</b>, но квартира спереди слева или просто зеркальная предыдущей ситуации. Опять же
     очень быстрый и удобный алгоритм.</p>
-    <p style="text-align:center"><img src="f2l_25_9.png" width="30%%"></p>
+    <p style="text-align:center"><img src="vf2l1_9.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=3:47&link=WIFh0sXDkMM">Алгоритм:</a> M U\' R\' F R U M\'</b><br/>
     ну или вместо неудобного <b>М</b>, можно сделать <b>Rw\' R</b>.
     <p>Еще один вариант из ускорения 3.8 без вращения средней грани (M).</p>
@@ -320,7 +320,7 @@
     пиф-пафом привести ситуацию к шестому ускорению, а можно использовать
     <a href="rubic-activity://ytactivity?time=4:23&link=WIFh0sXDkMM">быстрый</a>
     алгоритм с жирными включениями и выключениями света и привести ситуацию к трехходовке из <b>Части Х</b>.</p>
-    <p style="text-align:center"><img src="f2l_25_10.png" width="30%%"></p>
+    <p style="text-align:center"><img src="vf2l1_10.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=4:16&link=WIFh0sXDkMM">Алгоритм:</a> Rw U\' Rw\' U2 Rw U Rw\' (R U R\')</b>
 
     <p>11. Одиннадцатая <a href="rubic-activity://ytactivity?time=4:10&link=WIFh0sXDkMM">ситуация</a>
@@ -328,13 +328,13 @@
     но все это слева. Начальное положение рук как при пиф-пафе. Кстати чтобы получить данную ситуацию,
     можно сделать алгоритм из ускорения 10 на собранном F2L. И напротив чтобы получить ситуацию 10,
     выполнить данный алгоритм.</p>
-    <p style="text-align:center"><img src="f2l_25_11.png" width="30%%"></p>
+    <p style="text-align:center"><img src="vf2l1_11.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=4:31&link=WIFh0sXDkMM">Алгоритм:</a> F R U2 R\' F\' (L\' U\' L)</b>
 
     <p>12. Двенадцатая <a href="rubic-activity://ytactivity?time=4:43&link=WIFh0sXDkMM">ситуация</a>
     - все аналогично предыдущей, но квартира спереди справа. В этом случае делаем алгоритм обратный
     ситуации 10.</p>
-    <p style="text-align:center"><img src="f2l_25_12.png" width="30%%"></p>
+    <p style="text-align:center"><img src="vf2l1_12.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=4:49&link=WIFh0sXDkMM">Алгоритм:</a> (R U\' R\') Rw U\' Rw\' U2 Rw U Rw\'</b>
 
     <p>13. Тринадцатая <a href="rubic-activity://ytactivity?time=5:00&link=WIFh0sXDkMM">ситуация</a>
@@ -342,17 +342,17 @@
     справа сзади. Можно было поднять девушку на третий этаж, увести на заднюю грань, вернуть парня
     на третий этаж, подвести к нему квартиру и заселить в 3 хода. А можно сделать это удобно и
     <a href="rubic-activity://ytactivity?time=5:15&link=WIFh0sXDkMM">быстро.</a></p>
-    <p style="text-align:center"><img src="f2l_25_13.png" width="30%%"></p>
+    <p style="text-align:center"><img src="vf2l1_13.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=5:10&link=WIFh0sXDkMM">Алгоритм:</a> (R\' F) R\' F\' R U\' R</b>
 
     <p>14. Четырнадцатая <a href="rubic-activity://ytactivity?time=5:20&link=WIFh0sXDkMM">ситуация</a>
     из <b>Части В-3</b>. Парень с завышенной самооценкой, девушка на третьем этаже слева напротив своей
     грани. Но квартира у них спереди слева. Очень короткий и
     <a href="rubic-activity://ytactivity?time=5:41&link=WIFh0sXDkMM">быстрый</a> алгоритм.</p>
-    <p style="text-align:center"><img src="f2l_25_14.png" width="30%%"></p>
+    <p style="text-align:center"><img src="vf2l1_14.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=5:35&link=WIFh0sXDkMM">Алгоритм:</a> F R U2 R\' F\'</b>
     <p>Если же угол и квартира справа, то лучше использовать алгоритм из ускорений 3.4</p>
-    <p style="text-align:center"><img src="f2l3_4_1.png" width="30%%"></p>
+    <p style="text-align:center"><img src="f2l3_4_1.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=1:21&link=IL7VMSTatAA">Алгоритм:</a> (Rw U\' Rw\') U2 (Rw U Rw\')</b>
 
 
@@ -360,7 +360,7 @@
     ускорение для <b>Ромашки направо</b>, т.е. одной из ситуаций, когда парень уже на своем месте,
     а девушка на третьем этаже. Вот только стебель ромашки должен быть слева (на картинке не видно).
     Очень простой и быстрый алгоритм: жирный пиф-паф, жирнный английский пиф-паф.
-    <p style="text-align:center"><img src="f2l_25_15.png" width="30%%"></p>
+    <p style="text-align:center"><img src="vf2l1_15.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=5:54&link=WIFh0sXDkMM">Алгоритм:</a> (Rw U Rw\' U\') (Rw\' F Rw F\')</b>
 
     ]]></string>
@@ -477,7 +477,7 @@
     <p style="text-align:center"><img src="f2l3_4_1.png" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=1:21&link=IL7VMSTatAA">Алгоритм:</a> (Rw U\' Rw\') U2 (Rw U Rw\')</b>
     <p>Для квартиры и угла слева, вот такой алгоритм из ускорения 1.14</p>
-    <p style="text-align:center"><img src="f2l_25_14.png" width="30%%"></p>
+    <p style="text-align:center"><img src="vf2l1_14.xml" width="30%%"></p>
     <b><a href="rubic-activity://ytactivity?time=5:35&link=WIFh0sXDkMM">Алгоритм:</a> F R U2 R\' F\'</b>
 
 
