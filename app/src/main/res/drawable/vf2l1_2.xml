@@ -20,10 +20,10 @@
     <path android:fillColor="@color/cube_white"  android:pathData="M79.25,19.64l11.2,-4.44l-0.82,17.64l-10.99,4.91z"/>
     <path android:fillColor="@color/cube_ollgray" android:pathData="M46.62,53.23l14.78,-5.96l-0.57,17.49l-14.21,7.14z"/>
     <path android:fillColor="@color/cube_green" android:pathData="M63.31,46.5l13.34,-5.91l-0.96,17.01l-12.98,6.5z"/>
-    <path android:fillColor="@color/cube_ollgray" android:pathData="M78.61,39.71l11.01,-4.94l-1.01,16.23l-10.99,5.97z"/>
+    <path android:fillColor="@color/cube_litegray" android:strokeColor="@color/cube_red" android:strokeWidth="1" android:pathData="M78.61,39.71l11.01,-4.94l-1.01,16.23l-10.99,5.97z"/>
     <path android:fillColor="@color/cube_ollgray" android:pathData="M46.73,73.75l14.23,-7.13l-0.68,16.34l-13.48,7.45z"/>
     <path android:fillColor="@color/cube_green" android:pathData="M62.81,66.03l13.09,-6.56l-0.71,15.45l-13.06,7.16z"/>
-    <path android:fillColor="@color/cube_ollgray" android:pathData="M77.75,58.87l10.8,-5.85l-0.92,15.24l-10.6,5.61z"/>
+    <path android:fillColor="@color/cube_litegray" android:strokeColor="@color/cube_red" android:strokeWidth="1" android:pathData="M77.75,58.87l10.8,-5.85l-0.92,15.24l-10.6,5.61z"/>
 
     <path android:fillColor="@color/cube_ollgray" android:pathData="M29.48,26.29l15.26,5.59l-0.02,19.46l-14.64,-6.31z"/>
     <path android:fillColor="@color/cube_ollgray" android:pathData="M14.19,20.46l13.57,5.15l0.64,18.81l-13.57,-5.94z"/>
