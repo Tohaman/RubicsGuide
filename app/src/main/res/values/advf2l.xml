@@ -62,7 +62,7 @@
         <a href="rubic-activity://ytactivity?time=0:08&link=Ar_Zit1VLG0">собираются вместе</a>
         , угол (парень) ставится на место вместе со своим ребром (девушкой), т.е. парой.</p>
 
-        <p style="text-align:center"><img src="f2l_int_1.png" width="30%%"></p>
+        <p style="text-align:center"><img src="vf2l.xml" width="30%%"></p>
 
         <p>В F2L есть <b><a href="rubic-activity://ytactivity?time=0:08&link=Ar_Zit1VLG0">4 базовых алгоритма</a> (The 4 Fundamental Algorithms).</b><br/>
         Когда я сказал, что решать F2L можно без формул, я слукавил. Все таки 4 алгоритма выучить придется.
@@ -72,17 +72,17 @@
         <a href="rubic-activity://ytactivity?time=0:24&link=Ar_Zit1VLG0">Первый базовый</a> алгоритм: <b>R U\' R\'</b><br/>
         Применяется для ситуации когда угол с ребром уже образуют пару.
 
-        <p style="text-align:center"><img src="f2l_int_2.png" width="30%%"></p>
+        <p style="text-align:center"><img src="vf2l_int_2.xml" width="30%%"></p>
 
         <a href="rubic-activity://ytactivity?time=0:32&link=Ar_Zit1VLG0">Зеркальный первому</a> <b>L\' U L</b><br/>
-        <p style="text-align:center"><img src="f2l_int_3.png" width="30%%"></p>
+        <p style="text-align:center"><img src="vf2l_int_3.xml" width="30%%"></p>
 
         <a href="rubic-activity://ytactivity?time=0:40&link=Ar_Zit1VLG0">Второй базовый</a> алгоритм: <b>R U R\'</b><br/>
         Применяется когда верхние наклейки угла и ребра разные. Является первыми тремя ходами обычного пиф-пафа.
-        <p style="text-align:center"><img src="f2l_int_4.png" width="30%%"></p>
+        <p style="text-align:center"><img src="vf2l_int_4.xml" width="30%%"></p>
 
         Ну и <a href="rubic-activity://ytactivity?time=0:50&link=Ar_Zit1VLG0">зеркальный ему</a> <b>L\' U\' L</b><br/>
-        <p style="text-align:center"><img src="f2l_int_5.png" width="30%%"></p>
+        <p style="text-align:center"><img src="vf2l_int_5.xml" width="30%%"></p>
 
         Перейдем непосредственно к сборке.<br/><br/>
 
@@ -162,7 +162,7 @@
         <b><a href="rubic-activity://ytactivity?time=3:59&link=Ar_Zit1VLG0">белая наклейка угла сверху</a></b>,
         т.е. парень с завышенной самооценкой. Этот случай на мой взгляд еще проще, чем когда белая наклейка сбоку.<br/>
 
-        <p style="text-align:center"><img src="f2l_int_14.png" width="60%%"></p>
+        <p style="text-align:center"><img src="vf2l_int_14.xml" width="60%%"></p>
 
         3.  Тут сразу начинаем с  <b><a href="rubic-activity://ytactivity?time=4:15&link=Ar_Zit1VLG0">установки на место ребра</a>
         (Move the edge piece).</b><be/>
@@ -188,7 +188,7 @@
         <b><a href="rubic-activity://ytactivity?time=4:37&link=Ar_Zit1VLG0">(How to solve special cases).</a></b><br/>
         Например такая ситуация:
 
-        <p style="text-align:center"><img src="f2l_int_17.png" width="30%%"></p>
+        <p style="text-align:center"><img src="vf2l_int_17.xml" width="30%%"></p>
 
         В этом случае не получится собрать стебель, опустить ребро на второй этаж и подогнать к
         ребру угол, т.к. угол окажется на первом этаже. Есть несколько вариантов решения:<br/><br/>
@@ -202,7 +202,7 @@
 
         Если ребро опускается вместе с углом, например такая ситуация:
 
-        <p style="text-align:center"><img src="f2l_int_18.png" width="30%%"></p>
+        <p style="text-align:center"><img src="vf2l_int_18.xml" width="30%%"></p>
 
         то в этом случае не опустите, а поднимите угол и отведите его в сторону, после чего верните
         ребро на место, т.е. <b>(R U\' R\')</b>. Пара расстанется и ее можно легко решить интуитивно.
@@ -213,7 +213,7 @@
         своей квартире, но перевернут (белой наклейкой на первом этаже), а ребро на третьем этаже, то
         просто начинайте делать алгоритм для угла с завышенной самооценкой.</p>
 
-        <p style="text-align:center"><img src="f2l_int_19.png" width="30%%"></p>
+        <p style="text-align:center"><img src="vf2l_int_19.xml" width="30%%"></p>
 
         <p>Т.е. сначала подгоните
         ребро к своему цвету (сделайте стебель \"ромашки\"), опустите ребро на второй этаж от квартиры,
