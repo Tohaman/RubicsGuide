@@ -23,7 +23,7 @@ public class ListPager {
         this.mComment = mComment;
     }
 
-    public ListPager(String mPhase, int mId, String mTitle, int mIcon, String s) {
+    public ListPager(String mPhase, int mId, String mTitle, int mIcon) {
         this.mPhase = mPhase;
         this.mId = mId;
         this.mTitle = mTitle;

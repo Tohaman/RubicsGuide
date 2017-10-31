@@ -64,7 +64,7 @@ public class G2FFragment extends Fragment {
         String[] mTitles = getResources().getStringArray(R.array.g2f_title);
         int [] resID = getResID(R.array.g2f_icon);
         for (int i = 0; i < mTitles.length; i++) {
-            mListPagers.add (new ListPager("G2F", i+1, mTitles[i], resID[i],""));
+            mListPagers.add (new ListPager("G2F", i+1, mTitles[i], resID[i]));
         }
         ListAdapter mListAdapter  = new MyListAdapter(v.getContext(), R.layout.list_item, mListPagers);
         // устанавливаем адаптер

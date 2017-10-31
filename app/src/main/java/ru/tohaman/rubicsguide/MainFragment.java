@@ -69,7 +69,7 @@ public class MainFragment extends Fragment {
         String[] mTitles = getResources().getStringArray(R.array.main_title);
         int [] resID = getResID(R.array.main_icon);
         for (int i = 0; i < mTitles.length; i++) {
-            mListPagers.add (new ListPager("MAIN", i+1, mTitles[i], resID[i],""));
+            mListPagers.add (new ListPager("MAIN", i+1, mTitles[i], resID[i]));
         }
         ListAdapter mListAdapter  = new MyListAdapter(v.getContext(), R.layout.list_item, mListPagers);
         // устанавливаем адаптер
