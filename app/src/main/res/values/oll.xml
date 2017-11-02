@@ -950,29 +950,35 @@
     <string name="oll_st40_title">#40 Левый пропеллер</string>
     <string name="oll_st40_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
-        <p>Аналогично правому пропеллеру, но через вращение левой грани.</p>
+        <p>Взять так же точкой к себе и сделать все аналогично правому пропеллеру, но через вращение левой грани.</p>
         <p style="text-align:center"><img src="voll_40_1.xml" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=0:50&link=rzBm9e_FuiI">на видео 0:50</a> <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=9:45&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (L F\') (L\' U\' L U) F U\' L\'</b><br/><br/>
+        <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=1:24&link=rzBm9e_FuiI">на видео 1:24</a>
+        аналогично правому пропеллеру выполнить: S\', пиф-паф слева, английский пиф-паф с последним
+        жирным ходом слева.
         ]]></string>
-    <string name="oll_st40_url"></string>
+    <string name="oll_st40_url">rzBm9e_FuiI</string>
 
-    <string name="oll_st41_title">#41 Левая клюшка с блоком</string>
+    <string name="oll_st41_title">#41 Скобка с блоком</string>
     <string name="oll_st41_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
+        <p>Поставить скобку как на картинке (блоком справа) и выполнить очень простой алгоритм:
+        выключить свет, крыша против, английский пиф-паф, возвращаем крышу и свет на место.</p>
         <p style="text-align:center"><img src="voll_41_1.xml" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=6:03&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: (Rw U\' Rw\') (U\' Rw U Rw\') y\' (R\' U R)</b><br/><br/>
-        <b>Как смоделировать</b>: Выполнить левую рюмку - (R U R\' U\') R\' F (R2 U R\' U\') F\'.
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=1:14&link=GeEglUjr9Cg">на видео 1:14</a> <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:32&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: R\' U\' (R\' F R F\') U R</b><br/><br/>
         ]]></string>
-    <string name="oll_st41_url"></string>
+    <string name="oll_st41_url">GeEglUjr9Cg</string>
 
-    <string name="oll_st42_title">#42 Правая клюшка с блоком</string>
+    <string name="oll_st42_title">#42 Скобка с точкой</string>
     <string name="oll_st42_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         <p style="text-align:center"><img src="voll_42_1.xml" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=6:13&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: (R\' F R) (U R\' F\' R) (F U\' F\')</b><br/><br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:16&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: (R U R2\' U\') (R\' F R U) R U\' F\'</b><br/><br/>
         ]]></string>
     <string name="oll_st42_url"></string>
 
@@ -995,22 +1001,23 @@
     ]]></string>
     <string name="oll_st44_url"></string>
 
-    <string name="oll_st45_title">#45 Скобка с блоком</string>
+
+    <string name="oll_st45_title">#45 Левая клюшка с блоком</string>
     <string name="oll_st45_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
-        <p>Очень простой алгоритм, выключить свет, крыша против, английский пиф-паф, возвращаем крышу и свет на место.</p>
         <p style="text-align:center"><img src="voll_45_1.xml" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:32&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: R\' U\' (R\' F R F\') U R</b><br/><br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=6:03&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: (Rw U\' Rw\') (U\' Rw U Rw\') y\' (R\' U R)</b><br/><br/>
+        <b>Как смоделировать</b>: Выполнить левую рюмку - (R U R\' U\') R\' F (R2 U R\' U\') F\'.
         ]]></string>
     <string name="oll_st45_url"></string>
 
-    <string name="oll_st46_title">#46 Скобка с точкой</string>
+    <string name="oll_st46_title">#46 Правая клюшка с блоком</string>
     <string name="oll_st46_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         <p style="text-align:center"><img src="voll_46_1.xml" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:16&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: (R U R2\' U\') (R\' F R U) R U\' F\'</b><br/><br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=6:13&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: (R\' F R) (U R\' F\' R) (F U\' F\')</b><br/><br/>
         ]]></string>
     <string name="oll_st46_url"></string>
 
