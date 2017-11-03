@@ -1,8 +1,12 @@
 package ru.tohaman.rubicsguide.PLLTest;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
@@ -10,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -18,9 +23,12 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import ru.tohaman.rubicsguide.CommentFragment;
 import ru.tohaman.rubicsguide.R;
 import ru.tohaman.rubicsguide.listpager.ListPager;
 import ru.tohaman.rubicsguide.listpager.ListPagerLab;
+
+import static ru.tohaman.rubicsguide.PLLTest.PLLTestFragment.sPLLTest_row;
 
 /**
  * Created by Toha on 30.07.2017.
@@ -29,25 +37,62 @@ import ru.tohaman.rubicsguide.listpager.ListPagerLab;
 public class PLLTestSettingsFragment extends Fragment {
     private List<ListPager> mListPagers = new ArrayList();
     private ListPagerLab listPagerLab;
-    private static final String DIALOG_COMMENT = "DialogComment";  //в этой "паре", передаем значение комментария для редактирования
-    private static final int REQUEST_COMMENT = 0;
+    private ListPager mListPager;
+    private SharedPreferences sp;
+    private final String DIALOG_COMMENT = "DialogComment";  //в этой "паре", передаем значение комментария для редактирования
+    private final int REQUEST_COMMENT = 0;
+    private int guessRows; // количество строк с кнопками для вывода кнопок
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.fragment_mainscreen, container, false);
+        View v = inflater.inflate(R.layout.fragment_pll_test_list, container, false);
 
         // начальная инициализация списка для ListView c адаптером MyListAdapter
         // получаем элемент ListView
         ListView mListView = (ListView) v.findViewById(R.id.main_listview2);
+        final TextView guessRowsText = (TextView) v.findViewById(R.id.pll_test_button_row);
+        sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
+
+        Button plus_button = (Button) v.findViewById(R.id.pll_test_button_plus);
+        plus_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Обработка нажатия
+                int i = Integer.parseInt(guessRowsText.getText().toString());
+                i++;
+                if (i>4) {
+                    i = 4;
+                } else {
+                    guessRowsText.setText(String.valueOf(i));
+                    SharedPreferences.Editor e = sp.edit();
+                    e.putString(sPLLTest_row, String.valueOf(i*2));
+                    e.commit(); // подтверждаем изменения
+
+                }
+            }
+        });
+
+        Button minus_button = (Button) v.findViewById(R.id.pll_test_button_minus);
+        minus_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Обработка нажатия
+                int i = Integer.parseInt(guessRowsText.getText().toString());
+                i--;
+                if (i<1) {
+                    i = 1;
+                } else {
+                    guessRowsText.setText(String.valueOf(i));
+                    SharedPreferences.Editor e = sp.edit();
+                    e.putString(sPLLTest_row, String.valueOf(i*2));
+                    e.commit(); // подтверждаем изменения
+
+                }
+            }
+        });
 
         // Получаем синглет
         listPagerLab = ListPagerLab.get(getActivity());
-
         mListPagers = listPagerLab.getPhaseList("PLLTEST");
-
-        String[] mTitles = getResources().getStringArray(R.array.pll_test_phases);
-
         ListAdapter mListAdapter  = new PLLListAdapter(v.getContext(), R.layout.list_item, mListPagers);
         // устанавливаем адаптер
         mListView.setAdapter(mListAdapter);
@@ -59,14 +104,18 @@ public class PLLTestSettingsFragment extends Fragment {
                 //вызов окна редактирования комментария
                 FragmentManager manager = getFragmentManager();
                 int st = mListPagers.get(position).getIcon();
-                String st2 = mListPagers.get(position).getTitle();
+                String st2 = GetParamFromBase(mListPagers.get(position).getTitle());
+                mListPager = mListPagers.get(position);
                 PLLTest_SetName_Fragment dialog = PLLTest_SetName_Fragment.newInstance(String.valueOf(st),st2);
                 dialog.setTargetFragment(PLLTestSettingsFragment.this, REQUEST_COMMENT);
                 dialog.show (manager, DIALOG_COMMENT);
             }
         };
         mListView.setOnItemClickListener(itemListener);
-
+        // Записываем количество строк в текст на экране
+        String rows = sp.getString(sPLLTest_row, "6");
+        guessRows = Integer.parseInt(rows) / 2;
+        guessRowsText.setText(String.valueOf(guessRows));
         // возвращаем сформированный View в активность
         return v;
     }
@@ -110,6 +159,23 @@ public class PLLTestSettingsFragment extends Fragment {
             return convertView;
         }
     }
+
+    @Override
+    public void onActivityResult (int requestCode, int resultCode, Intent data) {
+        if (resultCode != Activity.RESULT_OK) {
+            return;
+        }
+        //Если все таки была нажата кнопка ОК
+        if (requestCode == REQUEST_COMMENT) {
+            // Получаем значение из EXTRA_Comment
+            String string = (String) data.getSerializableExtra(CommentFragment.EXTRA_Comment);
+            mListPager.setComment(string);
+            ListPagerLab.get(getActivity()).updateListPager(mListPager);
+            // Обновляем текст в пэйджере
+//            mCommentField.setText(mListPager.getComment());
+        }
+    }
+
 
     private String GetParamFromBase (String param) {
         String st = "";

@@ -41,4 +41,5 @@
     <dimen name="pll_pager_d_height">100dp</dimen>
     <dimen name="middle_margin">16dp</dimen>
     <dimen name="small_margin">8dp</dimen>
+    <dimen name="plltest_button_textsize">12sp</dimen>
 </resources>

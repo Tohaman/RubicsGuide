@@ -75,46 +75,6 @@ public class PLLTestFragment extends Fragment {
             }
         });
 
-        Button plus_button = (Button) v.findViewById(R.id.pll_test_button_plus);
-        plus_button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Обработка нажатия
-                int i = Integer.parseInt(guessRowsText.getText().toString());
-                i++;
-                if (i>4) {
-                    i = 4;
-                } else {
-                    guessRowsText.setText(String.valueOf(i));
-                    SharedPreferences.Editor e = sp.edit();
-                    e.putString(sPLLTest_row, String.valueOf(i*2));
-                    e.commit(); // подтверждаем изменения
-                    updateGuessRows(sp);
-                    LoadNextPLL();
-                }
-            }
-        });
-
-
-        Button minus_button = (Button) v.findViewById(R.id.pll_test_button_minus);
-        minus_button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Обработка нажатия
-                int i = Integer.parseInt(guessRowsText.getText().toString());
-                i--;
-                if (i<1) {
-                    i = 1;
-                } else {
-                    guessRowsText.setText(String.valueOf(i));
-                    SharedPreferences.Editor e = sp.edit();
-                    e.putString(sPLLTest_row, String.valueOf(i*2));
-                    e.commit(); // подтверждаем изменения
-                    updateGuessRows(sp);
-                    LoadNextPLL();
-                }
-            }
-        });
-
-
         guessLinearLayouts = new LinearLayout[4];
         guessLinearLayouts[0] = (LinearLayout) v.findViewById(R.id.row1LinearLayout);
         guessLinearLayouts[1] = (LinearLayout) v.findViewById(R.id.row2LinearLayout);
@@ -136,11 +96,10 @@ public class PLLTestFragment extends Fragment {
 //        e.commit(); // подтверждаем изменения
 
         updateGuessRows(sp);
-
         LoadNextPLL();
 
         // Записываем количество строк в текст на экране
-        guessRowsText.setText(String.valueOf(guessRows));
+//        guessRowsText.setText(String.valueOf(guessRows));
 
         // возвращаем сформированный View в активность
         return v;
@@ -156,6 +115,11 @@ public class PLLTestFragment extends Fragment {
     @Override
     public void onResume (){
         super.onResume();
+        String rows = sp.getString(sPLLTest_row, "6");
+        if (guessRows != Integer.parseInt(rows) / 2) {
+            updateGuessRows(sp);
+            LoadNextPLL();
+        }
     }
 
     private void InitArrays () {
