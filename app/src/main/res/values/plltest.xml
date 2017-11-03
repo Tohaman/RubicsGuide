@@ -72,7 +72,28 @@
         <item></item>
     </string-array>
 
-
-    pll_test_url
+    <string-array name="pll_test_url">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 
 </resources>

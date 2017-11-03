@@ -106,9 +106,31 @@ public class PLLTestSettingsFragment extends Fragment {
             ListPager listPager = mListPagers.get(position);
 
             icon.setImageResource(listPager.getIcon());
-            text.setText(listPager.getTitle());
+            text.setText(GetParamFromBase(listPager.getTitle()));
             return convertView;
         }
     }
 
+    private String GetParamFromBase (String param) {
+        String st = "";
+        for (int i = 0; i < mListPagers.size(); i++) {
+            if (mListPagers.get(i).getTitle().equals(param)) {
+                if (mListPagers.get(i).getComment().equals("")) {
+                    st = mListPagers.get(i).getTitle();
+                } else {
+                    st = mListPagers.get(i).getComment();
+                }
+            }
+        }
+        return st;
+    }
+
+    private void SetParamToBase (String param, String value) {
+        for (int i = 0; i < mListPagers.size(); i++) {
+            if (mListPagers.get(i).getTitle().equals(param)) {
+                mListPagers.get(i).setComment(value);
+                ListPagerLab.get(getActivity()).updateListPager(mListPagers.get(i));
+            }
+        }
+    }
 }
