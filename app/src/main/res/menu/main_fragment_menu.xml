@@ -5,5 +5,11 @@
         android:id="@+id/main_settings"
         android:icon="@drawable/ic_settings"
         android:title="@string/Settings"
-        app:showAsAction="ifRoom|withText"/>
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/main_plltest"
+        android:title="@string/pll_test_title"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
 </menu>

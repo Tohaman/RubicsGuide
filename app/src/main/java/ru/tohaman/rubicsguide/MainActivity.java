@@ -8,6 +8,8 @@ import android.support.v4.app.Fragment;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import ru.tohaman.rubicsguide.PLLTest.PLLTestActivity;
+import ru.tohaman.rubicsguide.PLLTest.PLLTestSettingsActivity;
 import ru.tohaman.rubicsguide.about.AboutActivity;
 import ru.tohaman.rubicsguide.about.AboutFragment;
 import ru.tohaman.rubicsguide.blind.BlindMenuActivity;
@@ -59,6 +61,10 @@ public class MainActivity extends SingleFragmentActivity implements MainFragment
             case R.id.main_settings:
                 Intent mIntent = new Intent(this, SettingsActivity.class);
                 startActivity(mIntent);
+                return true;
+            case R.id.main_plltest:
+                Intent mIntent2 = new Intent(this, PLLTestActivity.class);
+                startActivity(mIntent2);
                 return true;
             default:
                 return super.onOptionsItemSelected(item) ;
