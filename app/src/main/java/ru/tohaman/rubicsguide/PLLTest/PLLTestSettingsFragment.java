@@ -19,13 +19,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ru.tohaman.rubicsguide.R;
+import ru.tohaman.rubicsguide.listpager.ListPager;
+import ru.tohaman.rubicsguide.listpager.ListPagerLab;
 
 /**
  * Created by Toha on 30.07.2017.
  */
 
 public class PLLTestSettingsFragment extends Fragment {
-    private List<PLLTest> mListPlls = new ArrayList();
+    private List<ListPager> mListPagers = new ArrayList();
+    private ListPagerLab listPagerLab;
     private static final String DIALOG_COMMENT = "DialogComment";  //в этой "паре", передаем значение комментария для редактирования
     private static final int REQUEST_COMMENT = 0;
 
@@ -38,14 +41,14 @@ public class PLLTestSettingsFragment extends Fragment {
         // получаем элемент ListView
         ListView mListView = (ListView) v.findViewById(R.id.main_listview2);
 
-        // создаем адаптер и задаем массивы к адаптеру
-        mListPlls = new ArrayList();
+        // Получаем синглет
+        listPagerLab = ListPagerLab.get(getActivity());
+
+        mListPagers = listPagerLab.getPhaseList("PLLTEST");
+
         String[] mTitles = getResources().getStringArray(R.array.pll_test_phases);
-        int [] resID = getResID(R.array.pll_test_icon);
-        for (int i = 0; i < mTitles.length; i++) {
-            mListPlls.add (new PLLTest("PLLTest", i+1, mTitles[i], resID[i]));
-        }
-        ListAdapter mListAdapter  = new PLLListAdapter(v.getContext(), R.layout.list_item, mListPlls);
+
+        ListAdapter mListAdapter  = new PLLListAdapter(v.getContext(), R.layout.list_item, mListPagers);
         // устанавливаем адаптер
         mListView.setAdapter(mListAdapter);
 
@@ -55,8 +58,8 @@ public class PLLTestSettingsFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 //вызов окна редактирования комментария
                 FragmentManager manager = getFragmentManager();
-                int st = mListPlls.get(position).getIcon();
-                String st2 = mListPlls.get(position).getTitle();
+                int st = mListPagers.get(position).getIcon();
+                String st2 = mListPagers.get(position).getTitle();
                 PLLTest_SetName_Fragment dialog = PLLTest_SetName_Fragment.newInstance(String.valueOf(st),st2);
                 dialog.setTargetFragment(PLLTestSettingsFragment.this, REQUEST_COMMENT);
                 dialog.show (manager, DIALOG_COMMENT);
@@ -86,9 +89,9 @@ public class PLLTestSettingsFragment extends Fragment {
         return idx;
     }
 
-    private class PLLListAdapter extends ArrayAdapter<PLLTest> {
+    private class PLLListAdapter extends ArrayAdapter<ListPager> {
 
-        public PLLListAdapter(Context context, int list_item, List<PLLTest> listPlls) {
+        public PLLListAdapter(Context context, int list_item, List<ListPager> listPlls) {
             super(context, list_item, listPlls);
         }
 
@@ -100,7 +103,7 @@ public class PLLTestSettingsFragment extends Fragment {
             ImageView icon = (ImageView) convertView.findViewById(R.id.list_item_image);
             TextView text = (TextView) convertView.findViewById(R.id.list_item_title_text);
 
-            PLLTest listPager = mListPlls.get(position);
+            ListPager listPager = mListPagers.get(position);
 
             icon.setImageResource(listPager.getIcon());
             text.setText(listPager.getTitle());

@@ -47,4 +47,32 @@
         <item>@drawable/vpll_test_20</item>
         <item>@drawable/vpll_test_21</item>
     </integer-array>
+
+    <string-array name="pll_test_descr">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+
+    pll_test_url
+
 </resources>

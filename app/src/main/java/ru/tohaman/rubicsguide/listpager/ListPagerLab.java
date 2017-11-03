@@ -114,6 +114,13 @@ public class ListPagerLab {
         mUrl = new String[]{"",""};
         PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
 
+        mPhase = "PLLTEST";
+        mTitles = mContext.getResources().getStringArray(R.array.pll_test_phases);
+        mResId = getResID(R.array.pll_test_icon);
+        Descr = getResID(R.array.pll_test_descr);
+        mUrl = mContext.getResources().getStringArray(R.array.pll_test_url);
+        PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
+
     }
 
     // Инициализация фазы, с заданными массивами Заголовков, Иконок, Описаний, ютуб-ссылок
@@ -133,6 +140,9 @@ public class ListPagerLab {
             mListPagers.add (mListPager);
         }
     }
+
+
+
 
     // Создаем синглет, т.е. класс с закрытым конструктором. Открыт метод get, который
     // создает экземпляр, только если он еще не создан, в противном случае возвращает, то что уже создано
