@@ -6,6 +6,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/pll_test_rowtext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="16sp"
+        android:text="@string/pll_test_rowtext"
+        app:layout_constraintRight_toLeftOf="@+id/pll_test_button_minus"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/pll_test_button_plus"
+        android:layout_marginRight="@dimen/small_margin"
+        android:layout_marginLeft="@dimen/small_margin"/>
+
     <Button
         android:id="@+id/pll_test_button_minus"
         android:layout_width="50dp"
@@ -13,18 +27,18 @@
         android:text="-"
         android:layout_marginEnd="@dimen/middle_margin"
         android:layout_marginTop="@dimen/middle_margin"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/pll_test_textview_row"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id="@+id/pll_test_button_row"
+        android:id="@+id/pll_test_textview_row"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textColor="@android:color/background_dark"
         android:textSize="16sp"
-        android:text="4"
-        app:layout_constraintLeft_toRightOf="@+id/pll_test_button_minus"
+        android:text="3"
+        app:layout_constraintRight_toLeftOf="@+id/pll_test_button_plus"
         app:layout_constraintBaseline_toBaselineOf="@+id/pll_test_button_plus"
         android:layout_marginRight="@dimen/small_margin"
         android:layout_marginLeft="@dimen/small_margin"/>
@@ -38,7 +52,7 @@
         android:layout_marginTop="@dimen/middle_margin"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginEnd="@dimen/small_margin"
-        app:layout_constraintLeft_toRightOf="@+id/pll_test_button_row"/>
+        app:layout_constraintRight_toRightOf="parent"/>
 
     <LinearLayout
         android:layout_width="0dp"

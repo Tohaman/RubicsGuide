@@ -34,5 +34,6 @@
     <string name="settings">Настройки</string>
     <string name="plltest_setname_title">Зайдайте свое имя для:</string>
     <string name="pll_test_title">Тест PLL (бета)</string>
+    <string name="pll_test_rowtext">Кол-во строк с кнопками ответов:</string>
 
 </resources>
