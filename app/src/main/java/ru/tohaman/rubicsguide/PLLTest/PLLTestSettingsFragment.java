@@ -51,7 +51,7 @@ public class PLLTestSettingsFragment extends Fragment {
         // начальная инициализация списка для ListView c адаптером MyListAdapter
         // получаем элемент ListView
         ListView mListView = (ListView) v.findViewById(R.id.main_listview2);
-        final TextView guessRowsText = (TextView) v.findViewById(R.id.pll_test_button_row);
+        final TextView guessRowsText = (TextView) v.findViewById(R.id.pll_test_textview_row);
         sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
         Button plus_button = (Button) v.findViewById(R.id.pll_test_button_plus);

@@ -63,8 +63,6 @@ public class PLLTestFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_pll_test, container, false);
 
         img = (ImageView) v.findViewById(R.id.test_image);
-        final TextView guessRowsText = (TextView) v.findViewById(R.id.pll_test_button_row);
-
 
         SettingButton = (Button) v.findViewById(R.id.pll_test_setting_button);
         SettingButton.setOnClickListener(new View.OnClickListener(){
