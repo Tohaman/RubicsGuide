@@ -351,8 +351,39 @@
         <b>Как решать:</b><br/>
         <p>Держать как на картинке, левым двойным блоком к себе.<br/>
         <p style="text-align:center"><img src="vpll_12_1.xml" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=16:40&link=L-g7AQfghlw">на видео 16:40</a> <br/>
+        <p>Фингертрикс: <a href="rubic-activity://ytactivity?time=16:40&link=L-g7AQfghlw">на видео 16:40</a><br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=3:58&link=W-8n_E1YASU">от J Perm</a><br/>
         <b>Алгоритм: (R U2 R\' D)  (R U\' R U\' R U R2\' D) (R\' U\' R D2) </b></p>
+
+        <p>Альтернативные варианты от J Perm. Для начала сам алгоритм: <br/><br/>
+
+        <b>(R\' U R\' U\') y R\' F\' R2 U\' R\' (U R\' F R F)</b><br/><br/>
+
+        Тепрерь о том, как его выполнять:
+        <a href="rubic-activity://ytactivity?time=0:43&link=W-8n_E1YASU">Базовый</a> фингертрикс,
+        но чтобы делать его чуть быстрее, в последней части алгоритма используем
+        <a href="rubic-activity://ytactivity?time=1:35&link=W-8n_E1YASU">средний палец правой руки</a>,
+        т.е. получается <a href="rubic-activity://ytactivity?time=1:45&link=W-8n_E1YASU">вот так.</a><br/>
+        Или можно последний ход делать <a href="rubic-activity://ytactivity?time=2:00&link=W-8n_E1YASU">левой рукой,</a>
+        т.е. <a href="rubic-activity://ytactivity?time=2:15&link=W-8n_E1YASU">вот так.</a>
+        А еще в этом видео вы найдете и фингертрикс для ситуации когда в конце надо, сделать
+        <a href="rubic-activity://ytactivity?time=2:40&link=W-8n_E1YASU">ход U</a>
+        (довернуть крышу).</p>
+
+        <p>Еще один альтернативный вариант:<br/>
+        уже без перехвата и кручения <a href="rubic-activity://ytactivity?time=3:01&link=W-8n_E1YASU">передней грани</a>.<br/>
+        <b>Алгоритм: R\' U R\' U\' R D\' R\' D R\' U D\' R2 U\' R2 D R2</b>. <br/>
+        Но, данный алгоритм все таки наверно чуть медленее предыдущего, т.к. в нем фактически больше ходов, да
+        еще и больше \"медленных\" двойных. Более подробно
+        <a href="rubic-activity://ytactivity?time=3:26&link=W-8n_E1YASU">в видео с 3:26.</a></p>
+
+        <p>Второй альтернативный вариант от J Perm, является вариантом от Максима, фингертрикс приведен выше.
+        К минусам данного алгоритма стоит отнести перехваты <a href="rubic-activity://ytactivity?time=4:31&link=W-8n_E1YASU">правой рукой.</a></p>
+
+        <p>Ну и еще один, уже более быстрый вариант, но с довольно
+        <a href="rubic-activity://ytactivity?time=5:10&link=W-8n_E1YASU">сложным фингертриксом.</a></br>
+        <b>Алгоритм: z D\' R2 D R2 U R\' D\' R U\' R U R\' D R U\'</b></p>
+
     ]]></string>
     <string name="pll_st12_url">L-g7AQfghlw</string>
 

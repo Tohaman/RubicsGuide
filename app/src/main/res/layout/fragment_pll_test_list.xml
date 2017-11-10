@@ -59,6 +59,7 @@
         android:layout_height="0dp"
         android:gravity="center"
         android:orientation="vertical"
+        android:layout_marginTop="@dimen/middle_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,7 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/small_margin"
             android:gravity="center_vertical"
-            android:text="Выберите алгоритм,для которого хотите изменить название на свое"
+            android:text="@string/pll_test_list_text"
             android:textAlignment="center"
             android:textSize="20sp"
             android:textStyle="italic"/>
