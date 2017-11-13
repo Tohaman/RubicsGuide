@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatDelegate;
 import android.widget.Toast;
 
+import ru.tohaman.rubicsguide.PLLTest.PLLTestActivity;
 import ru.tohaman.rubicsguide.R;
 import ru.tohaman.rubicsguide.SingleFragmentActivity;
 

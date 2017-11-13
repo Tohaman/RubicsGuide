@@ -6,6 +6,7 @@
         <item>Такой разный F2L</item>
         <item>Максимкин PLL</item>
         <item>Долгожданный OLL</item>
+        <item>Игра \"Угадай PLL\"</item>
     </string-array>
 
     <integer-array name="g2f_icon">
@@ -14,6 +15,7 @@
         <item>@drawable/vf2l</item>
         <item>@drawable/vpll</item>
         <item>@drawable/voll_56</item>
+        <item>@drawable/vpll_test</item>
     </integer-array>
 
     <string-array name="g2f_phase">
@@ -22,6 +24,7 @@
         <item>ADVF2L</item>
         <item>PLL</item>
         <item>OLL</item>
+        <item>PLLTEST</item>
     </string-array>
 
 </resources>

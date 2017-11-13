@@ -64,14 +64,14 @@ public class PLLTestFragment extends Fragment {
 
         img = (ImageView) v.findViewById(R.id.test_image);
 
-        SettingButton = (Button) v.findViewById(R.id.pll_test_setting_button);
-        SettingButton.setOnClickListener(new View.OnClickListener(){
-            public void onClick (View v) {
-                Intent mIntent = new Intent(getContext(), PLLTestSettingsActivity.class);
-                startActivity(mIntent);
-
-            }
-        });
+//        SettingButton = (Button) v.findViewById(R.id.pll_test_setting_button);
+//        SettingButton.setOnClickListener(new View.OnClickListener(){
+//            public void onClick (View v) {
+//                Intent mIntent = new Intent(getContext(), PLLTestSettingsActivity.class);
+//                startActivity(mIntent);
+//
+//            }
+//        });
 
         guessLinearLayouts = new LinearLayout[4];
         guessLinearLayouts[0] = (LinearLayout) v.findViewById(R.id.row1LinearLayout);

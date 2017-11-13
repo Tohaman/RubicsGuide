@@ -60,14 +60,30 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+
         <activity android:name=".blind.BlindMenuActivity"/>
+
         <activity android:name=".blind.AzbukaActivity"/>
+
         <activity android:name=".timer.TimerActivity">
         </activity>
+
         <activity android:name=".SettingsActivity">
         </activity>
+
         <activity android:name=".PLLTest.PLLTestActivity">
+            <intent-filter>
+                <data
+                    android:host="plltest"
+                    android:scheme="rubic-activity"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
         </activity>
+
         <activity android:name=".PLLTest.PLLTestSettingsActivity">
         </activity>
     </application>
