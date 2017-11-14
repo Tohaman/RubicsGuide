@@ -23,6 +23,8 @@ import java.util.List;
 import java.util.Random;
 
 import ru.tohaman.rubicsguide.R;
+import ru.tohaman.rubicsguide.listpager.ListPager;
+import ru.tohaman.rubicsguide.listpager.ListPagerLab;
 
 
 /**
@@ -33,6 +35,10 @@ public class PLLTestFragment extends Fragment {
     public static final String sPLLTest_row = "pll_test_row";
 
     private SharedPreferences sp;
+    private List<ListPager> mListPagers = new ArrayList();
+    private ListPagerLab listPagerLab;
+    private ListPager mListPager;
+
     private int red,blue,white,orange,green,yellow,back,black;
     private int[] cubeColor = new int[8];
     private String[] pll = new String[21];
@@ -64,15 +70,6 @@ public class PLLTestFragment extends Fragment {
 
         img = (ImageView) v.findViewById(R.id.test_image);
 
-//        SettingButton = (Button) v.findViewById(R.id.pll_test_setting_button);
-//        SettingButton.setOnClickListener(new View.OnClickListener(){
-//            public void onClick (View v) {
-//                Intent mIntent = new Intent(getContext(), PLLTestSettingsActivity.class);
-//                startActivity(mIntent);
-//
-//            }
-//        });
-
         guessLinearLayouts = new LinearLayout[4];
         guessLinearLayouts[0] = (LinearLayout) v.findViewById(R.id.row1LinearLayout);
         guessLinearLayouts[1] = (LinearLayout) v.findViewById(R.id.row2LinearLayout);
@@ -88,10 +85,11 @@ public class PLLTestFragment extends Fragment {
         }
 
 
-        // сохраняем кол-во ответов в файле настроек
-//        SharedPreferences.Editor e = sp.edit();
-//        e.putString(sPLLTest_row, String.valueOf(6));
-//        e.commit(); // подтверждаем изменения
+        // считываем кол-во ответов в файле настроек и сохраняем значение defValue, если оно не было определено
+        String rows = sp.getString(sPLLTest_row, "6");
+        SharedPreferences.Editor e = sp.edit();
+        e.putString(sPLLTest_row,rows);
+        e.commit(); // подтверждаем изменения
 
         updateGuessRows(sp);
         LoadNextPLL();
@@ -113,11 +111,11 @@ public class PLLTestFragment extends Fragment {
     @Override
     public void onResume (){
         super.onResume();
-        String rows = sp.getString(sPLLTest_row, "6");
-        if (guessRows != Integer.parseInt(rows) / 2) {
-            updateGuessRows(sp);
-            LoadNextPLL();
+        for (int i=0; i < mListPagers.size(); i++) {
+            pllst[i] = PLLTestSettingsFragment.GetNameFromListPagers(mListPagers, i);
         }
+        updateGuessRows(sp);
+        LoadNextPLL();
     }
 
     private void InitArrays () {
@@ -174,8 +172,14 @@ public class PLLTestFragment extends Fragment {
         pllst[19] = sp.getString("pllst19", "Дальняя улитка");
         pllst[20] = sp.getString("pllst20", "Север");
 
+        //TODO избавиться от pllst, перейти на mListPagers
+
+        listPagerLab = ListPagerLab.get(getActivity());
+        mListPagers = listPagerLab.getPhaseList("PLLTEST");
+
         pllrnd.clear();
-        for (int i=0; i<21; i++) {
+        for (int i=0; i < mListPagers.size(); i++) {
+            pllst[i] = PLLTestSettingsFragment.GetNameFromListPagers(mListPagers, i);
             pllrnd.add(String.valueOf(i));
         }
     }

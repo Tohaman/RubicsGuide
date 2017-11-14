@@ -52,6 +52,7 @@ public class PLLTestSettingsFragment extends Fragment {
         // получаем элемент ListView
         ListView mListView = (ListView) v.findViewById(R.id.main_listview2);
         final TextView guessRowsText = (TextView) v.findViewById(R.id.pll_test_textview_row);
+
         sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
         Button plus_button = (Button) v.findViewById(R.id.pll_test_button_plus);
@@ -116,6 +117,7 @@ public class PLLTestSettingsFragment extends Fragment {
         String rows = sp.getString(sPLLTest_row, "6");
         guessRows = Integer.parseInt(rows) / 2;
         guessRowsText.setText(String.valueOf(guessRows));
+
         // возвращаем сформированный View в активность
         return v;
     }
@@ -171,8 +173,6 @@ public class PLLTestSettingsFragment extends Fragment {
             String string = (String) data.getSerializableExtra(CommentFragment.EXTRA_Comment);
             mListPager.setComment(string);
             ListPagerLab.get(getActivity()).updateListPager(mListPager);
-            // Обновляем текст в пэйджере
-//            mCommentField.setText(mListPager.getComment());
         }
     }
 
@@ -181,11 +181,7 @@ public class PLLTestSettingsFragment extends Fragment {
         String st = "";
         for (int i = 0; i < mListPagers.size(); i++) {
             if (mListPagers.get(i).getTitle().equals(param)) {
-                if (mListPagers.get(i).getComment().equals("")) {
-                    st = mListPagers.get(i).getTitle();
-                } else {
-                    st = mListPagers.get(i).getComment();
-                }
+                st = GetNameFromListPagers(mListPagers, i);
             }
         }
         return st;
@@ -199,4 +195,16 @@ public class PLLTestSettingsFragment extends Fragment {
             }
         }
     }
+
+    public static String GetNameFromListPagers(List<ListPager> ListPagers, int i) {
+        String st;
+        if (ListPagers.get(i).getComment().equals("")) {
+            st = ListPagers.get(i).getTitle();
+        } else {
+            st = ListPagers.get(i).getComment();
+        }
+        return st;
+    }
+
 }
+
