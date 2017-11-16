@@ -1019,8 +1019,9 @@
         Жирно включить свет слева, крыша против, жирно выключить свет слева, левый пиф-паф, жирно включить слева, крыша по и
         жирно выключить свет слева.</p>
         <p style="text-align:center"><img src="voll_44_1.xml" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:29&link=2zloUL9uWSQ">на видео 2:29</a> <br/>
-        <b>Алгоритм: (Lw\' U\' Lw) (L\' U\' L U) (Lw\' U Lw)</b><br/><br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:29&link=GXTtry_rdq8">на видео 2:29</a> <br/>
+        <b>Алгоритм: (Lw\' U\' Lw) (L\' U\' L U) (Lw\' U Lw)</b><br/>
+
         <p>Как Клюшку: Тоже похоже на предыдущий случай, но зеркалим не право и лево, а вращения граней по и против часовой стрелки.
         В этом случае можно обойтись без вращения левой грани.<br/>
         Жирно выключить свет, крыша против, жирно включить свет, обратный пиф-паф, снова жирно выключить, крыша обратно и
@@ -1029,12 +1030,18 @@
         Фингертрикс: <a href="rubic-activity://ytactivity?time=6:32&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (Rw\' U\' Rw) (R\' U\' R U) (Rw\' U Rw)</b><br/><br/>
         ]]></string>
-    <string name="oll_st44_url"></string>
+    <string name="oll_st44_url">GXTtry_rdq8</string>
 
     <string name="oll_st45_title">#45 Правая клюшка с блоком</string>
     <string name="oll_st45_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
+        <p>Как левую Г с левым блоком:</p>
         <p style="text-align:center"><img src="voll_45_1.xml" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=1:57&link=o1u_YhSHEB4">на видео 1:57</a> <br/>
+        <b>Алгоритм: (Rw\' U Rw) (U Rw\' U\' Rw) y (R U\' R\')</b><br/><br/>
+
+        <p>Как правую клюшку c блоком:</p>
+        <p style="text-align:center"><img src="voll_45_2.xml" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=6:13&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (R\' F R) (U R\' F\' R) (F U\' F\')</b><br/><br/>
         ]]></string>
@@ -1046,7 +1053,7 @@
         <p style="text-align:center"><img src="voll_46_1.xml" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=6:03&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (Rw U\' Rw\') (U\' Rw U Rw\') y\' (R\' U R)</b><br/><br/>
-        <b>Как смоделировать</b>: Выполнить левую рюмку - (R U R\' U\') R\' F (R2 U R\' U\') F\'.
+        <b>Как смоделировать</b>: Выполнить рюмку c блоком - (R U R\' U\') R\' F (R2 U R\' U\') F\'.
         ]]></string>
     <string name="oll_st46_url"></string>
 
