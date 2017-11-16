@@ -1,6 +1,5 @@
 package ru.tohaman.rubicsguide.PLLTest;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
@@ -15,7 +14,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -37,19 +35,16 @@ public class PLLTestFragment extends Fragment {
     private SharedPreferences sp;
     private List<ListPager> mListPagers = new ArrayList();
     private ListPagerLab listPagerLab;
-    private ListPager mListPager;
 
     private int red,blue,white,orange,green,yellow,back,black;
     private int[] cubeColor = new int[8];
     private String[] pll = new String[21];
     private List<String> pllrnd = new ArrayList<>();
-    private String[] pllst = new String[21];
     private int guessRows; // количество строк с кнопками для вывода кнопок
     private int correctAnswer; // номер правильного алгоритма
     private ImageView img;
     private final Random random = new Random();
     private LinearLayout[] guessLinearLayouts; // строки с кнопками ответов
-    private Button SettingButton;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -68,13 +63,13 @@ public class PLLTestFragment extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment_pll_test, container, false);
 
-        img = (ImageView) v.findViewById(R.id.test_image);
+        img = v.findViewById(R.id.test_image);
 
         guessLinearLayouts = new LinearLayout[4];
-        guessLinearLayouts[0] = (LinearLayout) v.findViewById(R.id.row1LinearLayout);
-        guessLinearLayouts[1] = (LinearLayout) v.findViewById(R.id.row2LinearLayout);
-        guessLinearLayouts[2] = (LinearLayout) v.findViewById(R.id.row3LinearLayout);
-        guessLinearLayouts[3] = (LinearLayout) v.findViewById(R.id.row4LinearLayout);
+        guessLinearLayouts[0] = v.findViewById(R.id.row1LinearLayout);
+        guessLinearLayouts[1] = v.findViewById(R.id.row2LinearLayout);
+        guessLinearLayouts[2] = v.findViewById(R.id.row3LinearLayout);
+        guessLinearLayouts[3] = v.findViewById(R.id.row4LinearLayout);
 
         // configure listeners for the guess Buttons
         for (LinearLayout row : guessLinearLayouts) {
@@ -89,7 +84,7 @@ public class PLLTestFragment extends Fragment {
         String rows = sp.getString(sPLLTest_row, "6");
         SharedPreferences.Editor e = sp.edit();
         e.putString(sPLLTest_row,rows);
-        e.commit(); // подтверждаем изменения
+        e.apply(); // подтверждаем изменения
 
         updateGuessRows(sp);
         LoadNextPLL();
@@ -111,9 +106,6 @@ public class PLLTestFragment extends Fragment {
     @Override
     public void onResume (){
         super.onResume();
-        for (int i=0; i < mListPagers.size(); i++) {
-            pllst[i] = PLLTestSettingsFragment.GetNameFromListPagers(mListPagers, i);
-        }
         updateGuessRows(sp);
         LoadNextPLL();
     }
@@ -150,36 +142,11 @@ public class PLLTestFragment extends Fragment {
         pll[19] = "242314133421";    //дальняя улитка
         pll[20] = "111223442334";    //север
 
-        pllst[0] = sp.getString("pllst00", "Смежные окошки");
-        pllst[1] = sp.getString("pllst01", "Противоположные окошки");
-        pllst[2] = sp.getString("pllst02", "Рельсы");
-        pllst[3] = sp.getString("pllst03", "Шахматы");
-        pllst[4] = sp.getString("pllst04", "Запад");
-        pllst[5] = sp.getString("pllst05", "Юг");
-        pllst[6] = sp.getString("pllst06", "Светофор");
-        pllst[7] = sp.getString("pllst07", "Австралия");
-        pllst[8] = sp.getString("pllst08", "Смежный треугольник");
-        pllst[9] = sp.getString("pllst09", "Противоположный треугольник");
-        pllst[10] = sp.getString("pllst10", "Черепаха");
-        pllst[11] = sp.getString("pllst11", "Угол");
-        pllst[12] = sp.getString("pllst12", "Правые кирпичи");
-        pllst[13] = sp.getString("pllst13", "Левые кирпичи");
-        pllst[14] = sp.getString("pllst14", "Убийца");
-        pllst[15] = sp.getString("pllst15", "Экватор");
-        pllst[16] = sp.getString("pllst16", "Встречная машинка");
-        pllst[17] = sp.getString("pllst17", "Попутная машинка");
-        pllst[18] = sp.getString("pllst18", "Ближняя улитка");
-        pllst[19] = sp.getString("pllst19", "Дальняя улитка");
-        pllst[20] = sp.getString("pllst20", "Север");
-
-        //TODO избавиться от pllst, перейти на mListPagers
-
         listPagerLab = ListPagerLab.get(getActivity());
         mListPagers = listPagerLab.getPhaseList("PLLTEST");
 
         pllrnd.clear();
         for (int i=0; i < mListPagers.size(); i++) {
-            pllst[i] = PLLTestSettingsFragment.GetNameFromListPagers(mListPagers, i);
             pllrnd.add(String.valueOf(i));
         }
     }
@@ -189,7 +156,7 @@ public class PLLTestFragment extends Fragment {
         public void onClick(View v) {
         Button guessButton = ((Button) v);
         String guess = guessButton.getText().toString();
-        if (guess.equals(pllst[correctAnswer])) {   //верный ответ
+        if (guess.equals(PLLTestSettingsFragment.GetNameFromListPagers(mListPagers, correctAnswer))) {   //верный ответ
             LoadNextPLL();
         } else {    //неправильный ответ
             guessButton.setEnabled(false);
@@ -221,7 +188,7 @@ public class PLLTestFragment extends Fragment {
                 newGuessButton.setEnabled(true);  // активируем кнопку
                 // пишем текст а названием алгоритма на кнопку
                 int numOfalg = Integer.parseInt(pllrnd.get((row * 2) + column));
-                newGuessButton.setText(pllst[numOfalg]);
+                newGuessButton.setText(PLLTestSettingsFragment.GetNameFromListPagers(mListPagers,numOfalg));
             }
         }
 
@@ -229,7 +196,7 @@ public class PLLTestFragment extends Fragment {
         int row = random.nextInt(guessRows);
         int column = random.nextInt(2);
         LinearLayout randomRow = guessLinearLayouts[row]; // получить строку
-        String AlgName = pllst[correctAnswer];
+        String AlgName = PLLTestSettingsFragment.GetNameFromListPagers(mListPagers, correctAnswer);
         ((Button) randomRow.getChildAt(column)).setText(AlgName);
 
 //        SettingButton.setText(AlgName);
@@ -282,7 +249,7 @@ public class PLLTestFragment extends Fragment {
         }
 
         DrawableCompat.setTint(drw1, yellow);
-        DrawableCompat.setTint(drw2, cubeColor[0+a]);
+        DrawableCompat.setTint(drw2, cubeColor[a]);
         DrawableCompat.setTint(drw3, cubeColor[1+a]);
         DrawableCompat.setTint(drw4, cubeColor[2+a]);
 
@@ -297,8 +264,7 @@ public class PLLTestFragment extends Fragment {
         DrawableCompat.setTint(drw13, cubeColor[cube3[8]+b]);
 
         Drawable drawableArray[] = new Drawable[] { drw0, drw1, drw2, drw3, drw4, drw5, drw6, drw7, drw8, drw9, drw10, drw11, drw12, drw13};
-        LayerDrawable layerDraw = new LayerDrawable(drawableArray);
-        return layerDraw;
+        return new LayerDrawable(drawableArray);
     }
 
     private LayerDrawable GenDrawable2sidePll (String st_pll) {
@@ -328,8 +294,8 @@ public class PLLTestFragment extends Fragment {
         }
 
         DrawableCompat.setTint(drw1, yellow);
-        DrawableCompat.setTint(drw2, cubeColor[0+a]);
-        DrawableCompat.setTint(drw3, cubeColor[1+a]);
+        DrawableCompat.setTint(drw2, cubeColor[a]);
+        DrawableCompat.setTint(drw3, cubeColor[a+1]);
 
         DrawableCompat.setTint(drw4, cubeColor[cube3[0]+b]);
         DrawableCompat.setTint(drw5, cubeColor[cube3[1]+b]);
@@ -339,8 +305,7 @@ public class PLLTestFragment extends Fragment {
         DrawableCompat.setTint(drw9, cubeColor[cube3[5]+b]);
 
         Drawable drawableArray[] = new Drawable[] { drw0, drw1, drw2, drw3, drw4, drw5, drw6, drw7, drw8, drw9};
-        LayerDrawable layerDraw = new LayerDrawable(drawableArray);
 
-        return layerDraw;
+        return new LayerDrawable(drawableArray);
     }
 }

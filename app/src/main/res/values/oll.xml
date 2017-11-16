@@ -990,49 +990,63 @@
         ]]></string>
     <string name="oll_st42_url">hfRAZDv84fA</string>
 
-    <string name="oll_st43_title">#43 Правая клюшка с точкой</string>
+    <string name="oll_st43_title">#43 Левая клюшка с точкой</string>
     <string name="oll_st43_descr" formatted="false"><![CDATA[
         <p>Еще четыре ситуации, но в которых я отступлю, от наименований предложенных Максимом. Согласитесь,
         что <b>Правая клюшка с точкой</b>, звучит лучше и легче, чем <b>Левая буква Г с правым блоком</b>.
         Обратите внимание, что <b>Правые</b> буквы Г - это <b>Левые</b> клюшки и соответственно
         <b>Левые</b> буквы Г - это <b>Правые</b> клюшки. Чтобы меньше путаться, если для вас это <b>буквы Г</b>
         то выполняйте их по алгоритмам Максима, а если <b>Клюшки</b>, то по алгоритмам от Феликса Земдегса,
-        в них как раз, начальное положение загнутым концом к себе и вы четко увидите, с блоком Клюшка или с точкой.
+        в них как раз, в основном начальное положение загнутым концом к себе и вы четко увидите, с блоком Клюшка или с точкой.
         </p>
         <b>Как решать:</b>
+        <p>Едиственная Клюшка, которую надо поставить загнутым концом вверх (как букву Г).<br/>
+        Жирно включить свет, крыша по, жирно выключить свет, пиф-паф, снова жирно включить, крыша обратно и
+        жирно выключить свет.</p>
         <p style="text-align:center"><img src="voll_43_1.xml" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:29&link=2zloUL9uWSQ">на видео 2:29</a> <br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=6:23&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: (Rw U Rw\') (R U R\' U\') (Rw U\' Rw\')</b><br/><br/>
+        <b>Как смоделировать</b>: <a href="rubic-activity://ytactivity?time=3:03&link=2zloUL9uWSQ">на видео 3:03</a>
+        повторить данный алгоритм 5 раз.
+    ]]></string>
+    <string name="oll_st43_url">2zloUL9uWSQ</string>
+
+    <string name="oll_st44_title">#44 Правая клюшка с точкой</string>
+    <string name="oll_st44_descr" formatted="false"><![CDATA[
+        <b>Как решать:</b>
+        <p>Как левую Г с правым блоком: Так же как и предыдущий случай, но слева. Т.е.
+        Жирно включить свет слева, крыша против, жирно выключить свет слева, левый пиф-паф, жирно включить слева, крыша по и
+        жирно выключить свет слева.</p>
+        <p style="text-align:center"><img src="voll_44_1.xml" width="60%%"></p>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=2:29&link=2zloUL9uWSQ">на видео 2:29</a> <br/>
+        <b>Алгоритм: (Lw\' U\' Lw) (L\' U\' L U) (Lw\' U Lw)</b><br/><br/>
+        <p>Как Клюшку: Тоже похоже на предыдущий случай, но зеркалим не право и лево, а вращения граней по и против часовой стрелки.
+        В этом случае можно обойтись без вращения левой грани.<br/>
+        Жирно выключить свет, крыша против, жирно включить свет, обратный пиф-паф, снова жирно выключить, крыша обратно и
+        жирно включить свет.</p>
+        <p style="text-align:center"><img src="voll_44_2.xml" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=6:32&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
         <b>Алгоритм: (Rw\' U\' Rw) (R\' U\' R U) (Rw\' U Rw)</b><br/><br/>
         ]]></string>
-    <string name="oll_st43_url"></string>
-
-    <string name="oll_st44_title">#44 Левая клюшка с точкой</string>
-    <string name="oll_st44_descr" formatted="false"><![CDATA[
-        <b>Как решать:</b>
-        <p>Поставить клюшку загнутым концом вверх.</p>
-        <p style="text-align:center"><img src="voll_44_1.xml" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=6:23&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: (Rw U Rw\') (R U R\' U\') (Rw U\' Rw\')</b><br/><br/>
-    ]]></string>
     <string name="oll_st44_url"></string>
 
-
-    <string name="oll_st45_title">#45 Левая клюшка с блоком</string>
+    <string name="oll_st45_title">#45 Правая клюшка с блоком</string>
     <string name="oll_st45_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         <p style="text-align:center"><img src="voll_45_1.xml" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=6:03&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: (Rw U\' Rw\') (U\' Rw U Rw\') y\' (R\' U R)</b><br/><br/>
-        <b>Как смоделировать</b>: Выполнить левую рюмку - (R U R\' U\') R\' F (R2 U R\' U\') F\'.
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=6:13&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: (R\' F R) (U R\' F\' R) (F U\' F\')</b><br/><br/>
         ]]></string>
-    <string name="oll_st45_url"></string>
+    <string name="oll_st45_url">o1u_YhSHEB4</string>
 
-    <string name="oll_st46_title">#46 Правая клюшка с блоком</string>
+    <string name="oll_st46_title">#46 Левая клюшка с блоком</string>
     <string name="oll_st46_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         <p style="text-align:center"><img src="voll_46_1.xml" width="60%%"></p>
-        Фингертрикс: <a href="rubic-activity://ytactivity?time=6:13&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: (R\' F R) (U R\' F\' R) (F U\' F\')</b><br/><br/>
+        Фингертрикс: <a href="rubic-activity://ytactivity?time=6:03&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
+        <b>Алгоритм: (Rw U\' Rw\') (U\' Rw U Rw\') y\' (R\' U R)</b><br/><br/>
+        <b>Как смоделировать</b>: Выполнить левую рюмку - (R U R\' U\') R\' F (R2 U R\' U\') F\'.
         ]]></string>
     <string name="oll_st46_url"></string>
 
