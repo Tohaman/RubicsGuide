@@ -94,7 +94,7 @@
         <a href="rubic-activity://ytactivity?time=1:20&link=Ar_Zit1VLG0">первыми тремя ходами</a>
         пиф-пафа, т.е. вторым базовым алгоритмом  <b>R U R\'</b>.<br/>
 
-        <p style="text-align:center"><img src="f2l_int_6.png" width="60%%"></p>
+        <p style="text-align:center"><img src="vf2l_int_6.xml" width="60%%"></p>
 
         Пожалуй есть одно исключение, когда не стоит поднимать обе части наверх - это когда угол уже
         стоит на своем месте. В этом случае проще загнать
@@ -108,7 +108,7 @@
         2.1 Первый случай: <b><a href="rubic-activity://ytactivity?time=1:32&link=Ar_Zit1VLG0">белая сбоку</a></b>, т.е.
         парень скромный или наглый.<br/><br/>
 
-        <p style="text-align:center"><img src="f2l_int_7.png" width="60%%"></p>
+        <p style="text-align:center"><img src="vf2l_int_7.xml" width="60%%"></p>
 
         3. <b>Устанавливаем угол (Move the corner piece).</b><br/>
         Для этого подгоняем парня к
@@ -118,7 +118,7 @@
         и . . . отводим угол от той стороны, какого цвета верхняя наклейка. Т.е. так,
         чтобы после отвода, белая наклейка угла оставалась видна.<br/><br/>
 
-        <p style="text-align:center"><img src="f2l_int_8.png" width="60%%"></p>
+        <p style="text-align:center"><img src="vf2l_int_8.xml" width="60%%"></p>
 
         4. Смотрим <b><a href="rubic-activity://ytactivity?time=1:54&link=Ar_Zit1VLG0">одинаковы ли верхние наклейки угла и ребра.</a>
         (Are top colors the same?).</b><br/>
@@ -129,14 +129,14 @@
         те два места, на котороые может встать ребро в зависимости как раз от того, одинаковы или нет
         верхние наклейки угла и ребра.
 
-        <p style="text-align:center"><img src="f2l_int_9.png" width="60%%"></p>
+        <p style="text-align:center"><img src="vf2l_int_9.xml" width="60%%"></p>
 
         Если наклейки
         <a href="rubic-activity://ytactivity?time=2:19&link=Ar_Zit1VLG0">одинаковы,</a> то место рядом с углом.
         Если <a href="rubic-activity://ytactivity?time=2:24&link=Ar_Zit1VLG0">противоположны,</a>
         то на противоположной грани.
 
-        <p style="text-align:center"><img src="f2l_int_10.png" width="80%%"></p>
+        <p style="text-align:center"><img src="vf2l_int_10.xml" width="80%%"></p>
 
         5. С местом определились. Теперь - <b><a href="rubic-activity://ytactivity?time=2:28&link=Ar_Zit1VLG0">ставим ребро на это место.</a>
         (Move the edge piece).</b><br/>
@@ -144,19 +144,19 @@
         Для этого опустим угол на первый этаж вращением той грани, на которой белая наклейка угла.
         Крутим крышу, так чтобы ребро встало на место и возвращаем угол на свое место.
 
-        <p style="text-align:center"><img src="f2l_int_11.png" width="80%%"></p>
+        <p style="text-align:center"><img src="vf2l_int_11.xml" width="80%%"></p>
 
         6. <b><a href="rubic-activity://ytactivity?time=2:48&link=Ar_Zit1VLG0">Заселяем.</a>
         (Insert).</b><br/>
         Используя один из базовых алгоритмов. Для одинаковых верхних наклеек это будет один из первых базовых.
 
-        <p style="text-align:center"><img src="f2l_int_12.png" width="80%%"></p>
+        <p style="text-align:center"><img src="vf2l_int_12.xml" width="80%%"></p>
 
         Теперь о ситуации когда верхние наклейки <a href="rubic-activity://ytactivity?time=2:48&link=Ar_Zit1VLG0">угла и ребра разные.</a><br/>
         Абсолютно те же самые 5 и 6 шаги, только ребро ставим не к углу, а на противоположную грань и для
         заселения используем один из вторых базовых алгоритмов.
 
-        <p style="text-align:center"><img src="f2l_int_13.png" width="60%%"></p>
+        <p style="text-align:center"><img src="vf2l_int_13.xml" width="60%%"></p>
 
         2.2 Вернемся еще чуть назад к ситуации, когда обе части на верхнем слое, но
         <b><a href="rubic-activity://ytactivity?time=3:59&link=Ar_Zit1VLG0">белая наклейка угла сверху</a></b>,
@@ -169,18 +169,18 @@
         А место у ребра в данном случае на своей грани, т.е. делаем хорошо знакомый \"Стебель ромашки\". И теперь
         опускаем ребро на второй этаж <a href="rubic-activity://ytactivity?time=4:18&link=Ar_Zit1VLG0">от своей квартиры.</a>
 
-        <p style="text-align:center"><img src="f2l_int_15.png" width="60%%"></p>
+        <p style="text-align:center"><img src="vf2l_int_15.xml" width="60%%"></p>
 
         4. <b><a href="rubic-activity://ytactivity?time=4:21&link=Ar_Zit1VLG0">Ставим угол над ребром.</a>
         (Put corner above edge).</b> И поднимаем пару на верхний слой.
 
-        <p style="text-align:center"><img src="f2l_int_16.png" width="60%%"></p>
+        <p style="text-align:center"><img src="vf2l_int_16.xml" width="60%%"></p>
 
         5. <b><a href="rubic-activity://ytactivity?time=4:28&link=Ar_Zit1VLG0">Заселяем.</a>
         (Insert).</b><br/>
         Используя один из первых базовых алгоритмов <b>R U\' R\'</b> или <b>L\' U L</b>.<br/><br/>
 
-        <p style="text-align:center"><img src="f2l_int_12.png" width="80%%"></p>
+        <p style="text-align:center"><img src="vf2l_int_12.xml" width="80%%"></p>
 
         Profit!<br/><br/>
 
