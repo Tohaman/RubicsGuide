@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatDelegate;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import ru.tohaman.rubicsguide.PLLTest.PLLTestActivity;
@@ -50,7 +52,12 @@ public class ListActivity extends SingleFragmentActivity implements ListFragment
         } else {
             if (findViewById(R.id.detail_fragment_container) == null) {
                 if (listPager.getPhase().equals("BASIC")) {
-                    Toast.makeText(this, listPager.getDescription(), Toast.LENGTH_SHORT).show();
+                    Toast toast = Toast.makeText(this, listPager.getDescription(), Toast.LENGTH_SHORT);
+                    LinearLayout toastImage = (LinearLayout) toast.getView();
+                    ImageView imageView = new ImageView(this);
+                    imageView.setImageResource (listPager.getIcon());
+                    toastImage.addView(imageView, 0);
+                    toast.show();
                 } else {
                     Intent intent = PagerActivity.newIntent(this, String.valueOf(position), phase);
                     startActivity(intent);
