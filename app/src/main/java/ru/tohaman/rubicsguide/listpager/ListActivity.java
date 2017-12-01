@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import ru.tohaman.rubicsguide.PLLTest.PLLTestActivity;
 import ru.tohaman.rubicsguide.R;
 import ru.tohaman.rubicsguide.SingleFragmentActivity;
 

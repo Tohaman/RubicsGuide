@@ -3,7 +3,7 @@ package ru.tohaman.rubicsguide.g2f;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 
-import ru.tohaman.rubicsguide.PLLTest.PLLTestActivity;
+import ru.tohaman.rubicsguide.plltestgame.PLLTestActivity;
 import ru.tohaman.rubicsguide.R;
 import ru.tohaman.rubicsguide.SingleFragmentActivity;
 import ru.tohaman.rubicsguide.listpager.ListActivity;

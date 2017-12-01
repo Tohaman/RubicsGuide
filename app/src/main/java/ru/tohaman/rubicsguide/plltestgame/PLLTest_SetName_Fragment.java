@@ -1,4 +1,4 @@
-package ru.tohaman.rubicsguide.PLLTest;
+package ru.tohaman.rubicsguide.plltestgame;
 
 import android.app.Activity;
 import android.app.Dialog;

@@ -1,4 +1,4 @@
-package ru.tohaman.rubicsguide.PLLTest;
+package ru.tohaman.rubicsguide.plltestgame;
 
 import android.content.Intent;
 import android.content.SharedPreferences;

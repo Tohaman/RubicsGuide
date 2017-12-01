@@ -12,6 +12,7 @@ import android.widget.ListView;
 
 import ru.tohaman.rubicsguide.R;
 import ru.tohaman.rubicsguide.listpager.ListPager;
+import ru.tohaman.rubicsguide.listpager.ListPagerLab;
 import ru.tohaman.rubicsguide.listpager.MyListAdapter;
 
 import java.util.ArrayList;
@@ -52,7 +53,7 @@ public class G2FFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
+        ListPagerLab listPagerLab = ListPagerLab.get(getActivity());
         View v = inflater.inflate(R.layout.fragment_mainlist, container, false);
 
         // начальная инициализация списка для ListView c адаптером MyListAdapter
@@ -61,6 +62,7 @@ public class G2FFragment extends Fragment {
 
         // создаем адаптер и задаем массивы к адаптеру
         List<ListPager> mListPagers = new ArrayList();
+
         String[] mTitles = getResources().getStringArray(R.array.g2f_title);
         int [] resID = getResID(R.array.g2f_icon);
         for (int i = 0; i < mTitles.length; i++) {

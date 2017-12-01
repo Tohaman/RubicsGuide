@@ -8,8 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import ru.tohaman.rubicsguide.PLLTest.PLLTestActivity;
-import ru.tohaman.rubicsguide.PLLTest.PLLTestSettingsActivity;
+import ru.tohaman.rubicsguide.plltestgame.PLLTestActivity;
 import ru.tohaman.rubicsguide.about.AboutActivity;
 import ru.tohaman.rubicsguide.about.AboutFragment;
 import ru.tohaman.rubicsguide.blind.BlindMenuActivity;

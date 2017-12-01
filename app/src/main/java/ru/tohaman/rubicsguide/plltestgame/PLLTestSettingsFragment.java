@@ -1,4 +1,4 @@
-package ru.tohaman.rubicsguide.PLLTest;
+package ru.tohaman.rubicsguide.plltestgame;
 
 import android.app.Activity;
 import android.content.Context;
@@ -28,7 +28,7 @@ import ru.tohaman.rubicsguide.R;
 import ru.tohaman.rubicsguide.listpager.ListPager;
 import ru.tohaman.rubicsguide.listpager.ListPagerLab;
 
-import static ru.tohaman.rubicsguide.PLLTest.PLLTestFragment.sPLLTest_row;
+import static ru.tohaman.rubicsguide.plltestgame.PLLTestFragment.sPLLTest_row;
 
 /**
  * Created by Toha on 30.07.2017.

@@ -150,6 +150,7 @@ public class ListPagerLab {
         if (sListPagerLab == null) {
             sListPagerLab = new ListPagerLab(context);
         }
+        mContext = context;
         return sListPagerLab;
     }
 
@@ -250,12 +251,15 @@ public class ListPagerLab {
     // т.е. на входе ссылка на <string-array name="ххх"> , а на выходе массив ссылок на элементы этого массива
     public static int[] getResID(int mId) {
         TypedArray tArray = mContext.getResources().obtainTypedArray(mId);
-        int count = tArray.length();
-        int[] idx = new int[count];
-        for (int i =0; i < idx.length; i++) {
-            idx[i] = tArray.getResourceId(i,0);
+        int[] idx = null;
+        if (tArray.length() != 0){
+            int count = tArray.length();
+            idx = new int[count];
+            for (int i = 0; i < idx.length; i++) {
+                idx[i] = tArray.getResourceId(i, 0);
+            }
+            tArray.recycle();
         }
-        tArray.recycle();
         return idx;
     }
 
