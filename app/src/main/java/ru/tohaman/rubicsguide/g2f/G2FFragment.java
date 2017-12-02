@@ -61,7 +61,7 @@ public class G2FFragment extends Fragment {
         ListView mListView = (ListView) v.findViewById(R.id.main_listview);
 
         // создаем адаптер и задаем массивы к адаптеру
-        List<ListPager> mListPagers = new ArrayList();
+        ArrayList<ListPager> mListPagers = new ArrayList<>();
 
         String[] mTitles = getResources().getStringArray(R.array.g2f_title);
         int [] resID = getResID(R.array.g2f_icon);
