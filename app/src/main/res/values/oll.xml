@@ -1143,7 +1143,7 @@
         <p>Ситуация из <b>Ускорения N9</b>.<br/>
         <p style="text-align:center"><img src="voll_53_1.xml" width="60%%"></p>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:00&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: F\' (Rw U R\' U\') Rw F R</b><br/><br/>
+        <b>Алгоритм: F\' (Rw U R\' U\') Rw\' F R</b><br/><br/>
         <p style="text-align:center"><img src="voll_53_2.xml" width="60%%"></p>
         <b>Алгоритм: (R\' F R B\') (R\' F\' R B)</b><br/><br/>
         ]]></string>
