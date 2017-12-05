@@ -23,7 +23,7 @@ public class BlindMenuActivity extends SingleFragmentActivity implements BlindMe
 
     @Override
     protected int getLayoutResId () {
-        return R.layout.activity_masterdetail;
+        return R.layout.activity_autoframe;
     }
 
     @Override

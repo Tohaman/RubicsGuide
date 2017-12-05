@@ -35,7 +35,7 @@ public class MainActivity extends SingleFragmentActivity implements MainFragment
 
     @Override
     protected int getLayoutResId () {
-        return R.layout.activity_maindetail;
+        return R.layout.activity_autoframe;
     }
 
     @Override

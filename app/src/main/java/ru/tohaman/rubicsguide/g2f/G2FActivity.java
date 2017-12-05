@@ -19,7 +19,7 @@ public class G2FActivity extends SingleFragmentActivity implements G2FFragment.C
 
     @Override
     protected int getLayoutResId () {
-        return R.layout.activity_masterdetail;
+        return R.layout.activity_autoframe;
     }   //стр.332
 
     @Override

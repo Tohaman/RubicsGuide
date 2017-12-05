@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/RubicsGuide.iml" filepath="$PROJECT_DIR$/RubicsGuide.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/RubicsGuide.iml" filepath="$PROJECT_DIR$/.idea/RubicsGuide.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
