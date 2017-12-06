@@ -221,11 +221,7 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
                 startActivity(mIntent);
                 return true;
             case R.id.main_donate50r:
-                Intent mIntent2 = new Intent(this, PLLTestActivity.class);
-                startActivity(mIntent2);
-                return true;
-            case R.id.main_donate100r:
-                Log.d(TAG, "100rub button clicked; launching purchase flow for pay 100rub.");
+                Log.d(TAG, "50rub button clicked; launching purchase flow for pay 50rub.");
                 setWaitScreen(true);
 
                 /* TODO: for security, generate your payload here for verification. See the comments on
@@ -234,8 +230,26 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
                 String payload = "";
 
                 try {
-                    mHelper.launchPurchaseFlow(this, SKU_PREMIUM, RC_REQUEST,
+                    mHelper.launchPurchaseFlow(this, SKU_GAS, RC_REQUEST,
                             mPurchaseFinishedListener, payload);
+                } catch (IabAsyncInProgressException e) {
+                    complain("Ошибка запуска потока оплаты. Другая асинхронная операция запущена.");
+                    setWaitScreen(false);
+                }
+                return true;
+
+            case R.id.main_donate100r:
+                Log.d(TAG, "100rub button clicked; launching purchase flow for pay 100rub.");
+                setWaitScreen(true);
+
+                /* TODO: for security, generate your payload here for verification. See the comments on
+                 *        verifyDeveloperPayload() for more info. Since this is a SAMPLE, we just use
+                 *        an empty string, but on a production app you should carefully generate this. */
+                String payload2 = "";
+
+                try {
+                    mHelper.launchPurchaseFlow(this, SKU_PREMIUM, RC_REQUEST,
+                            mPurchaseFinishedListener, payload2);
                 } catch (IabAsyncInProgressException e) {
                     complain("Ошибка запуска потока оплаты. Другая асинхронная операция запущена.");
                     setWaitScreen(false);
