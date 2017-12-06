@@ -1,7 +1,6 @@
 package ru.tohaman.rubicsguide;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
@@ -11,10 +10,8 @@ import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.Toast;
 
-import ru.tohaman.rubicsguide.plltestgame.PLLTestActivity;
 import ru.tohaman.rubicsguide.about.AboutActivity;
 import ru.tohaman.rubicsguide.about.AboutFragment;
 import ru.tohaman.rubicsguide.blind.BlindMenuActivity;
@@ -26,7 +23,7 @@ import ru.tohaman.rubicsguide.timer.TimerActivity;
 import ru.tohaman.rubicsguide.util.IabBroadcastReceiver;
 import ru.tohaman.rubicsguide.util.IabBroadcastReceiver.IabBroadcastListener;
 import ru.tohaman.rubicsguide.util.IabHelper;
-import ru.tohaman.rubicsguide.util.IabHelper.IabAsyncInProgressException;;
+import ru.tohaman.rubicsguide.util.IabHelper.IabAsyncInProgressException;
 import ru.tohaman.rubicsguide.util.IabResult;
 import ru.tohaman.rubicsguide.util.Inventory;
 import ru.tohaman.rubicsguide.util.Purchase;
@@ -39,7 +36,6 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
     private static long back_pressed;
     private SharedPreferences sp;
     private int count;
-    private FiveStarFragment FSF;
     private Boolean neverAskRate;
 
     // Пробуем добавить платежи внутри программы https://xakep.ru/2017/05/23/android-in-apps/
@@ -198,7 +194,7 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
 //                return;
 //            }
 
-            updateUi();
+//            updateUi();
             setWaitScreen(false);
             Log.d(TAG, "Initial inventory query finished; enabling main UI.");
         }
@@ -330,7 +326,7 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
                 count = sp.getInt("startcount", 1);
                 neverAskRate = sp.getBoolean("neverAskRate", false);
                 if ((count > 50) && (!neverAskRate)) {
-                    FSF = new FiveStarFragment();
+                    FiveStarFragment FSF = new FiveStarFragment();
                     // отменяем закрытие окна по кнопке back
                     FSF.setCancelable(false);
                     FSF.show(getSupportFragmentManager(), "RateUsPlease");

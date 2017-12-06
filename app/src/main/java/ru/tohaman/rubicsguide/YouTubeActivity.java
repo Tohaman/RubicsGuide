@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v7.app.AppCompatDelegate;
 import android.view.WindowManager;
 import android.widget.Toast;
 
@@ -37,7 +38,7 @@ public class YouTubeActivity extends Activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
         // Проверяем значения из настроек, выключать экран или нет при прсмотре видео
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
         boolean  sleep_youtube = sp.getBoolean("videoscreen_on", false);
