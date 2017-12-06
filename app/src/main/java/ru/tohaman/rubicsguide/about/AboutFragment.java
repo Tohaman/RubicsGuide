@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import ru.tohaman.rubicsguide.BuildConfig;
 import ru.tohaman.rubicsguide.CommentFragment;
 import ru.tohaman.rubicsguide.FiveStarFragment;
 import ru.tohaman.rubicsguide.R;
@@ -77,6 +78,10 @@ public class AboutFragment extends Fragment {
                 }
             }
         });
+
+        String cur_ver = String.valueOf(BuildConfig.VERSION_CODE);
+        TextView mAboutVersion = v.findViewById(R.id.about_version);
+        mAboutVersion.setText(cur_ver);
         return v;
     }
 

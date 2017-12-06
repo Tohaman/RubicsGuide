@@ -8,8 +8,13 @@
         android:orderInCategory="100"
         app:showAsAction="never"/>
     <item
-        android:id="@+id/main_plltest"
-        android:title="@string/pll_test_title"
+        android:id="@+id/main_donate50r"
+        android:title="@string/small_thanks"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/main_donate100r"
+        android:title="@string/medium_thanks"
         android:orderInCategory="100"
         app:showAsAction="never"/>
 </menu>

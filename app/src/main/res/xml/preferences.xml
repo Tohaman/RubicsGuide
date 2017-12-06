@@ -34,7 +34,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/pll_test_title">
+        android:title="@string/small_thanks">
     <ListPreference
         android:entries="@array/guesses_list"
         android:entryValues="@array/guesses_list"
