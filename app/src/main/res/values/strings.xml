@@ -37,5 +37,5 @@
     <string name="medium_thanks">Сказать Большое спасибо</string>
     <string name="pll_test_rowtext">Кол-во строк с кнопками ответов:</string>
     <string name="pll_test_list_text">Выберите алгоритм, для которого хотите изменить название на свое</string>
-
+    <string name="content_description_app_loading_image">Загрузка изображений</string>
 </resources>
