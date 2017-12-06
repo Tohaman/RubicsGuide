@@ -208,7 +208,6 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
         }
     }
 
-
     @Override
     public boolean onMyOptionsItemSelected (MenuItem item) {
         switch (item.getItemId()) {

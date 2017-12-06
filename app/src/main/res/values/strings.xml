@@ -33,7 +33,8 @@
     <string name="restarting_app">Перезапуск теста</string>
     <string name="settings">Настройки</string>
     <string name="plltest_setname_title">Зайдайте свое имя для:</string>
-    <string name="pll_test_title">Тест PLL (бета)</string>
+    <string name="small_thanks">Сказать спасибо автору</string>
+    <string name="medium_thanks">Сказать Большое спасибо</string>
     <string name="pll_test_rowtext">Кол-во строк с кнопками ответов:</string>
     <string name="pll_test_list_text">Выберите алгоритм, для которого хотите изменить название на свое</string>
 
