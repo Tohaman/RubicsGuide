@@ -1,10 +1,13 @@
 package ru.tohaman.rubicsguide;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -17,15 +20,38 @@ import ru.tohaman.rubicsguide.listpager.ListActivity;
 import ru.tohaman.rubicsguide.listpager.ListFragment;
 import ru.tohaman.rubicsguide.listpager.ListPager;
 import ru.tohaman.rubicsguide.timer.TimerActivity;
+import ru.tohaman.rubicsguide.util.IabBroadcastReceiver;
+import ru.tohaman.rubicsguide.util.IabBroadcastReceiver.IabBroadcastListener;
+import ru.tohaman.rubicsguide.util.IabHelper;
+import ru.tohaman.rubicsguide.util.IabHelper.IabAsyncInProgressException;;
+import ru.tohaman.rubicsguide.util.IabResult;
+import ru.tohaman.rubicsguide.util.Inventory;
+import ru.tohaman.rubicsguide.util.Purchase;
 
-public class MainActivity extends SingleFragmentActivity implements MainFragment.Callbacks, ListFragment.Callbacks {
-    private Intent mIntent;
+public class MainActivity extends SingleFragmentActivity implements IabBroadcastListener,
+        DialogInterface.OnClickListener, MainFragment.Callbacks, ListFragment.Callbacks {
     private String phase;
     private static long back_pressed;
     private SharedPreferences sp;
     private int count;
     private FiveStarFragment FSF;
     private Boolean neverAskRate;
+
+    // Пробуем добавить платежи внутри программы https://xakep.ru/2017/05/23/android-in-apps/
+    // Debug tag, для записи в лог
+    static final String TAG = "RubicsGuide";
+    // Пользователь уже платил?
+    boolean mIsPremium = false;
+    // SKUs для продуктов: the premium upgrade (non-consumable) and gas (consumable)
+    static final String SKU_PREMIUM = "medium_donation";
+    static final String SKU_GAS = "small_donation";
+    // (arbitrary) request code for the purchase flow
+    static final int RC_REQUEST = 10001;
+    // The helper object
+    IabHelper mHelper;
+    // Provides purchase notification while this app is running
+    IabBroadcastReceiver mBroadcastReceiver;
+
 
 
     @Override
@@ -52,7 +78,136 @@ public class MainActivity extends SingleFragmentActivity implements MainFragment
         } else {
             phase = "ABOUT";
         }
+
+        // load game data from PlayMarket
+        loadData();
+        String base64EncodedPublicKey = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiFFr98uzF/2DXWP6fa+2gjHV4VoXdj8KUb5Yoeg46Uj31nkDemyhksAWuNyfVpbyYBo5B7hHxeQj4ygMRlQa9GBbgh7VnwI5QTMVO+JVWaogzC1v14MwoOrynKs82TVqxXJLFykQb1fpc5KEmfj8CuafYv9UCWElH/zV/GKU6eyaBz6Fvyv3xCbjfuk9S6jdJG6UTrGxgUpIAuchkbM2dhlyAqNsk3lDX1G0Xd+1AxD4+EGCyucWsgIMzz7PfTVUFysBU7pbdwjs3M5GaMPlfZYz+Zrg4Nj5s0AnLvuFhSHyIevT2BeNpfmzjMyRNA6rXn1zsHkezVyAQOhYIF8tQwIDAQAB";
+        // Создаем helper, передаем context и public key to verify signatures with
+        Log.d(TAG, "Creating IAB helper.");
+        mHelper = new IabHelper(this, base64EncodedPublicKey);
+
+        //TODO enable debug logging (Для полноценной версии надо поставить в false).
+        mHelper.enableDebugLogging(true);
+
+        // Start setup. This is asynchronous and the specified listener
+        // will be called once setup completes.
+        Log.d(TAG, "Starting setup.");
+        mHelper.startSetup(new IabHelper.OnIabSetupFinishedListener() {
+            public void onIabSetupFinished(IabResult result) {
+                Log.d(TAG, "Setup finished.");
+
+                if (!result.isSuccess()) {
+                    // О нет, у нас проблемы.
+                    complain("Problem setting up in-app billing: " + result);
+                    return;
+                }
+
+                // Have we been disposed of in the meantime? If so, quit.
+                if (mHelper == null) return;
+
+                // Важно: Динамически сгенерированный слушатель броадкастовых сообщений о покупках.
+                // Создаем его динамически, а не через <receiver> in the Manifest
+                // потому что мы всегда вызываем getPurchases() при старте программы, этим мы можем
+                // игнорировать любые броадкасты пока приложение не запущено.
+                // Note: registering this listener in an Activity is a bad idea, but is done here
+                // because this is a SAMPLE. Regardless, the receiver must be registered after
+                // IabHelper is setup, but before first call to getPurchases().
+                mBroadcastReceiver = new IabBroadcastReceiver(MainActivity.this);
+                IntentFilter broadcastFilter = new IntentFilter(IabBroadcastReceiver.ACTION);
+                registerReceiver(mBroadcastReceiver, broadcastFilter);
+
+                // IAB is fully set up. Now, let's get an inventory of stuff we own.
+                Log.d(TAG, "Setup successful. Querying inventory.");
+                try {
+                    mHelper.queryInventoryAsync(mGotInventoryListener);
+                } catch (IabHelper.IabAsyncInProgressException e) {
+                    complain("Error querying inventory. Another async operation in progress.");
+                }
+            }
+        });
+
     }
+
+    // Слушатель, который вызывается, когда мы законичили запрос к серверу о купленных товарах
+    IabHelper.QueryInventoryFinishedListener mGotInventoryListener = new IabHelper.QueryInventoryFinishedListener() {
+        public void onQueryInventoryFinished(IabResult result, Inventory inventory) {
+            Log.d(TAG, "Query inventory finished.");
+
+            // Хелпер был ликвидирован? If so, выходим.
+            if (mHelper == null) return;
+
+            // Не получилось?
+            if (result.isFailure()) {
+                complain("Failed to query inventory: " + result);
+                return;
+            }
+
+            Log.d(TAG, "Query inventory was successful.");
+
+            /*
+             * Проверяем купленные товары. Обратите внимание, что проверяем для каждой покупки
+             * to see if it's correct! See verifyDeveloperPayload().
+             */
+
+            // Do we have the premium upgrade?
+            // Проверяем, платил ли пользователь уже 100руб.
+            Purchase premiumPurchase = inventory.getPurchase(SKU_PREMIUM);
+            mIsPremium = (premiumPurchase != null && verifyDeveloperPayload(premiumPurchase));
+            Log.d(TAG, "User is " + (mIsPremium ? "PREMIUM" : "NOT PREMIUM"));
+
+            // First find out which subscription is auto renewing
+            // У нас подписок нет, так что пока это отключаем
+//            Purchase gasMonthly = inventory.getPurchase(SKU_INFINITE_GAS_MONTHLY);
+//            Purchase gasYearly = inventory.getPurchase(SKU_INFINITE_GAS_YEARLY);
+//            if (gasMonthly != null && gasMonthly.isAutoRenewing()) {
+//                mInfiniteGasSku = SKU_INFINITE_GAS_MONTHLY;
+//                mAutoRenewEnabled = true;
+//            } else if (gasYearly != null && gasYearly.isAutoRenewing()) {
+//                mInfiniteGasSku = SKU_INFINITE_GAS_YEARLY;
+//                mAutoRenewEnabled = true;
+//            } else {
+//                mInfiniteGasSku = "";
+//                mAutoRenewEnabled = false;
+//            }
+
+            // The user is subscribed if either subscription exists, even if neither is auto
+            // renewing
+//            mSubscribedToInfiniteGas = (gasMonthly != null && verifyDeveloperPayload(gasMonthly))
+//                    || (gasYearly != null && verifyDeveloperPayload(gasYearly));
+//            Log.d(TAG, "User " + (mSubscribedToInfiniteGas ? "HAS" : "DOES NOT HAVE")
+//                    + " infinite gas subscription.");
+//            if (mSubscribedToInfiniteGas) mTank = TANK_MAX;
+
+            // Check for gas delivery -- if we own gas, we should fill up the tank immediately
+            // Проверяем платил ли 50 руб
+            Purchase gasPurchase = inventory.getPurchase(SKU_GAS);
+//            if (gasPurchase != null && verifyDeveloperPayload(gasPurchase)) {
+//                Log.d(TAG, "We have gas. Consuming it.");
+//                try {
+//                    mHelper.consumeAsync(inventory.getPurchase(SKU_GAS), mConsumeFinishedListener);
+//                } catch (IabAsyncInProgressException e) {
+//                    complain("Error consuming gas. Another async operation in progress.");
+//                }
+//                return;
+//            }
+
+            updateUi();
+            setWaitScreen(false);
+            Log.d(TAG, "Initial inventory query finished; enabling main UI.");
+        }
+    };
+
+    @Override
+    public void receivedBroadcast() {
+        // Received a broadcast notification that the inventory of items has changed
+        Log.d(TAG, "Received broadcast notification. Querying inventory.");
+        try {
+            mHelper.queryInventoryAsync(mGotInventoryListener);
+        } catch (IabAsyncInProgressException e) {
+            complain("Error querying inventory. Another async operation in progress.");
+        }
+    }
+
 
     @Override
     public boolean onMyOptionsItemSelected (MenuItem item) {
@@ -61,10 +216,15 @@ public class MainActivity extends SingleFragmentActivity implements MainFragment
                 Intent mIntent = new Intent(this, SettingsActivity.class);
                 startActivity(mIntent);
                 return true;
-            case R.id.main_plltest:
+            case R.id.main_donate50r:
                 Intent mIntent2 = new Intent(this, PLLTestActivity.class);
                 startActivity(mIntent2);
                 return true;
+            case R.id.main_donate100r:
+//                Intent mIntent2 = new Intent(this, PLLTestActivity.class);
+//                startActivity(mIntent2);
+                return true;
+
             default:
                 return super.onOptionsItemSelected(item) ;
         }
@@ -76,7 +236,7 @@ public class MainActivity extends SingleFragmentActivity implements MainFragment
         phase = getResources().getStringArray(R.array.main_phase)[id];
         switch (phase) {
             case "BEGIN":
-                mIntent = ListActivity.newIntenet(this, phase);
+                Intent mIntent = ListActivity.newIntenet(this, phase);
                 startActivity(mIntent);
                 break;
 
