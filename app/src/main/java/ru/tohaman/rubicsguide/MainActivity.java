@@ -31,6 +31,8 @@ import ru.tohaman.rubicsguide.util.IabResult;
 import ru.tohaman.rubicsguide.util.Inventory;
 import ru.tohaman.rubicsguide.util.Purchase;
 
+import static ru.tohaman.rubicsguide.DeveloperKey.base64EncodedPublicKey;
+
 public class MainActivity extends SingleFragmentActivity implements IabBroadcastListener,
         MainFragment.Callbacks, ListFragment.Callbacks {
     private String phase;
@@ -78,6 +80,7 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Если повернули экран или вернулись в активность, то открываем ту фазу, которая была, иначе - О Программе
         if (savedInstanceState != null) {
             phase = savedInstanceState.getString("phase");
         } else {
@@ -86,7 +89,6 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
 
         // load game data from PlayMarket
         loadData();
-        String base64EncodedPublicKey = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiFFr98uzF/2DXWP6fa+2gjHV4VoXdj8KUb5Yoeg46Uj31nkDemyhksAWuNyfVpbyYBo5B7hHxeQj4ygMRlQa9GBbgh7VnwI5QTMVO+JVWaogzC1v14MwoOrynKs82TVqxXJLFykQb1fpc5KEmfj8CuafYv9UCWElH/zV/GKU6eyaBz6Fvyv3xCbjfuk9S6jdJG6UTrGxgUpIAuchkbM2dhlyAqNsk3lDX1G0Xd+1AxD4+EGCyucWsgIMzz7PfTVUFysBU7pbdwjs3M5GaMPlfZYz+Zrg4Nj5s0AnLvuFhSHyIevT2BeNpfmzjMyRNA6rXn1zsHkezVyAQOhYIF8tQwIDAQAB";
         // Создаем helper, передаем context и public key to verify signatures with
         Log.d(TAG, "Creating IAB helper.");
         mHelper = new IabHelper(this, base64EncodedPublicKey);
