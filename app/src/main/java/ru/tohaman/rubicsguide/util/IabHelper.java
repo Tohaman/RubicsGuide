@@ -393,18 +393,18 @@ public class IabHelper {
     }
 
     public void launchPurchaseFlow(Activity act, String sku, int requestCode,
-            OnIabPurchaseFinishedListener listener, String extraData)
+                                   OnIabPurchaseFinishedListener listener, String extraData)
         throws IabAsyncInProgressException {
         launchPurchaseFlow(act, sku, ITEM_TYPE_INAPP, null, requestCode, listener, extraData);
     }
 
     public void launchSubscriptionPurchaseFlow(Activity act, String sku, int requestCode,
-            OnIabPurchaseFinishedListener listener) throws IabAsyncInProgressException {
+                                               OnIabPurchaseFinishedListener listener) throws IabAsyncInProgressException {
         launchSubscriptionPurchaseFlow(act, sku, requestCode, listener, "");
     }
 
     public void launchSubscriptionPurchaseFlow(Activity act, String sku, int requestCode,
-            OnIabPurchaseFinishedListener listener, String extraData)
+                                               OnIabPurchaseFinishedListener listener, String extraData)
         throws IabAsyncInProgressException {
         launchPurchaseFlow(act, sku, ITEM_TYPE_SUBS, null, requestCode, listener, extraData);
     }
@@ -413,7 +413,7 @@ public class IabHelper {
      * Initiate the UI flow for an in-app purchase. Call this method to initiate an in-app purchase,
      * which will involve bringing up the Google Play screen. The calling activity will be paused
      * while the user interacts with Google Play, and the result will be delivered via the
-     * activity's {@link Activity#onActivityResult} method, at which point you must call
+     * activity's {@link android.app.Activity#onActivityResult} method, at which point you must call
      * this object's {@link #handleActivityResult} method to continue the purchase flow. This method
      * MUST be called from the UI thread of the Activity.
      *
@@ -423,14 +423,14 @@ public class IabHelper {
      *      ITEM_TYPE_SUBS)
      * @param oldSkus A list of SKUs which the new SKU is replacing or null if there are none
      * @param requestCode A request code (to differentiate from other responses -- as in
-     *      {@link Activity#startActivityForResult}).
+     *      {@link android.app.Activity#startActivityForResult}).
      * @param listener The listener to notify when the purchase process finishes
      * @param extraData Extra data (developer payload), which will be returned with the purchase
      *      data when the purchase completes. This extra data will be permanently bound to that
      *      purchase and will always be returned when the purchase is queried.
      */
     public void launchPurchaseFlow(Activity act, String sku, String itemType, List<String> oldSkus,
-            int requestCode, OnIabPurchaseFinishedListener listener, String extraData)
+                                   int requestCode, OnIabPurchaseFinishedListener listener, String extraData)
         throws IabAsyncInProgressException {
         checkNotDisposed();
         checkSetupDone("launchPurchaseFlow");
@@ -504,7 +504,7 @@ public class IabHelper {
     /**
      * Handles an activity result that's part of the purchase flow in in-app billing. If you
      * are calling {@link #launchPurchaseFlow}, then you must call this method from your
-     * Activity's {@link Activity@onActivityResult} method. This method
+     * Activity's {@link android.app.Activity@onActivityResult} method. This method
      * MUST be called from the UI thread of the Activity.
      *
      * @param requestCode The requestCode as you received it.
@@ -684,7 +684,7 @@ public class IabHelper {
      * @param listener The listener to notify when the refresh operation completes.
      */
     public void queryInventoryAsync(final boolean querySkuDetails, final List<String> moreItemSkus,
-            final List<String> moreSubsSkus, final QueryInventoryFinishedListener listener)
+                                    final List<String> moreSubsSkus, final QueryInventoryFinishedListener listener)
         throws IabAsyncInProgressException {
         final Handler handler = new Handler();
         checkNotDisposed();

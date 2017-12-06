@@ -48,8 +48,10 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
     static final String SKU_GAS = "small_donation";
     // (arbitrary) request code for the purchase flow
     static final int RC_REQUEST = 10001;
-    // Current amount of rub was paid
-    int mTank;
+    // Тут будем подсчитывать сколько пользователь уже заплатил, пока не знаю для чего
+    int mCoins;
+    // Все ли хрошо с запуском GooglePlay, если нет, то оплату не запускаем
+    Boolean mGooglePlayOK;
     // The helper object
     IabHelper mHelper;
     // Provides purchase notification while this app is running
@@ -95,13 +97,15 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
         // Start setup. This is asynchronous and the specified listener
         // will be called once setup completes.
         Log.d(TAG, "Starting setup.");
+        mGooglePlayOK = true; // изначально считаем что все ОК
         mHelper.startSetup(new IabHelper.OnIabSetupFinishedListener() {
             public void onIabSetupFinished(IabResult result) {
                 Log.d(TAG, "Setup finished.");
 
                 if (!result.isSuccess()) {
-                    // О нет, у нас проблемы.
-                    complain("Problem setting up in-app billing: " + result);
+                    // Хьюстон, у нас проблемы с Google Play
+                    //complain("Пожалуйста обновите Google Play App до последней версии "); // + result
+                    mGooglePlayOK = false;
                     return;
                 }
 
@@ -179,7 +183,7 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
 //                    || (gasYearly != null && verifyDeveloperPayload(gasYearly));
 //            Log.d(TAG, "User " + (mSubscribedToInfiniteGas ? "HAS" : "DOES NOT HAVE")
 //                    + " infinite gas subscription.");
-//            if (mSubscribedToInfiniteGas) mTank = TANK_MAX;
+//            if (mSubscribedToInfiniteGas) mCoins = TANK_MAX;
 
             // Check for gas delivery -- if we own gas, we should fill up the tank immediately
             // Проверяем платил ли 50 руб
@@ -227,11 +231,16 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
                  *        an empty string, but on a production app you should carefully generate this. */
                 String payload = "";
 
-                try {
-                    mHelper.launchPurchaseFlow(this, SKU_GAS, RC_REQUEST,
-                            mPurchaseFinishedListener, payload);
-                } catch (IabAsyncInProgressException e) {
-                    complain("Ошибка запуска потока оплаты. Другая асинхронная операция запущена.");
+                if (mGooglePlayOK){
+                    try {
+                        mHelper.launchPurchaseFlow(this, SKU_GAS, RC_REQUEST,
+                                mPurchaseFinishedListener, payload);
+                    } catch (IabAsyncInProgressException e) {
+                        complain("Ошибка запуска потока оплаты. Другая асинхронная операция запущена.");
+                        setWaitScreen(false);
+                    }
+                } else {
+                    complain("Пожалуйста обновите Google Play App до последней версии ");
                     setWaitScreen(false);
                 }
                 return true;
@@ -245,11 +254,16 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
                  *        an empty string, but on a production app you should carefully generate this. */
                 String payload2 = "";
 
-                try {
-                    mHelper.launchPurchaseFlow(this, SKU_PREMIUM, RC_REQUEST,
-                            mPurchaseFinishedListener, payload2);
-                } catch (IabAsyncInProgressException e) {
-                    complain("Ошибка запуска потока оплаты. Другая асинхронная операция запущена.");
+                if (mGooglePlayOK) {
+                    try {
+                        mHelper.launchPurchaseFlow(this, SKU_PREMIUM, RC_REQUEST,
+                                mPurchaseFinishedListener, payload2);
+                    } catch (IabAsyncInProgressException e) {
+                        complain("Ошибка запуска потока оплаты. Другая асинхронная операция запущена.");
+                        setWaitScreen(false);
+                    }
+                } else {
+                    complain("Пожалуйста обновите Google Play App до последней версии ");
                     setWaitScreen(false);
                 }
                 return true;
@@ -441,20 +455,25 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
             if (purchase.getSku().equals(SKU_GAS)) {
                 // Пользователь задонатил 50 руб.
                 Log.d(TAG, "Покупка = донат 50 руб.");
-                try {
-                    mHelper.consumeAsync(purchase, mConsumeFinishedListener);
-                } catch (IabAsyncInProgressException e) {
-                    complain("Ошибка оплаты. Другая асинхронная операция запущена.");
-                    setWaitScreen(false);
-                    return;
-                }
+                alert("Большое спаибо за поддержку");
+                mCoins = mCoins + 50;
+                saveData();
+                setWaitScreen(false);
+//                try {
+//                    mHelper.consumeAsync(purchase, mConsumeFinishedListener);
+//                } catch (IabAsyncInProgressException e) {
+//                    complain("Ошибка оплаты. Другая асинхронная операция запущена.");
+//                    setWaitScreen(false);
+//                    return;
+//                }
             }
             else if (purchase.getSku().equals(SKU_PREMIUM)) {
-                // bought the premium upgrade!
+                // Пользователь задонатил 100 руб.
                 Log.d(TAG, "Покупка = донат 100 руб.");
                 alert("Большое спаибо за поддержку");
                 mIsPremium = true;
-                updateUi();
+                mCoins = mCoins + 100;
+                saveData();
                 setWaitScreen(false);
             }
         }
@@ -475,14 +494,14 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
 //                // successfully consumed, so we apply the effects of the item in our
 //                // game world's logic, which in our case means filling the gas tank a bit
 //                Log.d(TAG, "Consumption successful. Provisioning.");
-//                mTank = mTank == TANK_MAX ? TANK_MAX : mTank + 1;
+//                mCoins = mCoins == TANK_MAX ? TANK_MAX : mCoins + 1;
 //                saveData();
-//                alert("You filled 1/4 tank. Your tank is now " + String.valueOf(mTank) + "/4 full!");
+//                alert("You filled 1/4 tank. Your tank is now " + String.valueOf(mCoins) + "/4 full!");
 //            }
 //            else {
 //                complain("Error while consuming: " + result);
 //            }
-            updateUi();
+//            updateUi();
             setWaitScreen(false);
             Log.d(TAG, "End consumption flow.");
         }
@@ -528,7 +547,7 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
 //            ((ImageView)findViewById(R.id.gas_gauge)).setImageResource(R.drawable.gas_inf);
 //        }
 //        else {
-//            int index = mTank >= TANK_RES_IDS.length ? TANK_RES_IDS.length - 1 : mTank;
+//            int index = mCoins >= TANK_RES_IDS.length ? TANK_RES_IDS.length - 1 : mCoins;
 //            ((ImageView)findViewById(R.id.gas_gauge)).setImageResource(TANK_RES_IDS[index]);
 //        }
     }
@@ -561,15 +580,15 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
          */
 
         SharedPreferences.Editor spe = getPreferences(MODE_PRIVATE).edit();
-        spe.putInt("tank", mTank);
+        spe.putInt("payCoins", mCoins);
         spe.apply();
-        Log.d(TAG, "Saved data: tank = " + String.valueOf(mTank));
+        Log.d(TAG, "Saved data: tank = " + String.valueOf(mCoins));
     }
 
     void loadData() {
         SharedPreferences sp = getPreferences(MODE_PRIVATE);
-        mTank = sp.getInt("tank", 0);
-        Log.d(TAG, "Loaded data: tank = " + String.valueOf(mTank));
+        mCoins = sp.getInt("payCoins", 0);
+        Log.d(TAG, "Пользователь уже оплатил = " + String.valueOf(mCoins));
     }
 
 }
