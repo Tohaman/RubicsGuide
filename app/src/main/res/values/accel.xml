@@ -405,7 +405,7 @@
         <p><b>\"Смежная наклейка\"</b> - пока делаем старым алгоритмом. Альтернативные варианты рассмотрим
         в <a href="rubic-activity://ytactivity?time=0:00&link=L_r41Y1MuAY">PLL Треугольники</a> <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=6:00&link=B_Fkals9Svk">на видео 6:00</a> <br/>
-        <b>Алгоритм: (R, U\', R) D2 (R\' U R) D2 R2</b>
+        <b>Алгоритм: (R U\' R) D2 (R\' U R) D2 R2</b>
     ]]></string>
     <string name="accel_st20_url">B_Fkals9Svk</string>
 
