@@ -29,8 +29,6 @@ import ru.tohaman.rubicsguide.listpager.PagerFragment;
  */
 
 public class AboutFragment extends Fragment {
-    private TextView mAboutField;
-    private Button mFiveStarButton;
     //стр.249
     private static final int REQUEST_COMMENT = 0;
     private static final String DIALOG_COMMENT = "DialogComment";  //в этой "паре", передаем значение комментария для редактирования
@@ -62,12 +60,12 @@ public class AboutFragment extends Fragment {
             spanresult = Html.fromHtml(description, imgGetter, null);
         }
 
-        mAboutField = (TextView) v.findViewById(R.id.about_textView);
-        mAboutField.setText(spanresult);
-        mAboutField.setMovementMethod(LinkMovementMethod.getInstance());
+        TextView aboutField = v.findViewById(R.id.about_textView);
+        aboutField.setText(spanresult);
+        aboutField.setMovementMethod(LinkMovementMethod.getInstance());
 
-        mFiveStarButton = (Button) v.findViewById(R.id.fivestarbutton);
-        mFiveStarButton.setOnClickListener(new View.OnClickListener(){
+        Button fiveStarButton = v.findViewById(R.id.fivestarbutton);
+        fiveStarButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 final String appPackageName = getActivity().getPackageName(); // getPackageName() from Context or Activity object
@@ -88,14 +86,13 @@ public class AboutFragment extends Fragment {
     @Override
     public void onActivityResult (int requestCode, int resultCode, Intent data) {
         if (resultCode != Activity.RESULT_OK) {
-            return;
         }
     }
 
     @SuppressWarnings("deprecation")
     private Html.ImageGetter imgGetter = new Html.ImageGetter() {
         public Drawable getDrawable(String source) {
-            Drawable drawable = null;
+            Drawable drawable;
             source = source.replace(".png", "");
             int resID = getResources().getIdentifier(source , "drawable", getActivity().getPackageName());
             //если картинка в drawable не найдена, то подсовываем заведомо существующую картинку

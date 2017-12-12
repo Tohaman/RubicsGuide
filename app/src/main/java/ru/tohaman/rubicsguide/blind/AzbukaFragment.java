@@ -40,10 +40,8 @@ import static ru.tohaman.rubicsguide.blind.ScambleFragment.Initialize;
  */
 
 public class AzbukaFragment extends Fragment {
-    private TextView mAzbukaField;
     private MyGridAdapter mAdapter;
-    private GridView mGridView;
-    private List<CubeAzbuka> mGridList = new ArrayList();
+    private List<CubeAzbuka> mGridList = new ArrayList<>();
     ListPagerLab listPagerLab;
     int[] cubeColor = new int[6];
     int red,blue,white,orange,green,yellow,back,black;
@@ -86,16 +84,16 @@ public class AzbukaFragment extends Fragment {
             spanresult = Html.fromHtml(description, imgGetter, null);
         }
 
-        mAzbukaField = (TextView) view.findViewById(R.id.azbuka_textView);
-        mAzbukaField.setText(spanresult);
-        mAzbukaField.setMovementMethod(LinkMovementMethod.getInstance());
+        TextView azbukaField = (TextView) view.findViewById(R.id.azbuka_textView);
+        azbukaField.setText(spanresult);
+        azbukaField.setMovementMethod(LinkMovementMethod.getInstance());
 
         InitGridList();
 
-        mGridView = (GridView) view.findViewById(R.id.azbuka_gridView);
+        GridView gridView = (GridView) view.findViewById(R.id.azbuka_gridView);
         mAdapter = new MyGridAdapter(view.getContext(),R.layout.grid_item2,mGridList);
-        mGridView.setAdapter(mAdapter);
-        mGridView.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        gridView.setAdapter(mAdapter);
+        gridView.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 //                mAzbukaField.setText("Выбранный элемент: " + mAdapter.getItem(position));
@@ -106,7 +104,7 @@ public class AzbukaFragment extends Fragment {
 //                mAzbukaField.setText("Ничего не выбрано");
             }
         });
-        mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View v,
@@ -191,7 +189,7 @@ public class AzbukaFragment extends Fragment {
     @SuppressWarnings("deprecation")
     private Html.ImageGetter imgGetter = new Html.ImageGetter() {
         public Drawable getDrawable(String source) {
-            Drawable drawable = null;
+            Drawable drawable;
             source = source.replace(".png", "");
             int resID = getResources().getIdentifier(source , "drawable", getActivity().getPackageName());
             //если картинка в drawable не найдена, то подсовываем заведомо существующую картинку

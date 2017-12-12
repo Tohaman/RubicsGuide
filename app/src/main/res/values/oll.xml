@@ -414,7 +414,7 @@
     ]]></string>
     <string name="oll_st10_url">RczVF3poV4E</string>
 
-    <string name="oll_st11_title">#11 Чистый бумеранг 1-3</string>
+    <string name="oll_st11_title">#11 Чистый бумеранг 1–3</string>
     <string name="oll_st11_descr" formatted="false"><![CDATA[
 		<p>Вариантов чистого бумеранга целых шесть, чтобы понять который из них перед вами, поверните бумеранг
         на 9 и 12 часов и посмотрите на переднюю и правую грани. Сколько там желтых наклеек.
@@ -433,7 +433,7 @@
     ]]></string>
     <string name="oll_st11_url">QbXsEIoaEIY</string>
 
-    <string name="oll_st12_title">#12 Чистый бумеранг 2-1</string>
+    <string name="oll_st12_title">#12 Чистый бумеранг 2–1</string>
     <string name="oll_st12_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         <p>Данный бумеранг можно назвать классическим, т.к. выполнить надо алгоритм
@@ -447,7 +447,7 @@
     ]]></string>
     <string name="oll_st12_url">hpKpQDXbA4Q</string>
 
-    <string name="oll_st13_title">#13 Чистый бумеранг 1-2</string>
+    <string name="oll_st13_title">#13 Чистый бумеранг 1–2</string>
     <string name="oll_st13_descr" formatted="false"><![CDATA[
         <b>Как решать:</b><br/>
         <p>Является зеркальным случаем предыдущего, и поэтому все тоже, что и в бумеранге 2-1, но слева.
@@ -460,7 +460,7 @@
     ]]></string>
     <string name="oll_st13_url">CQYVqMdqpQk</string>
 
-    <string name="oll_st14_title">#14 Чистый бумеранг 3-1</string>
+    <string name="oll_st14_title">#14 Чистый бумеранг 3–1</string>
     <string name="oll_st14_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         <p>1. Простой и быстрый алгоритм с двойным включением/выключением света.
@@ -482,7 +482,7 @@
     ]]></string>
     <string name="oll_st14_url">Ek1Y8_vjQYw</string>
 
-    <string name="oll_st15_title">#15 Чистый бумеранг 2-3 (Официант)</string>
+    <string name="oll_st15_title">#15 Чистый бумеранг 2–3 (Официант)</string>
     <string name="oll_st15_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         <p>1. Официант подходит к ближнему столику, принимает заказ, идет к дальнему столику,
@@ -499,7 +499,7 @@
     ]]></string>
     <string name="oll_st15_url">YBDy3ZrHy54</string>
 
-    <string name="oll_st16_title">#16 Чистый бумеранг 3-2</string>
+    <string name="oll_st16_title">#16 Чистый бумеранг 3–2</string>
     <string name="oll_st16_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         <p>1. Противоположный алгоритму Феликса для бумеранга 2-3. Повернуть на 12 и 3 часов.
@@ -1063,7 +1063,7 @@
         ]]></string>
     <string name="oll_st46_url">QDzT8Fe_nf8</string>
 
-    <string name="oll_st47_title">#47 Чистая палка 3-3</string>
+    <string name="oll_st47_title">#47 Чистая палка 3–3</string>
     <string name="oll_st47_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         <p style="text-align:center"><img src="voll_47_1.xml" width="60%%"></p>
@@ -1072,7 +1072,7 @@
         ]]></string>
     <string name="oll_st47_url">n52nllQkI_A</string>
 
-    <string name="oll_st48_title">#48 Чистая палка 1-3</string>
+    <string name="oll_st48_title">#48 Чистая палка 1–3</string>
     <string name="oll_st48_descr" formatted="false"><![CDATA[
         <p>В этой палке есть и блок и точка, но будем считать ее палкой с точкой.</p>
         <b>Как решать:</b>
@@ -1083,7 +1083,7 @@
     ]]></string>
     <string name="oll_st48_url">GJrGFdkBx2s</string>
 
-    <string name="oll_st49_title">#49 Чистая палка 2-2</string>
+    <string name="oll_st49_title">#49 Чистая палка 2–2</string>
     <string name="oll_st49_descr" formatted="false"><![CDATA[
         <p>Рассмотрим чистые палки, которые бывают 4 видов:
         Симметричные/ассиметричные и с точкой/блоком. Первой будет ассиметричная палка с блоком.
@@ -1098,7 +1098,7 @@
         ]]></string>
     <string name="oll_st49_url">26xcl1sXPak</string>
 
-    <string name="oll_st50_title">#50 Чистая палка 1-1</string>
+    <string name="oll_st50_title">#50 Чистая палка 1–1</string>
     <string name="oll_st50_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         <p>Поставить палку горизонтально. </p>

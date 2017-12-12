@@ -39,4 +39,5 @@
     <string name="pll_test_list_text">Выберите алгоритм, для которого хотите изменить название на свое</string>
     <string name="content_description_app_loading_image">Загрузка изображений</string>
     <string name="version">20171206</string>
+    <string name="pll_set_name_edittext">Свое название ситуации</string>
 </resources>

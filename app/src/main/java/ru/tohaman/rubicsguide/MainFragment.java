@@ -65,7 +65,7 @@ public class MainFragment extends Fragment {
         ListView mListView = (ListView) v.findViewById(R.id.main_listview2);
 
         // создаем адаптер и задаем массивы к адаптеру
-        List<ListPager> mListPagers = new ArrayList();
+        List<ListPager> mListPagers = new ArrayList<>();
         String[] mTitles = getResources().getStringArray(R.array.main_title);
         int [] resID = getResID(R.array.main_icon, getContext());
         for (int i = 0; i < mTitles.length; i++) {
