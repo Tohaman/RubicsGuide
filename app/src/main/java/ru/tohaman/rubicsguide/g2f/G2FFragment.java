@@ -18,11 +18,11 @@ import ru.tohaman.rubicsguide.listpager.MyListAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import static ru.tohaman.rubicsguide.listpager.ListPagerLab.getResID;
+import static ru.tohaman.rubicsguide.util.Util.getResID;
 
 
 /**
- * Created by Toha on 20.05.2017.
+ * Created by Toha on 20.05.2017. ListView для меню переходим на Фридрих
  */
 public class G2FFragment extends Fragment {
 
@@ -53,18 +53,18 @@ public class G2FFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ListPagerLab listPagerLab = ListPagerLab.get(getActivity());
+        ListPagerLab listPagerLab = ListPagerLab.get();
         View v = inflater.inflate(R.layout.fragment_mainlist, container, false);
 
         // начальная инициализация списка для ListView c адаптером MyListAdapter
         // получаем элемент ListView
-        ListView mListView = (ListView) v.findViewById(R.id.main_listview);
+        ListView mListView = v.findViewById(R.id.main_listview);
 
         // создаем адаптер и задаем массивы к адаптеру
         ArrayList<ListPager> mListPagers = new ArrayList<>();
 
         String[] mTitles = getResources().getStringArray(R.array.g2f_title);
-        int [] resID = getResID(R.array.g2f_icon);
+        int [] resID = getResID(R.array.g2f_icon,getContext());
         for (int i = 0; i < mTitles.length; i++) {
             mListPagers.add (new ListPager("G2F", i+1, mTitles[i], resID[i]));
         }

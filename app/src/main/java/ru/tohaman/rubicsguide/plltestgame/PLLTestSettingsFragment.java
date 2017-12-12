@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
@@ -35,13 +36,12 @@ import static ru.tohaman.rubicsguide.plltestgame.PLLTestFragment.sPLLTest_row;
  */
 
 public class PLLTestSettingsFragment extends Fragment {
-    private List<ListPager> mListPagers = new ArrayList();
+    private List<ListPager> mListPagers = new ArrayList<>();
     private ListPagerLab listPagerLab;
     private ListPager mListPager;
     private SharedPreferences sp;
     private final String DIALOG_COMMENT = "DialogComment";  //в этой "паре", передаем значение комментария для редактирования
     private final int REQUEST_COMMENT = 0;
-    private int guessRows; // количество строк с кнопками для вывода кнопок
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -50,12 +50,12 @@ public class PLLTestSettingsFragment extends Fragment {
 
         // начальная инициализация списка для ListView c адаптером MyListAdapter
         // получаем элемент ListView
-        ListView mListView = (ListView) v.findViewById(R.id.main_listview2);
-        final TextView guessRowsText = (TextView) v.findViewById(R.id.pll_test_textview_row);
+        ListView mListView = v.findViewById(R.id.main_listview2);
+        final TextView guessRowsText = v.findViewById(R.id.pll_test_textview_row);
 
         sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
-        Button plus_button = (Button) v.findViewById(R.id.pll_test_button_plus);
+        Button plus_button = v.findViewById(R.id.pll_test_button_plus);
         plus_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Обработка нажатия
@@ -67,13 +67,12 @@ public class PLLTestSettingsFragment extends Fragment {
                     guessRowsText.setText(String.valueOf(i));
                     SharedPreferences.Editor e = sp.edit();
                     e.putString(sPLLTest_row, String.valueOf(i*2));
-                    e.commit(); // подтверждаем изменения
-
+                    e.apply(); // подтверждаем изменения
                 }
             }
         });
 
-        Button minus_button = (Button) v.findViewById(R.id.pll_test_button_minus);
+        Button minus_button = v.findViewById(R.id.pll_test_button_minus);
         minus_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Обработка нажатия
@@ -85,14 +84,14 @@ public class PLLTestSettingsFragment extends Fragment {
                     guessRowsText.setText(String.valueOf(i));
                     SharedPreferences.Editor e = sp.edit();
                     e.putString(sPLLTest_row, String.valueOf(i*2));
-                    e.commit(); // подтверждаем изменения
+                    e.apply(); // подтверждаем изменения
 
                 }
             }
         });
 
         // Получаем синглет
-        listPagerLab = ListPagerLab.get(getActivity());
+        listPagerLab = ListPagerLab.get();
         mListPagers = listPagerLab.getPhaseList("PLLTEST");
         ListAdapter mListAdapter  = new PLLListAdapter(v.getContext(), R.layout.list_item, mListPagers);
         // устанавливаем адаптер
@@ -115,7 +114,7 @@ public class PLLTestSettingsFragment extends Fragment {
         mListView.setOnItemClickListener(itemListener);
         // Записываем количество строк в текст на экране
         String rows = sp.getString(sPLLTest_row, "6");
-        guessRows = Integer.parseInt(rows) / 2;
+        int guessRows = Integer.parseInt(rows) / 2;
         guessRowsText.setText(String.valueOf(guessRows));
 
         // возвращаем сформированный View в активность
@@ -142,17 +141,18 @@ public class PLLTestSettingsFragment extends Fragment {
 
     private class PLLListAdapter extends ArrayAdapter<ListPager> {
 
-        public PLLListAdapter(Context context, int list_item, List<ListPager> listPlls) {
+        PLLListAdapter(Context context, int list_item, List<ListPager> listPlls) {
             super(context, list_item, listPlls);
         }
 
+        @NonNull
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
+        public View getView(int position, View convertView, @NonNull ViewGroup parent) {
 
             if (convertView == null) { convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, null);}
 
-            ImageView icon = (ImageView) convertView.findViewById(R.id.list_item_image);
-            TextView text = (TextView) convertView.findViewById(R.id.list_item_title_text);
+            ImageView icon = convertView.findViewById(R.id.list_item_image);
+            TextView text = convertView.findViewById(R.id.list_item_title_text);
 
             ListPager listPager = mListPagers.get(position);
 
@@ -172,7 +172,7 @@ public class PLLTestSettingsFragment extends Fragment {
             // Получаем значение из EXTRA_Comment
             String string = (String) data.getSerializableExtra(CommentFragment.EXTRA_Comment);
             mListPager.setComment(string);
-            ListPagerLab.get(getActivity()).updateListPager(mListPager);
+            listPagerLab.updateListPager(mListPager);
         }
     }
 
@@ -191,7 +191,7 @@ public class PLLTestSettingsFragment extends Fragment {
         for (int i = 0; i < mListPagers.size(); i++) {
             if (mListPagers.get(i).getTitle().equals(param)) {
                 mListPagers.get(i).setComment(value);
-                ListPagerLab.get(getActivity()).updateListPager(mListPagers.get(i));
+                listPagerLab.updateListPager(mListPagers.get(i));
             }
         }
     }

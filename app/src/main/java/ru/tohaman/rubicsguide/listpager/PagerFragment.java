@@ -87,7 +87,7 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
         String phase = (String) getArguments().getSerializable(RubicPhase);  //Приняли название фазы (PLL,OLL,...)
         setHasOptionsMenu(true);
         int id = Integer.parseInt(stringId);
-        mListPager = ListPagerLab.get(getActivity()).getPhaseItem(id, phase);
+        mListPager = ListPagerLab.get().getPhaseItem(id, phase);
 
     }
 
@@ -261,7 +261,7 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
             // Получаем значение из EXTRA_Comment
             String string = (String) data.getSerializableExtra(CommentFragment.EXTRA_Comment);
             mListPager.setComment(string);
-            ListPagerLab.get(getActivity()).updateListPager(mListPager);
+            ListPagerLab.get().updateListPager(mListPager);
             // Обновляем текст в пэйджере
             mCommentField.setText(mListPager.getComment());
         }

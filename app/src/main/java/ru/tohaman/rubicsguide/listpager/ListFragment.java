@@ -20,11 +20,11 @@ import java.util.List;
 import static ru.tohaman.rubicsguide.g2f.G2FActivity.RubicPhase;
 
 /**
- * Created by Toha on 09.04.2017.
+ * Created by Toha on 09.04.2017. Фрагмент для отображения ListView пунктов меню
  */
 
 public class ListFragment extends Fragment {
-    private List<ListPager> mListPagers = new ArrayList();
+    private List<ListPager> mListPagers;
     private RecyclerView mRecyclerView;
     private RecycleAdapter mRecycleAdapter;
     private String Phase;
@@ -66,7 +66,7 @@ public class ListFragment extends Fragment {
         String phase;
 
         // Получаем синглет
-        listPagerLab = ListPagerLab.get(getActivity());
+        listPagerLab = ListPagerLab.get();
         // Получаем данные о фазе от родителя и делаем выборку по фазе
 
         if (uri != null) {
@@ -84,7 +84,7 @@ public class ListFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_list, container, false);
 
         // список через РесайклВью с адаптером RecycleAdapter
-        mRecyclerView = (RecyclerView) v.findViewById(R.id.recycler_view_list);
+        mRecyclerView = v.findViewById(R.id.recycler_view_list);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         updateUI();
         //mCallbacks.onItemSelected(mListPagers.get(0));
@@ -107,14 +107,14 @@ public class ListFragment extends Fragment {
         private TextView mTextView;
         private ListPager mListPager;
 
-        public RecycleViewHolder(View view) {
+        RecycleViewHolder(View view) {
             super(view);
             itemView.setOnClickListener(this);
-            mImageView = (ImageView) view.findViewById(R.id.list_item_image);
-            mTextView = (TextView) view.findViewById(R.id.list_item_title_text);
+            mImageView = view.findViewById(R.id.list_item_image);
+            mTextView = view.findViewById(R.id.list_item_title_text);
         }
 
-        public void bindRecycleView (ListPager listPager){
+        void bindRecycleView(ListPager listPager){
             mListPager = listPager;
             mTextView.setText(mListPager.getTitle());
             mImageView.setImageResource(mListPager.getIcon());

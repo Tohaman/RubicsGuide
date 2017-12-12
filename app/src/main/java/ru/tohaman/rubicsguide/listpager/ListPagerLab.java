@@ -1,15 +1,18 @@
 package ru.tohaman.rubicsguide.listpager;
 
+import android.app.Application;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import ru.tohaman.rubicsguide.MainActivity;
 import ru.tohaman.rubicsguide.R;
 import ru.tohaman.rubicsguide.database.BaseHelper;
 import ru.tohaman.rubicsguide.database.DBCursorWrapper;
 import ru.tohaman.rubicsguide.database.DBSchema;
+import ru.tohaman.rubicsguide.util.Util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,90 +25,88 @@ import java.util.List;
  */
 
 public class ListPagerLab {
-    private static ListPagerLab sListPagerLab;
-    private static Context mContext;
     private SQLiteDatabase mDatabase;
     private List<ListPager> mListPagers;
 
-    private ListPagerLab(Context context){
-        mContext = context.getApplicationContext();
+    private ListPagerLab(){
+        Context mContext = MainActivity.get();
         mDatabase = new BaseHelper(mContext).getWritableDatabase();
         mListPagers = new ArrayList<>();
 
         String mPhase = "PLL";
         String[] mTitles = mContext.getResources().getStringArray(R.array.pll_title);
-        int [] mResId = getResID(R.array.pll_icon);
-        int [] Descr = getResID(R.array.pll_descr);
+        int [] mResId = Util.getResID(R.array.pll_icon,mContext);
+        int [] Descr = Util.getResID(R.array.pll_descr,mContext);
         String[] mUrl = mContext.getResources().getStringArray(R.array.pll_url);
         PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
 
         mPhase = "OLL";
         mTitles = mContext.getResources().getStringArray(R.array.oll_title);
-        mResId = getResID(R.array.oll_icon);
-        Descr = getResID(R.array.oll_descr);
+        mResId = Util.getResID(R.array.oll_icon,mContext);
+        Descr = Util.getResID(R.array.oll_descr,mContext);
         mUrl = mContext.getResources().getStringArray(R.array.oll_url);
         PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
 
         mPhase = "CROSS";
         mTitles = mContext.getResources().getStringArray(R.array.cross_title);
-        mResId = getResID(R.array.cross_icon);
-        Descr = getResID(R.array.cross_descr);
+        mResId = Util.getResID(R.array.cross_icon,mContext);
+        Descr = Util.getResID(R.array.cross_descr,mContext);
         mUrl = mContext.getResources().getStringArray(R.array.cross_url);
         PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
 
         mPhase = "ACCEL";
         mTitles = mContext.getResources().getStringArray(R.array.accel_title);
-        mResId = getResID(R.array.accel_icon);
-        Descr = getResID(R.array.accel_descr);
+        mResId = Util.getResID(R.array.accel_icon,mContext);
+        Descr = Util.getResID(R.array.accel_descr,mContext);
         mUrl = mContext.getResources().getStringArray(R.array.accel_url);
         PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
 
         mPhase = "F2L";
         mTitles = mContext.getResources().getStringArray(R.array.f2l_title);
-        mResId = getResID(R.array.f2l_icon);
-        Descr = getResID(R.array.f2l_descr);
+        mResId = Util.getResID(R.array.f2l_icon,mContext);
+        Descr = Util.getResID(R.array.f2l_descr,mContext);
         mUrl = mContext.getResources().getStringArray(R.array.f2l_url);
         PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
 
         mPhase = "ADVF2L";
         mTitles = mContext.getResources().getStringArray(R.array.advf2l_title);
-        mResId = getResID(R.array.advf2l_icon);
-        Descr = getResID(R.array.advf2l_descr);
+        mResId = Util.getResID(R.array.advf2l_icon,mContext);
+        Descr = Util.getResID(R.array.advf2l_descr,mContext);
         mUrl = mContext.getResources().getStringArray(R.array.advf2l_url);
         PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
 
         mPhase = "BASIC";
         mTitles = mContext.getResources().getStringArray(R.array.basic_title);
-        mResId = getResID(R.array.basic_icon);
-        Descr = getResID(R.array.basic_descr);
+        mResId = Util.getResID(R.array.basic_icon,mContext);
+        Descr = Util.getResID(R.array.basic_descr,mContext);
         mUrl = mContext.getResources().getStringArray(R.array.basic_url);
         PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
 
         mPhase = "BEGIN";
         mTitles = mContext.getResources().getStringArray(R.array.begin_title);
-        mResId = getResID(R.array.begin_icon);
-        Descr = getResID(R.array.begin_descr);
+        mResId = Util.getResID(R.array.begin_icon,mContext);
+        Descr = Util.getResID(R.array.begin_descr,mContext);
         mUrl = mContext.getResources().getStringArray(R.array.begin_url);
         PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
 
         mPhase = "BLIND";
         mTitles = mContext.getResources().getStringArray(R.array.blind_title);
-        mResId = getResID(R.array.blind_icon);
-        Descr = getResID(R.array.blind_descr);
+        mResId = Util.getResID(R.array.blind_icon,mContext);
+        Descr = Util.getResID(R.array.blind_descr,mContext);
         mUrl = mContext.getResources().getStringArray(R.array.blind_url);
         PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
 
         mPhase = "BLINDACC";
         mTitles = mContext.getResources().getStringArray(R.array.blindacc_title);
-        mResId = getResID(R.array.blindacc_icon);
-        Descr = getResID(R.array.blindacc_descr);
+        mResId = Util.getResID(R.array.blindacc_icon,mContext);
+        Descr = Util.getResID(R.array.blindacc_descr,mContext);
         mUrl = mContext.getResources().getStringArray(R.array.blindacc_url);
         PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
 
         mPhase = "SCRAMBLEGEN";
         mTitles = mContext.getResources().getStringArray(R.array.scramblegen_title);
-        mResId = getResID(R.array.scramblegen_icon);
-        Descr = getResID(R.array.scramblegen_descr);
+        mResId = Util.getResID(R.array.scramblegen_icon,mContext);
+        Descr = Util.getResID(R.array.scramblegen_descr,mContext);
         mUrl = mContext.getResources().getStringArray(R.array.scramblegen_url);
         PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
 
@@ -118,11 +119,25 @@ public class ListPagerLab {
 
         mPhase = "PLLTEST";
         mTitles = mContext.getResources().getStringArray(R.array.pll_test_phases);
-        mResId = getResID(R.array.pll_test_icon);
-        Descr = getResID(R.array.pll_test_descr);
+        mResId = Util.getResID(R.array.pll_test_icon,mContext);
+        Descr = Util.getResID(R.array.pll_test_descr,mContext);
         mUrl = mContext.getResources().getStringArray(R.array.pll_test_url);
         PhaseInit (mPhase, mTitles, mResId, Descr, mUrl);
 
+    }
+
+    private static ListPagerLab instance;
+
+    // Создаем синглет, т.е. класс с закрытым конструктором. Открыт метод get, который
+    // создает экземпляр, только если он еще не создан, в противном случае возвращает, то что уже создано
+    public static ListPagerLab get(){
+        if (instance == null) instance = getSync();
+        return instance;
+    }
+
+    private static synchronized ListPagerLab getSync() {
+        if (instance==null) instance = new ListPagerLab();
+        return instance;
     }
 
     // Инициализация фазы, с заданными массивами Заголовков, Иконок, Описаний, ютуб-ссылок
@@ -144,18 +159,6 @@ public class ListPagerLab {
     }
 
 
-
-
-    // Создаем синглет, т.е. класс с закрытым конструктором. Открыт метод get, который
-    // создает экземпляр, только если он еще не создан, в противном случае возвращает, то что уже создано
-    public static ListPagerLab get(Context context) {
-        if (sListPagerLab == null) {
-            sListPagerLab = new ListPagerLab(context);
-        }
-        mContext = context;
-        return sListPagerLab;
-    }
-
     //возвращает из ListPagerLab список ListPager'ов с заданной фазой
     public List<ListPager> getPhaseList(String Phase){
         List<ListPager> sPagerLists = new ArrayList<>();
@@ -170,7 +173,7 @@ public class ListPagerLab {
 
     //возвращает из ListPagerLab один ListPager с заданными фазой и номером
     public ListPager getPhaseItem(int id, String phase) {
-        ListPager mPagerList = null;
+        ListPager mPagerList = new ListPager("",0,"",0);
 
         for (ListPager listPager : mListPagers){
             if (phase.equals(listPager.getPhase())& id==listPager.getId()) {
@@ -247,22 +250,6 @@ public class ListPagerLab {
                 DBSchema.BaseTable.Cols.ID +
                         " =? and " + DBSchema.BaseTable.Cols.PHASE + " = ?",
                 new String[] {lp.getStringId(), lp.getPhase()});
-    }
-
-    // возвращает массив целых числел, являющихся ссылками на ресурсы входящего массива (заданного тк же ссылкой)
-    // т.е. на входе ссылка на <string-array name="ххх"> , а на выходе массив ссылок на элементы этого массива
-    public static int[] getResID(int mId) {
-        TypedArray tArray = mContext.getResources().obtainTypedArray(mId);
-        int[] idx = null;
-        if (tArray.length() != 0){
-            int count = tArray.length();
-            idx = new int[count];
-            for (int i = 0; i < idx.length; i++) {
-                idx[i] = tArray.getResourceId(i, 0);
-            }
-            tArray.recycle();
-        }
-        return idx;
     }
 
     public String[] getMaximAzbuka() {
@@ -383,4 +370,6 @@ public class ListPagerLab {
         }
         return azbuka;
     }
+
+
 }

@@ -33,10 +33,9 @@ public class PLLTestFragment extends Fragment {
     public static final String sPLLTest_row = "pll_test_row";
 
     private SharedPreferences sp;
-    private List<ListPager> mListPagers = new ArrayList();
-    private ListPagerLab listPagerLab;
+    private List<ListPager> mListPagers = new ArrayList<>();
 
-    private int red,blue,white,orange,green,yellow,back,black;
+    private int red,blue,white,orange,green,yellow,black;
     private int[] cubeColor = new int[8];
     private String[] pll = new String[21];
     private List<String> pllrnd = new ArrayList<>();
@@ -142,7 +141,7 @@ public class PLLTestFragment extends Fragment {
         pll[19] = "242314133421";    //дальняя улитка
         pll[20] = "111223442334";    //север
 
-        listPagerLab = ListPagerLab.get(getActivity());
+        ListPagerLab listPagerLab = ListPagerLab.get();
         mListPagers = listPagerLab.getPhaseList("PLLTEST");
 
         pllrnd.clear();

@@ -18,10 +18,10 @@ import ru.tohaman.rubicsguide.R;
 import ru.tohaman.rubicsguide.listpager.ListPager;
 import ru.tohaman.rubicsguide.listpager.MyListAdapter;
 
-import static ru.tohaman.rubicsguide.listpager.ListPagerLab.getResID;
+import static ru.tohaman.rubicsguide.util.Util.getResID;
 
 /**
- * Created by Toha on 21.06.2017.
+ * Created by Toha on 21.06.2017. Фрагмент для отображения меню выбора слепой сборки
  */
 
 public class BlindMenuFragment extends Fragment {
@@ -60,12 +60,12 @@ public class BlindMenuFragment extends Fragment {
 
         // начальная инициализация списка для ListView c адаптером MyListAdapter
         // получаем элемент ListView
-        ListView mListView = (ListView) v.findViewById(R.id.main_listview);
+        ListView mListView = v.findViewById(R.id.main_listview);
 
         // создаем адаптер и задаем массивы к адаптеру
-        List<ListPager> mListPagers = new ArrayList();
+        List<ListPager> mListPagers = new ArrayList<>();
         String[] mTitles = getResources().getStringArray(R.array.blind_menu_title);
-        int [] resID = getResID(R.array.blind_menu_icon);
+        int [] resID = getResID(R.array.blind_menu_icon,getContext());
         for (int i = 0; i < mTitles.length; i++) {
             mListPagers.add (new ListPager("BLINDMENU", i+1, mTitles[i], resID[i]));
         }

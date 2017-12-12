@@ -24,10 +24,10 @@ import ru.tohaman.rubicsguide.listpager.ListPager;
 import ru.tohaman.rubicsguide.listpager.ListPagerLab;
 import ru.tohaman.rubicsguide.listpager.MyListAdapter;
 
-import static ru.tohaman.rubicsguide.listpager.ListPagerLab.getResID;
+import static ru.tohaman.rubicsguide.util.Util.getResID;
 
 /**
- * Created by Toha on 12.06.2017.
+ * Created by Toha on 12.06.2017. Фрагмент главного меню программы
  */
 
 public class MainFragment extends Fragment {
@@ -56,7 +56,7 @@ public class MainFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         //Инициализируем синглет ListPagerLab, в котором будет база.
-        ListPagerLab listPagerLab = ListPagerLab.get(getActivity());
+        ListPagerLab listPagerLab = ListPagerLab.get();
 
         View v = inflater.inflate(R.layout.fragment_mainscreen, container, false);
 
@@ -67,7 +67,7 @@ public class MainFragment extends Fragment {
         // создаем адаптер и задаем массивы к адаптеру
         List<ListPager> mListPagers = new ArrayList();
         String[] mTitles = getResources().getStringArray(R.array.main_title);
-        int [] resID = getResID(R.array.main_icon);
+        int [] resID = getResID(R.array.main_icon, getContext());
         for (int i = 0; i < mTitles.length; i++) {
             mListPagers.add (new ListPager("MAIN", i+1, mTitles[i], resID[i]));
         }
@@ -93,7 +93,7 @@ public class MainFragment extends Fragment {
         count++;
         SharedPreferences.Editor e = sp.edit();
         e.putInt("startcount", count);
-        e.commit(); // подтверждаем изменения
+        e.apply(); // подтверждаем изменения
 
         // проверяем версию программы в файле настроек, если она отлична от текущей, то выводим окно с описанием обновлений
         ver = sp.getInt("version", 1);
@@ -106,7 +106,7 @@ public class MainFragment extends Fragment {
                 public void onClick(View v) {
                         SharedPreferences.Editor e = sp.edit();
                         e.putInt("version", cur_ver);
-                        e.commit(); // подтверждаем изменения
+                        e.apply(); // подтверждаем изменения
                         mConstraintLayout.setVisibility(View.INVISIBLE);
                     }
             });

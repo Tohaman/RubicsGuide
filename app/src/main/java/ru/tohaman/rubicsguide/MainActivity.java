@@ -37,6 +37,8 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
     private SharedPreferences sp;
     private int count;
     private Boolean neverAskRate;
+    private static MainActivity instance;
+    public static MainActivity get () {return instance;}
 
     // Пробуем добавить платежи внутри программы https://xakep.ru/2017/05/23/android-in-apps/
     // Debug tag, для записи в лог
@@ -78,6 +80,7 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        instance = this;
         //Если повернули экран или вернулись в активность, то открываем ту фазу, которая была, иначе - О Программе
         if (savedInstanceState != null) {
             phase = savedInstanceState.getString("phase");

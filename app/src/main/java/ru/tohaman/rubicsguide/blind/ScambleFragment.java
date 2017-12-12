@@ -33,21 +33,20 @@ import ru.tohaman.rubicsguide.listpager.ListPagerLab;
 
 
 /**
- * Created by Toha on 21.06.2017.
+ * Created by Toha on 21.06.2017. Фрагмент для отображения генератора скрамблов
  */
 
 public class ScambleFragment extends Fragment {
     private Intent mIntent;
 
     private MyGridAdapter mAdapter;
-    private GridView mGridView;
-    private List<CubeAzbuka> mGridList = new ArrayList();
+    private List<CubeAzbuka> mGridList = new ArrayList<>();
 
     private TextView solvetext,ScrambleLength,Scramble,progressText;
     private CheckBox mChBoxRebro,mChBoxUgol,mChBoxSolve;
     private Button gen_button;
     private ProgressBar mProgressBar;
-    private int red,blue,white,orange,green,yellow,back,black;
+    private int back;
     private int[] cubeColor = new int[6];
     private int[] MainCube = new int [54];
     private int[] MainRebro = new int[66];
@@ -77,13 +76,13 @@ public class ScambleFragment extends Fragment {
 
         String scram;
         back = ContextCompat.getColor(view.getContext(), R.color.transparent);
-        black = ContextCompat.getColor(view.getContext(), R.color.black);
-        red = ContextCompat.getColor(view.getContext(), R.color.red);
-        blue = ContextCompat.getColor(view.getContext(), R.color.blue);
-        white = ContextCompat.getColor(view.getContext(), R.color.white);
-        orange = ContextCompat.getColor(view.getContext(), R.color.orange);
-        green = ContextCompat.getColor(view.getContext(), R.color.green);
-        yellow = ContextCompat.getColor(view.getContext(), R.color.yellow);
+        int black = ContextCompat.getColor(view.getContext(), R.color.black);
+        int red = ContextCompat.getColor(view.getContext(), R.color.red);
+        int blue = ContextCompat.getColor(view.getContext(), R.color.blue);
+        int white = ContextCompat.getColor(view.getContext(), R.color.white);
+        int orange = ContextCompat.getColor(view.getContext(), R.color.orange);
+        int green = ContextCompat.getColor(view.getContext(), R.color.green);
+        int yellow = ContextCompat.getColor(view.getContext(), R.color.yellow);
 
         cubeColor[0] = blue;
         cubeColor[1] = orange;
@@ -94,8 +93,8 @@ public class ScambleFragment extends Fragment {
 
 
         // Инициализируем переменные
-        listPagerLab = ListPagerLab.get(getActivity());
-        mListPagers = ListPagerLab.get(getActivity()).getPhaseList("SCRAMBLEGEN");
+        listPagerLab = ListPagerLab.get();
+        mListPagers = listPagerLab.getPhaseList("SCRAMBLEGEN");
         InitArrays();
         MainCube = Initialize();
         InitGridList(MainCube);
@@ -109,9 +108,9 @@ public class ScambleFragment extends Fragment {
         progressText.setTextSize(12);
         progressText.setVisibility(View.INVISIBLE);
 
-        mGridView = (GridView) view.findViewById(R.id.scram_gridView);
+        GridView gridView = (GridView) view.findViewById(R.id.scram_gridView);
         mAdapter = new MyGridAdapter(view.getContext(),R.layout.grid_item2,mGridList);
-        mGridView.setAdapter(mAdapter);
+        gridView.setAdapter(mAdapter);
 
         Button azb_button = (Button) view.findViewById(R.id.button_azbuka);
         azb_button.setOnClickListener(new View.OnClickListener() {
@@ -896,7 +895,7 @@ public class ScambleFragment extends Fragment {
         for (int i = 0; i < mListPagers.size(); i++) {
             if (mListPagers.get(i).getTitle().equals(param)) {
                 mListPagers.get(i).setComment(value);
-                ListPagerLab.get(getActivity()).updateListPager(mListPagers.get(i));
+                listPagerLab.updateListPager(mListPagers.get(i));
             }
         }
     }
