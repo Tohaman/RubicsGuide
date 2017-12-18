@@ -204,7 +204,7 @@
     <p>Решение аналогично предыдущему, но не нужно делать ни перехватов, ни крутить два нижних слоя.
     Девушка идет от квартиры, парень уезжает далеко-далеко, девушка вовращается на третий этаж,
     парня подводим к квартире и заселяем в 3 хода.</p>
-    <b><a href="rubic-activity://ytactivity?time=1:33&link=t5ePtMEJvyE">Алгоритм:</a> (R U2 R\') U (R U R\')</b>
+    <b><a href="rubic-activity://ytactivity?time=1:33&link=t5ePtMEJvyE">Алгоритм:</a> (R U2 R\') U\' (R U R\')</b>
     ]]></string>
     <string name="f2l_st5_url">t5ePtMEJvyE</string>
 
