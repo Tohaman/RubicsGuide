@@ -441,7 +441,7 @@
         <p style="text-align:center"><img src="voll_12_1.xml" width="60%%"></p> <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:09&link=hpKpQDXbA4Q">на видео 1:09</a> <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=7:42&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: F\' (R U R\' U\') (R U R\' U\') F </b> <br/><br/>
+        <b>Алгоритм: F (R U R\' U\') (R U R\' U\') F\' </b> <br/><br/>
         <b>Как смоделировать</b>: В Лондон, 4 пиф-пафа, из Лондона. Или В Лондон, 2 анти-пиф-пафа,
          из Лондона. <a href="rubic-activity://ytactivity?time=2:50&link=hpKpQDXbA4Q">На видео 2:50</a>.
     ]]></string>
@@ -455,7 +455,7 @@
         <p style="text-align:center"><img src="voll_13_1.xml" width="60%%"></p> <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=1:20&link=CQYVqMdqpQk">на видео 1:20</a> <br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=7:52&link=IasVqtCHoj0">от Феликса Земдегса</a> <br/>
-        <b>Алгоритм: U [F (L\' U\' L U) (L\' U\' L U) F\'] </b> <br/><br/>
+        <b>Алгоритм: U [F\' (L\' U\' L U) (L\' U\' L U) F] </b> <br/><br/>
         <b>Как смоделировать</b>: Аналогично предыдущему случаю. Из Лондона, 4 пиф-пафа левой рукой, в Лондон.
     ]]></string>
     <string name="oll_st13_url">CQYVqMdqpQk</string>

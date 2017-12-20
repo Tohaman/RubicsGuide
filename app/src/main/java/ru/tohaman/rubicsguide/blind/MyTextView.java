@@ -5,8 +5,12 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
+/**
+ * Создаем свой TextView, который будет квадратным
+ */
+
 @SuppressLint("AppCompatCustomView")
-public class MyTextView extends TextView {  //Создаем свой TextView, который будет квадратным
+public class MyTextView extends TextView {
 
     public MyTextView(Context context) {
         super(context);

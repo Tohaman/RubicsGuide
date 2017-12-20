@@ -17,7 +17,7 @@
     <string name="pager_youtubeText">Ссылка на полное видео на youtube</string>
     <string name="timer_hint_text1">Для старта и остановки, одновременно коснитесь обеих половинок экрана.</string>
     <string name="timer_hint_text2">Двойной щелчок по экрану обнуляет время.</string>
-    <string name="hint_start_time">0:04:73</string>
+    <string name="hint_start_time">0:04:69</string>
     <string name="input_letter">A</string>
     <string name="input_letter_minus">-</string>
     <string name="input_letter_plus">+</string>
@@ -39,5 +39,5 @@
     <string name="pll_test_list_text">Выберите алгоритм, для которого хотите изменить название на свое</string>
     <string name="content_description_app_loading_image">Загрузка изображений</string>
     <string name="version">20171206</string>
-    <string name="pll_set_name_edittext">Свое название ситуации</string>
+    <string name="pager_view_main_text">тут описание этапа</string>
 </resources>

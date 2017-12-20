@@ -45,7 +45,7 @@
              android:layout_marginBottom="8dp"
              android:textSize="15sp"
              android:textIsSelectable="true"
-             android:text="тут описание этапа"/>
+             android:text="@string/pager_view_main_text"/>
 
          <android.support.constraint.ConstraintLayout
              android:id="@+id/frame"
