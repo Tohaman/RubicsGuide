@@ -349,5 +349,4 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
         }
     };
 
-
 }
