@@ -27,7 +27,7 @@ import ru.tohaman.rubicsguide.R;
  * Created by anton on 19.07.17.
  */
 
-public class TimerFragment extends Fragment {
+public class TimerFragment extends Fragment implements View.OnTouchListener {
     private TextView timerTextView, hintText1, hintText2, hintTextTime;
     long startTime = 0;
     boolean leftHandDown = false;
@@ -77,26 +77,11 @@ public class TimerFragment extends Fragment {
         mRightLight = view.findViewById(R.id.right_light);  // равносильно mRightLight = (View) view.findViewById(R.id.right_light);
 
         // Обработка прикосновения к левому лэйауту
-        mLeftHand.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                mGestureDetector.onTouchEvent(event);           // даблтап
-                int action = event.getActionMasked();
-                leftHandDown = OnTouchAction(leftHandDown, rightHandDown, action, mLeftLight);
-                return true;
-            }
-        });
+        mLeftHand.setOnTouchListener(this);
 
         // Обработка прикосновения к правому лэйауту
-        mRightHand.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                mGestureDetector.onTouchEvent(event);           // даблтап
-                int action = event.getActionMasked();
-                rightHandDown = OnTouchAction(rightHandDown, leftHandDown, action, mRightLight);
-                return true;
-            }
-        });
+        mRightHand.setOnTouchListener(this);
+
 
         mConstraintLayout = (ConstraintLayout) view.findViewById(R.id.hint_background);
         sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
@@ -202,4 +187,20 @@ public class TimerFragment extends Fragment {
         return drawable;
     }
 
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        v.performClick();
+        mGestureDetector.onTouchEvent(event);           // даблтап
+        int action = event.getActionMasked();
+        switch (v.getId()) {
+            case R.id.left_hand:
+                leftHandDown = OnTouchAction(leftHandDown, rightHandDown, action, mLeftLight);
+                break;
+            case R.id.rigth_hand:
+                rightHandDown = OnTouchAction(rightHandDown, leftHandDown, action, mRightLight);
+                break;
+        }
+
+        return true;
+    }
 }

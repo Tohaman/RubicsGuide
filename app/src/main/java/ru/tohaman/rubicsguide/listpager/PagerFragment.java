@@ -147,7 +147,7 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
 
         //смотрим в настройках программы, показывать превью видео или текст
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        boolean enabled = prefs.getBoolean(sVideo_preview, true);
+        boolean previewEnabled = prefs.getBoolean(sVideo_preview, true);
 
         TextView youtubetext = (TextView) v.findViewById(R.id.pager_youtubetext);
         thumbnailView = (YouTubeThumbnailView) v.findViewById(R.id.pager_youtube);
@@ -158,7 +158,7 @@ public class PagerFragment extends Fragment implements YouTubeThumbnailView.OnIn
         } else {
             frame.setVisibility(View.VISIBLE);
         }
-        if (enabled) {
+        if (previewEnabled) {
             youtubetext.setVisibility(View.INVISIBLE);
             thumbnailView.setVisibility(View.VISIBLE);
             thumbnailView.initialize(DEVELOPER_KEY,this);
