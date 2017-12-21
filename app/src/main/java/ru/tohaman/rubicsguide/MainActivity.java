@@ -94,8 +94,8 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
         Log.d(TAG, "Creating IAB helper.");
         mHelper = new IabHelper(this, base64EncodedPublicKey);
 
-        //TODO enable debug logging (Для полноценной версии надо поставить в false).
-        mHelper.enableDebugLogging(true);
+        //TO DO enable debug logging (Для полноценной версии надо поставить в false).
+        mHelper.enableDebugLogging(false);
 
         // Start setup. This is asynchronous and the specified listener
         // will be called once setup completes.
@@ -229,7 +229,7 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
                 Log.d(TAG, "50rub button clicked; launching purchase flow for pay 50rub.");
                 setWaitScreen(true);
 
-                /* TODO: for security, generate your payload here for verification. See the comments on
+                /* TO DO: for security, generate your payload here for verification. See the comments on
                  *        verifyDeveloperPayload() for more info. Since this is a SAMPLE, we just use
                  *        an empty string, but on a production app you should carefully generate this. */
                 String payload = "";
@@ -252,7 +252,7 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
                 Log.d(TAG, "100rub button clicked; launching purchase flow for pay 100rub.");
                 setWaitScreen(true);
 
-                /* TODO: for security, generate your payload here for verification. See the comments on
+                /* TO DO: for security, generate your payload here for verification. See the comments on
                  *        verifyDeveloperPayload() for more info. Since this is a SAMPLE, we just use
                  *        an empty string, but on a production app you should carefully generate this. */
                 String payload2 = "";
@@ -409,7 +409,7 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
         String payload = p.getDeveloperPayload();
 
         /*
-         * TODO: verify that the developer payload of the purchase is correct. It will be
+         * TO DO: verify that the developer payload of the purchase is correct. It will be
          * the same one that you sent when initiating the purchase.
          *
          * WARNING: Locally generating a random string when starting a purchase and
