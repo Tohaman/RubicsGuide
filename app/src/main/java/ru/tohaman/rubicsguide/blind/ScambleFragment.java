@@ -944,9 +944,7 @@ public class ScambleFragment extends Fragment {
             cube2view(MainCube);
             solvetext.setText("");
             // делаем кнопку "Генерерировать" не активной, а прогресбар активным
-            //gen_button.setVisibility(View.INVISIBLE);
             gen_button.setEnabled(false);
-
             mProgressBar.setVisibility(View.VISIBLE);
             progressText.setVisibility(View.VISIBLE);
             ChReb = mChBoxRebro.isChecked();
