@@ -2,7 +2,6 @@ package ru.tohaman.rubicsguide.blind;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -13,13 +12,9 @@ import android.support.v4.content.ContextCompat;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
-import android.util.DisplayMetrics;
-import android.util.Log;
-import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
@@ -28,9 +23,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import ru.tohaman.rubicsguide.CommentFragment;
 import ru.tohaman.rubicsguide.R;
-import ru.tohaman.rubicsguide.listpager.ListPager;
 import ru.tohaman.rubicsguide.listpager.ListPagerLab;
 
 import static ru.tohaman.rubicsguide.blind.ScambleFragment.Initialize;
@@ -112,7 +105,7 @@ public class AzbukaFragment extends Fragment {
                 String letter = mAdapter.getItem(position);
                 if (!(letter.equals("") | letter.equals("-"))){
                     FragmentManager manager = getFragmentManager();
-                    InputLetterFragment dialog = InputLetterFragment.newInstance(mAdapter.getItem(position).toString(), position);
+                    InputLetterFragment dialog = InputLetterFragment.newInstance(mAdapter.getItem(position), position);
                     dialog.setTargetFragment(AzbukaFragment.this, REQUEST_AZBUKA);
                     dialog.show(manager, DIALOG_AZBUKA);
                 }
@@ -152,7 +145,7 @@ public class AzbukaFragment extends Fragment {
         Button but_loadazbuka = (Button) view.findViewById(R.id.button_loadazbuka);
         but_loadazbuka.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                String[] azbuka = listPagerLab.loadCustomAzbuka();
+                String[] azbuka = listPagerLab.getCustomAzbuka();
                 listPagerLab.setCustomAzbuka(azbuka);
                 InitGridList();
                 mAdapter.notifyDataSetChanged();
@@ -230,7 +223,7 @@ public class AzbukaFragment extends Fragment {
         }
 
         int[] cube = Initialize();
-        String[] azbuka = listPagerLab.getCustomAzbuka();
+        String[] azbuka = listPagerLab.getCurrentAzbuka();
 
         for (int i = 0; i < 9; i++) {
             mGridList.set((i/3)*12+3+(i%3), new CubeAzbuka(cubeColor[cube[i]],azbuka [i]));

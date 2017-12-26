@@ -2,11 +2,9 @@ package ru.tohaman.rubicsguide.blind;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
@@ -19,12 +17,10 @@ import android.widget.CompoundButton;
 import android.widget.GridView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
 import ru.tohaman.rubicsguide.CommentFragment;
 import ru.tohaman.rubicsguide.R;
@@ -873,7 +869,7 @@ public class ScambleFragment extends Fragment {
     }
 
     private String FindLetter (int c) {     //Доработать функцию поиска буквы из азбуки, пока просто цифра
-        String[] azbuka = listPagerLab.getCustomAzbuka();
+        String[] azbuka = listPagerLab.getCurrentAzbuka();
         return azbuka[c];
     }
 

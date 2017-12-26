@@ -334,9 +334,20 @@ public class ListPagerLab {
     }
 
 
-    public String[] getCustomAzbuka() {
+    public String[] getCurrentAzbuka() {
         String[] azbuka = new String [54];
         ListPager mListPager = getPhaseItem (0,"AZBUKA");
+        if (mListPager.getComment().equals("")) {
+            azbuka = getMaximAzbuka();
+        } else {
+            azbuka = mListPager.getComment().split(" ");
+        }
+        return azbuka;
+    }
+
+    public String[] getCustomAzbuka() {
+        String[] azbuka = new String [54];
+        ListPager mListPager = getPhaseItem (1,"AZBUKA");
         if (mListPager.getComment().equals("")) {
             azbuka = getMaximAzbuka();
         } else {
@@ -348,28 +359,19 @@ public class ListPagerLab {
     public void setCustomAzbuka(String[] azbuka) {
         String st = "";
         for (int i=0; i<azbuka.length;i++) {
-            st = st + azbuka[i] + " ";
+            st += azbuka[i] + " ";
         }
         ListPager mListPager = getPhaseItem (0,"AZBUKA");
         mListPager.setComment(st);
         updateListPager(mListPager);
     }
+
     public void saveCustomAzbuka() {
         ListPager mListPager = getPhaseItem (0,"AZBUKA");
         ListPager mLP = new ListPager(1,"AZBUKA",mListPager.getComment());
         updateListPager(mLP);
     }
 
-    public String[] loadCustomAzbuka () {
-        String[] azbuka = new String [54];
-        ListPager mListPager = getPhaseItem (1,"AZBUKA");
-        if (mListPager.getComment().equals("")) {
-            azbuka = getMaximAzbuka();
-        } else {
-            azbuka = mListPager.getComment().split(" ");
-        }
-        return azbuka;
-    }
 
 
 }

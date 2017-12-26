@@ -31,8 +31,6 @@ public class InputLetterFragment extends DialogFragment {
     private static final String ARG_Position = "ru.tohaman.rubicsguide.letter2";
 
     private TextView mTextView;
-    private Button mButton_minus;
-    private Button mButton_plus;
 
     public static InputLetterFragment newInstance (String letter, int position) {
         Bundle args = new Bundle();
@@ -56,7 +54,7 @@ public class InputLetterFragment extends DialogFragment {
         mTextView = (TextView) v.findViewById(R.id.textView_letter);
         mTextView.setText(letter);
 
-        mButton_plus = (Button) v.findViewById(R.id.button_plus2);
+        Button mButton_plus = (Button) v.findViewById(R.id.button_plus2);
         mButton_plus.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Обработка нажатия
@@ -70,7 +68,7 @@ public class InputLetterFragment extends DialogFragment {
             }
         });
 
-        mButton_minus = (Button) v.findViewById(R.id.button_minus2);
+        Button mButton_minus = (Button) v.findViewById(R.id.button_minus2);
         mButton_minus.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Обработка нажатия
