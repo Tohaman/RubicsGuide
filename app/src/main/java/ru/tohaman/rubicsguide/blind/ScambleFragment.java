@@ -31,6 +31,8 @@ import ru.tohaman.rubicsguide.R;
 import ru.tohaman.rubicsguide.listpager.ListPager;
 import ru.tohaman.rubicsguide.listpager.ListPagerLab;
 
+import static ru.tohaman.rubicsguide.blind.BlindMoves.Ekvator;
+
 
 /**
  * Created by Toha on 21.06.2017. Фрагмент для отображения генератора скрамблов
@@ -341,7 +343,10 @@ public class ScambleFragment extends Fragment {
         st = st.trim();
         st = st + ") ";
         int j = st.split(" ").length;
-        if (j%2 != 0) { st = st + "Эк ";}
+        if (j%2 != 0) {
+            st = st + "Эк ";
+            cube = Ekvator(cube);
+        }
 
         st = st + ("(");
         do {
@@ -386,7 +391,10 @@ public class ScambleFragment extends Fragment {
             } while (!CheckRebro(CurCube));
 
             int d = solve.split(" ").length;
-            if (d%2 != 0) { solve = solve + "Эк ";}
+            if (d%2 != 0) {
+                solve = solve + "Эк ";
+                CurCube = Ekvator(CurCube);
+            }
 
             do {
                 int a = CurCube[18] + 1;       //смотрим что в буфере углов
