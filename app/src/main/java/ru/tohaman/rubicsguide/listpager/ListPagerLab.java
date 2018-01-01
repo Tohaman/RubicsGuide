@@ -28,8 +28,7 @@ public class ListPagerLab {
     private SQLiteDatabase mDatabase;
     private List<ListPager> mListPagers;
 
-    private ListPagerLab(){
-        Context mContext = MainActivity.get();
+    private ListPagerLab(Context mContext){
         mDatabase = new BaseHelper(mContext).getWritableDatabase();
         mListPagers = new ArrayList<>();
 
@@ -130,13 +129,13 @@ public class ListPagerLab {
 
     // Создаем синглет, т.е. класс с закрытым конструктором. Открыт метод get, который
     // создает экземпляр, только если он еще не создан, в противном случае возвращает, то что уже создано
-    public static ListPagerLab get(){
-        if (instance == null) instance = getSync();
+    public static ListPagerLab get(Context mContext){
+        if (instance == null) instance = getSync(mContext);
         return instance;
     }
 
-    private static synchronized ListPagerLab getSync() {
-        if (instance==null) instance = new ListPagerLab();
+    private static synchronized ListPagerLab getSync(Context mContext) {
+        if (instance==null) instance = new ListPagerLab(mContext);
         return instance;
     }
 
