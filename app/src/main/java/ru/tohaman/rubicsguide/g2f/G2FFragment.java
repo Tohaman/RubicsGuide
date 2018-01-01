@@ -53,7 +53,7 @@ public class G2FFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ListPagerLab listPagerLab = ListPagerLab.get();
+        ListPagerLab listPagerLab = ListPagerLab.get(getContext());
         View v = inflater.inflate(R.layout.fragment_mainlist, container, false);
 
         // начальная инициализация списка для ListView c адаптером MyListAdapter

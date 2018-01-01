@@ -64,7 +64,7 @@ public class AzbukaFragment extends Fragment {
         cubeColor[5] = green;
 
         // Получаем синглет
-        listPagerLab = ListPagerLab.get();
+        listPagerLab = ListPagerLab.get(getContext());
         // Немного преобразуем текст для корректного отображения.
         String text = "<html><body style=\"text-align:justify\"> %s </body></Html>";
         String description = String.format(text,getString(R.string.azbuka2));

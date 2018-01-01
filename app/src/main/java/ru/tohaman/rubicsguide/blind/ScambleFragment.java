@@ -91,7 +91,7 @@ public class ScambleFragment extends Fragment {
 
 
         // Инициализируем переменные
-        listPagerLab = ListPagerLab.get();
+        listPagerLab = ListPagerLab.get(getContext());
         mListPagers = listPagerLab.getPhaseList("SCRAMBLEGEN");
         InitArrays();
         MainCube = Initialize();

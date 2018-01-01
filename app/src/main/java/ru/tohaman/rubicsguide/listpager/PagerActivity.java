@@ -41,7 +41,7 @@ public class PagerActivity extends AppCompatActivity {
 
         mViewPager = (ViewPager) findViewById(R.id.activity_pager_view_pager);
 
-        mListPagers = ListPagerLab.get().getPhaseList(Phase);
+        mListPagers = ListPagerLab.get(this).getPhaseList(Phase);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         mViewPager.setAdapter(new FragmentStatePagerAdapter(fragmentManager) {
