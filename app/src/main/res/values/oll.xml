@@ -253,7 +253,7 @@
         <b>Алгоритм: S (R\' U\') (R U R U R) U\' R\' S\' </b></p>
         <p>2. Альтернативный вариант, но не такой быстрый
         <a href="rubic-activity://ytactivity?time=4:08&link=vDG7tg__FNo">на видео 4:08</a> <br/>
-        <b>Алгоритм: (M U\' M U\' M U\' M U\') (M\' U\' M\' U\' M\' U\' M\' U\') </b></p>
+        <b>Алгоритм: (M\' U\' M\' U\' M\' U\' M\' U\') (M U\' M U\' M U\' M U\')</b></p>
         <p>3. Вариант от Феликса Земдегса<br/>
         Фингертрикс: <a href="rubic-activity://ytactivity?time=11:51&link=IasVqtCHoj0">от Феликса</a> <br/>
         <b>Алгоритм: M U (R U R\' U\') M2\' (U R U\' Rw\')</b> хотя судя по исполнению, правильнее
@@ -337,8 +337,6 @@
     <string name="oll_st6_url">vwJYwlgnEbs</string>
 
     <string name="oll_st7_title">#7 Микки Маус с бородой</string>
-    <string name="oll_st7_descr1">\t
-    </string>
     <string name="oll_st7_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         <p>1. Взять бородой к себе. Жирная рыбка, жирно выключить, крыша против, вкл.свет, снова
@@ -363,8 +361,6 @@
     <string name="oll_st7_url">2TKJWiA7Yzg</string>
 
     <string name="oll_st8_title">#8 Микки Маус с бакенбардами</string>
-    <string name="oll_st8_descr1">\t
-    </string>
     <string name="oll_st8_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         <p>Ушами вверх (как на картинке). Средний слой неудобно, крыша по, пиф-паф, средний слой назад,
@@ -378,8 +374,6 @@
     <string name="oll_st8_url">VuQfVI8a6nY</string>
 
     <string name="oll_st9_title">#9 Школа</string>
-    <string name="oll_st9_descr1">\t
-    </string>
     <string name="oll_st9_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         <p>1. Поставить буквой H. Выполнить пиф-паф, средний слой удобно, анти-пиф-паф с двойным последним кручением. <br/>
@@ -396,8 +390,6 @@
     <string name="oll_st9_url">qMGjfB8CcH0</string>
 
     <string name="oll_st10_title">#10 Летающий змей</string>
-    <string name="oll_st10_descr1">\t
-    </string>
     <string name="oll_st10_descr" formatted="false"><![CDATA[
         <b>Как решать:</b>
         <p>1. Змей улетает влево от нас. Жирный пиф-паф, средний неудобно, анти-пиф-паф.  <br/>
