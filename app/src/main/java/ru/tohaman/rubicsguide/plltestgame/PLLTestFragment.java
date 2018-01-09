@@ -141,7 +141,7 @@ public class PLLTestFragment extends Fragment {
         pll[19] = "242314133421";    //дальняя улитка
         pll[20] = "111223442334";    //север
 
-        ListPagerLab listPagerLab = ListPagerLab.get();
+        ListPagerLab listPagerLab = ListPagerLab.get(getContext());
         mListPagers = listPagerLab.getPhaseList("PLLTEST");
 
         pllrnd.clear();

@@ -66,7 +66,7 @@ public class ListFragment extends Fragment {
         String phase;
 
         // Получаем синглет
-        listPagerLab = ListPagerLab.get();
+        listPagerLab = ListPagerLab.get(getContext());
         // Получаем данные о фазе от родителя и делаем выборку по фазе
 
         if (uri != null) {

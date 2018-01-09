@@ -91,7 +91,7 @@ public class PLLTestSettingsFragment extends Fragment {
         });
 
         // Получаем синглет
-        listPagerLab = ListPagerLab.get();
+        listPagerLab = ListPagerLab.get(getContext());
         mListPagers = listPagerLab.getPhaseList("PLLTEST");
         ListAdapter mListAdapter  = new PLLListAdapter(v.getContext(), R.layout.list_item, mListPagers);
         // устанавливаем адаптер
