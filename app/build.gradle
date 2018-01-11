@@ -6,10 +6,10 @@ android {
     buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "ru.tohaman.rubicsguide"
-        minSdkVersion 18
+        minSdkVersion 17
         targetSdkVersion 26
-        versionCode 9934
-        versionName "1.1.180109"
+        versionCode 9935
+        versionName "1.1.180111"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }
