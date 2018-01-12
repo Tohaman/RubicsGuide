@@ -46,8 +46,8 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
     // Пользователь уже платил?
     boolean mIsPremium = false;
     // SKUs для продуктов: the premium upgrade (non-consumable) and gas (consumable)
-    static final String SKU_PREMIUM = "medium_donation";
-    static final String SKU_GAS = "small_donation";
+    static final String MEDIUM_DONATION = "medium_donation";
+    static final String SMALL_DONATION = "small_donation";
     // (arbitrary) request code for the purchase flow
     static final int RC_REQUEST = 10001;
     // Тут будем подсчитывать сколько пользователь уже заплатил, пока не знаю для чего
@@ -161,7 +161,7 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
 
             // Do we have the premium upgrade?
             // Проверяем, платил ли пользователь уже 100руб.
-            Purchase premiumPurchase = inventory.getPurchase(SKU_PREMIUM);
+            Purchase premiumPurchase = inventory.getPurchase(MEDIUM_DONATION);
             mIsPremium = (premiumPurchase != null && verifyDeveloperPayload(premiumPurchase));
             Log.d(TAG, "User is " + (mIsPremium ? "PREMIUM" : "NOT PREMIUM"));
 
@@ -190,11 +190,11 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
 
             // Check for gas delivery -- if we own gas, we should fill up the tank immediately
             // Проверяем платил ли 50 руб
-            Purchase gasPurchase = inventory.getPurchase(SKU_GAS);
+            Purchase gasPurchase = inventory.getPurchase(SMALL_DONATION);
 //            if (gasPurchase != null && verifyDeveloperPayload(gasPurchase)) {
 //                Log.d(TAG, "We have gas. Consuming it.");
 //                try {
-//                    mHelper.consumeAsync(inventory.getPurchase(SKU_GAS), mConsumeFinishedListener);
+//                    mHelper.consumeAsync(inventory.getPurchase(SMALL_DONATION), mConsumeFinishedListener);
 //                } catch (IabAsyncInProgressException e) {
 //                    complain("Error consuming gas. Another async operation in progress.");
 //                }
@@ -236,7 +236,7 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
 
                 if (mGooglePlayOK){
                     try {
-                        mHelper.launchPurchaseFlow(this, SKU_GAS, RC_REQUEST,
+                        mHelper.launchPurchaseFlow(this, SMALL_DONATION, RC_REQUEST,
                                 mPurchaseFinishedListener, payload);
                     } catch (IabAsyncInProgressException e) {
                         complain("Ошибка запуска потока оплаты. Другая асинхронная операция запущена.");
@@ -259,7 +259,7 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
 
                 if (mGooglePlayOK) {
                     try {
-                        mHelper.launchPurchaseFlow(this, SKU_PREMIUM, RC_REQUEST,
+                        mHelper.launchPurchaseFlow(this, MEDIUM_DONATION, RC_REQUEST,
                                 mPurchaseFinishedListener, payload2);
                     } catch (IabAsyncInProgressException e) {
                         complain("Ошибка запуска потока оплаты. Другая асинхронная операция запущена.");
@@ -455,7 +455,7 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
 
             Log.d(TAG, "Покупка прошла успешно.");
 
-            if (purchase.getSku().equals(SKU_GAS)) {
+            if (purchase.getSku().equals(SMALL_DONATION)) {
                 // Пользователь задонатил 50 руб.
                 Log.d(TAG, "Покупка = донат 50 руб.");
                 alert("Большое спаибо за поддержку");
@@ -470,7 +470,7 @@ public class MainActivity extends SingleFragmentActivity implements IabBroadcast
 //                    return;
 //                }
             }
-            else if (purchase.getSku().equals(SKU_PREMIUM)) {
+            else if (purchase.getSku().equals(MEDIUM_DONATION)) {
                 // Пользователь задонатил 100 руб.
                 Log.d(TAG, "Покупка = донат 100 руб.");
                 alert("Большое спаибо за поддержку");
