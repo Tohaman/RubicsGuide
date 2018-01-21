@@ -8,8 +8,8 @@ android {
         applicationId "ru.tohaman.rubicsguide"
         minSdkVersion 17
         targetSdkVersion 26
-        versionCode 9937
-        versionName "1.1.180114.2"
+        versionCode 9938
+        versionName "1.1.180118.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }
@@ -31,7 +31,7 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:26.1.0'
     compile 'com.android.support:gridlayout-v7:26.1.0'
     testCompile 'junit:junit:4.12'
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 repositories {
     mavenCentral()
