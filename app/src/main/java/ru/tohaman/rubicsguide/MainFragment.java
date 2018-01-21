@@ -85,7 +85,7 @@ public class MainFragment extends Fragment {
         };
         mListView.setOnItemClickListener(itemListener);
 
-        mConstraintLayout = (ConstraintLayout) v.findViewById(R.id.hint_main);
+        mConstraintLayout = v.findViewById(R.id.hint_main);
         cur_ver = BuildConfig.VERSION_CODE;
 
         sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
