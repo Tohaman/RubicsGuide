@@ -1,7 +1,9 @@
 package ru.tohaman.rubicsguide;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.constraint.ConstraintLayout;
@@ -101,15 +103,29 @@ public class MainFragment extends Fragment {
         if (cur_ver!=ver) { //если версии разные
             mConstraintLayout.setVisibility(View.VISIBLE);
             Button hintbutton = (Button) v.findViewById(R.id.hint_mainbutton);
+            Button goButton = v.findViewById(R.id.hint_go_button);
             mConstraintLayout.setVisibility(View.VISIBLE);
             hintbutton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                        SharedPreferences.Editor e = sp.edit();
-                        e.putInt("version", cur_ver);
-                        e.apply(); // подтверждаем изменения
-                        mConstraintLayout.setVisibility(View.INVISIBLE);
+                    SharedPreferences.Editor e = sp.edit();
+                    e.putInt("version", cur_ver);
+                    e.apply(); // подтверждаем изменения
+                    mConstraintLayout.setVisibility(View.INVISIBLE);
+                }
+            });
+            goButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    final String appPackageName = "ru.tohaman.rg2";
+                    try {
+                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName));
+                        startActivity(intent);
+                    } catch (android.content.ActivityNotFoundException anfe) {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
                     }
+                    mConstraintLayout.setVisibility(View.INVISIBLE);
+                }
             });
         } else {    // если не первый, то убираем подсказку
             mConstraintLayout.setVisibility(View.INVISIBLE);
